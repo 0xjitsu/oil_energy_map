@@ -1,0 +1,68 @@
+import { PriceBenchmark } from '@/types';
+
+export const priceBenchmarks: PriceBenchmark[] = [
+  {
+    id: 'dubai-crude',
+    name: 'Dubai Crude',
+    value: 166.42,
+    previousWeek: 158.10,
+    unit: '$/bbl',
+    tooltip: 'RECORD. What PH pays for raw oil. Spiked due to Hormuz disruption.',
+  },
+  {
+    id: 'brent-crude',
+    name: 'Brent Crude',
+    value: 106.28,
+    previousWeek: 101.50,
+    unit: '$/bbl',
+    tooltip: 'Global benchmark. Lower than Dubai because Hormuz mainly affects Asia.',
+  },
+  {
+    id: 'mops-gasoline',
+    name: 'MOPS Gasoline (95)',
+    value: 118.45,
+    previousWeek: 112.30,
+    unit: '$/bbl',
+    tooltip: 'Singapore gasoline benchmark. Directly sets PH pump price.',
+  },
+  {
+    id: 'mops-diesel',
+    name: 'MOPS Diesel',
+    value: 122.80,
+    previousWeek: 116.90,
+    unit: '$/bbl',
+    tooltip: 'Singapore diesel benchmark. Affects jeepney fares, food delivery, agriculture.',
+  },
+  {
+    id: 'php-usd',
+    name: 'PHP/USD',
+    value: 58.42,
+    previousWeek: 57.85,
+    unit: '\u20B1/$',
+    tooltip: 'Peso weakening against dollar. Higher = more expensive oil imports.',
+  },
+  {
+    id: 'pump-gasoline',
+    name: 'Pump Gasoline',
+    value: 78.50,
+    previousWeek: 74.70,
+    unit: '\u20B1/liter',
+    tooltip: 'What you pay at the gas station for RON 91 unleaded.',
+  },
+  {
+    id: 'pump-diesel',
+    name: 'Pump Diesel',
+    value: 72.30,
+    previousWeek: 68.90,
+    unit: '\u20B1/liter',
+    tooltip: 'What jeepneys, buses, and delivery trucks pay.',
+  },
+  {
+    id: 'sg-refining-margin',
+    name: 'SG Refining Margin',
+    value: 30,
+    previousWeek: 25,
+    unit: '$/bbl',
+    tooltip: 'Cost premium to refine crude into usable fuel. 4-year high.',
+  },
+];

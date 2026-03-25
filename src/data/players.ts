@@ -1,0 +1,52 @@
+import { MarketPlayer } from '@/types';
+
+export const marketPlayers: MarketPlayer[] = [
+  {
+    name: 'Petron',
+    marketShare: 27,
+    stations: 2400,
+    strategy: 'Refine + Import',
+    vulnerabilityScore: 85,
+    color: '#3b82f6',
+  },
+  {
+    name: 'Shell',
+    marketShare: 18,
+    stations: 1100,
+    strategy: 'Import Only',
+    vulnerabilityScore: 70,
+    color: '#facc15',
+  },
+  {
+    name: 'Chevron/Caltex',
+    marketShare: 8,
+    stations: 600,
+    strategy: 'Import Only',
+    vulnerabilityScore: 55,
+    color: '#ef4444',
+  },
+  {
+    name: 'Phoenix',
+    marketShare: 7,
+    stations: 700,
+    strategy: 'Import Only',
+    vulnerabilityScore: 75,
+    color: '#f97316',
+  },
+  {
+    name: 'SeaOil',
+    marketShare: 5,
+    stations: 500,
+    strategy: 'Import Only',
+    vulnerabilityScore: 65,
+    color: '#8b5cf6',
+  },
+  {
+    name: 'Others',
+    marketShare: 35,
+    stations: 3000,
+    strategy: 'Import Only',
+    vulnerabilityScore: 60,
+    color: '#475569',
+  },
+];
