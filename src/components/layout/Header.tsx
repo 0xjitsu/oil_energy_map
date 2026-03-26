@@ -1,6 +1,25 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Ticker } from '@/components/ui/Ticker';
 
+function useCurrentDate() {
+  const [date, setDate] = useState('');
+  useEffect(() => {
+    setDate(
+      new Date().toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      }).toUpperCase()
+    );
+  }, []);
+  return date;
+}
+
 export function Header() {
+  const currentDate = useCurrentDate();
+
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-[rgba(6,10,16,0.85)]">
       {/* Philippine flag accent bars */}
@@ -31,7 +50,7 @@ export function Header() {
             LIVE
           </span>
           <span className="text-[10px] font-mono text-[rgba(255,255,255,0.3)] tracking-wider">
-            MAR 25, 2026
+            {currentDate}
           </span>
         </div>
       </div>
