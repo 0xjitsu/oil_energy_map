@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import { priceBenchmarks } from '@/data/prices';
+import { usePrices } from '@/hooks/usePrices';
 import { PriceBenchmark } from '@/types';
 import { SparkChart } from './SparkChart';
 import { Tooltip } from '@/components/ui/Tooltip';
@@ -51,6 +51,7 @@ function BenchmarkCard({ benchmark }: { benchmark: PriceBenchmark }) {
 }
 
 export function PricePanel() {
+  const { prices: priceBenchmarks } = usePrices();
   const benchmarks = priceBenchmarks.slice(0, 5);
 
   return (

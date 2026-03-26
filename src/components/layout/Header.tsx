@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Ticker } from '@/components/ui/Ticker';
+import { useEvents } from '@/hooks/useEvents';
 
 function useCurrentDate() {
   const [date, setDate] = useState('');
@@ -19,6 +20,7 @@ function useCurrentDate() {
 
 export function Header() {
   const currentDate = useCurrentDate();
+  const { isLive } = useEvents();
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-[rgba(6,10,16,0.85)]">
@@ -42,12 +44,18 @@ export function Header() {
 
         {/* Right — live badge + date */}
         <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-md border border-emerald-500/20 bg-emerald-500/10 px-2 py-1 text-[10px] font-mono tracking-wider text-emerald-400">
+          <span className={`inline-flex items-center gap-1.5 rounded-md border px-2 py-1 text-[10px] font-mono tracking-wider ${
+            isLive
+              ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-400'
+              : 'border-amber-500/20 bg-amber-500/10 text-amber-400'
+          }`}>
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              {isLive && (
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              )}
+              <span className={`relative inline-flex h-2 w-2 rounded-full ${isLive ? 'bg-emerald-400' : 'bg-amber-400'}`} />
             </span>
-            LIVE
+            {isLive ? 'LIVE' : 'STATIC'}
           </span>
           <span className="text-[10px] font-mono text-[rgba(255,255,255,0.3)] tracking-wider">
             {currentDate}
