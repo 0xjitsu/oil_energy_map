@@ -30,7 +30,7 @@ function renderLabel(props: PieLabelRenderProps) {
 
 export function MarketShare() {
   return (
-    <div className="rounded-xl border border-[rgba(255,255,255,0.04)] bg-[#0a0f1a] p-4">
+    <div className="glass-card p-4">
       <h3 className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-2 font-sans">
         Market Share
       </h3>

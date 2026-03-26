@@ -20,7 +20,7 @@ const RISK_BADGE: Record<RiskLevel, { label: string; className: string }> = {
   },
   red: {
     label: 'CRISIS',
-    className: 'bg-red-500/20 text-red-400 border-red-500/30',
+    className: 'bg-red-500/20 text-red-400 border-red-500/30 alert-glow',
   },
 };
 
@@ -39,7 +39,7 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
   const dieselDiff = diesel - CURRENT_DIESEL;
 
   return (
-    <div className="rounded-xl border border-[rgba(255,255,255,0.04)] bg-[#0a0f1a] p-5">
+    <div className="glass-card p-5">
       {/* Risk badge */}
       <div className="mb-4">
         <span

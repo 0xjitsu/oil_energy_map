@@ -13,7 +13,7 @@ export function Ticker() {
   const tickerContent = [...items, ...items];
 
   return (
-    <div className="overflow-hidden border-t border-b border-[rgba(255,255,255,0.04)] bg-[#060a12]">
+    <div className="overflow-hidden border-t border-b border-[rgba(255,255,255,0.04)] bg-[#060a12] ticker-mask">
       <div className="flex animate-ticker whitespace-nowrap py-1.5">
         {tickerContent.map((item, i) => (
           <span

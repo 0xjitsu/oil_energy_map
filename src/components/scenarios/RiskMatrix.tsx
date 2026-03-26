@@ -13,7 +13,7 @@ interface RiskCategory {
 const DOT_COLORS: Record<RiskLevel, string> = {
   green: 'bg-emerald-400',
   yellow: 'bg-yellow-400',
-  red: 'bg-red-400',
+  red: 'bg-red-400 animate-pulse',
 };
 
 const LEVEL_LABELS: Record<RiskLevel, string> = {
@@ -49,7 +49,7 @@ export function RiskMatrix({ params, riskLevel }: RiskMatrixProps) {
   const risks = evaluateRisks(params, riskLevel);
 
   return (
-    <div className="rounded-xl border border-[rgba(255,255,255,0.04)] bg-[#0a0f1a] p-5">
+    <div className="glass-card p-5">
       <h3 className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-4 font-sans">
         Risk Matrix
       </h3>

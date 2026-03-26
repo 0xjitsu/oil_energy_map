@@ -26,7 +26,7 @@ function BenchmarkCard({ benchmark }: { benchmark: PriceBenchmark }) {
   const sparkColor = isUp ? '#f87171' : '#34d399';
 
   return (
-    <div className="rounded-xl border border-[rgba(255,255,255,0.04)] bg-[#0a0f1a] p-4">
+    <div className="glass-card card-interactive p-4">
       <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-1">
         {benchmark.name}
       </p>

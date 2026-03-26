@@ -10,17 +10,15 @@ import { MarketShare } from "@/components/players/MarketShare";
 import { PlayerCards } from "@/components/players/PlayerCards";
 import { VitalSigns } from "@/components/health/VitalSigns";
 import { EventTimeline } from "@/components/health/EventTimeline";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[var(--bg-primary)]">
-      {/* Crisis Alert */}
+      <ScrollProgress />
       <AlertBanner />
-
-      {/* Header + Ticker */}
       <Header />
 
-      {/* Main Content */}
       <main className="max-w-[1600px] mx-auto px-4 py-6 space-y-6">
         {/* Hero: Map + Price Sidebar */}
         <section className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4">
@@ -105,7 +103,6 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

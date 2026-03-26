@@ -1,54 +1,60 @@
-'use client';
-
-import { Polyline, Tooltip } from 'react-leaflet';
+import { ArcLayer, PathLayer } from '@deck.gl/layers';
 import { shippingRoutes } from '@/data/shipping-routes';
-import type { RouteStatus } from '@/types';
+import type { ShippingRoute } from '@/types';
 
-interface ShippingLayerProps {
-  visible: boolean;
+function swapCoords(coords: [number, number][]): [number, number][] {
+  return coords.map(([lat, lng]) => [lng, lat]);
 }
 
-const routeStyle: Record<RouteStatus, { dashArray: string | undefined; weight: number; opacity: number }> = {
-  disrupted: { dashArray: '10 6', weight: 2, opacity: 0.8 },
-  active: { dashArray: undefined, weight: 2, opacity: 0.6 },
-  new: { dashArray: undefined, weight: 3, opacity: 0.7 },
-};
+function hexToRgb(hex: string): [number, number, number] {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return [r, g, b];
+}
 
-const statusLabel: Record<RouteStatus, string> = {
-  active: 'Active',
-  disrupted: 'Disrupted',
-  new: 'New Route',
-};
+export function createRouteLayers(visible: boolean) {
+  const pathLayer = new PathLayer<ShippingRoute>({
+    id: 'route-paths',
+    data: shippingRoutes,
+    visible,
+    pickable: true,
+    getPath: (d: ShippingRoute) => swapCoords(d.coordinates),
+    getColor: (d: ShippingRoute) => {
+      const rgb = hexToRgb(d.color);
+      const alpha = d.status === 'disrupted' ? 220 : 150;
+      return [...rgb, alpha] as [number, number, number, number];
+    },
+    getWidth: (d: ShippingRoute) => (d.status === 'disrupted' ? 3 : 2),
+    widthUnits: 'pixels' as const,
+    widthMinPixels: 1,
+  });
 
-export default function ShippingLayer({ visible }: ShippingLayerProps) {
-  if (!visible) return null;
+  const arcLayer = new ArcLayer<ShippingRoute>({
+    id: 'route-arcs',
+    data: shippingRoutes,
+    visible,
+    pickable: true,
+    getSourcePosition: (d: ShippingRoute) => {
+      const first = d.coordinates[0];
+      return [first[1], first[0]];
+    },
+    getTargetPosition: (d: ShippingRoute) => {
+      const last = d.coordinates[d.coordinates.length - 1];
+      return [last[1], last[0]];
+    },
+    getSourceColor: (d: ShippingRoute) => {
+      const rgb = hexToRgb(d.color);
+      return [...rgb, 80] as [number, number, number, number];
+    },
+    getTargetColor: (d: ShippingRoute) => {
+      const rgb = hexToRgb(d.color);
+      return [...rgb, 220] as [number, number, number, number];
+    },
+    getWidth: 2,
+    getHeight: 0.3,
+    greatCircle: true,
+  });
 
-  return (
-    <>
-      {shippingRoutes.map((route) => {
-        const style = routeStyle[route.status];
-        return (
-          <Polyline
-            key={route.id}
-            positions={route.coordinates}
-            pathOptions={{
-              color: route.status === 'disrupted' ? '#ef4444' : route.color,
-              weight: style.weight,
-              opacity: style.opacity,
-              dashArray: style.dashArray,
-            }}
-          >
-            <Tooltip sticky>
-              <div className="font-mono text-[10px]">
-                <div className="font-bold text-[rgba(255,255,255,0.9)]">{route.label}</div>
-                <div className="text-[rgba(255,255,255,0.5)] mt-0.5">
-                  Status: {statusLabel[route.status]}
-                </div>
-              </div>
-            </Tooltip>
-          </Polyline>
-        );
-      })}
-    </>
-  );
+  return [pathLayer, arcLayer];
 }

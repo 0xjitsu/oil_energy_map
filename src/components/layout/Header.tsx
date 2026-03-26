@@ -2,7 +2,7 @@ import { Ticker } from '@/components/ui/Ticker';
 
 export function Header() {
   return (
-    <header>
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-[rgba(6,10,16,0.85)]">
       {/* Philippine flag accent bars */}
       <div className="flex h-[3px]">
         <div className="flex-1 bg-[#0038a8]" />

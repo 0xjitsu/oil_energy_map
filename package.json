@@ -9,16 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "leaflet": "^1.9.4",
+    "@deck.gl/core": "^9.2.11",
+    "@deck.gl/layers": "^9.2.11",
+    "@deck.gl/mapbox": "^9.2.11",
     "lucide-react": "^1.6.0",
+    "maplibre-gl": "^5.21.1",
     "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
-    "react-leaflet": "4.2.1",
+    "react-map-gl": "^8.1.0",
     "recharts": "^3.8.0"
   },
   "devDependencies": {
-    "@types/leaflet": "^1.9.21",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

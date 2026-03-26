@@ -1,4 +1,28 @@
+'use client';
+
 import { priceBenchmarks } from '@/data/prices';
+import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
+
+function PriceCard({ label, value, change }: { label: string; value: number; change: number }) {
+  const animatedValue = useAnimatedNumber(value);
+
+  return (
+    <div className="glass-card p-6 border-[rgba(59,130,246,0.12)] shadow-[0_0_20px_rgba(59,130,246,0.06)]">
+      <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-2">
+        {label}
+      </p>
+      <div className="flex items-baseline gap-2">
+        <span className="text-4xl font-mono font-bold text-[rgba(255,255,255,0.9)]">
+          ₱{animatedValue.toFixed(2)}
+        </span>
+        <span className="text-sm text-[rgba(255,255,255,0.3)] font-mono">/L</span>
+      </div>
+      <p className="mt-2 text-sm font-mono text-red-400">
+        ↑₱{change.toFixed(2)} week-over-week
+      </p>
+    </div>
+  );
+}
 
 export function PumpPrices() {
   const gasoline = priceBenchmarks.find((b) => b.id === 'pump-gasoline');
@@ -16,23 +40,12 @@ export function PumpPrices() {
       {fuels.map(({ label, benchmark }) => {
         const change = benchmark.value - benchmark.previousWeek;
         return (
-          <div
+          <PriceCard
             key={benchmark.id}
-            className="rounded-xl border border-[rgba(255,255,255,0.04)] bg-[#0a0f1a] p-6"
-          >
-            <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-2">
-              {label}
-            </p>
-            <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-mono font-bold text-[rgba(255,255,255,0.9)]">
-                ₱{benchmark.value.toFixed(2)}
-              </span>
-              <span className="text-sm text-[rgba(255,255,255,0.3)] font-mono">/L</span>
-            </div>
-            <p className="mt-2 text-sm font-mono text-red-400">
-              ↑₱{change.toFixed(2)} week-over-week
-            </p>
-          </div>
+            label={label}
+            value={benchmark.value}
+            change={change}
+          />
         );
       })}
     </div>

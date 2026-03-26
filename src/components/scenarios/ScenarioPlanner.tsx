@@ -33,7 +33,7 @@ export function ScenarioPlanner() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Sliders */}
-        <div className="space-y-6 rounded-xl border border-[rgba(255,255,255,0.04)] bg-[#0a0f1a] p-5">
+        <div className="space-y-6 glass-card p-5">
           {/* Brent Crude */}
           <div>
             <div className="flex items-center justify-between mb-2">

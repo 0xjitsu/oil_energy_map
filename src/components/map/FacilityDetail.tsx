@@ -25,7 +25,7 @@ export default function FacilityDetail({ facility, onClose }: FacilityDetailProp
 
   return (
     <div
-      className="absolute bottom-4 left-4 z-50 max-w-sm bg-[#0a0f1a]/95 backdrop-blur-sm rounded-xl overflow-hidden border border-[rgba(255,255,255,0.04)]"
+      className="absolute bottom-4 left-4 z-50 max-w-sm rounded-xl overflow-hidden bg-[rgba(10,15,26,0.75)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)] shadow-2xl animate-[slideUp_0.25s_ease-out]"
       style={{ borderLeft: `4px solid ${facility.color}` }}
     >
       <div className="p-4">
@@ -35,7 +35,7 @@ export default function FacilityDetail({ facility, onClose }: FacilityDetailProp
           </h3>
           <button
             onClick={onClose}
-            className="shrink-0 text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.7)] transition-colors text-lg leading-none"
+            className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.7)] hover:bg-[rgba(255,255,255,0.06)] transition-all duration-150 text-lg leading-none"
             aria-label="Close detail panel"
           >
             &times;

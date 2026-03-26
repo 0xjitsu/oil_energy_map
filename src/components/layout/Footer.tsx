@@ -1,6 +1,9 @@
 export function Footer() {
   return (
-    <footer className="border-t border-[rgba(255,255,255,0.04)] py-4 px-4 sm:px-6">
+    <footer className="border-t border-[rgba(255,255,255,0.04)] py-4 px-4 sm:px-6 relative">
+      {/* Gradient top border accent */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.08)] to-transparent" />
+
       <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
         <div className="text-center sm:text-left">
           <p className="text-[10px] font-mono text-[rgba(255,255,255,0.3)]">
@@ -11,7 +14,7 @@ export function Footer() {
           </p>
         </div>
         <p className="text-[10px] font-mono text-[rgba(255,255,255,0.2)]">
-          Built with Next.js + Leaflet
+          Built with Next.js + MapLibre
         </p>
       </div>
     </footer>

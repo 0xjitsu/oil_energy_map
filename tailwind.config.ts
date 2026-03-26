@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'slide-up': 'slideUp 0.25s ease-out',
+      },
       fontFamily: {
         mono: ["var(--font-mono)", "IBM Plex Mono", "monospace"],
         sans: ["var(--font-sans)", "IBM Plex Sans", "sans-serif"],

@@ -1,117 +1,73 @@
-'use client';
-
-import { CircleMarker, Popup, useMap } from 'react-leaflet';
-import L from 'leaflet';
-import { useEffect, useRef } from 'react';
+import { ScatterplotLayer } from '@deck.gl/layers';
 import { facilities } from '@/data/facilities';
 import type { Facility, FacilityType } from '@/types';
 
-interface FacilityLayerProps {
-  visible: boolean;
-  onSelect: (facility: Facility) => void;
+function hexToRgb(hex: string): [number, number, number] {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return [r, g, b];
 }
 
-const radiusByType: Record<FacilityType, number> = {
-  refinery: 8,
-  terminal: 6,
-  depot: 4,
+const TYPE_RADIUS: Record<FacilityType, number> = {
+  refinery: 10000,
+  terminal: 6000,
+  depot: 3500,
 };
 
-function PulsingMarker({ facility }: { facility: Facility }) {
-  const map = useMap();
-  const markerRef = useRef<L.Marker | null>(null);
-
-  useEffect(() => {
-    const icon = L.divIcon({
-      className: '',
-      html: `<div class="pulse-marker" style="
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: ${facility.color};
-        opacity: 0.5;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      "></div>`,
-      iconSize: [20, 20],
-      iconAnchor: [10, 10],
-    });
-
-    const marker = L.marker(facility.coordinates, {
-      icon,
-      interactive: false,
-    });
-    marker.addTo(map);
-    markerRef.current = marker;
-
-    return () => {
-      if (markerRef.current) {
-        markerRef.current.remove();
-      }
-    };
-  }, [map, facility.coordinates, facility.color]);
-
-  return null;
-}
-
-export default function FacilityLayer({ visible, onSelect }: FacilityLayerProps) {
-  if (!visible) return null;
-
-  return (
-    <>
-      {facilities.map((facility) => (
-        <div key={facility.id}>
-          {facility.isPrimary && <PulsingMarker facility={facility} />}
-          <CircleMarker
-            center={facility.coordinates}
-            radius={radiusByType[facility.type]}
-            pathOptions={{
-              color: facility.color,
-              fillColor: facility.color,
-              fillOpacity: 0.7,
-              weight: 1.5,
-              opacity: 0.9,
-            }}
-            eventHandlers={{
-              click: () => onSelect(facility),
-            }}
-          >
-            <Popup>
-              <div className="font-mono text-[11px] min-w-[180px]">
-                <div className="font-bold text-[rgba(255,255,255,0.9)] text-xs">
-                  {facility.name}
-                </div>
-                <div className="mt-1.5 space-y-1 text-[rgba(255,255,255,0.6)]">
-                  <div>
-                    <span className="text-[rgba(255,255,255,0.35)]">Operator:</span>{' '}
-                    {facility.operator}
-                  </div>
-                  <div>
-                    <span className="text-[rgba(255,255,255,0.35)]">Capacity:</span>{' '}
-                    {facility.capacity}
-                  </div>
-                  <div>
-                    <span className="text-[rgba(255,255,255,0.35)]">Status:</span>{' '}
-                    <span
-                      className={
-                        facility.status === 'operational'
-                          ? 'text-emerald-400'
-                          : facility.status === 'upgraded'
-                            ? 'text-yellow-400'
-                            : 'text-red-400'
-                      }
-                    >
-                      {facility.status.toUpperCase()}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Popup>
-          </CircleMarker>
-        </div>
-      ))}
-    </>
-  );
+export function createFacilityLayer(
+  visible: boolean,
+  onSelect: (facility: Facility) => void,
+  hoveredId: string | null,
+  setHoveredId: (id: string | null) => void,
+) {
+  return new ScatterplotLayer<Facility>({
+    id: 'facilities',
+    data: facilities,
+    visible,
+    pickable: true,
+    filled: true,
+    stroked: true,
+    getPosition: (d: Facility) => [d.coordinates[1], d.coordinates[0]],
+    getRadius: (d: Facility) => {
+      const base = TYPE_RADIUS[d.type] ?? 3500;
+      if (d.isPrimary) return base * 1.4;
+      if (d.id === hoveredId) return base * 1.2;
+      return base;
+    },
+    getFillColor: (d: Facility) => {
+      const rgb = hexToRgb(d.color);
+      const alpha =
+        d.id === hoveredId ? 255 : d.status === 'closed' ? 80 : 200;
+      return [...rgb, alpha] as [number, number, number, number];
+    },
+    getLineColor: (d: Facility) => {
+      const rgb = hexToRgb(d.color);
+      return [...rgb, d.isPrimary ? 255 : 100] as [
+        number,
+        number,
+        number,
+        number,
+      ];
+    },
+    getLineWidth: (d: Facility) => (d.isPrimary ? 3 : 1),
+    lineWidthUnits: 'pixels' as const,
+    radiusUnits: 'meters' as const,
+    radiusMinPixels: 4,
+    radiusMaxPixels: 30,
+    onClick: ({ object }: { object?: Facility }) => {
+      if (object) onSelect(object);
+    },
+    onHover: ({ object }: { object?: Facility }) => {
+      setHoveredId(object ? object.id : null);
+    },
+    transitions: {
+      getRadius: 300,
+      getFillColor: 300,
+    },
+    updateTriggers: {
+      getFillColor: hoveredId,
+      getRadius: hoveredId,
+    },
+  });
 }

@@ -7,7 +7,7 @@ export function ImpactCards() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {IMPACT_ITEMS.map((item) => (
           <Tooltip key={item.label} text={item.tooltip}>
-            <div className="rounded-xl border border-[rgba(255,255,255,0.04)] bg-[#0a0f1a] p-4 cursor-default">
+            <div className="glass-card card-interactive p-4 cursor-default border-l-2 border-l-red-500/40">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-lg" role="img" aria-label={item.label}>
                   {item.icon}
