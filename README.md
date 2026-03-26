@@ -64,13 +64,13 @@ The event timeline aggregates intelligence from 5 source types, each color-coded
 | **AI/NLP** | HuggingFace sentiment analysis, NER pipelines | Orange | Automated signal detection across 120+ energy feeds |
 | **Market** | Bloomberg Terminal, Singapore Exchange | Yellow | Refining margins, benchmark prices, forex |
 
-### HuggingFace Integration (Roadmap)
+### HuggingFace Integration
 
-The dashboard is architected to consume HuggingFace Inference API for:
+The `/api/sentiment` route calls HuggingFace Inference API for real-time headline analysis:
 
-- **Sentiment analysis** — classify global oil news tone (positive/negative/neutral) using trending text-classification models
-- **Named Entity Recognition** — detect supply disruption mentions, facility names, trade route references across energy feeds
-- **Zero-shot classification** — categorize unstructured social media posts into risk categories
+- **Sentiment analysis** — classifies oil news tone using `distilbert-base-uncased-finetuned-sst-2-english` (positive/negative with confidence scores)
+- **Named Entity Recognition** — detect supply disruption mentions, facility names, trade route references across energy feeds (roadmap)
+- **Zero-shot classification** — categorize unstructured social media posts into risk categories (roadmap)
 
 > HuggingFace models referenced: [text-classification](https://huggingface.co/models?pipeline_tag=text-classification&sort=trending) | [token-classification](https://huggingface.co/models?pipeline_tag=token-classification&sort=trending) | [zero-shot](https://huggingface.co/models?pipeline_tag=zero-shot-classification&sort=trending)
 
@@ -84,12 +84,50 @@ The dashboard is architected to consume HuggingFace Inference API for:
 
 ## Architecture
 
+### Agent-First Data Engine
+
+The dashboard uses an **agent-first, human-second** architecture inspired by [Karpathy's autoresearch](https://github.com/karpathy/autoresearch). The system fetches, analyzes, and presents data autonomously — humans curate and validate.
+
+```
+┌─────────────────────────────────────────────────────┐
+│                  Vercel Cron (4h)                    │
+│                    /api/cron                         │
+├──────────┬──────────────┬───────────────────────────┤
+│          │              │                           │
+▼          ▼              ▼                           │
+/api/events    /api/prices    /api/sentiment          │
+RSS feeds      Variance       HuggingFace NLP         │
+(PhilStar,     engine on      (distilbert SST-2)      │
+Al Jazeera,    static base                            │
+Google News)   prices                                 │
+│          │              │                           │
+└──────────┴──────┬───────┘                           │
+                  ▼                                   │
+           useEvents() / usePrices()                  │
+           (static fallback on failure)               │
+                  ▼                                   │
+           ┌──────────────────┐                       │
+           │   Dashboard UI   │ ← LIVE/STATIC badge   │
+           │  Ticker, Events, │                       │
+           │  Prices, Alerts  │                       │
+           └──────────────────┘                       │
+```
+
+**Key principle**: Every data consumer tries the API first, falls back to static data. The dashboard never breaks — worst case shows stale data with an amber "STATIC" badge.
+
+### Project Structure
+
 ```
 src/
-├── app/                    # Next.js App Router
+├── app/
 │   ├── page.tsx           # Single-page dashboard (dynamic imports)
 │   ├── layout.tsx         # Root layout (IBM Plex fonts, preconnect)
-│   └── globals.css        # Glass morphism, animations, dark theme
+│   ├── globals.css        # Glass morphism, animations, dark theme
+│   └── api/               # Agent data engine
+│       ├── events/        # RSS aggregation (PhilStar, Al Jazeera, Google News)
+│       ├── prices/        # Price variance engine
+│       ├── sentiment/     # HuggingFace NLP (text classification)
+│       └── cron/          # 4-hourly orchestrator (Vercel Cron)
 ├── components/
 │   ├── map/               # MapLibre GL + deck.gl (WebGL)
 │   │   ├── IntelMap.tsx   # Map component with DeckGL overlay
@@ -101,22 +139,23 @@ src/
 │   ├── scenarios/         # Scenario planner + risk matrix
 │   ├── players/           # Market share + player cards
 │   ├── health/            # System vitals + event timeline (filterable)
-│   ├── layout/            # Header, footer, alert banner
-│   └── ui/                # Scroll progress, fade sections
-├── data/                  # Static data (facilities, routes, prices, events)
-├── hooks/                 # useAnimatedNumber, useScrollProgress
+│   ├── layout/            # Header (LIVE badge), footer, alert banner, ticker
+│   └── ui/                # Scroll progress, fade sections, Bloomberg ticker
+├── data/                  # Static fallback data (facilities, routes, prices, events)
+├── hooks/                 # useEvents, usePrices, useAnimatedNumber
 ├── types/                 # TypeScript types (SourceType, Severity, etc.)
 └── lib/                   # Scenario engine, constants
 ```
 
 ### Design Principles
 
-- **Static-first** — all data hardcoded, pages fully static (190kB first-load JS)
+- **Agent-first** — autonomous data pipeline fetches, analyzes, and presents data on a 4-hour cycle
+- **Graceful degradation** — every component falls back to static data on API failure (192kB first-load JS)
 - **Multi-channel intelligence** — events sourced from news, government, social, AI/NLP, and market feeds
 - **WebGL rendering** — MapLibre GL vector tiles + deck.gl layers for 60fps map interaction
 - **Glass morphism** — `backdrop-blur` + translucent borders + subtle gradients
 - **Dark terminal aesthetic** — IBM Plex Mono headings, dark backgrounds, accent-coded data
-- **Performance-optimized** — dynamic imports, CSS containment, preconnect hints
+- **Bloomberg-style ticker** — interleaved prices + breaking headlines in a continuous scroll
 - **Layer architecture** — deck.gl layers are modular; add API data sources without touching the map
 
 ### Performance
@@ -133,7 +172,10 @@ src/
 | Phase | Scope | Status |
 |-------|-------|--------|
 | **PH Deep Dive** | Philippine refineries, depots, shipping routes, domestic prices | ✅ Live |
-| **Live Data Feeds** | HuggingFace NLP, X API, Reddit API, DOE scraper | 🔜 Next |
+| **Agent Data Engine** | RSS aggregation, HuggingFace NLP sentiment, Vercel Cron (4h), LIVE/STATIC badge | ✅ Live |
+| **Bloomberg Ticker** | Interleaved prices + breaking headlines in continuous scroll | ✅ Live |
+| **Social Intelligence** | X API, Reddit API, Facebook sentiment feeds | 🔜 Next |
+| **Real Price Feeds** | Live crude/forex APIs replacing variance engine | 🔜 Next |
 | **ASEAN Expansion** | Singapore refining hub, Malaysia, Indonesia, Thailand | 📋 Planned |
 | **Asia Network** | Middle East supply routes, China demand, India refining | 📋 Planned |
 | **Global Trade Map** | Full chokepoint monitoring, geopolitical risk overlay | 📋 Planned |
@@ -172,11 +214,14 @@ npx vercel --prod
 
 ### Environment
 
-No environment variables required for the static dashboard. For live data feeds (roadmap):
+The dashboard works without env vars (static fallback). For the agent data engine:
 
 ```bash
-# .env.local (optional, for future API integrations)
-HUGGINGFACE_API_TOKEN=hf_...    # HuggingFace Inference API
+# .env.local
+HUGGINGFACE_API_TOKEN=hf_...    # HuggingFace Inference API (required for /api/sentiment)
+CRON_SECRET=...                  # Vercel Cron auth (required for /api/cron)
+
+# Roadmap
 TWITTER_BEARER_TOKEN=...         # X API v2
 REDDIT_CLIENT_ID=...             # Reddit API
 REDDIT_CLIENT_SECRET=...         # Reddit API
