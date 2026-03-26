@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { timelineEvents } from '@/data/events';
+import { useEvents } from '@/hooks/useEvents';
 import { Severity, SourceType } from '@/types';
 import { ExternalLink } from 'lucide-react';
 
@@ -29,6 +29,7 @@ const FILTERS: { key: Filter; label: string }[] = [
 ];
 
 export function EventTimeline() {
+  const { events: timelineEvents } = useEvents();
   const [filter, setFilter] = useState<Filter>('all');
 
   const filtered = filter === 'all'

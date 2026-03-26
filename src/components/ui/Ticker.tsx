@@ -1,7 +1,7 @@
 'use client';
 
-import { priceBenchmarks } from '@/data/prices';
-import { timelineEvents } from '@/data/events';
+import { usePrices } from '@/hooks/usePrices';
+import { useEvents } from '@/hooks/useEvents';
 import { Severity } from '@/types';
 
 const SEVERITY_DOT: Record<Severity, string> = {
@@ -15,6 +15,9 @@ type TickerItem =
   | { kind: 'headline'; text: string; severity: Severity; source: string; sourceUrl: string };
 
 export function Ticker() {
+  const { prices: priceBenchmarks } = usePrices();
+  const { events: timelineEvents } = useEvents();
+
   const priceItems: TickerItem[] = priceBenchmarks.map((b) => {
     const change = b.value - b.previousWeek;
     const pct = ((change / b.previousWeek) * 100).toFixed(1);

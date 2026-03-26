@@ -1,6 +1,6 @@
 'use client';
 
-import { priceBenchmarks } from '@/data/prices';
+import { usePrices } from '@/hooks/usePrices';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 
 function PriceCard({ label, value, change }: { label: string; value: number; change: number }) {
@@ -25,6 +25,7 @@ function PriceCard({ label, value, change }: { label: string; value: number; cha
 }
 
 export function PumpPrices() {
+  const { prices: priceBenchmarks } = usePrices();
   const gasoline = priceBenchmarks.find((b) => b.id === 'pump-gasoline');
   const diesel = priceBenchmarks.find((b) => b.id === 'pump-diesel');
 
