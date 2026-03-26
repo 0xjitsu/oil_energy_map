@@ -7,6 +7,15 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'red',
     source: 'Reuters',
     sourceUrl: 'https://www.reuters.com/business/energy/',
+    sourceType: 'news',
+  },
+  {
+    date: 'Mar 25, 2026',
+    event: 'HuggingFace sentiment model flags 92% negative tone in global oil news — highest since 2022 invasion',
+    severity: 'red',
+    source: 'HuggingFace',
+    sourceUrl: 'https://huggingface.co/models?pipeline_tag=text-classification&sort=trending',
+    sourceType: 'ai',
   },
   {
     date: 'Mar 24, 2026',
@@ -14,6 +23,15 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'red',
     source: 'DOE Philippines',
     sourceUrl: 'https://www.doe.gov.ph/',
+    sourceType: 'government',
+  },
+  {
+    date: 'Mar 24, 2026',
+    event: 'r/Philippines megathread on fuel hikes hits 2.4k comments — #OilPriceHike trending',
+    severity: 'yellow',
+    source: 'Reddit',
+    sourceUrl: 'https://www.reddit.com/r/Philippines/',
+    sourceType: 'social',
   },
   {
     date: 'Mar 23, 2026',
@@ -21,6 +39,7 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'green',
     source: 'BusinessWorld',
     sourceUrl: 'https://www.bworldonline.com/corporate/',
+    sourceType: 'news',
   },
   {
     date: 'Mar 22, 2026',
@@ -28,6 +47,15 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'yellow',
     source: 'Inquirer',
     sourceUrl: 'https://business.inquirer.net/category/economy',
+    sourceType: 'news',
+  },
+  {
+    date: 'Mar 21, 2026',
+    event: '#OilCrisis trending on X/Twitter PH — 48k posts in 24 hours, mostly jeepney driver concerns',
+    severity: 'yellow',
+    source: 'X (Twitter)',
+    sourceUrl: 'https://x.com/search?q=%23OilCrisis%20Philippines',
+    sourceType: 'social',
   },
   {
     date: 'Mar 20, 2026',
@@ -35,6 +63,15 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'yellow',
     source: 'Bloomberg',
     sourceUrl: 'https://www.bloomberg.com/energy',
+    sourceType: 'market',
+  },
+  {
+    date: 'Mar 19, 2026',
+    event: 'HuggingFace NER pipeline detects 3x surge in "supply disruption" mentions across 120 energy feeds',
+    severity: 'yellow',
+    source: 'HuggingFace',
+    sourceUrl: 'https://huggingface.co/models?pipeline_tag=token-classification&sort=trending',
+    sourceType: 'ai',
   },
   {
     date: 'Mar 18, 2026',
@@ -42,6 +79,15 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'yellow',
     source: 'BSP',
     sourceUrl: 'https://www.bsp.gov.ph/',
+    sourceType: 'government',
+  },
+  {
+    date: 'Mar 16, 2026',
+    event: 'Facebook PH energy groups report panic buying at Metro Manila gas stations',
+    severity: 'yellow',
+    source: 'Facebook',
+    sourceUrl: 'https://www.facebook.com/groups/',
+    sourceType: 'social',
   },
   {
     date: 'Mar 15, 2026',
@@ -49,6 +95,7 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'red',
     source: 'Al Jazeera',
     sourceUrl: 'https://www.aljazeera.com/tag/strait-of-hormuz/',
+    sourceType: 'news',
   },
   {
     date: 'Mar 12, 2026',
@@ -56,5 +103,6 @@ export const timelineEvents: TimelineEvent[] = [
     severity: 'green',
     source: 'PhilStar',
     sourceUrl: 'https://www.philstar.com/business',
+    sourceType: 'news',
   },
 ];

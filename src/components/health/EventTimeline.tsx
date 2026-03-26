@@ -2,13 +2,21 @@
 
 import { useState } from 'react';
 import { timelineEvents } from '@/data/events';
-import { Severity } from '@/types';
+import { Severity, SourceType } from '@/types';
 import { ExternalLink } from 'lucide-react';
 
 const SEVERITY_COLORS: Record<Severity, string> = {
   red: 'bg-[#ef4444] shadow-[0_0_8px_rgba(239,68,68,0.5)]',
   yellow: 'bg-[#eab308] shadow-[0_0_8px_rgba(234,179,8,0.4)]',
   green: 'bg-[#10b981] shadow-[0_0_8px_rgba(16,185,129,0.4)]',
+};
+
+const SOURCE_TYPE_STYLES: Record<SourceType, string> = {
+  news: 'text-blue-400/70',
+  government: 'text-emerald-400/70',
+  social: 'text-purple-400/70',
+  ai: 'text-orange-400/70',
+  market: 'text-yellow-400/70',
 };
 
 type Filter = 'all' | Severity;
@@ -72,15 +80,20 @@ export function EventTimeline() {
                 <p className="text-xs font-sans text-[rgba(255,255,255,0.65)] leading-relaxed mt-0.5">
                   {entry.event}
                 </p>
-                <a
-                  href={entry.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 mt-1 text-[10px] font-mono text-[rgba(59,130,246,0.6)] hover:text-[rgba(59,130,246,0.9)] transition-colors"
-                >
-                  {entry.source}
-                  <ExternalLink className="w-2.5 h-2.5" />
-                </a>
+                <div className="flex items-center gap-2 mt-1">
+                  <a
+                    href={entry.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-1 text-[10px] font-mono hover:brightness-125 transition-all ${SOURCE_TYPE_STYLES[entry.sourceType]}`}
+                  >
+                    {entry.source}
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                  <span className="text-[9px] font-mono uppercase tracking-wider text-[rgba(255,255,255,0.15)]">
+                    {entry.sourceType}
+                  </span>
+                </div>
               </div>
             </div>
           ))}

@@ -47,12 +47,15 @@ export interface MarketPlayer {
   color: string;
 }
 
+export type SourceType = 'news' | 'government' | 'social' | 'ai' | 'market';
+
 export interface TimelineEvent {
   date: string;
   event: string;
   severity: Severity;
   source: string;
   sourceUrl: string;
+  sourceType: SourceType;
 }
 
 export interface ScenarioParams {
