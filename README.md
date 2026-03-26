@@ -9,10 +9,11 @@
 [![MapLibre GL](https://img.shields.io/badge/MapLibre_GL-WebGL-396CB2?style=flat-square)](https://maplibre.org)
 [![deck.gl](https://img.shields.io/badge/deck.gl-9.2-E25A1C?style=flat-square)](https://deck.gl)
 [![HuggingFace](https://img.shields.io/badge/HuggingFace-NLP-FFD21E?style=flat-square&logo=huggingface)](https://huggingface.co)
+[![Live Demo](https://img.shields.io/badge/Live-energy--intelligence--map.vercel.app-00C853?style=flat-square&logo=vercel)](https://energy-intelligence-map.vercel.app)
 [![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-000?style=flat-square&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/0xjitsu/oil_energy_map)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-[Quick Start](#quick-start) | [Features](#features) | [Intelligence Sources](#intelligence-sources) | [Architecture](#architecture) | [Deploy](#deploy)
+[Live Demo](https://energy-intelligence-map.vercel.app) | [Quick Start](#quick-start) | [Features](#features) | [Intelligence Sources](#intelligence-sources) | [Architecture](#architecture) | [Deploy](#deploy)
 
 </div>
 
@@ -208,6 +209,6 @@ Commercial licensing available — contact [@0xjitsu](https://github.com/0xjitsu
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/0xjitsu/oil_energy_map)
 
-[Quick Start](#quick-start) | [Report a Bug](https://github.com/0xjitsu/oil_energy_map/issues) | [Request a Feature](https://github.com/0xjitsu/oil_energy_map/issues)
+[Live Demo](https://energy-intelligence-map.vercel.app) | [Quick Start](#quick-start) | [Report a Bug](https://github.com/0xjitsu/oil_energy_map/issues) | [Request a Feature](https://github.com/0xjitsu/oil_energy_map/issues)
 
 </div>

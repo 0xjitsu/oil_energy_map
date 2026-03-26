@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Phoenix Petroleum: Bird/flame motif -->
+  <circle cx="12" cy="12" r="11" fill="#1a1a2e" stroke="#f97316" stroke-width="1"/>
+  <path d="M12 4C8 8 6 12 8 16c1 2 3 3 4 4 1-1 3-2 4-4 2-4 0-8-4-12z" fill="#f97316"/>
+  <path d="M12 8c-2 3-2 5-1 7 .5 1 1.5 1.5 1 2 .5-.5 1.5-1 1-2 1-2 1-4-1-7z" fill="#fbbf24"/>
+</svg>

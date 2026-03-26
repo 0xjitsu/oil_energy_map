@@ -24,9 +24,18 @@ export function PlayerCards() {
             className="glass-card card-interactive p-4"
             style={{ borderLeftColor: player.color, borderLeftWidth: 3 }}
           >
-            <h4 className="text-sm font-sans font-semibold text-[rgba(255,255,255,0.9)] mb-2">
-              {player.name}
-            </h4>
+            <div className="flex items-center gap-2 mb-2">
+              <img
+                src={player.logo}
+                alt={`${player.name} logo`}
+                width={24}
+                height={24}
+                className="rounded"
+              />
+              <h4 className="text-sm font-sans font-semibold text-[rgba(255,255,255,0.9)]">
+                {player.name}
+              </h4>
+            </div>
             <div className="space-y-1.5 text-[11px]">
               <div className="flex justify-between">
                 <span className="text-[rgba(255,255,255,0.4)] font-sans">Market Share</span>

@@ -45,6 +45,7 @@ export interface MarketPlayer {
   strategy: string;
   vulnerabilityScore: number;
   color: string;
+  logo: string;
 }
 
 export type SourceType = 'news' | 'government' | 'social' | 'ai' | 'market';
