@@ -8,6 +8,7 @@ export const marketPlayers: MarketPlayer[] = [
     strategy: 'Refine + Import',
     vulnerabilityScore: 85,
     color: '#3b82f6',
+    logo: '/logos/petron.svg',
   },
   {
     name: 'Shell',
@@ -16,6 +17,7 @@ export const marketPlayers: MarketPlayer[] = [
     strategy: 'Import Only',
     vulnerabilityScore: 70,
     color: '#facc15',
+    logo: '/logos/shell.svg',
   },
   {
     name: 'Chevron/Caltex',
@@ -24,6 +26,7 @@ export const marketPlayers: MarketPlayer[] = [
     strategy: 'Import Only',
     vulnerabilityScore: 55,
     color: '#ef4444',
+    logo: '/logos/chevron.svg',
   },
   {
     name: 'Phoenix',
@@ -32,6 +35,7 @@ export const marketPlayers: MarketPlayer[] = [
     strategy: 'Import Only',
     vulnerabilityScore: 75,
     color: '#f97316',
+    logo: '/logos/phoenix.svg',
   },
   {
     name: 'SeaOil',
@@ -40,6 +44,7 @@ export const marketPlayers: MarketPlayer[] = [
     strategy: 'Import Only',
     vulnerabilityScore: 65,
     color: '#8b5cf6',
+    logo: '/logos/seaoil.svg',
   },
   {
     name: 'Others',
@@ -48,5 +53,6 @@ export const marketPlayers: MarketPlayer[] = [
     strategy: 'Import Only',
     vulnerabilityScore: 60,
     color: '#475569',
+    logo: '/logos/others.svg',
   },
 ];

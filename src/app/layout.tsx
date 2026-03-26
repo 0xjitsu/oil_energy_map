@@ -20,10 +20,17 @@ export const metadata: Metadata = {
   title: "PH Oil Intelligence — Supply Chain Dashboard",
   description:
     "Real-time intelligence dashboard for Philippine oil supply chain. Track crude prices, refinery status, shipping routes, and geopolitical risk factors affecting fuel costs.",
+  metadataBase: new URL("https://energy-intelligence-map.vercel.app"),
   openGraph: {
     title: "PH Oil Intelligence",
-    description: "Philippine Oil Supply Chain Intelligence Dashboard",
+    description: "Philippine Oil Supply Chain Intelligence Dashboard — WebGL mapping, multi-channel event feeds, scenario planning",
     type: "website",
+    url: "https://energy-intelligence-map.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PH Oil Intelligence",
+    description: "Real-time Philippine oil supply chain intelligence dashboard",
   },
 };
 

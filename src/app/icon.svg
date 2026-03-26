@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark background circle -->
+  <rect width="32" height="32" rx="8" fill="#060a10"/>
+  <!-- Oil drop shape -->
+  <path d="M16 4C16 4 10 12 10 18a6 6 0 0012 0C22 12 16 4 16 4z" fill="#3b82f6" opacity="0.9"/>
+  <!-- Radar/signal rings -->
+  <circle cx="16" cy="17" r="3" stroke="#ef4444" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <circle cx="16" cy="17" r="6" stroke="#ef4444" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <circle cx="16" cy="17" r="9" stroke="#ef4444" stroke-width="0.5" fill="none" opacity="0.2"/>
+  <!-- Center dot -->
+  <circle cx="16" cy="17" r="1.5" fill="#ffffff"/>
+</svg>

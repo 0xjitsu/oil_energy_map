@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Shell: Iconic pecten/scallop shell shape -->
+  <path d="M12 2C12 2 4 8 4 14c0 4.4 3.6 8 8 8s8-3.6 8-8C20 8 12 2 12 2z" fill="#facc15"/>
+  <path d="M12 4v16M8 7l4 13M16 7l-4 13M6 11l12 5M6 16l12-5" stroke="#dd1d21" stroke-width="0.7" opacity="0.6"/>
+</svg>
