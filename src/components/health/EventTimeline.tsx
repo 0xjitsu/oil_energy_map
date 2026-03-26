@@ -1,5 +1,9 @@
+'use client';
+
+import { useState } from 'react';
 import { timelineEvents } from '@/data/events';
 import { Severity } from '@/types';
+import { ExternalLink } from 'lucide-react';
 
 const SEVERITY_COLORS: Record<Severity, string> = {
   red: 'bg-[#ef4444] shadow-[0_0_8px_rgba(239,68,68,0.5)]',
@@ -7,18 +11,51 @@ const SEVERITY_COLORS: Record<Severity, string> = {
   green: 'bg-[#10b981] shadow-[0_0_8px_rgba(16,185,129,0.4)]',
 };
 
+type Filter = 'all' | Severity;
+
+const FILTERS: { key: Filter; label: string }[] = [
+  { key: 'all', label: 'All' },
+  { key: 'red', label: 'Critical' },
+  { key: 'yellow', label: 'Watch' },
+  { key: 'green', label: 'Positive' },
+];
+
 export function EventTimeline() {
+  const [filter, setFilter] = useState<Filter>('all');
+
+  const filtered = filter === 'all'
+    ? timelineEvents
+    : timelineEvents.filter(e => e.severity === filter);
+
   return (
     <div className="glass-card p-5">
-      <h3 className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-4 font-sans">
+      <h3 className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-3 font-sans">
         Event Timeline
       </h3>
+
+      {/* Filter tabs */}
+      <div className="flex gap-1 mb-4">
+        {FILTERS.map(f => (
+          <button
+            key={f.key}
+            onClick={() => setFilter(f.key)}
+            className={`px-2.5 py-1 text-[10px] font-mono rounded-md transition-all ${
+              filter === f.key
+                ? 'bg-[rgba(255,255,255,0.08)] text-[rgba(255,255,255,0.9)]'
+                : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.5)] hover:bg-[rgba(255,255,255,0.03)]'
+            }`}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
       <div className="relative">
         {/* Connecting line with gradient */}
         <div className="absolute left-[4.5px] top-1 bottom-1 w-px bg-gradient-to-b from-red-500/40 via-yellow-500/20 to-emerald-500/10" />
 
-        <div className="space-y-4">
-          {timelineEvents.map((entry, idx) => (
+        <div className="space-y-3">
+          {filtered.map((entry, idx) => (
             <div key={idx} className="relative flex gap-3 pl-0">
               {/* Severity dot with glow */}
               <div className="relative z-10 mt-0.5 shrink-0">
@@ -35,6 +72,15 @@ export function EventTimeline() {
                 <p className="text-xs font-sans text-[rgba(255,255,255,0.65)] leading-relaxed mt-0.5">
                   {entry.event}
                 </p>
+                <a
+                  href={entry.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 mt-1 text-[10px] font-mono text-[rgba(59,130,246,0.6)] hover:text-[rgba(59,130,246,0.9)] transition-colors"
+                >
+                  {entry.source}
+                  <ExternalLink className="w-2.5 h-2.5" />
+                </a>
               </div>
             </div>
           ))}

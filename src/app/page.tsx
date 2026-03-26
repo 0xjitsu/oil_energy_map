@@ -1,16 +1,18 @@
+import dynamic from "next/dynamic";
 import { AlertBanner } from "@/components/layout/AlertBanner";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import MapWrapper from "@/components/map/MapWrapper";
-import { PricePanel } from "@/components/prices/PricePanel";
 import { PumpPrices } from "@/components/prices/PumpPrices";
 import { ImpactCards } from "@/components/prices/ImpactCards";
-import { ScenarioPlanner } from "@/components/scenarios/ScenarioPlanner";
-import { MarketShare } from "@/components/players/MarketShare";
-import { PlayerCards } from "@/components/players/PlayerCards";
 import { VitalSigns } from "@/components/health/VitalSigns";
 import { EventTimeline } from "@/components/health/EventTimeline";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
+
+const PricePanel = dynamic(() => import("@/components/prices/PricePanel").then(m => m.PricePanel), { ssr: false });
+const ScenarioPlanner = dynamic(() => import("@/components/scenarios/ScenarioPlanner").then(m => m.ScenarioPlanner), { ssr: false });
+const MarketShare = dynamic(() => import("@/components/players/MarketShare").then(m => m.MarketShare), { ssr: false });
+const PlayerCards = dynamic(() => import("@/components/players/PlayerCards").then(m => m.PlayerCards), { ssr: false });
 
 export default function Home() {
   return (

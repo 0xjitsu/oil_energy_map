@@ -10,7 +10,7 @@ const STATUS_STYLES: Record<RiskLevel, { badge: string; label: string; pulse: bo
 
 export function VitalSigns() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+    <div className="grid grid-cols-2 gap-3">
       {VITAL_SIGNS.map((sign) => {
         const style = STATUS_STYLES[sign.status];
         return (

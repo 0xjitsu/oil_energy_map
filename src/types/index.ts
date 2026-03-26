@@ -51,6 +51,8 @@ export interface TimelineEvent {
   date: string;
   event: string;
   severity: Severity;
+  source: string;
+  sourceUrl: string;
 }
 
 export interface ScenarioParams {

@@ -34,6 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${plexMono.variable} ${plexSans.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://basemaps.cartocdn.com" />
+      </head>
       <body className="font-sans antialiased bg-[var(--bg-primary)] text-[var(--text-primary)]">
         {children}
       </body>
