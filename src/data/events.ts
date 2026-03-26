@@ -2,6 +2,46 @@ import { TimelineEvent } from '@/types';
 
 export const timelineEvents: TimelineEvent[] = [
   {
+    date: 'Mar 27, 2026',
+    event: 'Dubai crude breaches $168/bbl — 5th consecutive day at record highs as Hormuz disruption deepens',
+    severity: 'red',
+    source: 'Reuters',
+    sourceUrl: 'https://www.reuters.com/business/energy/',
+    sourceType: 'news',
+  },
+  {
+    date: 'Mar 27, 2026',
+    event: 'HuggingFace zero-shot classifier flags "imminent shortage" signal across 120 energy feeds — confidence 94%',
+    severity: 'red',
+    source: 'HuggingFace',
+    sourceUrl: 'https://huggingface.co/models?pipeline_tag=zero-shot-classification&sort=trending',
+    sourceType: 'ai',
+  },
+  {
+    date: 'Mar 26, 2026',
+    event: 'DOE activates 72-hour strategic petroleum reserve protocol — first activation since 2019',
+    severity: 'red',
+    source: 'DOE Philippines',
+    sourceUrl: 'https://www.doe.gov.ph/',
+    sourceType: 'government',
+  },
+  {
+    date: 'Mar 26, 2026',
+    event: '#TulongJeepney trending on X — jeepney drivers announce 3-day strike over ₱6/L fuel hike',
+    severity: 'yellow',
+    source: 'X (Twitter)',
+    sourceUrl: 'https://x.com/search?q=%23TulongJeepney',
+    sourceType: 'social',
+  },
+  {
+    date: 'Mar 26, 2026',
+    event: 'Brent-Dubai spread widens to $60/bbl — widest in a decade, signals severe Asia supply premium',
+    severity: 'yellow',
+    source: 'Bloomberg',
+    sourceUrl: 'https://www.bloomberg.com/energy',
+    sourceType: 'market',
+  },
+  {
     date: 'Mar 25, 2026',
     event: 'Dubai crude holds above $166/bbl — 4th consecutive day at record highs',
     severity: 'red',
