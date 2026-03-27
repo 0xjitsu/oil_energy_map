@@ -11,7 +11,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/1662345554",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-2031862354",
@@ -25,7 +26,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2031862354",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-2295354813",
@@ -39,7 +41,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2295354813",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-2296664677",
@@ -53,7 +56,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2296664677",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-2374750744",
@@ -67,7 +71,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2374750744",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-2422513826",
@@ -81,7 +86,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2422513826",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-2552619019",
@@ -95,7 +101,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2552619019",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "phoenix-2826281341",
@@ -109,7 +116,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2826281341",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-2974117361",
@@ -123,7 +131,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2974117361",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-3055033020",
@@ -137,7 +146,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3055033020",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-3389179132",
@@ -155,7 +165,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3389179132",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-3437329213",
@@ -169,7 +180,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3437329213",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-4001704666",
@@ -183,7 +195,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4001704666",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-4102214234",
@@ -197,7 +210,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4102214234",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-4134689993",
@@ -211,7 +225,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4134689993",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-4273659489",
@@ -225,7 +240,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4273659489",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-4447295489",
@@ -239,7 +255,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4447295489",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-4451721540",
@@ -253,7 +270,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4451721540",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-4567931193",
@@ -267,7 +285,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4567931193",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-4567944596",
@@ -281,7 +300,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4567944596",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-4568242416",
@@ -295,7 +315,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4568242416",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-4849065121",
@@ -309,7 +330,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4849065121",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-4885063790",
@@ -323,7 +345,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4885063790",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-4992438721",
@@ -337,7 +360,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4992438721",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-5738924623",
@@ -351,7 +375,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/5738924623",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-6386862289",
@@ -365,7 +390,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6386862289",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "phoenix-7855836937",
@@ -379,7 +405,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/7855836937",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-8113619119",
@@ -393,7 +420,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/8113619119",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-8253384973",
@@ -407,7 +435,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/8253384973",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-8300067132",
@@ -421,7 +450,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/8300067132",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "phoenix-8320378305",
@@ -435,7 +465,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/8320378305",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-8518713836",
@@ -449,7 +480,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/8518713836",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-9008901111",
@@ -463,7 +495,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/9008901111",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-9990989858",
@@ -477,7 +510,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/9990989858",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-10278111513",
@@ -491,7 +525,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/10278111513",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "phoenix-11005384415",
@@ -505,7 +540,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11005384415",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-11036641805",
@@ -519,7 +555,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11036641805",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-11061918205",
@@ -533,7 +570,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11061918205",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-11258865637",
@@ -547,7 +585,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11258865637",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "phoenix-11345748669",
@@ -561,7 +600,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11345748669",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-12189505256",
@@ -575,7 +615,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12189505256",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-12217326949",
@@ -589,7 +630,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12217326949",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "phoenix-12253935374",
@@ -603,7 +645,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12253935374",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-12463241601",
@@ -617,7 +660,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12463241601",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-12534001338",
@@ -631,7 +675,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12534001338",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-12794314238",
@@ -645,7 +690,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12794314238",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "phoenix-12839665594",
@@ -659,7 +705,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12839665594",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "phoenix-13165129384",
@@ -673,7 +720,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13165129384",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-37125717",
@@ -687,7 +735,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/37125717",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-82869514",
@@ -701,7 +750,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/82869514",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-82890595",
@@ -715,7 +765,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/82890595",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-97888140",
@@ -729,7 +780,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/97888140",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-118167277",
@@ -743,7 +795,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/118167277",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-131940911",
@@ -757,7 +810,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/131940911",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-139537205",
@@ -771,7 +825,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/139537205",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-144958542",
@@ -785,7 +840,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/144958542",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-144959640",
@@ -799,7 +855,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/144959640",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-144960516",
@@ -813,7 +870,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/144960516",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-145076687",
@@ -827,7 +885,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/145076687",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-145405188",
@@ -841,7 +900,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/145405188",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-151708980",
@@ -855,7 +915,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/151708980",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-157832205",
@@ -869,7 +930,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/157832205",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-159269018",
@@ -888,7 +950,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/159269018",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-159546326",
@@ -902,7 +965,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/159546326",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-160912789",
@@ -916,7 +980,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/160912789",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-165741041",
@@ -930,7 +995,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/165741041",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-169332662",
@@ -944,7 +1010,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/169332662",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-172632888",
@@ -958,7 +1025,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/172632888",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-177615883",
@@ -972,7 +1040,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/177615883",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-178426057",
@@ -986,7 +1055,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/178426057",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-180826172",
@@ -1000,7 +1070,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/180826172",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-181601046",
@@ -1014,7 +1085,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/181601046",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-183803305",
@@ -1033,7 +1105,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/183803305",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-185940140",
@@ -1047,7 +1120,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/185940140",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-192456549",
@@ -1061,7 +1135,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/192456549",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-192916238",
@@ -1075,7 +1150,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/192916238",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-198873420",
@@ -1089,7 +1165,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/198873420",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-228830008",
@@ -1103,7 +1180,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/228830008",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-229489130",
@@ -1117,7 +1195,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/229489130",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-235252113",
@@ -1131,7 +1210,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/235252113",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-236421340",
@@ -1145,7 +1225,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/236421340",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-239060561",
@@ -1159,7 +1240,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/239060561",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-239923660",
@@ -1173,7 +1255,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/239923660",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-241570306",
@@ -1190,7 +1273,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/241570306",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-248447670",
@@ -1204,7 +1288,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/248447670",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-253156484",
@@ -1222,7 +1307,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/253156484",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-265564186",
@@ -1241,7 +1327,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/265564186",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-266493618",
@@ -1255,7 +1342,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/266493618",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-271142005",
@@ -1265,11 +1353,12 @@
       14.455807,
       121.039113
     ],
-    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "address": "Dr. A. Santos Avenue, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/271142005",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-274420865",
@@ -1283,7 +1372,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/274420865",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-274426166",
@@ -1297,7 +1387,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/274426166",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-274426191",
@@ -1311,7 +1402,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/274426191",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-274893675",
@@ -1325,7 +1417,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/274893675",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-275383586",
@@ -1339,7 +1432,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/275383586",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-275497307",
@@ -1353,7 +1447,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/275497307",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-283047081",
@@ -1372,7 +1467,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/283047081",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-287672281",
@@ -1386,7 +1482,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/287672281",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-287822885",
@@ -1400,7 +1497,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/287822885",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-288171344",
@@ -1414,7 +1512,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/288171344",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-289705251",
@@ -1428,7 +1527,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/289705251",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-289838242",
@@ -1447,7 +1547,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/289838242",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-291194341",
@@ -1461,7 +1562,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/291194341",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "phoenix-292257952",
@@ -1475,7 +1577,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/292257952",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-302983430",
@@ -1489,7 +1592,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/302983430",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-302984769",
@@ -1508,7 +1612,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/302984769",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-313347786",
@@ -1522,7 +1627,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313347786",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-313356714",
@@ -1536,7 +1642,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313356714",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "phoenix-313504973",
@@ -1550,7 +1657,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313504973",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314213200",
@@ -1564,7 +1672,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314213200",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314213547",
@@ -1578,7 +1687,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314213547",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314213976",
@@ -1592,7 +1702,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314213976",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314214780",
@@ -1606,7 +1717,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314214780",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314216868",
@@ -1620,7 +1732,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314216868",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314216945",
@@ -1634,7 +1747,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314216945",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314221633",
@@ -1648,7 +1762,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314221633",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314530796",
@@ -1662,7 +1777,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314530796",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-314666489",
@@ -1676,7 +1792,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314666489",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-314670682",
@@ -1690,7 +1807,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314670682",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-314670709",
@@ -1704,7 +1822,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314670709",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-314670887",
@@ -1718,7 +1837,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314670887",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-314672611",
@@ -1732,7 +1852,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314672611",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-315220707",
@@ -1751,7 +1872,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/315220707",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-315567324",
@@ -1765,7 +1887,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/315567324",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-316549585",
@@ -1782,7 +1905,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/316549585",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-322580636",
@@ -1796,7 +1920,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/322580636",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-322580637",
@@ -1810,7 +1935,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/322580637",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-330890613",
@@ -1824,7 +1950,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/330890613",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-354489425",
@@ -1838,7 +1965,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/354489425",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-354760571",
@@ -1852,7 +1980,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/354760571",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-361370423",
@@ -1866,7 +1995,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/361370423",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-379498889",
@@ -1880,7 +2010,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/379498889",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-388462272",
@@ -1899,7 +2030,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/388462272",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-392146821",
@@ -1918,7 +2050,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/392146821",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-405587138",
@@ -1932,7 +2065,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/405587138",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-416959817",
@@ -1949,7 +2083,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/416959817",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-419381805",
@@ -1968,7 +2103,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/419381805",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-420678104",
@@ -1982,7 +2118,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/420678104",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-421941530",
@@ -1996,7 +2133,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/421941530",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-431787913",
@@ -2010,7 +2148,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/431787913",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-436381567",
@@ -2024,7 +2163,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/436381567",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-436726117",
@@ -2038,7 +2178,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/436726117",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-451814573",
@@ -2052,7 +2193,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/451814573",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-457050167",
@@ -2066,7 +2208,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/457050167",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-458409674",
@@ -2080,7 +2223,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/458409674",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-458980552",
@@ -2094,7 +2238,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/458980552",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-461117645",
@@ -2108,7 +2253,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/461117645",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-462485704",
@@ -2122,7 +2268,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/462485704",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-466837556",
@@ -2141,7 +2288,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/466837556",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-468174289",
@@ -2155,7 +2303,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/468174289",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-468611913",
@@ -2169,7 +2318,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/468611913",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-469686762",
@@ -2183,7 +2333,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/469686762",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-471711048",
@@ -2197,7 +2348,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/471711048",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-477396988",
@@ -2211,7 +2363,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/477396988",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-491248386",
@@ -2230,7 +2383,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/491248386",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "phoenix-501025964",
@@ -2244,7 +2398,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/501025964",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-513115894",
@@ -2258,7 +2413,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/513115894",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-514285131",
@@ -2272,7 +2428,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/514285131",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-519067543",
@@ -2291,7 +2448,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/519067543",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-529820654",
@@ -2305,7 +2463,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/529820654",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-531852693",
@@ -2319,7 +2478,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/531852693",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-538652492",
@@ -2333,7 +2493,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/538652492",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-551563715",
@@ -2352,7 +2513,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/551563715",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-560679510",
@@ -2371,7 +2533,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/560679510",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-569170584",
@@ -2385,7 +2548,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/569170584",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-569197133",
@@ -2399,7 +2563,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/569197133",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-569663960",
@@ -2413,7 +2578,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/569663960",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-570818877",
@@ -2423,7 +2589,7 @@
       14.306983,
       120.952914
     ],
-    "address": "Emilio Aguinaldo Highway, Dasmari\u00f1as",
+    "address": "Emilio Aguinaldo Highway, Dasmariñas",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -2432,7 +2598,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/570818877",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-573766855",
@@ -2446,7 +2613,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/573766855",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-576411122",
@@ -2460,7 +2628,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/576411122",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-577659376",
@@ -2478,7 +2647,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/577659376",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-589806759",
@@ -2492,7 +2662,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/589806759",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-591926457",
@@ -2511,7 +2682,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/591926457",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-592648803",
@@ -2525,7 +2697,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/592648803",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-601793457",
@@ -2539,7 +2712,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/601793457",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-603780618",
@@ -2553,7 +2727,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/603780618",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-608254315",
@@ -2567,7 +2742,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/608254315",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-609498994",
@@ -2581,7 +2757,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/609498994",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-616842299",
@@ -2595,7 +2772,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/616842299",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-619599349",
@@ -2612,7 +2790,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/619599349",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-620879263",
@@ -2626,7 +2805,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/620879263",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-624762994",
@@ -2640,7 +2820,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/624762994",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-625597374",
@@ -2654,7 +2835,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/625597374",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-640781090",
@@ -2668,7 +2850,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/640781090",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-652749942",
@@ -2682,7 +2865,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/652749942",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-653305250",
@@ -2692,11 +2876,12 @@
       14.462678,
       120.989578
     ],
-    "address": "Naga Road, Las Pi\u00f1as",
+    "address": "Naga Road, Las Piñas",
     "source": {
       "url": "https://www.openstreetmap.org/way/653305250",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-671185753",
@@ -2710,7 +2895,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/671185753",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-685035597",
@@ -2724,7 +2910,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/685035597",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-695817897",
@@ -2738,7 +2925,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/695817897",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-716744473",
@@ -2757,7 +2945,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/716744473",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-719069398",
@@ -2771,7 +2960,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/719069398",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-742475343",
@@ -2785,7 +2975,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/742475343",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-742675882",
@@ -2799,7 +2990,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/742675882",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-758384851",
@@ -2818,7 +3010,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/758384851",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-772595231",
@@ -2832,7 +3025,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/772595231",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-772804902",
@@ -2850,7 +3044,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/772804902",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-774902599",
@@ -2860,11 +3055,12 @@
       14.491824,
       120.991455
     ],
-    "address": "Ninoy Aquino Avenue, Para\u00f1aque",
+    "address": "Ninoy Aquino Avenue, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/774902599",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-785330513",
@@ -2878,7 +3074,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/785330513",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-786085308",
@@ -2892,7 +3089,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/786085308",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-793883221",
@@ -2909,7 +3107,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/793883221",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-794644148",
@@ -2926,7 +3125,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794644148",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-795186375",
@@ -2940,7 +3140,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/795186375",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-798049264",
@@ -2954,7 +3155,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/798049264",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-803227425",
@@ -2968,7 +3170,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/803227425",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-805208658",
@@ -2986,7 +3189,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/805208658",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-807002503",
@@ -3000,7 +3204,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/807002503",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-808996104",
@@ -3014,7 +3219,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/808996104",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-810652891",
@@ -3028,7 +3234,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/810652891",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-812386979",
@@ -3042,7 +3249,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/812386979",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-814071621",
@@ -3056,7 +3264,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/814071621",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-814864593",
@@ -3070,7 +3279,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/814864593",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-815168950",
@@ -3084,7 +3294,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/815168950",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-822262081",
@@ -3098,7 +3309,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/822262081",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-827099026",
@@ -3112,7 +3324,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/827099026",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-834148247",
@@ -3126,7 +3339,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/834148247",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-837790309",
@@ -3140,7 +3354,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/837790309",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-840457462",
@@ -3154,7 +3369,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/840457462",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-840792175",
@@ -3168,7 +3384,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/840792175",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-845223138",
@@ -3182,7 +3399,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/845223138",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-845878335",
@@ -3196,7 +3414,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/845878335",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-845891027",
@@ -3210,7 +3429,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/845891027",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-848751316",
@@ -3224,7 +3444,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/848751316",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-849062869",
@@ -3238,7 +3459,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/849062869",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-850723387",
@@ -3252,7 +3474,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/850723387",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-853119073",
@@ -3266,7 +3489,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/853119073",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-855300944",
@@ -3284,7 +3508,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/855300944",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-856219273",
@@ -3298,7 +3523,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/856219273",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-856661881",
@@ -3312,7 +3538,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/856661881",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "phoenix-859744101",
@@ -3326,7 +3553,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/859744101",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-862370333",
@@ -3340,7 +3568,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/862370333",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-872869958",
@@ -3354,7 +3583,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/872869958",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-876484379",
@@ -3364,11 +3594,12 @@
       14.481557,
       120.996083
     ],
-    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "address": "Dr. A. Santos Avenue, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/876484379",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-880843207",
@@ -3382,7 +3613,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/880843207",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-880862728",
@@ -3396,7 +3628,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/880862728",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-884002269",
@@ -3414,7 +3647,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/884002269",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-885601953",
@@ -3428,7 +3662,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/885601953",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-886936768",
@@ -3442,7 +3677,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/886936768",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-893202757",
@@ -3461,7 +3697,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/893202757",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-898204218",
@@ -3475,7 +3712,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/898204218",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-898219122",
@@ -3489,7 +3727,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/898219122",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-902950128",
@@ -3503,7 +3742,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/902950128",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-903420320",
@@ -3522,7 +3762,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/903420320",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-904589323",
@@ -3536,7 +3777,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/904589323",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-904593521",
@@ -3550,7 +3792,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/904593521",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-905663496",
@@ -3564,7 +3807,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/905663496",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-906403006",
@@ -3578,7 +3822,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/906403006",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-908093862",
@@ -3597,7 +3842,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/908093862",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-911508164",
@@ -3611,7 +3857,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/911508164",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-913701621",
@@ -3625,7 +3872,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/913701621",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-921553430",
@@ -3639,7 +3887,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/921553430",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-921761874",
@@ -3653,7 +3902,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/921761874",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-922789448",
@@ -3667,7 +3917,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/922789448",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-923222321",
@@ -3681,7 +3932,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/923222321",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-925388681",
@@ -3695,7 +3947,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/925388681",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-928354359",
@@ -3709,7 +3962,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/928354359",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-934498200",
@@ -3723,7 +3977,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/934498200",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-934632455",
@@ -3737,7 +3992,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/934632455",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-939615513",
@@ -3751,7 +4007,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/939615513",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-940950137",
@@ -3765,7 +4022,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/940950137",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-942160148",
@@ -3779,7 +4037,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/942160148",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-942945025",
@@ -3793,7 +4052,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/942945025",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-952050714",
@@ -3807,7 +4067,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/952050714",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-954994914",
@@ -3821,7 +4082,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/954994914",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-955581200",
@@ -3838,7 +4100,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/955581200",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-956332196",
@@ -3852,7 +4115,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/956332196",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-960979128",
@@ -3866,7 +4130,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/960979128",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-961222369",
@@ -3880,7 +4145,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/961222369",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-963788258",
@@ -3894,7 +4160,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/963788258",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-963788263",
@@ -3908,7 +4175,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/963788263",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-964100992",
@@ -3922,7 +4190,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/964100992",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-964215657",
@@ -3936,7 +4205,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/964215657",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-965348073",
@@ -3950,7 +4220,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/965348073",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-965523994",
@@ -3964,7 +4235,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/965523994",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-969451068",
@@ -3978,7 +4250,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/969451068",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-969825715",
@@ -3992,7 +4265,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/969825715",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-970963149",
@@ -4006,7 +4280,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/970963149",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-972128829",
@@ -4020,7 +4295,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/972128829",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-973515978",
@@ -4034,7 +4310,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/973515978",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-974390630",
@@ -4048,7 +4325,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/974390630",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-975562725",
@@ -4067,7 +4345,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/975562725",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-975859590",
@@ -4081,7 +4360,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/975859590",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-976076198",
@@ -4095,7 +4375,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/976076198",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-976722939",
@@ -4109,7 +4390,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/976722939",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-977012862",
@@ -4123,7 +4405,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/977012862",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-978260672",
@@ -4142,7 +4425,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/978260672",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-982447811",
@@ -4156,7 +4440,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/982447811",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "phoenix-982860147",
@@ -4170,7 +4455,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/982860147",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-985412117",
@@ -4184,7 +4470,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/985412117",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-985630949",
@@ -4198,7 +4485,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/985630949",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-987412658",
@@ -4212,7 +4500,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/987412658",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-993045370",
@@ -4231,7 +4520,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/993045370",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-993479282",
@@ -4245,7 +4535,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/993479282",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-994015769",
@@ -4259,7 +4550,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/994015769",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1001157023",
@@ -4273,7 +4565,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1001157023",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1005361197",
@@ -4287,7 +4580,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1005361197",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1005612537",
@@ -4301,7 +4595,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1005612537",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1012499756",
@@ -4315,7 +4610,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1012499756",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1013833062",
@@ -4325,11 +4621,12 @@
       14.426855,
       121.002401
     ],
-    "address": "Marcos Alvarez Avenue, Las Pi\u00f1as",
+    "address": "Marcos Alvarez Avenue, Las Piñas",
     "source": {
       "url": "https://www.openstreetmap.org/way/1013833062",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1023099992",
@@ -4343,7 +4640,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1023099992",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1023147061",
@@ -4362,7 +4660,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1023147061",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1023280593",
@@ -4376,7 +4675,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1023280593",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1023462615",
@@ -4390,7 +4690,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1023462615",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1027242467",
@@ -4404,7 +4705,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1027242467",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-1028594657",
@@ -4423,7 +4725,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1028594657",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1038584813",
@@ -4437,7 +4740,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1038584813",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1038642071",
@@ -4451,7 +4755,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1038642071",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1038675257",
@@ -4465,7 +4770,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1038675257",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1039255600",
@@ -4479,7 +4785,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1039255600",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-1044619029",
@@ -4493,7 +4800,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1044619029",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1051178880",
@@ -4507,7 +4815,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1051178880",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1052183983",
@@ -4521,7 +4830,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1052183983",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1052940490",
@@ -4535,7 +4845,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1052940490",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1052961317",
@@ -4545,11 +4856,12 @@
       8.469399,
       124.703122
     ],
-    "address": "Butuan \u2013 Cagayan de Oro \u2013 Iligan Road",
+    "address": "Butuan – Cagayan de Oro – Iligan Road",
     "source": {
       "url": "https://www.openstreetmap.org/way/1052961317",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1053191015",
@@ -4559,11 +4871,12 @@
       8.475384,
       124.715394
     ],
-    "address": "Butuan \u2013 Cagayan de Oro \u2013 Iligan Road",
+    "address": "Butuan – Cagayan de Oro – Iligan Road",
     "source": {
       "url": "https://www.openstreetmap.org/way/1053191015",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1054319770",
@@ -4577,7 +4890,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1054319770",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1054609065",
@@ -4587,11 +4901,12 @@
       8.572993,
       124.770764
     ],
-    "address": "Butuan \u2013 Cagayan de Oro \u2013 Iligan Road",
+    "address": "Butuan – Cagayan de Oro – Iligan Road",
     "source": {
       "url": "https://www.openstreetmap.org/way/1054609065",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1054978361",
@@ -4605,7 +4920,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1054978361",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "phoenix-1055254906",
@@ -4619,7 +4935,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1055254906",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-1055866758",
@@ -4633,7 +4950,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1055866758",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-1058061842",
@@ -4647,7 +4965,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1058061842",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-1063371965",
@@ -4661,7 +4980,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1063371965",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1066429538",
@@ -4675,7 +4995,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1066429538",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1070707073",
@@ -4689,7 +5010,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1070707073",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-1071700783",
@@ -4703,7 +5025,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1071700783",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1074696531",
@@ -4717,7 +5040,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1074696531",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1079809975",
@@ -4731,7 +5055,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1079809975",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1082510610",
@@ -4745,7 +5070,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1082510610",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1083847242",
@@ -4759,7 +5085,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1083847242",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-1087740998",
@@ -4773,7 +5100,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1087740998",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-1092448803",
@@ -4787,7 +5115,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1092448803",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1102665251",
@@ -4797,11 +5126,12 @@
       14.490646,
       121.01738
     ],
-    "address": "Do\u00f1a Soledad Avenue, Para\u00f1aque",
+    "address": "Doña Soledad Avenue, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/1102665251",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1104412316",
@@ -4815,7 +5145,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1104412316",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-1105329309",
@@ -4825,11 +5156,12 @@
       10.696751,
       122.541921
     ],
-    "address": "Avance\u00f1a Street, Iloilo",
+    "address": "Avanceña Street, Iloilo",
     "source": {
       "url": "https://www.openstreetmap.org/way/1105329309",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-1105384834",
@@ -4843,7 +5175,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1105384834",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1110899433",
@@ -4857,7 +5190,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1110899433",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1111595113",
@@ -4871,7 +5205,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1111595113",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1112164470",
@@ -4885,7 +5220,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1112164470",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1115700734",
@@ -4899,7 +5235,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1115700734",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-1118205969",
@@ -4913,7 +5250,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1118205969",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1126166172",
@@ -4927,7 +5265,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1126166172",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1126808781",
@@ -4941,7 +5280,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1126808781",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1127954877",
@@ -4955,7 +5295,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1127954877",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1131829023",
@@ -4969,7 +5310,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1131829023",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1132353438",
@@ -4983,7 +5325,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1132353438",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1137466974",
@@ -4997,7 +5340,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1137466974",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1148135220",
@@ -5011,7 +5355,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1148135220",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1149465910",
@@ -5025,7 +5370,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1149465910",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1150844866",
@@ -5039,7 +5385,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1150844866",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-1158076759",
@@ -5053,7 +5400,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1158076759",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1158257175",
@@ -5067,7 +5415,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1158257175",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1162253682",
@@ -5081,7 +5430,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1162253682",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1164236868",
@@ -5095,7 +5445,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1164236868",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1165430998",
@@ -5109,7 +5460,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1165430998",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1186119850",
@@ -5123,7 +5475,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1186119850",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "phoenix-1186175287",
@@ -5137,7 +5490,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1186175287",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1191591216",
@@ -5147,7 +5501,7 @@
       14.35022,
       120.962956
     ],
-    "address": "Jose Abad Santos Avenue, Dasmari\u00f1as",
+    "address": "Jose Abad Santos Avenue, Dasmariñas",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -5156,7 +5510,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1191591216",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1191742949",
@@ -5170,7 +5525,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1191742949",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1202333678",
@@ -5184,7 +5540,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1202333678",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-1205567399",
@@ -5198,7 +5555,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1205567399",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1207334800",
@@ -5212,7 +5570,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1207334800",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1217485374",
@@ -5226,7 +5585,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1217485374",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-1226577513",
@@ -5240,7 +5600,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1226577513",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1240077425",
@@ -5254,7 +5615,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1240077425",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1241857527",
@@ -5268,7 +5630,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1241857527",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1243256447",
@@ -5278,7 +5641,7 @@
       14.498622,
       120.99764
     ],
-    "address": "Multinational Avenue, Para\u00f1aque",
+    "address": "Multinational Avenue, Parañaque",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -5287,7 +5650,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1243256447",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1253912813",
@@ -5301,7 +5665,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1253912813",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-1271734817",
@@ -5315,7 +5680,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1271734817",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1280164394",
@@ -5329,7 +5695,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1280164394",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "phoenix-1281277596",
@@ -5343,7 +5710,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1281277596",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1295625717",
@@ -5357,7 +5725,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1295625717",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-1313482815",
@@ -5371,7 +5740,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1313482815",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-1314402940",
@@ -5385,7 +5755,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1314402940",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1315642989",
@@ -5399,7 +5770,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1315642989",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1317007267",
@@ -5413,7 +5785,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1317007267",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1320225241",
@@ -5423,11 +5796,12 @@
       14.963559,
       120.896991
     ],
-    "address": "Do\u00f1a Remedios Trinidad Highway, Baliwag",
+    "address": "Doña Remedios Trinidad Highway, Baliwag",
     "source": {
       "url": "https://www.openstreetmap.org/way/1320225241",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1322059948",
@@ -5441,7 +5815,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1322059948",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1323783916",
@@ -5455,7 +5830,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1323783916",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "phoenix-1331578428",
@@ -5469,7 +5845,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1331578428",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-1331578433",
@@ -5483,7 +5860,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1331578433",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "phoenix-1333275132",
@@ -5497,7 +5875,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1333275132",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1337840544",
@@ -5511,7 +5890,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1337840544",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1341747382",
@@ -5525,7 +5905,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1341747382",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-1343918580",
@@ -5539,7 +5920,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1343918580",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-1360919117",
@@ -5553,7 +5935,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1360919117",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "phoenix-1364686267",
@@ -5567,7 +5950,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1364686267",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1365139700",
@@ -5581,7 +5965,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1365139700",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "phoenix-1368498424",
@@ -5595,7 +5980,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1368498424",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1369414093",
@@ -5609,7 +5995,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1369414093",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1369652160",
@@ -5623,7 +6010,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1369652160",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "phoenix-1373559946",
@@ -5637,7 +6025,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1373559946",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "phoenix-1376426487",
@@ -5651,7 +6040,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1376426487",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-1388956670",
@@ -5665,7 +6055,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1388956670",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1391984914",
@@ -5675,11 +6066,12 @@
       11.678031,
       122.363082
     ],
-    "address": "Osme\u00f1a Avenue",
+    "address": "Osmeña Avenue",
     "source": {
       "url": "https://www.openstreetmap.org/way/1391984914",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "phoenix-1395188405",
@@ -5693,7 +6085,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1395188405",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "phoenix-1416470292",
@@ -5707,7 +6100,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1416470292",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1416679374",
@@ -5721,7 +6115,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1416679374",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1416681381",
@@ -5735,7 +6130,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1416681381",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1422347342",
@@ -5749,7 +6145,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1422347342",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1422949028",
@@ -5763,7 +6160,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1422949028",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1434426811",
@@ -5781,7 +6179,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1434426811",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1434772871",
@@ -5795,7 +6194,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1434772871",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-1442194557",
@@ -5809,7 +6209,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1442194557",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1443170647",
@@ -5823,7 +6224,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1443170647",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "phoenix-1449269183",
@@ -5837,7 +6239,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1449269183",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1452315778",
@@ -5851,7 +6254,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1452315778",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "phoenix-1453375011",
@@ -5865,7 +6269,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1453375011",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1453461079",
@@ -5879,7 +6284,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1453461079",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "phoenix-1459318139",
@@ -5893,7 +6299,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1459318139",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "phoenix-1475070285",
@@ -5912,7 +6319,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1475070285",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1475085039",
@@ -5926,7 +6334,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1475085039",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "phoenix-1489994859",
@@ -5940,6 +6349,7 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1489994859",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   }
 ]

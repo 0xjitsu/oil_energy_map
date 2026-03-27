@@ -16,7 +16,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/255066656",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-393731810",
@@ -35,7 +36,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/393731810",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1114428119",
@@ -49,7 +51,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/1114428119",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1321393922",
@@ -63,7 +66,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/1321393922",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1375482296",
@@ -82,7 +86,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/1375482296",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-1384023822",
@@ -101,7 +106,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/1384023822",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1489274043",
@@ -120,7 +126,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/1489274043",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-1818653399",
@@ -139,7 +146,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/1818653399",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-2031315161",
@@ -158,7 +166,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2031315161",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-2361521126",
@@ -177,7 +186,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2361521126",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-2447742290",
@@ -196,7 +206,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2447742290",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-2514819335",
@@ -215,7 +226,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2514819335",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-2803823315",
@@ -234,7 +246,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2803823315",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "seaoil-3014249223",
@@ -248,7 +261,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3014249223",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-3050386727",
@@ -267,7 +281,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3050386727",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-3051286318",
@@ -286,7 +301,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3051286318",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-3055268915",
@@ -305,7 +321,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3055268915",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-3057189087",
@@ -324,7 +341,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3057189087",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-3266538320",
@@ -343,7 +361,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3266538320",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-3383878763",
@@ -362,7 +381,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3383878763",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-3420928293",
@@ -381,7 +401,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3420928293",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-3698776720",
@@ -400,7 +421,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/3698776720",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-4033993103",
@@ -419,7 +441,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4033993103",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-4077717492",
@@ -438,7 +461,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4077717492",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-4130679394",
@@ -457,7 +481,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4130679394",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-4134701890",
@@ -476,7 +501,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4134701890",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-4141988589",
@@ -495,7 +521,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4141988589",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-4265752891",
@@ -514,7 +541,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4265752891",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-4418982208",
@@ -533,7 +561,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4418982208",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-4636588591",
@@ -552,7 +581,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4636588591",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-4890811022",
@@ -571,7 +601,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/4890811022",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-5474546087",
@@ -590,7 +621,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/5474546087",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "seaoil-5982420660",
@@ -609,7 +641,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/5982420660",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-6005635589",
@@ -628,7 +661,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6005635589",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-6089835879",
@@ -647,7 +681,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6089835879",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-6285237551",
@@ -666,7 +701,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6285237551",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-6377419081",
@@ -685,7 +721,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6377419081",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-6440006703",
@@ -704,7 +741,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6440006703",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-6783088267",
@@ -723,7 +761,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6783088267",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-6834179606",
@@ -742,7 +781,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/6834179606",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-7065011186",
@@ -761,7 +801,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/7065011186",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-7609216779",
@@ -780,7 +821,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/7609216779",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-8286085418",
@@ -799,7 +841,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/8286085418",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-9097587158",
@@ -818,7 +861,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/9097587158",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-9567353317",
@@ -837,7 +881,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/9567353317",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-10074110217",
@@ -851,7 +896,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/10074110217",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-10303874409",
@@ -865,7 +911,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/10303874409",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-10718657002",
@@ -879,7 +926,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/10718657002",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-11049107206",
@@ -893,7 +941,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11049107206",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-11066968705",
@@ -907,7 +956,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11066968705",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-11178047660",
@@ -921,7 +971,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11178047660",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "seaoil-11180405537",
@@ -935,7 +986,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11180405537",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-11180687537",
@@ -949,7 +1001,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11180687537",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-11182415538",
@@ -963,7 +1016,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11182415538",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-11184627737",
@@ -977,7 +1031,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11184627737",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-11266737810",
@@ -991,7 +1046,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11266737810",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-11374480869",
@@ -1005,7 +1061,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11374480869",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-11690374169",
@@ -1019,7 +1076,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11690374169",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-11794888469",
@@ -1033,7 +1091,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11794888469",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-11804145070",
@@ -1047,7 +1106,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11804145070",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-11804270670",
@@ -1061,7 +1121,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11804270670",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-11954675691",
@@ -1075,7 +1136,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11954675691",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-11997685782",
@@ -1089,7 +1151,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11997685782",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-12046817407",
@@ -1108,7 +1171,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12046817407",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-12054382396",
@@ -1122,7 +1186,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12054382396",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12082337569",
@@ -1136,7 +1201,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12082337569",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-12084454869",
@@ -1150,7 +1216,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12084454869",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-12086558569",
@@ -1164,7 +1231,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12086558569",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-12091307869",
@@ -1178,7 +1246,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12091307869",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12101710027",
@@ -1192,7 +1261,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12101710027",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-12101851630",
@@ -1206,7 +1276,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12101851630",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-12116268001",
@@ -1220,7 +1291,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12116268001",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-12123992801",
@@ -1234,7 +1306,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12123992801",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-12137596844",
@@ -1244,11 +1317,12 @@
       18.228009,
       120.598593
     ],
-    "address": "Rodolfo G. Fari\u00f1as Bypass Road, Bacarra",
+    "address": "Rodolfo G. Fariñas Bypass Road, Bacarra",
     "source": {
       "url": "https://www.openstreetmap.org/node/12137596844",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "seaoil-12155552562",
@@ -1262,7 +1336,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12155552562",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-12169189463",
@@ -1276,7 +1351,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12169189463",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-12195885779",
@@ -1290,7 +1366,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12195885779",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-12195890226",
@@ -1304,7 +1381,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12195890226",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-12198041904",
@@ -1318,7 +1396,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12198041904",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-12217326971",
@@ -1332,7 +1411,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12217326971",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-12218255967",
@@ -1351,7 +1431,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12218255967",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-12221996214",
@@ -1365,7 +1446,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12221996214",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-12243171569",
@@ -1379,7 +1461,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12243171569",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-12292174658",
@@ -1393,7 +1476,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12292174658",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12343655602",
@@ -1407,7 +1491,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12343655602",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-12383751101",
@@ -1421,7 +1506,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12383751101",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12383759702",
@@ -1435,7 +1521,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12383759702",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12395493402",
@@ -1449,7 +1536,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12395493402",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-12454416436",
@@ -1463,7 +1551,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12454416436",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-12483079201",
@@ -1477,7 +1566,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12483079201",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12483896801",
@@ -1491,7 +1581,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12483896801",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12556107153",
@@ -1505,7 +1596,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12556107153",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-12597712901",
@@ -1519,7 +1611,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12597712901",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12627914801",
@@ -1533,7 +1626,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12627914801",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12688662501",
@@ -1547,7 +1641,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12688662501",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12765515102",
@@ -1561,7 +1656,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12765515102",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-12872240601",
@@ -1575,7 +1671,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12872240601",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-12909323022",
@@ -1589,7 +1686,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12909323022",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-12982218302",
@@ -1603,7 +1701,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12982218302",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-13110175876",
@@ -1622,7 +1721,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13110175876",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-13164279716",
@@ -1636,7 +1736,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13164279716",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-13202043921",
@@ -1650,7 +1751,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13202043921",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-13231949227",
@@ -1664,7 +1766,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13231949227",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-13282336770",
@@ -1678,7 +1781,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13282336770",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-13287498556",
@@ -1692,7 +1796,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13287498556",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-13323227100",
@@ -1706,7 +1811,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13323227100",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-13427680094",
@@ -1720,7 +1826,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13427680094",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-13511257989",
@@ -1734,7 +1841,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13511257989",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-13585155202",
@@ -1748,7 +1856,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13585155202",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-13601959001",
@@ -1762,7 +1871,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13601959001",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-13601975702",
@@ -1776,7 +1886,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13601975702",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-82899364",
@@ -1795,7 +1906,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/82899364",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-115466946",
@@ -1814,7 +1926,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/115466946",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-129296297",
@@ -1833,7 +1946,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/129296297",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-155588342",
@@ -1852,7 +1966,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/155588342",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-157082260",
@@ -1871,7 +1986,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/157082260",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-158044652",
@@ -1890,7 +2006,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/158044652",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-159645821",
@@ -1909,7 +2026,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/159645821",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-170833974",
@@ -1928,7 +2046,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/170833974",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-175831906",
@@ -1947,7 +2066,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/175831906",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-176589423",
@@ -1966,7 +2086,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/176589423",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-180937773",
@@ -1980,7 +2101,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/180937773",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-181602427",
@@ -1999,7 +2121,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/181602427",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-182490865",
@@ -2018,7 +2141,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/182490865",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-184171024",
@@ -2037,7 +2161,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/184171024",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-202634228",
@@ -2056,7 +2181,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/202634228",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-230277557",
@@ -2075,7 +2201,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/230277557",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-232299151",
@@ -2094,7 +2221,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/232299151",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-233003243",
@@ -2113,7 +2241,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/233003243",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "seaoil-233135830",
@@ -2132,7 +2261,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/233135830",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-235068713",
@@ -2151,7 +2281,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/235068713",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-241866896",
@@ -2170,7 +2301,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/241866896",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-245858904",
@@ -2184,7 +2316,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/245858904",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-247099355",
@@ -2203,7 +2336,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/247099355",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-249318473",
@@ -2222,7 +2356,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/249318473",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-254443856",
@@ -2232,7 +2367,7 @@
       14.41744,
       120.991485
     ],
-    "address": "Marcos Alvarez Avenue, Las Pi\u00f1as",
+    "address": "Marcos Alvarez Avenue, Las Piñas",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -2241,7 +2376,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/254443856",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-256322911",
@@ -2260,7 +2396,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/256322911",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-261633608",
@@ -2279,7 +2416,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/261633608",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-262023357",
@@ -2298,7 +2436,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/262023357",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-262967431",
@@ -2317,7 +2456,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/262967431",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-263603974",
@@ -2334,7 +2474,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/263603974",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-264504390",
@@ -2353,7 +2494,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/264504390",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-267023691",
@@ -2367,7 +2509,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/267023691",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-269475464",
@@ -2386,7 +2529,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/269475464",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-281251536",
@@ -2400,7 +2544,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/281251536",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-284175364",
@@ -2419,7 +2564,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/284175364",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-284346729",
@@ -2433,7 +2579,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/284346729",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-286014753",
@@ -2452,7 +2599,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/286014753",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-288010150",
@@ -2471,7 +2619,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/288010150",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-288279964",
@@ -2490,7 +2639,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/288279964",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-288744528",
@@ -2509,7 +2659,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/288744528",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-290472292",
@@ -2528,7 +2679,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/290472292",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-290705883",
@@ -2547,7 +2699,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/290705883",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-291617308",
@@ -2566,7 +2719,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/291617308",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-291617545",
@@ -2580,7 +2734,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/291617545",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-294168233",
@@ -2599,7 +2754,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/294168233",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-295310948",
@@ -2618,7 +2774,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/295310948",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-295946688",
@@ -2637,7 +2794,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/295946688",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-296124387",
@@ -2656,7 +2814,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/296124387",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-297520595",
@@ -2675,7 +2834,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/297520595",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-301009345",
@@ -2694,7 +2854,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/301009345",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-302430831",
@@ -2713,7 +2874,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/302430831",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-302890941",
@@ -2727,7 +2889,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/302890941",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-307248220",
@@ -2737,7 +2900,7 @@
       14.181129,
       121.227823
     ],
-    "address": "National Highway, Los Ba\u00f1os",
+    "address": "National Highway, Los Baños",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -2746,7 +2909,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/307248220",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-311349264",
@@ -2765,7 +2929,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/311349264",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-313351744",
@@ -2784,7 +2949,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313351744",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-313356787",
@@ -2803,7 +2969,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313356787",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-313358247",
@@ -2822,7 +2989,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313358247",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-313470030",
@@ -2841,7 +3009,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313470030",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-313505413",
@@ -2855,7 +3024,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313505413",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-313768699",
@@ -2869,7 +3039,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/313768699",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-314214657",
@@ -2888,7 +3059,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314214657",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-314214997",
@@ -2902,7 +3074,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314214997",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-314220021",
@@ -2916,7 +3089,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314220021",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-314530923",
@@ -2935,7 +3109,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314530923",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-314530978",
@@ -2954,7 +3129,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314530978",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-314670767",
@@ -2973,7 +3149,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314670767",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-314671038",
@@ -2992,7 +3169,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314671038",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-314671042",
@@ -3011,7 +3189,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314671042",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-314671058",
@@ -3030,7 +3209,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314671058",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-314671092",
@@ -3049,7 +3229,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/314671092",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-315574446",
@@ -3063,7 +3244,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/315574446",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-321566799",
@@ -3082,7 +3264,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/321566799",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-336306702",
@@ -3101,7 +3284,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/336306702",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-343780319",
@@ -3120,7 +3304,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/343780319",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-354433339",
@@ -3139,7 +3324,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/354433339",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-361865001",
@@ -3158,7 +3344,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/361865001",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-368290112",
@@ -3177,7 +3364,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/368290112",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-369641689",
@@ -3196,7 +3384,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/369641689",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-369671444",
@@ -3215,7 +3404,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/369671444",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-370527449",
@@ -3234,7 +3424,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/370527449",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-378586353",
@@ -3253,7 +3444,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/378586353",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-387457661",
@@ -3272,7 +3464,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/387457661",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-394105180",
@@ -3286,7 +3479,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/394105180",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-396538654",
@@ -3300,7 +3494,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/396538654",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-397035998",
@@ -3319,7 +3514,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/397035998",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-400384411",
@@ -3338,7 +3534,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/400384411",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-408505256",
@@ -3357,7 +3554,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/408505256",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-422151048",
@@ -3376,7 +3574,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/422151048",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-423074503",
@@ -3395,7 +3594,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/423074503",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-428702992",
@@ -3414,7 +3614,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/428702992",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-432732853",
@@ -3433,7 +3634,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/432732853",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-437095929",
@@ -3452,7 +3654,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/437095929",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-452621728",
@@ -3471,7 +3674,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/452621728",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-463589111",
@@ -3490,7 +3694,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/463589111",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-465029998",
@@ -3509,7 +3714,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/465029998",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-468612237",
@@ -3528,7 +3734,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/468612237",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-470177555",
@@ -3542,7 +3749,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/470177555",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-474964118",
@@ -3556,7 +3764,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/474964118",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-524242715",
@@ -3575,7 +3784,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/524242715",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-538645549",
@@ -3594,7 +3804,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/538645549",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-555865813",
@@ -3613,7 +3824,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/555865813",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-563618990",
@@ -3632,7 +3844,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/563618990",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-563995804",
@@ -3651,7 +3864,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/563995804",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "seaoil-571703351",
@@ -3670,7 +3884,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/571703351",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-587737320",
@@ -3689,7 +3904,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/587737320",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-591979368",
@@ -3708,7 +3924,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/591979368",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-596226656",
@@ -3727,7 +3944,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/596226656",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-597853748",
@@ -3746,7 +3964,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/597853748",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-598991234",
@@ -3756,7 +3975,7 @@
       14.455147,
       121.041649
     ],
-    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "address": "Dr. A. Santos Avenue, Parañaque",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -3765,7 +3984,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/598991234",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-605702422",
@@ -3784,7 +4004,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/605702422",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-606567041",
@@ -3803,7 +4024,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/606567041",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-607696142",
@@ -3822,7 +4044,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/607696142",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-608096165",
@@ -3839,7 +4062,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/608096165",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-627375275",
@@ -3858,7 +4082,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/627375275",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-630854666",
@@ -3877,7 +4102,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/630854666",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-630960913",
@@ -3891,7 +4117,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/630960913",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-640385234",
@@ -3910,7 +4137,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/640385234",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-642143335",
@@ -3929,7 +4157,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/642143335",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-646415280",
@@ -3948,7 +4177,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/646415280",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-655982331",
@@ -3967,7 +4197,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/655982331",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-663441816",
@@ -3981,7 +4212,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/663441816",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-663713393",
@@ -4000,7 +4232,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/663713393",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "seaoil-667083328",
@@ -4019,7 +4252,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/667083328",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-667738059",
@@ -4038,7 +4272,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/667738059",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-693142680",
@@ -4052,7 +4287,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/693142680",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-694310298",
@@ -4066,7 +4302,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/694310298",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-717055235",
@@ -4085,7 +4322,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/717055235",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-732875954",
@@ -4104,7 +4342,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/732875954",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-732944991",
@@ -4123,7 +4362,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/732944991",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-737545272",
@@ -4142,7 +4382,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/737545272",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-737545274",
@@ -4161,7 +4402,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/737545274",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-742365142",
@@ -4175,7 +4417,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/742365142",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-743074861",
@@ -4189,7 +4432,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/743074861",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-743102119",
@@ -4208,7 +4452,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/743102119",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-745343633",
@@ -4227,7 +4472,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/745343633",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-756166559",
@@ -4246,7 +4492,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/756166559",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-758473396",
@@ -4265,7 +4512,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/758473396",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-767738843",
@@ -4284,7 +4532,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/767738843",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-769860572",
@@ -4303,7 +4552,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/769860572",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-771591507",
@@ -4313,7 +4563,7 @@
       14.513024,
       121.054865
     ],
-    "address": "Marichu R. Ti\u00f1ga Avenue",
+    "address": "Marichu R. Tiñga Avenue",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -4322,7 +4572,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/771591507",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-776163639",
@@ -4336,7 +4587,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/776163639",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-783217256",
@@ -4350,7 +4602,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/783217256",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-783261239",
@@ -4369,7 +4622,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/783261239",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-785751546",
@@ -4388,7 +4642,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/785751546",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-787079260",
@@ -4407,7 +4662,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/787079260",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-789631030",
@@ -4426,7 +4682,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/789631030",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-791213678",
@@ -4445,7 +4702,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/791213678",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Unknown"
   },
   {
     "id": "seaoil-793883223",
@@ -4464,7 +4722,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/793883223",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-794664992",
@@ -4483,7 +4742,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794664992",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-794671955",
@@ -4502,7 +4762,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794671955",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-794734113",
@@ -4521,7 +4782,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794734113",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-794794061",
@@ -4540,7 +4802,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794794061",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-795000662",
@@ -4559,7 +4822,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/795000662",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-802855753",
@@ -4578,7 +4842,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/802855753",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-810345480",
@@ -4597,7 +4862,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/810345480",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-813796388",
@@ -4616,7 +4882,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/813796388",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-814027833",
@@ -4635,7 +4902,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/814027833",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Unknown"
   },
   {
     "id": "seaoil-814071600",
@@ -4654,7 +4922,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/814071600",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-815176383",
@@ -4673,7 +4942,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/815176383",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-816136128",
@@ -4692,7 +4962,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/816136128",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-816164041",
@@ -4702,7 +4973,7 @@
       10.885884,
       123.411427
     ],
-    "address": "A.E. Mara\u00f1on Street",
+    "address": "A.E. Marañon Street",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -4711,7 +4982,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/816164041",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-820435605",
@@ -4730,7 +5002,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/820435605",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-821650084",
@@ -4744,7 +5017,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/821650084",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-823536392",
@@ -4758,7 +5032,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/823536392",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-823915108",
@@ -4777,7 +5052,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/823915108",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-824734189",
@@ -4796,7 +5072,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/824734189",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-825237722",
@@ -4815,7 +5092,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/825237722",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-825749230",
@@ -4834,7 +5112,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/825749230",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-827099023",
@@ -4853,7 +5132,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/827099023",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-828397738",
@@ -4872,7 +5152,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/828397738",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-837565674",
@@ -4891,7 +5172,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/837565674",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-839888749",
@@ -4910,7 +5192,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/839888749",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-839997225",
@@ -4929,7 +5212,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/839997225",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-840792176",
@@ -4948,7 +5232,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/840792176",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-843431839",
@@ -4962,7 +5247,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/843431839",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "seaoil-844901021",
@@ -4981,7 +5267,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/844901021",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-845891032",
@@ -5000,7 +5287,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/845891032",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-847354777",
@@ -5019,7 +5307,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/847354777",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-847896433",
@@ -5038,7 +5327,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/847896433",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-849746717",
@@ -5057,7 +5347,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/849746717",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-850368478",
@@ -5076,7 +5367,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/850368478",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "seaoil-854090547",
@@ -5095,7 +5387,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/854090547",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-856219282",
@@ -5114,7 +5407,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/856219282",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-859504458",
@@ -5133,7 +5427,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/859504458",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-868518542",
@@ -5152,7 +5447,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/868518542",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-871567619",
@@ -5171,7 +5467,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/871567619",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-877699051",
@@ -5185,7 +5482,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/877699051",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-878941706",
@@ -5204,7 +5502,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/878941706",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-885890178",
@@ -5223,7 +5522,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/885890178",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-888441062",
@@ -5242,7 +5542,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/888441062",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-889196641",
@@ -5256,7 +5557,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/889196641",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-891747378",
@@ -5275,7 +5577,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/891747378",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-893194305",
@@ -5294,7 +5597,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/893194305",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-894159434",
@@ -5313,7 +5617,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/894159434",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-899692776",
@@ -5332,7 +5637,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/899692776",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-904347677",
@@ -5351,7 +5657,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/904347677",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-906960487",
@@ -5370,7 +5677,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/906960487",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-908343494",
@@ -5389,7 +5697,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/908343494",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-915726751",
@@ -5403,7 +5712,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/915726751",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-919707102",
@@ -5417,7 +5727,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/919707102",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-924969342",
@@ -5436,7 +5747,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/924969342",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-926878753",
@@ -5450,7 +5762,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/926878753",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-933655936",
@@ -5469,7 +5782,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/933655936",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-934491993",
@@ -5488,7 +5802,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/934491993",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-934884982",
@@ -5502,7 +5817,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/934884982",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-940612559",
@@ -5521,7 +5837,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/940612559",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-942786863",
@@ -5540,7 +5857,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/942786863",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-944177139",
@@ -5559,7 +5877,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/944177139",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-944920404",
@@ -5578,7 +5897,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/944920404",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-945703090",
@@ -5597,7 +5917,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/945703090",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-946674886",
@@ -5616,7 +5937,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/946674886",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-950263197",
@@ -5635,7 +5957,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/950263197",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "seaoil-958538463",
@@ -5654,7 +5977,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/958538463",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-958716856",
@@ -5673,7 +5997,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/958716856",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-962474306",
@@ -5687,7 +6012,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/962474306",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-962868507",
@@ -5701,7 +6027,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/962868507",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-964010764",
@@ -5715,7 +6042,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/964010764",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-965786252",
@@ -5734,7 +6062,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/965786252",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-969209079",
@@ -5753,7 +6082,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/969209079",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-969257870",
@@ -5767,7 +6097,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/969257870",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-971132378",
@@ -5781,7 +6112,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/971132378",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-974879057",
@@ -5795,7 +6127,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/974879057",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-977352253",
@@ -5814,7 +6147,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/977352253",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-979643464",
@@ -5824,7 +6158,7 @@
       16.021236,
       120.360954
     ],
-    "address": "Urdaneta\u2013Dagupan Road",
+    "address": "Urdaneta–Dagupan Road",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -5833,7 +6167,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/979643464",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-979658788",
@@ -5843,11 +6178,12 @@
       16.021479,
       120.357323
     ],
-    "address": "Urdaneta\u2013Dagupan Road",
+    "address": "Urdaneta–Dagupan Road",
     "source": {
       "url": "https://www.openstreetmap.org/way/979658788",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-979956512",
@@ -5866,7 +6202,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/979956512",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-980647991",
@@ -5885,7 +6222,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/980647991",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-980665164",
@@ -5899,7 +6237,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/980665164",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-980673686",
@@ -5918,7 +6257,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/980673686",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-983425334",
@@ -5932,7 +6272,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/983425334",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XII (SOCCSKSARGEN)"
   },
   {
     "id": "seaoil-984493133",
@@ -5951,7 +6292,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/984493133",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-985412109",
@@ -5970,7 +6312,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/985412109",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-986881394",
@@ -5989,7 +6332,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/986881394",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-987873596",
@@ -6008,7 +6352,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/987873596",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-988449199",
@@ -6027,7 +6372,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/988449199",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-993454362",
@@ -6046,7 +6392,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/993454362",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-993487401",
@@ -6065,7 +6412,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/993487401",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-995897487",
@@ -6084,7 +6432,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/995897487",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-997531314",
@@ -6103,7 +6452,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/997531314",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-997683034",
@@ -6117,7 +6467,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/997683034",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-998174363",
@@ -6136,7 +6487,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/998174363",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-998191445",
@@ -6155,7 +6507,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/998191445",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-999891504",
@@ -6169,7 +6522,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/999891504",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1005775586",
@@ -6188,7 +6542,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1005775586",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-1009008700",
@@ -6207,7 +6562,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1009008700",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1010293710",
@@ -6226,7 +6582,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1010293710",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1010879853",
@@ -6245,7 +6602,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1010879853",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1011943797",
@@ -6264,7 +6622,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1011943797",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-1012316396",
@@ -6283,7 +6642,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1012316396",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-1013337533",
@@ -6302,7 +6662,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1013337533",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1022511726",
@@ -6321,7 +6682,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1022511726",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1023359567",
@@ -6340,7 +6702,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1023359567",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1029655347",
@@ -6359,7 +6722,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1029655347",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1030722375",
@@ -6378,7 +6742,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1030722375",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1034652369",
@@ -6397,7 +6762,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1034652369",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-1035891488",
@@ -6416,7 +6782,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1035891488",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1040996724",
@@ -6435,7 +6802,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1040996724",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1046992146",
@@ -6454,7 +6822,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1046992146",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1050302662",
@@ -6473,7 +6842,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1050302662",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1051402336",
@@ -6492,7 +6862,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1051402336",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1051959777",
@@ -6511,7 +6882,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1051959777",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1052357307",
@@ -6530,7 +6902,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1052357307",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1052607942",
@@ -6540,11 +6913,12 @@
       11.238676,
       124.986503
     ],
-    "address": "President Sergio Osme\u00f1a Avenue, Tacloban",
+    "address": "President Sergio Osmeña Avenue, Tacloban",
     "source": {
       "url": "https://www.openstreetmap.org/way/1052607942",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-1053191414",
@@ -6563,7 +6937,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1053191414",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1056132321",
@@ -6582,7 +6957,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1056132321",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1057133996",
@@ -6601,7 +6977,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1057133996",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1058223966",
@@ -6620,7 +6997,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1058223966",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-1059725513",
@@ -6634,7 +7012,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1059725513",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1059749236",
@@ -6653,7 +7032,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1059749236",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1065586951",
@@ -6672,7 +7052,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1065586951",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1066216991",
@@ -6691,7 +7072,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1066216991",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1067451633",
@@ -6710,7 +7092,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1067451633",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1067679116",
@@ -6729,7 +7112,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1067679116",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1068080244",
@@ -6748,7 +7132,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1068080244",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-1069304114",
@@ -6767,7 +7152,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1069304114",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1069319493",
@@ -6786,7 +7172,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1069319493",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1080059904",
@@ -6805,7 +7192,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1080059904",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1082119797",
@@ -6824,7 +7212,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1082119797",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1086043263",
@@ -6843,7 +7232,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1086043263",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1087050480",
@@ -6862,7 +7252,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1087050480",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1090254626",
@@ -6881,7 +7272,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1090254626",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1092324627",
@@ -6900,7 +7292,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1092324627",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1092753255",
@@ -6919,7 +7312,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1092753255",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1094946228",
@@ -6933,7 +7327,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1094946228",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-1109714620",
@@ -6947,7 +7342,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1109714620",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1110900030",
@@ -6961,7 +7357,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1110900030",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1121558247",
@@ -6975,7 +7372,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1121558247",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1125128925",
@@ -6989,7 +7387,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1125128925",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-1131857866",
@@ -7008,7 +7407,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1131857866",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1132390653",
@@ -7022,7 +7422,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1132390653",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1134937982",
@@ -7036,7 +7437,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1134937982",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1137962474",
@@ -7055,7 +7457,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1137962474",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1144582449",
@@ -7069,7 +7472,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1144582449",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XIII (Caraga)"
   },
   {
     "id": "seaoil-1153622618",
@@ -7083,7 +7487,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1153622618",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1153631302",
@@ -7097,7 +7502,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1153631302",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1165295883",
@@ -7111,7 +7517,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1165295883",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-1166002635",
@@ -7130,7 +7537,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1166002635",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1167872552",
@@ -7149,7 +7557,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1167872552",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1169223393",
@@ -7159,7 +7568,7 @@
       10.692056,
       122.50544
     ],
-    "address": "Osme\u00f1a Road",
+    "address": "Osmeña Road",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -7168,7 +7577,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1169223393",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1175189403",
@@ -7182,7 +7592,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1175189403",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-1175242799",
@@ -7201,7 +7612,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1175242799",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1177340135",
@@ -7215,7 +7627,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1177340135",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1178366720",
@@ -7234,7 +7647,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1178366720",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1182776483",
@@ -7253,7 +7667,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1182776483",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1185729730",
@@ -7267,7 +7682,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1185729730",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1186181862",
@@ -7281,7 +7697,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1186181862",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1186661928",
@@ -7300,7 +7717,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1186661928",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1186691180",
@@ -7314,7 +7732,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1186691180",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-1187869516",
@@ -7333,7 +7752,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1187869516",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1195988983",
@@ -7352,7 +7772,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1195988983",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-1199956094",
@@ -7371,7 +7792,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1199956094",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-1200616918",
@@ -7390,7 +7812,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1200616918",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1204589649",
@@ -7404,7 +7827,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1204589649",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1204767366",
@@ -7418,7 +7842,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1204767366",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1206020343",
@@ -7432,7 +7857,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1206020343",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1206380547",
@@ -7446,7 +7872,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1206380547",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "seaoil-1207030759",
@@ -7465,7 +7892,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1207030759",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Unknown"
   },
   {
     "id": "seaoil-1211634087",
@@ -7479,7 +7907,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1211634087",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-1216007086",
@@ -7493,7 +7922,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1216007086",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-1219694598",
@@ -7507,7 +7937,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1219694598",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Unknown"
   },
   {
     "id": "seaoil-1227607542",
@@ -7521,7 +7952,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1227607542",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-1230242247",
@@ -7535,7 +7967,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1230242247",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1237721273",
@@ -7549,7 +7982,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1237721273",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-1240077395",
@@ -7568,7 +8002,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1240077395",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1240077444",
@@ -7582,7 +8017,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1240077444",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1246969847",
@@ -7596,7 +8032,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1246969847",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "seaoil-1251087918",
@@ -7610,7 +8047,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1251087918",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1268246341",
@@ -7629,7 +8067,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1268246341",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1271280487",
@@ -7643,7 +8082,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1271280487",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1280192422",
@@ -7657,7 +8097,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1280192422",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1281158831",
@@ -7671,7 +8112,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1281158831",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region II (Cagayan Valley)"
   },
   {
     "id": "seaoil-1282834444",
@@ -7685,7 +8127,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1282834444",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1285854369",
@@ -7704,7 +8147,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1285854369",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1290375576",
@@ -7718,7 +8162,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1290375576",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1300649457",
@@ -7732,7 +8177,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1300649457",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1301927320",
@@ -7750,7 +8196,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1301927320",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1302253512",
@@ -7769,7 +8216,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1302253512",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1303556305",
@@ -7788,7 +8236,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1303556305",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1304643883",
@@ -7802,7 +8251,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1304643883",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1309647831",
@@ -7816,7 +8266,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1309647831",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1312741164",
@@ -7830,7 +8281,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1312741164",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-1316655889",
@@ -7844,7 +8296,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1316655889",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-1316655907",
@@ -7858,7 +8311,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1316655907",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-1316738979",
@@ -7877,7 +8331,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1316738979",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1316973771",
@@ -7896,7 +8351,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1316973771",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1320198160",
@@ -7915,7 +8371,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1320198160",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-1323850686",
@@ -7934,7 +8391,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1323850686",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1324938988",
@@ -7953,7 +8411,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1324938988",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1325492687",
@@ -7972,7 +8431,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1325492687",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1326181204",
@@ -7986,7 +8446,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1326181204",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1327140005",
@@ -8000,7 +8461,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1327140005",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1328738145",
@@ -8014,7 +8476,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1328738145",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1338509555",
@@ -8028,7 +8491,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1338509555",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1338812565",
@@ -8042,7 +8506,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1338812565",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1344747780",
@@ -8061,7 +8526,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1344747780",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-1345159596",
@@ -8075,7 +8541,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1345159596",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1348659692",
@@ -8089,7 +8556,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1348659692",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1349018798",
@@ -8103,7 +8571,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1349018798",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1349714859",
@@ -8122,7 +8591,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1349714859",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1355613369",
@@ -8136,7 +8606,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1355613369",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1357913778",
@@ -8150,7 +8621,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1357913778",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1360060899",
@@ -8164,7 +8636,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1360060899",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "seaoil-1364411496",
@@ -8178,7 +8651,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1364411496",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1368206987",
@@ -8192,7 +8666,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1368206987",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1371100496",
@@ -8206,7 +8681,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1371100496",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1371973899",
@@ -8220,7 +8696,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1371973899",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1374168052",
@@ -8234,7 +8711,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1374168052",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-1376601088",
@@ -8248,7 +8726,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1376601088",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1376778381",
@@ -8267,7 +8746,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1376778381",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1377698270",
@@ -8281,7 +8761,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1377698270",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1381187614",
@@ -8295,7 +8776,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1381187614",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1385509604",
@@ -8314,7 +8796,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1385509604",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region V (Bicol)"
   },
   {
     "id": "seaoil-1386907302",
@@ -8328,7 +8811,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1386907302",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1389711956",
@@ -8342,7 +8826,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1389711956",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1396477677",
@@ -8356,7 +8841,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1396477677",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1396715543",
@@ -8366,7 +8852,7 @@
       10.713855,
       122.534797
     ],
-    "address": "O\u00f1ate de Leon Street",
+    "address": "Oñate de Leon Street",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -8375,7 +8861,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1396715543",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1414184510",
@@ -8394,7 +8881,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1414184510",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-B (MIMAROPA)"
   },
   {
     "id": "seaoil-1416819167",
@@ -8408,7 +8896,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1416819167",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1420317398",
@@ -8427,7 +8916,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1420317398",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1422986255",
@@ -8446,7 +8936,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1422986255",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1425207109",
@@ -8460,7 +8951,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1425207109",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1429862508",
@@ -8479,7 +8971,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1429862508",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-1431203653",
@@ -8493,7 +8986,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1431203653",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1441739708",
@@ -8507,7 +9001,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1441739708",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1443174837",
@@ -8526,7 +9021,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1443174837",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region X (Northern Mindanao)"
   },
   {
     "id": "seaoil-1445815658",
@@ -8540,7 +9036,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1445815658",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1446675586",
@@ -8559,7 +9056,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1446675586",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1449338503",
@@ -8573,7 +9071,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1449338503",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1449416405",
@@ -8592,7 +9091,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1449416405",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1451323089",
@@ -8606,7 +9106,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1451323089",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "seaoil-1452326587",
@@ -8620,7 +9121,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1452326587",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1453461078",
@@ -8639,7 +9141,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1453461078",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-1455081395",
@@ -8658,7 +9161,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1455081395",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1455892066",
@@ -8672,7 +9176,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1455892066",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1455939160",
@@ -8686,7 +9191,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1455939160",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-1456140912",
@@ -8700,7 +9206,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1456140912",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1457028873",
@@ -8714,7 +9221,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1457028873",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   },
   {
     "id": "seaoil-1457409205",
@@ -8731,7 +9239,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1457409205",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IX (Zamboanga Peninsula)"
   },
   {
     "id": "seaoil-1458465448",
@@ -8745,7 +9254,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1458465448",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1467713493",
@@ -8764,7 +9274,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1467713493",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "seaoil-1469317719",
@@ -8778,7 +9289,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1469317719",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "seaoil-1475272474",
@@ -8792,7 +9304,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1475272474",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "seaoil-1476208481",
@@ -8811,7 +9324,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1476208481",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "seaoil-1477852345",
@@ -8830,7 +9344,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1477852345",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1480684180",
@@ -8844,7 +9359,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1480684180",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "seaoil-1484998953",
@@ -8863,7 +9379,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1484998953",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "seaoil-1487166874",
@@ -8873,10 +9390,11 @@
       17.56319,
       120.638553
     ],
-    "address": "Pe\u00f1arrubia",
+    "address": "Peñarrubia",
     "source": {
       "url": "https://www.openstreetmap.org/way/1487166874",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "CAR (Cordillera)"
   }
 ]

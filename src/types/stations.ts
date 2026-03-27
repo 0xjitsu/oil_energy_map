@@ -5,6 +5,7 @@ export interface GasStation {
   coordinates: [number, number]; // [lat, lng]
   address: string;
   fuelTypes?: string[];
+  region?: string;
   source: {
     url: string;
     scrapedAt: string;

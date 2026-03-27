@@ -11,7 +11,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/27582804",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-2185435486",
@@ -25,7 +26,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/2185435486",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "unioil-5684627121",
@@ -39,7 +41,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/5684627121",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-7051459907",
@@ -53,7 +56,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/7051459907",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VI (Western Visayas)"
   },
   {
     "id": "unioil-11947283270",
@@ -67,7 +71,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11947283270",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "unioil-11958261248",
@@ -86,7 +91,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/11958261248",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-12194103101",
@@ -100,7 +106,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/12194103101",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-13183756034",
@@ -114,7 +121,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13183756034",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region I (Ilocos)"
   },
   {
     "id": "unioil-13622927374",
@@ -128,7 +136,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/node/13622927374",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-55210750",
@@ -147,7 +156,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/55210750",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-85692794",
@@ -157,11 +167,12 @@
       14.526256,
       120.994171
     ],
-    "address": "Roxas Boulevard, Para\u00f1aque",
+    "address": "Roxas Boulevard, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/85692794",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-85692797",
@@ -171,11 +182,12 @@
       14.527189,
       120.99407
     ],
-    "address": "Roxas Boulevard, Para\u00f1aque",
+    "address": "Roxas Boulevard, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/85692797",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-113540568",
@@ -194,7 +206,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/113540568",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-117045344",
@@ -208,7 +221,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/117045344",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-160725244",
@@ -222,7 +236,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/160725244",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-170085817",
@@ -236,7 +251,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/170085817",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-172909804",
@@ -250,7 +266,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/172909804",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-177432913",
@@ -264,7 +281,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/177432913",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-185485863",
@@ -283,7 +301,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/185485863",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-228531257",
@@ -297,7 +316,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/228531257",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-235789870",
@@ -316,7 +336,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/235789870",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-247625709",
@@ -333,7 +354,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/247625709",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-263311465",
@@ -347,7 +369,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/263311465",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-265634277",
@@ -361,7 +384,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/265634277",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-265891732",
@@ -375,7 +399,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/265891732",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-267619888",
@@ -389,7 +414,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/267619888",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-270806065",
@@ -403,7 +429,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/270806065",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-271145973",
@@ -413,11 +440,12 @@
       14.500519,
       120.996889
     ],
-    "address": "Ninoy Aquino Avenue, Para\u00f1aque",
+    "address": "Ninoy Aquino Avenue, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/271145973",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-278851300",
@@ -431,7 +459,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/278851300",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-287018046",
@@ -445,7 +474,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/287018046",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-320911625",
@@ -455,11 +485,12 @@
       14.481591,
       120.996738
     ],
-    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "address": "Dr. A. Santos Avenue, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/320911625",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-351551679",
@@ -473,7 +504,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/351551679",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-368471744",
@@ -492,7 +524,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/368471744",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-379389866",
@@ -506,7 +539,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/379389866",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-388186958",
@@ -520,7 +554,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/388186958",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-409655107",
@@ -534,7 +569,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/409655107",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-411228207",
@@ -544,7 +580,7 @@
       14.293574,
       120.938883
     ],
-    "address": "Governor's Drive, Dasmari\u00f1as",
+    "address": "Governor's Drive, Dasmariñas",
     "fuelTypes": [
       "diesel",
       "gasoline",
@@ -553,7 +589,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/411228207",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-413884400",
@@ -567,7 +604,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/413884400",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-419641815",
@@ -586,7 +624,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/419641815",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-431545432",
@@ -600,7 +639,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/431545432",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-441214517",
@@ -614,7 +654,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/441214517",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VIII (Eastern Visayas)"
   },
   {
     "id": "unioil-443561074",
@@ -628,7 +669,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/443561074",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-482221750",
@@ -642,7 +684,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/482221750",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-506442019",
@@ -656,7 +699,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/506442019",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-506563016",
@@ -670,7 +714,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/506563016",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-525403854",
@@ -684,7 +729,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/525403854",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-538644394",
@@ -698,7 +744,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/538644394",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-561771480",
@@ -712,7 +759,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/561771480",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-569210515",
@@ -726,7 +774,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/569210515",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-589276448",
@@ -740,7 +789,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/589276448",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-592141489",
@@ -754,7 +804,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/592141489",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-598184336",
@@ -768,7 +819,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/598184336",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-633004581",
@@ -782,7 +834,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/633004581",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region VII (Central Visayas)"
   },
   {
     "id": "unioil-671942723",
@@ -796,7 +849,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/671942723",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-675768356",
@@ -810,7 +864,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/675768356",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-700306145",
@@ -824,7 +879,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/700306145",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-739471420",
@@ -834,11 +890,12 @@
       14.550353,
       121.01114
     ],
-    "address": "Osme\u00f1a Highway",
+    "address": "Osmeña Highway",
     "source": {
       "url": "https://www.openstreetmap.org/way/739471420",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-772046504",
@@ -848,11 +905,12 @@
       14.459058,
       121.031621
     ],
-    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "address": "Dr. A. Santos Avenue, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/772046504",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-772596405",
@@ -866,7 +924,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/772596405",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-793696456",
@@ -880,7 +939,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/793696456",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-794251417",
@@ -894,7 +954,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794251417",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-794257192",
@@ -908,7 +969,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794257192",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-794287062",
@@ -922,7 +984,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/794287062",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-795186096",
@@ -936,7 +999,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/795186096",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-795517061",
@@ -950,7 +1014,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/795517061",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-795660431",
@@ -964,7 +1029,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/795660431",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-795860939",
@@ -978,7 +1044,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/795860939",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-795883798",
@@ -992,7 +1059,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/795883798",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-804071702",
@@ -1002,11 +1070,12 @@
       14.434302,
       121.012138
     ],
-    "address": "Alabang-Zapote Road, Las Pi\u00f1as",
+    "address": "Alabang-Zapote Road, Las Piñas",
     "source": {
       "url": "https://www.openstreetmap.org/way/804071702",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-804496554",
@@ -1020,7 +1089,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/804496554",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-901084842",
@@ -1034,7 +1104,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/901084842",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-926730645",
@@ -1048,7 +1119,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/926730645",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-930831800",
@@ -1062,7 +1134,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/930831800",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-930960293",
@@ -1076,7 +1149,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/930960293",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-934491990",
@@ -1090,7 +1164,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/934491990",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "unioil-940442696",
@@ -1104,7 +1179,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/940442696",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-944122468",
@@ -1118,7 +1194,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/944122468",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-965364711",
@@ -1137,7 +1214,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/965364711",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-998454770",
@@ -1151,7 +1229,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/998454770",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1043327870",
@@ -1165,7 +1244,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1043327870",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1059222209",
@@ -1184,7 +1264,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1059222209",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1061627877",
@@ -1198,7 +1279,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1061627877",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1065676780",
@@ -1212,7 +1294,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1065676780",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1073093653",
@@ -1226,7 +1309,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1073093653",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1074271357",
@@ -1240,7 +1324,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1074271357",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1074878168",
@@ -1254,7 +1339,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1074878168",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1074979759",
@@ -1268,7 +1354,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1074979759",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1102680183",
@@ -1282,7 +1369,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1102680183",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1133267381",
@@ -1296,7 +1384,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1133267381",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1144647496",
@@ -1310,7 +1399,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1144647496",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1148109842",
@@ -1324,7 +1414,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1148109842",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1171457630",
@@ -1338,7 +1429,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1171457630",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "unioil-1175984212",
@@ -1352,7 +1444,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1175984212",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1190695311",
@@ -1366,7 +1459,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1190695311",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1217809838",
@@ -1385,7 +1479,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1217809838",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1226638311",
@@ -1399,7 +1494,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1226638311",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1234640186",
@@ -1413,7 +1509,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1234640186",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1239424063",
@@ -1427,7 +1524,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1239424063",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1249704672",
@@ -1446,7 +1544,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1249704672",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1255631979",
@@ -1460,7 +1559,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1255631979",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1273146765",
@@ -1474,7 +1574,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1273146765",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1275191670",
@@ -1488,7 +1589,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1275191670",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1296234875",
@@ -1502,7 +1604,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1296234875",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region XI (Davao)"
   },
   {
     "id": "unioil-1316971288",
@@ -1512,11 +1615,12 @@
       14.479081,
       121.044698
     ],
-    "address": "West Service Road, Para\u00f1aque",
+    "address": "West Service Road, Parañaque",
     "source": {
       "url": "https://www.openstreetmap.org/way/1316971288",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1316973773",
@@ -1535,7 +1639,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1316973773",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1349979131",
@@ -1549,7 +1654,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1349979131",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region III (Central Luzon)"
   },
   {
     "id": "unioil-1371396875",
@@ -1563,7 +1669,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1371396875",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1379621272",
@@ -1577,7 +1684,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1379621272",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1383669521",
@@ -1591,7 +1699,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1383669521",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1388410949",
@@ -1605,7 +1714,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1388410949",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1418374471",
@@ -1619,7 +1729,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1418374471",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1422098563",
@@ -1629,14 +1740,15 @@
       14.443888,
       120.992784
     ],
-    "address": "BF Resort Drive, Las Pi\u00f1as",
+    "address": "BF Resort Drive, Las Piñas",
     "fuelTypes": [
       "premium"
     ],
     "source": {
       "url": "https://www.openstreetmap.org/way/1422098563",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1423916710",
@@ -1650,7 +1762,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1423916710",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1430872336",
@@ -1664,7 +1777,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1430872336",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1458628586",
@@ -1678,7 +1792,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1458628586",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1459318141",
@@ -1692,7 +1807,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1459318141",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1467326310",
@@ -1706,7 +1822,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1467326310",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1472155970",
@@ -1720,7 +1837,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1472155970",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1475607806",
@@ -1739,7 +1857,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1475607806",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "Region IV-A (CALABARZON)"
   },
   {
     "id": "unioil-1480691859",
@@ -1753,7 +1872,8 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1480691859",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   },
   {
     "id": "unioil-1488516091",
@@ -1767,6 +1887,7 @@
     "source": {
       "url": "https://www.openstreetmap.org/way/1488516091",
       "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
-    }
+    },
+    "region": "NCR (Metro Manila)"
   }
 ]
