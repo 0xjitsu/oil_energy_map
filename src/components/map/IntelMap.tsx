@@ -8,6 +8,8 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import type { Facility, MapMode, ScenarioParams } from '@/types';
 import { createFacilityLayers } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
+import { createStationLayer } from './StationLayer';
+import { BRAND_LIST } from '@/data/stations';
 import LayerControls from './LayerControls';
 import FacilityDetail from './FacilityDetail';
 
@@ -54,6 +56,9 @@ export default function IntelMap({
   });
   const [selectedFacility, setSelectedFacility] = useState<Facility | null>(null);
   const [hoveredFacility, setHoveredFacility] = useState<string | null>(null);
+  const [stationsVisible, setStationsVisible] = useState(true);
+  const [visibleBrands, setVisibleBrands] = useState<Set<string>>(new Set(BRAND_LIST));
+  const [hoveredStation, setHoveredStation] = useState<string | null>(null);
   const [currentTime, setCurrentTime] = useState(0);
   const rafRef = useRef<number>(0);
 
@@ -103,6 +108,15 @@ export default function IntelMap({
         setHoveredFacility,
       ),
       ...createRouteLayers(layers.routes, mapMode, effectiveTime, scenarioParams),
+      ...createStationLayer(
+        stationsVisible,
+        visibleBrands,
+        () => {
+          /* future: station detail panel */
+        },
+        hoveredStation,
+        setHoveredStation,
+      ),
     ],
     [
       layers.facilities,
@@ -113,6 +127,9 @@ export default function IntelMap({
       effectiveTime,
       handleSelect,
       hoveredFacility,
+      stationsVisible,
+      visibleBrands,
+      hoveredStation,
     ],
   );
 
@@ -135,6 +152,17 @@ export default function IntelMap({
         onToggle={handleToggle}
         mapMode={mapMode}
         onModeChange={onModeChange}
+        stationsVisible={stationsVisible}
+        onStationsToggle={() => setStationsVisible((v) => !v)}
+        visibleBrands={visibleBrands}
+        onBrandToggle={(brand: string) => {
+          setVisibleBrands((prev) => {
+            const next = new Set(prev);
+            if (next.has(brand)) next.delete(brand);
+            else next.add(brand);
+            return next;
+          });
+        }}
       />
       <FacilityDetail facility={selectedFacility} onClose={handleClose} />
     </div>
