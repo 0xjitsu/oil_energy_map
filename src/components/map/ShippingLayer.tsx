@@ -47,9 +47,9 @@ export function createRouteLayers(
       const alpha = getRouteOpacity(d, mapMode, scenarioParams);
       return [...rgb, alpha] as [number, number, number, number];
     },
-    opacity: 0.8,
-    widthMinPixels: 4,
-    trailLength: 150,
+    opacity: 0.9,
+    widthMinPixels: 6,
+    trailLength: 200,
     currentTime,
   });
 
@@ -68,13 +68,13 @@ export function createRouteLayers(
     },
     getSourceColor: (d: ShippingRoute) => {
       const rgb = hexToRgb(d.color);
-      return [...rgb, 40] as [number, number, number, number];
+      return [...rgb, 90] as [number, number, number, number];
     },
     getTargetColor: (d: ShippingRoute) => {
       const rgb = hexToRgb(d.color);
-      return [...rgb, 40] as [number, number, number, number];
+      return [...rgb, 60] as [number, number, number, number];
     },
-    getWidth: 1,
+    getWidth: 2,
     getHeight: 0.3,
     greatCircle: true,
   });

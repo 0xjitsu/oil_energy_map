@@ -6,7 +6,7 @@ import { MapboxOverlay } from '@deck.gl/mapbox';
 import type { MapViewState, Layer } from '@deck.gl/core';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import type { Facility, MapMode, ScenarioParams } from '@/types';
-import { createFacilityLayer } from './FacilityLayer';
+import { createFacilityLayers } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
 import LayerControls from './LayerControls';
 import FacilityDetail from './FacilityDetail';
@@ -93,7 +93,7 @@ export default function IntelMap({
 
   const deckLayers = useMemo(
     () => [
-      createFacilityLayer(
+      ...createFacilityLayers(
         layers.facilities,
         mapMode,
         scenarioParams,

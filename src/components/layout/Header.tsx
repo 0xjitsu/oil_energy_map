@@ -53,10 +53,10 @@ export function Header() {
         {/* Left — title */}
         <div>
           <h1 className="text-sm font-mono tracking-widest text-[rgba(255,255,255,0.9)] uppercase">
-            PH Oil Intelligence
+            Energy Intelligence Map
           </h1>
           <p className="text-[10px] font-mono tracking-widest text-[rgba(255,255,255,0.3)] uppercase mt-0.5">
-            Supply Chain Dashboard
+            Philippines Supply Chain
           </p>
         </div>
 
