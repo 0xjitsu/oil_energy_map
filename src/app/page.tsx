@@ -13,6 +13,7 @@ import { VitalSigns } from '@/components/health/VitalSigns';
 import { SentimentGauge } from '@/components/health/SentimentGauge';
 import { EventTimeline } from '@/components/health/EventTimeline';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
+import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import type { MapMode, ScenarioParams } from '@/types';
 
 const PricePanel = dynamic(
@@ -53,6 +54,9 @@ export default function Home() {
       <Header />
 
       <main className="max-w-[1600px] mx-auto px-4 py-6 space-y-6">
+        {/* Executive Snapshot — Bloomberg-style KPI row */}
+        <ExecutiveSnapshot scenarioParams={scenarioParams} />
+
         {/* Hero: Map + Price Sidebar */}
         <section className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4">
           <div>
