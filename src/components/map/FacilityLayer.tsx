@@ -9,7 +9,7 @@ function hexToRgb(hex: string): [number, number, number] {
   return [r, g, b];
 }
 
-const ELEVATION_SCALE = 50; // multiplier for productionBpd → visual height
+const ELEVATION_SCALE = 5; // multiplier for productionBpd → visual height
 
 function getElevationMultiplier(
   facility: Facility,
@@ -49,7 +49,7 @@ export function createFacilityLayer(
     pickable: true,
     extruded: true,
     diskResolution: 20,
-    radius: 30000,
+    radius: 8000,
     getPosition: (d: Facility) => [d.coordinates[1], d.coordinates[0]],
     getElevation: (d: Facility) => {
       const multiplier = getElevationMultiplier(d, mapMode, scenarioParams);
