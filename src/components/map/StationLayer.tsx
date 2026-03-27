@@ -17,6 +17,7 @@ export function createStationLayer(
   onSelect: (station: GasStation) => void,
   hoveredId: string | null,
   setHoveredId: (id: string | null) => void,
+  onHoverInfo?: (info: { station: GasStation; x: number; y: number } | null) => void,
 ): Layer[] {
   const filtered = allStations.filter((s) => visibleBrands.has(s.brand));
 
@@ -38,8 +39,9 @@ export function createStationLayer(
     onClick: ({ object }: { object?: GasStation }) => {
       if (object) onSelect(object);
     },
-    onHover: ({ object }: { object?: GasStation }) => {
+    onHover: ({ object, x, y }: { object?: GasStation; x: number; y: number }) => {
       setHoveredId(object ? object.id : null);
+      onHoverInfo?.(object ? { station: object, x, y } : null);
     },
     transitions: {
       getFillColor: 300,

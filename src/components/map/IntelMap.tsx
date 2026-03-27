@@ -6,12 +6,14 @@ import { MapboxOverlay } from '@deck.gl/mapbox';
 import type { MapViewState, Layer } from '@deck.gl/core';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import type { Facility, MapMode, ScenarioParams } from '@/types';
+import type { GasStation } from '@/types/stations';
 import { createFacilityLayers } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
 import { createStationLayer } from './StationLayer';
 import { BRAND_LIST } from '@/data/stations';
 import LayerControls from './LayerControls';
 import FacilityDetail from './FacilityDetail';
+import StationTooltip from './StationTooltip';
 
 function DeckGLOverlay(props: { layers: Layer[] }) {
   const overlay = useControl(() => new MapboxOverlay({ layers: [] }));
@@ -59,6 +61,11 @@ export default function IntelMap({
   const [stationsVisible, setStationsVisible] = useState(true);
   const [visibleBrands, setVisibleBrands] = useState<Set<string>>(new Set(BRAND_LIST));
   const [hoveredStation, setHoveredStation] = useState<string | null>(null);
+  const [hoveredStationInfo, setHoveredStationInfo] = useState<{
+    station: GasStation;
+    x: number;
+    y: number;
+  } | null>(null);
   const [currentTime, setCurrentTime] = useState(0);
   const rafRef = useRef<number>(0);
 
@@ -116,6 +123,7 @@ export default function IntelMap({
         },
         hoveredStation,
         setHoveredStation,
+        setHoveredStationInfo,
       ),
     ],
     [
@@ -136,7 +144,7 @@ export default function IntelMap({
   return (
     <div
       className="relative h-[600px] lg:h-[700px] w-full rounded-xl overflow-hidden border border-[rgba(255,255,255,0.06)]"
-      style={{ cursor: hoveredFacility ? 'pointer' : 'grab' }}
+      style={{ cursor: hoveredFacility || hoveredStation ? 'pointer' : 'grab' }}
     >
       <Map
         initialViewState={INITIAL_VIEW_STATE}
@@ -165,6 +173,13 @@ export default function IntelMap({
         }}
       />
       <FacilityDetail facility={selectedFacility} onClose={handleClose} />
+      {hoveredStationInfo && (
+        <StationTooltip
+          station={hoveredStationInfo.station}
+          x={hoveredStationInfo.x}
+          y={hoveredStationInfo.y}
+        />
+      )}
     </div>
   );
 }
