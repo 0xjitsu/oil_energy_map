@@ -62,10 +62,10 @@ export function ScenarioPlanner({
   return (
     <div>
       <div className="mb-6">
-        <h2 className="text-sm font-mono tracking-widest text-[rgba(255,255,255,0.9)] uppercase">
+        <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
           Scenario Planner
         </h2>
-        <p className="text-xs font-sans text-[rgba(255,255,255,0.4)] mt-1">
+        <p className="text-xs font-sans text-text-label mt-1">
           {isTimelineDriven ? 'Driven by timeline — scrub to explore' : 'What happens if...'}
         </p>
       </div>
@@ -77,11 +77,11 @@ export function ScenarioPlanner({
           <div>
             <div className="flex items-center justify-between mb-2">
               <Tooltip text="The global benchmark crude oil price. PH imports are priced against this.">
-                <label className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.4)] font-sans cursor-help">
+                <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
                   Brent Crude
                 </label>
               </Tooltip>
-              <span className="text-sm font-mono font-bold text-[rgba(255,255,255,0.9)]">
+              <span className="text-sm font-mono font-bold text-text-primary">
                 ${params.brentPrice}/bbl
               </span>
             </div>
@@ -93,9 +93,9 @@ export function ScenarioPlanner({
               value={params.brentPrice}
               onChange={(e) => updateParam('brentPrice', Number(e.target.value))}
               disabled={isTimelineDriven}
-              className="w-full h-1.5 rounded-full appearance-none bg-[rgba(255,255,255,0.08)] accent-blue-500 cursor-pointer disabled:cursor-not-allowed"
+              className="w-full h-1.5 rounded-full appearance-none bg-border-hover accent-blue-500 cursor-pointer disabled:cursor-not-allowed"
             />
-            <div className="flex justify-between text-[9px] font-mono text-[rgba(255,255,255,0.2)] mt-1">
+            <div className="flex justify-between text-[9px] font-mono text-text-dim mt-1">
               <span>$60</span>
               <span>$180</span>
             </div>
@@ -105,11 +105,11 @@ export function ScenarioPlanner({
           <div>
             <div className="flex items-center justify-between mb-2">
               <Tooltip text="Weeks the Strait of Hormuz is partially or fully blocked. 70% of PH crude transits here.">
-                <label className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.4)] font-sans cursor-help">
+                <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
                   Hormuz Disruption
                 </label>
               </Tooltip>
-              <span className="text-sm font-mono font-bold text-[rgba(255,255,255,0.9)]">
+              <span className="text-sm font-mono font-bold text-text-primary">
                 {params.hormuzWeeks} {params.hormuzWeeks === 1 ? 'week' : 'weeks'}
               </span>
             </div>
@@ -121,9 +121,9 @@ export function ScenarioPlanner({
               value={params.hormuzWeeks}
               onChange={(e) => updateParam('hormuzWeeks', Number(e.target.value))}
               disabled={isTimelineDriven}
-              className="w-full h-1.5 rounded-full appearance-none bg-[rgba(255,255,255,0.08)] accent-orange-500 cursor-pointer disabled:cursor-not-allowed"
+              className="w-full h-1.5 rounded-full appearance-none bg-border-hover accent-orange-500 cursor-pointer disabled:cursor-not-allowed"
             />
-            <div className="flex justify-between text-[9px] font-mono text-[rgba(255,255,255,0.2)] mt-1">
+            <div className="flex justify-between text-[9px] font-mono text-text-dim mt-1">
               <span>0 wk</span>
               <span>16 wk</span>
             </div>
@@ -133,11 +133,11 @@ export function ScenarioPlanner({
           <div>
             <div className="flex items-center justify-between mb-2">
               <Tooltip text="The Philippine Peso to US Dollar exchange rate. Weaker peso = more expensive imports.">
-                <label className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.4)] font-sans cursor-help">
+                <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
                   PHP/USD Rate
                 </label>
               </Tooltip>
-              <span className="text-sm font-mono font-bold text-[rgba(255,255,255,0.9)]">
+              <span className="text-sm font-mono font-bold text-text-primary">
                 ₱{params.forexRate.toFixed(2)}
               </span>
             </div>
@@ -149,9 +149,9 @@ export function ScenarioPlanner({
               value={params.forexRate}
               onChange={(e) => updateParam('forexRate', Number(e.target.value))}
               disabled={isTimelineDriven}
-              className="w-full h-1.5 rounded-full appearance-none bg-[rgba(255,255,255,0.08)] accent-yellow-500 cursor-pointer disabled:cursor-not-allowed"
+              className="w-full h-1.5 rounded-full appearance-none bg-border-hover accent-yellow-500 cursor-pointer disabled:cursor-not-allowed"
             />
-            <div className="flex justify-between text-[9px] font-mono text-[rgba(255,255,255,0.2)] mt-1">
+            <div className="flex justify-between text-[9px] font-mono text-text-dim mt-1">
               <span>₱54</span>
               <span>₱65</span>
             </div>
@@ -160,7 +160,7 @@ export function ScenarioPlanner({
           {/* Refinery Toggle */}
           <div className="flex items-center justify-between">
             <Tooltip text="Petron Bataan is the only refinery in the Philippines. If offline, the country goes to 100% import dependency.">
-              <label className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.4)] font-sans cursor-help">
+              <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
                 Bataan Refinery Offline
               </label>
             </Tooltip>

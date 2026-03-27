@@ -66,6 +66,8 @@ export default function IntelMap({
     x: number;
     y: number;
   } | null>(null);
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [currentZoom, setCurrentZoom] = useState(INITIAL_VIEW_STATE.zoom);
   const [currentTime, setCurrentTime] = useState(0);
   const rafRef = useRef<number>(0);
 
@@ -124,6 +126,8 @@ export default function IntelMap({
         hoveredStation,
         setHoveredStation,
         setHoveredStationInfo,
+        currentZoom,
+        selectedRegion,
       ),
     ],
     [
@@ -138,12 +142,14 @@ export default function IntelMap({
       stationsVisible,
       visibleBrands,
       hoveredStation,
+      currentZoom,
+      selectedRegion,
     ],
   );
 
   return (
     <div
-      className="relative h-[600px] lg:h-[700px] w-full rounded-xl overflow-hidden border border-[rgba(255,255,255,0.06)]"
+      className="relative h-[600px] lg:h-[700px] w-full rounded-xl overflow-hidden border border-border-subtle"
       style={{ cursor: hoveredFacility || hoveredStation ? 'pointer' : 'grab' }}
     >
       <Map
@@ -151,6 +157,7 @@ export default function IntelMap({
         mapStyle={MAP_STYLE}
         style={{ width: '100%', height: '100%' }}
         attributionControl={{}}
+        onMove={(evt) => setCurrentZoom(evt.viewState.zoom)}
       >
         <DeckGLOverlay layers={deckLayers} />
         <NavigationControl position="top-left" showCompass={false} />
@@ -171,6 +178,8 @@ export default function IntelMap({
             return next;
           });
         }}
+        selectedRegion={selectedRegion}
+        onRegionChange={setSelectedRegion}
       />
       <FacilityDetail facility={selectedFacility} onClose={handleClose} />
       {hoveredStationInfo && (

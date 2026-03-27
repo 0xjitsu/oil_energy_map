@@ -7,7 +7,7 @@ import { MarketPlayer } from '@/types';
 export function MarketShare() {
   return (
     <div className="glass-card p-4">
-      <h3 className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-2 font-sans">
+      <h3 className="text-[10px] uppercase tracking-widest text-text-muted mb-2 font-sans">
         Market Share
       </h3>
       <div className="w-full" style={{ height: 220 }}>
@@ -53,10 +53,10 @@ export function MarketShare() {
               height={16}
               className="rounded-sm"
             />
-            <span className="text-[10px] font-mono text-[rgba(255,255,255,0.5)]">
+            <span className="text-[10px] font-mono text-text-secondary">
               {player.name}
             </span>
-            <span className="text-[10px] font-mono text-[rgba(255,255,255,0.3)] ml-auto">
+            <span className="text-[10px] font-mono text-text-subtle ml-auto">
               {player.marketShare}%
             </span>
           </div>

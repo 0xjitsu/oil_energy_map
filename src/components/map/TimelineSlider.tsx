@@ -75,10 +75,10 @@ export default function TimelineSlider({
   if (!visible) return null;
 
   return (
-    <div className="absolute bottom-4 left-4 right-4 z-50 flex items-center gap-3 px-4 py-3 rounded-xl bg-[rgba(10,15,26,0.75)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)] shadow-2xl">
+    <div className="absolute bottom-4 left-4 right-4 z-50 flex items-center gap-3 px-4 py-3 rounded-xl bg-[rgba(10,15,26,0.75)] backdrop-blur-xl border border-border-hover shadow-2xl">
       <button
         onClick={handlePlayPause}
-        className="shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-[rgba(255,255,255,0.06)] hover:bg-[rgba(255,255,255,0.12)] transition-all text-[rgba(255,255,255,0.7)] hover:text-[rgba(255,255,255,0.9)]"
+        className="shrink-0 w-8 h-8 flex items-center justify-center rounded-lg bg-border-subtle hover:bg-[rgba(255,255,255,0.12)] transition-all text-text-body hover:text-text-primary"
         aria-label={isPlaying ? 'Pause' : 'Play'}
       >
         {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -91,10 +91,10 @@ export default function TimelineSlider({
         step={1}
         value={position}
         onChange={handleSliderChange}
-        className="flex-1 h-1.5 rounded-full appearance-none bg-[rgba(255,255,255,0.08)] accent-cyan-500 cursor-pointer"
+        className="flex-1 h-1.5 rounded-full appearance-none bg-border-hover accent-cyan-500 cursor-pointer"
       />
 
-      <span className="shrink-0 text-[10px] font-mono tracking-widest text-[rgba(255,255,255,0.5)] min-w-[60px] text-right">
+      <span className="shrink-0 text-[10px] font-mono tracking-widest text-text-secondary min-w-[60px] text-right">
         WEEK {week}
       </span>
     </div>

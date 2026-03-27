@@ -29,12 +29,20 @@ const config: Config = {
         },
         border: {
           DEFAULT: "var(--border)",
+          subtle: "var(--border-subtle)",
           hover: "var(--border-hover)",
+        },
+        surface: {
+          hover: "var(--surface-hover)",
         },
         text: {
           primary: "var(--text-primary)",
+          body: "var(--text-body)",
           secondary: "var(--text-secondary)",
+          label: "var(--text-label)",
+          subtle: "var(--text-subtle)",
           muted: "var(--text-muted)",
+          dim: "var(--text-dim)",
         },
         petron: "var(--accent-petron)",
         shell: "var(--accent-shell)",

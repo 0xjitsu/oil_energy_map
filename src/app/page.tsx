@@ -48,7 +48,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)]">
+    <div className="min-h-screen bg-bg-primary">
       <ScrollProgress />
       <AlertBanner />
       <Header />
@@ -61,8 +61,8 @@ export default function Home() {
         <section className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-[var(--accent-petron)]" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+              <div className="w-2 h-2 rounded-full bg-petron" />
+              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
                 Supply Chain Map
               </h2>
             </div>
@@ -83,16 +83,16 @@ export default function Home() {
 
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-1">
-              <div className="w-2 h-2 rounded-full bg-[var(--status-red)]" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+              <div className="w-2 h-2 rounded-full bg-status-red" />
+              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
                 Pump Prices
               </h2>
             </div>
             <PumpPrices />
 
             <div className="flex items-center gap-2 mt-4 mb-1">
-              <div className="w-2 h-2 rounded-full bg-[var(--accent-phoenix)]" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+              <div className="w-2 h-2 rounded-full bg-phoenix" />
+              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
                 What This Means For You
               </h2>
             </div>
@@ -103,8 +103,8 @@ export default function Home() {
         {/* Price Intelligence */}
         <section>
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-2 h-2 rounded-full bg-[var(--accent-shell)]" />
-            <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+            <div className="w-2 h-2 rounded-full bg-shell" />
+            <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
               Price Intelligence
             </h2>
           </div>
@@ -125,8 +125,8 @@ export default function Home() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-[var(--accent-seaoil)]" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+              <div className="w-2 h-2 rounded-full bg-seaoil" />
+              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
                 Market Players
               </h2>
             </div>
@@ -138,16 +138,16 @@ export default function Home() {
 
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-[var(--status-green)]" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+              <div className="w-2 h-2 rounded-full bg-status-green" />
+              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
                 System Health
               </h2>
             </div>
             <VitalSigns scenarioParams={scenarioParams} mapMode={mapMode} />
             <div className="mt-4">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-2 h-2 rounded-full bg-[var(--accent-shell)]" />
-                <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+                <div className="w-2 h-2 rounded-full bg-shell" />
+                <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
                   NLP Sentiment
                 </h2>
               </div>
@@ -155,8 +155,8 @@ export default function Home() {
             </div>
             <div className="mt-4">
               <div className="flex items-center gap-2 mb-3">
-                <div className="w-2 h-2 rounded-full bg-[var(--status-yellow)]" />
-                <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+                <div className="w-2 h-2 rounded-full bg-status-yellow" />
+                <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
                   Event Timeline
                 </h2>
               </div>

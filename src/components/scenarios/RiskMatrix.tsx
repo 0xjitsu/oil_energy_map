@@ -50,23 +50,23 @@ export function RiskMatrix({ params, riskLevel }: RiskMatrixProps) {
 
   return (
     <div className="glass-card p-5">
-      <h3 className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-4 font-sans">
+      <h3 className="text-[10px] uppercase tracking-widest text-text-muted mb-4 font-sans">
         Risk Matrix
       </h3>
       <div className="grid grid-cols-2 gap-3">
         {risks.map((risk) => (
           <div
             key={risk.label}
-            className="flex items-center gap-2.5 rounded-lg border border-[rgba(255,255,255,0.04)] bg-[rgba(255,255,255,0.02)] px-3 py-2.5"
+            className="flex items-center gap-2.5 rounded-lg border border-border bg-surface-hover px-3 py-2.5"
           >
             <span
               className={`inline-block h-2.5 w-2.5 rounded-full shrink-0 ${DOT_COLORS[risk.level]}`}
             />
             <div className="min-w-0">
-              <p className="text-[10px] font-sans text-[rgba(255,255,255,0.5)] truncate">
+              <p className="text-[10px] font-sans text-text-secondary truncate">
                 {risk.label}
               </p>
-              <p className="text-[10px] font-mono font-semibold text-[rgba(255,255,255,0.7)]">
+              <p className="text-[10px] font-mono font-semibold text-text-body">
                 {LEVEL_LABELS[risk.level]}
               </p>
             </div>

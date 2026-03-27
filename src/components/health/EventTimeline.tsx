@@ -6,9 +6,9 @@ import { Severity, SourceType } from '@/types';
 import { ExternalLink } from 'lucide-react';
 
 const SEVERITY_COLORS: Record<Severity, string> = {
-  red: 'bg-[#ef4444] shadow-[0_0_8px_rgba(239,68,68,0.5)]',
-  yellow: 'bg-[#eab308] shadow-[0_0_8px_rgba(234,179,8,0.4)]',
-  green: 'bg-[#10b981] shadow-[0_0_8px_rgba(16,185,129,0.4)]',
+  red: 'bg-status-red shadow-[0_0_8px_rgba(239,68,68,0.5)]',
+  yellow: 'bg-status-yellow shadow-[0_0_8px_rgba(234,179,8,0.4)]',
+  green: 'bg-status-green shadow-[0_0_8px_rgba(16,185,129,0.4)]',
 };
 
 const SOURCE_TYPE_STYLES: Record<SourceType, string> = {
@@ -51,7 +51,7 @@ export function EventTimeline() {
 
   return (
     <div className="glass-card p-5">
-      <h3 className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-3 font-sans">
+      <h3 className="text-[10px] uppercase tracking-widest text-text-muted mb-3 font-sans">
         Event Timeline
       </h3>
 
@@ -63,8 +63,8 @@ export function EventTimeline() {
             onClick={() => setFilter(f.key)}
             className={`px-2.5 py-1 text-[10px] font-mono rounded-md transition-all ${
               filter === f.key
-                ? 'bg-[rgba(255,255,255,0.08)] text-[rgba(255,255,255,0.9)]'
-                : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.5)] hover:bg-[rgba(255,255,255,0.03)]'
+                ? 'bg-border-hover text-text-primary'
+                : 'text-text-subtle hover:text-text-secondary hover:bg-surface-hover'
             }`}
           >
             {f.label}
@@ -80,8 +80,8 @@ export function EventTimeline() {
             onClick={() => setSourceFilter(f.key)}
             className={`px-2 py-0.5 text-[9px] font-mono rounded transition-all ${
               sourceFilter === f.key
-                ? 'bg-[rgba(255,255,255,0.06)] text-[rgba(255,255,255,0.8)]'
-                : 'text-[rgba(255,255,255,0.25)] hover:text-[rgba(255,255,255,0.45)] hover:bg-[rgba(255,255,255,0.03)]'
+                ? 'bg-border-subtle text-text-primary'
+                : 'text-text-muted hover:text-text-secondary hover:bg-surface-hover'
             }`}
           >
             {f.label}
@@ -105,10 +105,10 @@ export function EventTimeline() {
 
               {/* Content */}
               <div className="min-w-0">
-                <p className="text-[10px] font-mono text-[rgba(255,255,255,0.3)]">
+                <p className="text-[10px] font-mono text-text-subtle">
                   {entry.date}
                 </p>
-                <p className="text-xs font-sans text-[rgba(255,255,255,0.65)] leading-relaxed mt-0.5">
+                <p className="text-xs font-sans text-text-body leading-relaxed mt-0.5">
                   {entry.event}
                 </p>
                 <div className="flex items-center gap-2 mt-1">
@@ -121,7 +121,7 @@ export function EventTimeline() {
                     {entry.source}
                     <ExternalLink className="w-2.5 h-2.5" />
                   </a>
-                  <span className="text-[9px] font-mono uppercase tracking-wider text-[rgba(255,255,255,0.15)]">
+                  <span className="text-[9px] font-mono uppercase tracking-wider text-text-dim">
                     {entry.sourceType}
                   </span>
                 </div>

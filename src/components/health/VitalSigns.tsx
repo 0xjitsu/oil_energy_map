@@ -62,7 +62,7 @@ export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
             className="glass-card p-4"
           >
             <div className="flex items-center justify-between mb-2">
-              <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] font-sans">
+              <p className="text-[10px] uppercase tracking-widest text-text-muted font-sans">
                 {sign.label}
               </p>
               <span
@@ -78,7 +78,7 @@ export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
               </span>
             </div>
             <Tooltip text={sign.tooltip}>
-              <span className="text-2xl font-mono font-bold text-[rgba(255,255,255,0.9)] cursor-help">
+              <span className="text-2xl font-mono font-bold text-text-primary cursor-help">
                 {sign.value}
               </span>
             </Tooltip>

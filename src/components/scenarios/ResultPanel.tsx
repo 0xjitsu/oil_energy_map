@@ -52,10 +52,10 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
       {/* Price estimates */}
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div>
-          <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-1 font-sans">
+          <p className="text-[10px] uppercase tracking-widest text-text-muted mb-1 font-sans">
             Est. Gasoline
           </p>
-          <p className="text-3xl font-mono font-bold text-[rgba(255,255,255,0.9)]">
+          <p className="text-3xl font-mono font-bold text-text-primary">
             ₱{gasoline.toFixed(2)}
           </p>
           <p
@@ -67,10 +67,10 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
           </p>
         </div>
         <div>
-          <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-1 font-sans">
+          <p className="text-[10px] uppercase tracking-widest text-text-muted mb-1 font-sans">
             Est. Diesel
           </p>
-          <p className="text-3xl font-mono font-bold text-[rgba(255,255,255,0.9)]">
+          <p className="text-3xl font-mono font-bold text-text-primary">
             ₱{diesel.toFixed(2)}
           </p>
           <p
@@ -84,7 +84,7 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
       </div>
 
       {/* Summary */}
-      <p className="text-xs font-sans leading-relaxed text-[rgba(255,255,255,0.5)]">
+      <p className="text-xs font-sans leading-relaxed text-text-secondary">
         {RISK_SUMMARY[riskLevel]}
       </p>
     </div>

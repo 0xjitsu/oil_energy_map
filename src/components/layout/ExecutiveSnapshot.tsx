@@ -47,16 +47,16 @@ function KPICard({
 
   return (
     <div className="glass-card p-4 flex flex-col justify-between min-w-0">
-      <p className="text-[9px] uppercase tracking-widest text-[rgba(255,255,255,0.3)] mb-1 truncate">
+      <p className="text-[9px] uppercase tracking-widest text-text-subtle mb-1 truncate">
         {label}
       </p>
       <div className="flex items-end justify-between gap-2">
         <div className="min-w-0">
-          <span className="text-2xl lg:text-3xl font-mono font-bold text-[rgba(255,255,255,0.9)] tabular-nums">
+          <span className="text-2xl lg:text-3xl font-mono font-bold text-text-primary tabular-nums">
             {formatValue(animated, unit)}
           </span>
           {unit === '₱/liter' && (
-            <span className="text-xs text-[rgba(255,255,255,0.2)] font-mono ml-0.5">/L</span>
+            <span className="text-xs text-text-dim font-mono ml-0.5">/L</span>
           )}
         </div>
         {sparkData.length >= 2 && (
@@ -74,11 +74,11 @@ function RiskBadge({ params }: { params: ScenarioParams }) {
   const { label, color } = getRiskLevel(params);
   return (
     <div className="glass-card p-4 flex flex-col justify-between">
-      <p className="text-[9px] uppercase tracking-widest text-[rgba(255,255,255,0.3)] mb-1">
+      <p className="text-[9px] uppercase tracking-widest text-text-subtle mb-1">
         Supply Risk
       </p>
       <span className={`text-2xl lg:text-3xl font-mono font-bold ${color}`}>{label}</span>
-      <p className="mt-1.5 text-[11px] font-mono text-[rgba(255,255,255,0.2)]">
+      <p className="mt-1.5 text-[11px] font-mono text-text-dim">
         Hormuz + Refinery
       </p>
     </div>
@@ -90,7 +90,7 @@ function DisruptionCount() {
   const critical = events.filter((e) => e.severity === 'red').length;
   return (
     <div className="glass-card p-4 flex flex-col justify-between">
-      <p className="text-[9px] uppercase tracking-widest text-[rgba(255,255,255,0.3)] mb-1">
+      <p className="text-[9px] uppercase tracking-widest text-text-subtle mb-1">
         Disruptions
       </p>
       <span
@@ -100,7 +100,7 @@ function DisruptionCount() {
       >
         {critical}
       </span>
-      <p className="mt-1.5 text-[11px] font-mono text-[rgba(255,255,255,0.2)]">
+      <p className="mt-1.5 text-[11px] font-mono text-text-dim">
         of {events.length} events
       </p>
     </div>

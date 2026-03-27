@@ -38,17 +38,17 @@ function BenchmarkCard({
 
   return (
     <div className="glass-card card-interactive p-4">
-      <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-1">
+      <p className="text-[10px] uppercase tracking-widest text-text-muted mb-1">
         {benchmark.name}
       </p>
       <div className="flex items-end justify-between gap-2">
         <div>
           <Tooltip text={benchmark.tooltip}>
-            <span className="text-2xl font-mono font-bold text-[rgba(255,255,255,0.9)]">
+            <span className="text-2xl font-mono font-bold text-text-primary">
               {benchmark.value.toLocaleString('en-US', { minimumFractionDigits: 2 })}
             </span>
           </Tooltip>
-          <span className="ml-1 text-[10px] text-[rgba(255,255,255,0.3)] font-mono">
+          <span className="ml-1 text-[10px] text-text-subtle font-mono">
             {benchmark.unit}
           </span>
         </div>

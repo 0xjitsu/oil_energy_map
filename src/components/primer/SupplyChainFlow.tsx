@@ -47,7 +47,7 @@ function StageCard({
       {/* Connector line */}
       {stage.number > 1 && (
         <div className="flex justify-center py-2">
-          <div className="w-px h-8 bg-gradient-to-b from-[rgba(255,255,255,0.1)] to-[rgba(255,255,255,0.03)]" />
+          <div className="w-px h-8 bg-gradient-to-b from-border-hover to-surface-hover" />
         </div>
       )}
 
@@ -84,7 +84,7 @@ function StageCard({
 
           {/* Expand indicator */}
           <div
-            className="flex-shrink-0 w-6 h-6 rounded-full border border-[rgba(255,255,255,0.08)] flex items-center justify-center transition-transform duration-300"
+            className="flex-shrink-0 w-6 h-6 rounded-full border border-border-hover flex items-center justify-center transition-transform duration-300"
             style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
           >
             <svg
@@ -150,7 +150,7 @@ function StageCard({
                   {stage.keyPlayers.map((player) => (
                     <span
                       key={player}
-                      className="inline-block text-xs font-mono px-2.5 py-1 rounded-md bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.06)] text-[var(--text-secondary)]"
+                      className="inline-block text-xs font-mono px-2.5 py-1 rounded-md bg-border border border-border-subtle text-[var(--text-secondary)]"
                     >
                       {player}
                     </span>

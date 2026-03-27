@@ -74,12 +74,12 @@ export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
                 <span className="text-lg" role="img" aria-label={item.label}>
                   {item.icon}
                 </span>
-                <span className="text-xs font-sans text-[rgba(255,255,255,0.5)]">
+                <span className="text-xs font-sans text-text-secondary">
                   {item.label}
                 </span>
               </div>
               <p className={`text-sm font-mono font-semibold ${changeColor}`}>{item.change}</p>
-              <p className="text-[10px] font-mono text-[rgba(255,255,255,0.3)] mt-1">
+              <p className="text-[10px] font-mono text-text-subtle mt-1">
                 from {item.current}
               </p>
             </div>

@@ -35,7 +35,7 @@ export function PrimerHero() {
       ref={ref}
       className={`text-center py-16 px-4 fade-in-section ${visible ? 'visible' : 'pending'}`}
     >
-      <div className="inline-flex items-center gap-2 mb-6 rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)] px-4 py-1.5">
+      <div className="inline-flex items-center gap-2 mb-6 rounded-full border border-border-hover bg-surface-hover px-4 py-1.5">
         <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-muted)]">
           Oil Primer
         </span>

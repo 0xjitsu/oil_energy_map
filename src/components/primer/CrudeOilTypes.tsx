@@ -73,7 +73,7 @@ export function CrudeOilTypes() {
                     <h3 className="text-sm font-semibold text-[var(--text-primary)]">
                       {crude.name}
                     </h3>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-muted)] px-2 py-0.5 rounded border border-[rgba(255,255,255,0.06)]">
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-muted)] px-2 py-0.5 rounded border border-border-subtle">
                       {crude.subtitle}
                     </span>
                     {crude.highlight && (

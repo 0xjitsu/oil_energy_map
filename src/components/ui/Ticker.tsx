@@ -46,14 +46,14 @@ export function Ticker() {
   const tickerContent = [...merged, ...merged];
 
   return (
-    <div className="overflow-hidden border-t border-b border-[rgba(255,255,255,0.04)] bg-[#060a12] ticker-mask">
+    <div className="overflow-hidden border-t border-b border-border bg-bg-primary ticker-mask">
       <div className="flex ticker-animate whitespace-nowrap py-1.5">
         {tickerContent.map((item, i) => (
           <span key={i} className="mx-3 inline-flex items-center gap-1.5 text-[10px] font-mono">
             {item.kind === 'price' ? (
               <>
-                <span className="text-[rgba(255,255,255,0.35)]">{item.name}</span>
-                <span className="text-[rgba(255,255,255,0.9)] font-semibold">
+                <span className="text-text-subtle">{item.name}</span>
+                <span className="text-text-primary font-semibold">
                   {item.value} {item.unit}
                 </span>
                 <span className={item.isUp ? 'text-red-400' : 'text-emerald-400'}>
@@ -62,18 +62,18 @@ export function Ticker() {
               </>
             ) : (
               <>
-                <span className="text-[rgba(255,255,255,0.15)]">·</span>
+                <span className="text-text-dim">·</span>
                 <span className={`inline-block h-1.5 w-1.5 rounded-full ${SEVERITY_DOT[item.severity]}`} />
                 <a
                   href={item.sourceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[rgba(255,255,255,0.55)] hover:text-[rgba(255,255,255,0.8)] transition-colors"
+                  className="text-text-secondary hover:text-text-primary transition-colors"
                 >
                   {item.text}
                 </a>
-                <span className="text-[rgba(255,255,255,0.2)]">{item.source}</span>
-                <span className="text-[rgba(255,255,255,0.15)]">·</span>
+                <span className="text-text-dim">{item.source}</span>
+                <span className="text-text-dim">·</span>
               </>
             )}
           </span>
