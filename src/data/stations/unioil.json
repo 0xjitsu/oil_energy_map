@@ -1,0 +1,1772 @@
+[
+  {
+    "id": "unioil-27582804",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.372274,
+      120.980507
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/27582804",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-2185435486",
+    "brand": "Unioil",
+    "name": "Uni Oil",
+    "coordinates": [
+      7.791664,
+      126.451641
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2185435486",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-5684627121",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.781139,
+      120.978019
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/5684627121",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-7051459907",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      10.774634,
+      122.600648
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/7051459907",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-11947283270",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      16.021389,
+      120.355661
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/11947283270",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-11958261248",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.604376,
+      121.085429
+    ],
+    "address": "Industria Street, Quezon City",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/node/11958261248",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-12194103101",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.593487,
+      121.175699
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12194103101",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-13183756034",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      16.227445,
+      120.495618
+    ],
+    "address": "Pugo - Rosario Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/13183756034",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-13622927374",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.552794,
+      121.125106
+    ],
+    "address": "Highway 2000",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/13622927374",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-55210750",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.423473,
+      121.036368
+    ],
+    "address": "Alabang-Zapote Road, Muntinlupa",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/55210750",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-85692794",
+    "brand": "Unioil",
+    "name": "Cleanfuel Auto LPG",
+    "coordinates": [
+      14.526256,
+      120.994171
+    ],
+    "address": "Roxas Boulevard, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/85692794",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-85692797",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.527189,
+      120.99407
+    ],
+    "address": "Roxas Boulevard, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/85692797",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-113540568",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      15.043919,
+      120.674262
+    ],
+    "address": "MacArthur Highway",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/113540568",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-117045344",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.618329,
+      121.071442
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/117045344",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-160725244",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.98,
+      120.504506
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/160725244",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-170085817",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      15.16829,
+      120.542724
+    ],
+    "address": "Manuel A. Roxas Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/170085817",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-172909804",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.665971,
+      121.032208
+    ],
+    "address": "Congressional Avenue, Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/172909804",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-177432913",
+    "brand": "Unioil",
+    "name": "Unioil Station",
+    "coordinates": [
+      14.650882,
+      121.107124
+    ],
+    "address": "Marikina",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/177432913",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-185485863",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.061618,
+      121.238641
+    ],
+    "address": "Maharlika Highway",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/185485863",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-228531257",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      15.051053,
+      120.702589
+    ],
+    "address": "Jose Abad Santos Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/228531257",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-235789870",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.176851,
+      120.960777
+    ],
+    "address": "Aguinaldo Highway, Silang",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/235789870",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-247625709",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.403998,
+      120.90461
+    ],
+    "address": "Lancaster Boulevard, Imus",
+    "fuelTypes": [
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/247625709",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-263311465",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.62074,
+      121.062209
+    ],
+    "address": "P. Tuazon Boulevard",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/263311465",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-265634277",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.657537,
+      120.990506
+    ],
+    "address": "EDSA",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/265634277",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-265891732",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.647536,
+      120.983455
+    ],
+    "address": "Rizal Avenue Extension",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/265891732",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-267619888",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.583685,
+      121.001835
+    ],
+    "address": "Quirino Avenue, Manila",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/267619888",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-270806065",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.641973,
+      121.054848
+    ],
+    "address": "Kalayaan Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/270806065",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-271145973",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.500519,
+      120.996889
+    ],
+    "address": "Ninoy Aquino Avenue, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/271145973",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-278851300",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.58964,
+      121.03748
+    ],
+    "address": "Shaw Boulevard",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/278851300",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-287018046",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.554244,
+      121.066406
+    ],
+    "address": "San Guillermo Avenue, Pasig",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/287018046",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-320911625",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.481591,
+      120.996738
+    ],
+    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/320911625",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-351551679",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.602936,
+      121.026364
+    ],
+    "address": "F. Blumentritt Street, San Juan",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/351551679",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-368471744",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.417404,
+      120.881834
+    ],
+    "address": "Antero Soriano Highway, General Trias",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/368471744",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-379389866",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.598904,
+      121.014313
+    ],
+    "address": "Valenzuela Street, Manila",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/379389866",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-388186958",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.589917,
+      121.096864
+    ],
+    "address": "Ortigas Avenue Extension",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/388186958",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-409655107",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.622725,
+      120.972605
+    ],
+    "address": "Juan Luna Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/409655107",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-411228207",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.293574,
+      120.938883
+    ],
+    "address": "Governor's Drive, Dasmari\u00f1as",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/411228207",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-413884400",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.288575,
+      121.011755
+    ],
+    "address": "Governor's Drive, Carmona",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/413884400",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-419641815",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.243502,
+      120.975063
+    ],
+    "address": "Silang",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/419641815",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-431545432",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.654335,
+      120.988441
+    ],
+    "address": "Bonny Serrano Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/431545432",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-441214517",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      11.786539,
+      124.867758
+    ],
+    "address": "Maharlika Highway, Catbalogan City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/441214517",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-443561074",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.823002,
+      120.298499
+    ],
+    "address": "Rizal Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/443561074",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-482221750",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.335046,
+      121.061258
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/482221750",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-506442019",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.55538,
+      120.991432
+    ],
+    "address": "F. B. Harrison Street, Pasay",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/506442019",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-506563016",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.624778,
+      120.998165
+    ],
+    "address": "Mayon Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/506563016",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-525403854",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.656274,
+      121.025142
+    ],
+    "address": "EDSA",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/525403854",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-538644394",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.672609,
+      121.047262
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/538644394",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-561771480",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.582967,
+      121.125457
+    ],
+    "address": "Ortigas Avenue Extension",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/561771480",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-569210515",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.585022,
+      121.12089
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/569210515",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-589276448",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.724867,
+      121.061443
+    ],
+    "address": "Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/589276448",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-592141489",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.704829,
+      121.077203
+    ],
+    "address": "Commonwealth Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/592141489",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-598184336",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.477393,
+      121.045552
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/598184336",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-633004581",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      10.285354,
+      123.860711
+    ],
+    "address": "Natalio Bacalso Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/633004581",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-671942723",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.16194,
+      120.997335
+    ],
+    "address": "Santa Rosa-Tagaytay Road, Silang",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/671942723",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-675768356",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.637567,
+      121.049201
+    ],
+    "address": "V. Luna Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/675768356",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-700306145",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.567186,
+      121.03048
+    ],
+    "address": "Makati Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/700306145",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-739471420",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.550353,
+      121.01114
+    ],
+    "address": "Osme\u00f1a Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/739471420",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-772046504",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.459058,
+      121.031621
+    ],
+    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/772046504",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-772596405",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      15.073564,
+      120.643933
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/772596405",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-793696456",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.640565,
+      120.992025
+    ],
+    "address": "Andres Bonifacio Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/793696456",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-794251417",
+    "brand": "Unioil",
+    "name": "Unioil Station",
+    "coordinates": [
+      14.704811,
+      121.07717
+    ],
+    "address": "Commonwealth Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/794251417",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-794257192",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.559327,
+      121.040606
+    ],
+    "address": "EDSA",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/794257192",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-794287062",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.682762,
+      121.078607
+    ],
+    "address": "Holy Spirit Drive",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/794287062",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-795186096",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.692109,
+      121.023216
+    ],
+    "address": "Mindanao Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/795186096",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-795517061",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.612645,
+      121.037185
+    ],
+    "address": "N. Domingo Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/795517061",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-795660431",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.686085,
+      121.031413
+    ],
+    "address": "Mindanao Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/795660431",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-795860939",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.672499,
+      121.064818
+    ],
+    "address": "Congressional Avenue Extension",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/795860939",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-795883798",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.733225,
+      121.048549
+    ],
+    "address": "Zabarte Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/795883798",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-804071702",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.434302,
+      121.012138
+    ],
+    "address": "Alabang-Zapote Road, Las Pi\u00f1as",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/804071702",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-804496554",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.74348,
+      120.95868
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/804496554",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-901084842",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.624346,
+      121.033764
+    ],
+    "address": "E. Rodriguez Sr. Avenue, Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/901084842",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-926730645",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.708982,
+      121.038922
+    ],
+    "address": "Quirino Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/926730645",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-930831800",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.597585,
+      121.109504
+    ],
+    "address": "F. P. Felix Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/930831800",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-930960293",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.632965,
+      121.083489
+    ],
+    "address": "A. Bonifacio Avenue, Marikina",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/930960293",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-934491990",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      7.083639,
+      125.581844
+    ],
+    "address": "Ma-a Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/934491990",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-940442696",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.621581,
+      121.005367
+    ],
+    "address": "Quezon Avenue, Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/940442696",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-944122468",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.705776,
+      120.989428
+    ],
+    "address": "Paso de Blas Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/944122468",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-965364711",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.2869,
+      121.001023
+    ],
+    "address": "Congressional Road, General Mariano Alvarez",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/965364711",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-998454770",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      15.017646,
+      120.66414
+    ],
+    "address": "Jose Abad Santos Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/998454770",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1043327870",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.644994,
+      121.027301
+    ],
+    "address": "West Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1043327870",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1059222209",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.113552,
+      121.142958
+    ],
+    "address": "Maharlika Highway, Santo Tomas",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1059222209",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1061627877",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.603957,
+      121.0322
+    ],
+    "address": "Pinaglabanan Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1061627877",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1065676780",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      15.246081,
+      120.953577
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1065676780",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1073093653",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.671504,
+      120.524802
+    ],
+    "address": "Balanga",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1073093653",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1074271357",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.73015,
+      120.512476
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1074271357",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1074878168",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.854288,
+      120.474385
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1074878168",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1074979759",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.575491,
+      121.088731
+    ],
+    "address": "F. Legaspi Street, Pasig",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1074979759",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1102680183",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.49576,
+      121.040402
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1102680183",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1133267381",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.429142,
+      120.974811
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1133267381",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1144647496",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.62475,
+      121.009798
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1144647496",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1148109842",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.252355,
+      121.496961
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1148109842",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1171457630",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      7.063558,
+      125.599316
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1171457630",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1175984212",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.808305,
+      120.94405
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1175984212",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1190695311",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.522267,
+      121.157738
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1190695311",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1217809838",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.070589,
+      121.30865
+    ],
+    "address": "Maharlika Highway, San Pablo",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1217809838",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1226638311",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.264375,
+      121.075527
+    ],
+    "address": "Santa Rosa-Tagaytay Road, Santa Rosa",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1226638311",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1234640186",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.700249,
+      120.962416
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1234640186",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1239424063",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.704781,
+      120.995224
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1239424063",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1249704672",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.102824,
+      121.154885
+    ],
+    "address": "Maharlika Highway, Santo Tomas",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1249704672",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1255631979",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.639342,
+      121.010424
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1255631979",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1273146765",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.047282,
+      120.695593
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1273146765",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1275191670",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.567075,
+      121.009945
+    ],
+    "address": "Pablo Ocampo Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1275191670",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1296234875",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      7.126327,
+      125.634188
+    ],
+    "address": "C. P. Garcia Highway, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1296234875",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1316971288",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.479081,
+      121.044698
+    ],
+    "address": "West Service Road, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1316971288",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1316973773",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.164392,
+      121.138132
+    ],
+    "address": "Maharlika Highway, Calamba",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1316973773",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1349979131",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      15.486707,
+      120.59596
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1349979131",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1371396875",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.312175,
+      120.86195
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1371396875",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1379621272",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.386962,
+      120.961482
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1379621272",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1383669521",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.636031,
+      121.023579
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1383669521",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1388410949",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.410557,
+      120.878355
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1388410949",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1418374471",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.62535,
+      121.048768
+    ],
+    "address": "EDSA",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1418374471",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1422098563",
+    "brand": "Unioil",
+    "name": "UniOil",
+    "coordinates": [
+      14.443888,
+      120.992784
+    ],
+    "address": "BF Resort Drive, Las Pi\u00f1as",
+    "fuelTypes": [
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1422098563",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1423916710",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.447612,
+      120.962528
+    ],
+    "address": "Bacoor Boulevard, Bacoor",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1423916710",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1430872336",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.613281,
+      121.070694
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1430872336",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1458628586",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.602957,
+      121.014992
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1458628586",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1459318141",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.612794,
+      121.075044
+    ],
+    "address": "E. Rodriguez Jr. Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1459318141",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1467326310",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.658054,
+      121.018649
+    ],
+    "address": "EDSA",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1467326310",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1472155970",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.545421,
+      121.117163
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1472155970",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1475607806",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.122038,
+      121.416056
+    ],
+    "address": "San Pablo - Rizal - Nagcarlan Road",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1475607806",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1480691859",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.563443,
+      121.138503
+    ],
+    "address": "Taytay Diversion Road, Taytay",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1480691859",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "unioil-1488516091",
+    "brand": "Unioil",
+    "name": "Unioil",
+    "coordinates": [
+      14.567393,
+      121.088886
+    ],
+    "address": "Mercedes Avenue, Pasig",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1488516091",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  }
+]

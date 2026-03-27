@@ -1,0 +1,5945 @@
+[
+  {
+    "id": "phoenix-1662345554",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.015319,
+      125.088505
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/1662345554",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2031862354",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.33551,
+      124.976381
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2031862354",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2295354813",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.141819,
+      120.955546
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2295354813",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2296664677",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      17.651297,
+      121.74342
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2296664677",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2374750744",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.623291,
+      126.085537
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2374750744",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2422513826",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.388601,
+      120.846943
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2422513826",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2552619019",
+    "brand": "Phoenix",
+    "name": "Hemado",
+    "coordinates": [
+      9.746394,
+      125.482912
+    ],
+    "address": "Surigao-Butuan National Highway, Surigao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2552619019",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2826281341",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.521461,
+      126.120498
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2826281341",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-2974117361",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.931752,
+      125.469962
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/2974117361",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-3055033020",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      11.717024,
+      122.358397
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/3055033020",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-3389179132",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.456875,
+      126.159065
+    ],
+    "address": "Tagbina",
+    "fuelTypes": [
+      "diesel",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/node/3389179132",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-3437329213",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.900575,
+      121.195197
+    ],
+    "address": "Lipa",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/3437329213",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4001704666",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.839139,
+      123.454881
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4001704666",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4102214234",
+    "brand": "Phoenix",
+    "name": "Phoenix Oil",
+    "coordinates": [
+      9.795818,
+      118.714125
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4102214234",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4134689993",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.936808,
+      123.774259
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4134689993",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4273659489",
+    "brand": "Phoenix",
+    "name": "Phoenix Petroleum  ",
+    "coordinates": [
+      14.243363,
+      121.119411
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4273659489",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4447295489",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.970394,
+      120.60517
+    ],
+    "address": "Jose Abad Santos Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4447295489",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4451721540",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.680385,
+      121.540013
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4451721540",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4567931193",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.997935,
+      122.815705
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4567931193",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4567944596",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.001974,
+      122.808908
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4567944596",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4568242416",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      17.637768,
+      120.408328
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4568242416",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4849065121",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.825549,
+      125.109782
+    ],
+    "address": "J. J. Ganaban Avenue, Gingoog City",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4849065121",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4885063790",
+    "brand": "Phoenix",
+    "name": "Phoenix Lalaan 1",
+    "coordinates": [
+      14.200201,
+      120.96497
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4885063790",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-4992438721",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      18.511272,
+      120.640172
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/4992438721",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-5738924623",
+    "brand": "Phoenix",
+    "name": "Phoenix Fuel Station",
+    "coordinates": [
+      9.355375,
+      125.941502
+    ],
+    "address": "Surigao - Davao Coastal Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/5738924623",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-6386862289",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.106807,
+      124.826385
+    ],
+    "address": "Roxas Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/6386862289",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-7855836937",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.280691,
+      120.741282
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/7855836937",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-8113619119",
+    "brand": "Phoenix",
+    "name": "Phoenix Gas Station",
+    "coordinates": [
+      11.245657,
+      123.022201
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/8113619119",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-8253384973",
+    "brand": "Phoenix",
+    "name": "Phoenix Super LPG",
+    "coordinates": [
+      15.110587,
+      120.564261
+    ],
+    "address": "Bayanihan Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/8253384973",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-8300067132",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.595672,
+      123.260215
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/8300067132",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-8320378305",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      17.62551,
+      121.719688
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/8320378305",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-8518713836",
+    "brand": "Phoenix",
+    "name": "Phoenix Super LPG",
+    "coordinates": [
+      14.273665,
+      121.418622
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/8518713836",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-9008901111",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.424621,
+      120.889379
+    ],
+    "address": "Antero Soriano Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/9008901111",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-9990989858",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.641685,
+      122.933182
+    ],
+    "address": "Pagadian-Zamboanga City Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/9990989858",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-10278111513",
+    "brand": "Phoenix",
+    "name": "Phoenix Super LPG",
+    "coordinates": [
+      12.044799,
+      125.488115
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/10278111513",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-11005384415",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.809677,
+      120.963333
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/11005384415",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-11036641805",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.630285,
+      124.724216
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/11036641805",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-11061918205",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.628437,
+      123.902116
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/11061918205",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-11258865637",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      11.026067,
+      124.594534
+    ],
+    "address": "Barangay Owak Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/11258865637",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-11345748669",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      17.625491,
+      121.719546
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/11345748669",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-12189505256",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.925637,
+      122.083985
+    ],
+    "address": "Maria Clara L. Lobregat Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12189505256",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-12217326949",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.157159,
+      123.719129
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12217326949",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-12253935374",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.528961,
+      119.254218
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12253935374",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-12463241601",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.302728,
+      123.957728
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12463241601",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-12534001338",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.235259,
+      121.154918
+    ],
+    "address": "Banlic - Mamatid Road, Cabuyao",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12534001338",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-12794314238",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.695984,
+      123.481691
+    ],
+    "address": "San Juan Bautista Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12794314238",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-12839665594",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.18827,
+      123.661973
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/12839665594",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-13165129384",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.373641,
+      120.980265
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/node/13165129384",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-37125717",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.086569,
+      125.628818
+    ],
+    "address": "R. Castillo Street, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/37125717",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-82869514",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.719103,
+      120.986536
+    ],
+    "address": "Valenzuela",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/82869514",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-82890595",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.428634,
+      121.045063
+    ],
+    "address": "West Service Road, Muntinlupa",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/82890595",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-97888140",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.839681,
+      125.408808
+    ],
+    "address": "Davao-Cotabato National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/97888140",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-118167277",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.483189,
+      120.964279
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/118167277",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-131940911",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.570661,
+      121.070802
+    ],
+    "address": "E. Rodriguez Jr. Avenue, Pasig",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/131940911",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-139537205",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.0736,
+      125.616282
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/139537205",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-144958542",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.301644,
+      125.680659
+    ],
+    "address": "Davao-Agusan National Highway, Panabo City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/144958542",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-144959640",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.30519,
+      125.685657
+    ],
+    "address": "Quezon Street, Panabo City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/144959640",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-144960516",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.314826,
+      125.686323
+    ],
+    "address": "National Highway, Panabo City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/144960516",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-145076687",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.431377,
+      125.797574
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/145076687",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-145405188",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.093632,
+      125.603418
+    ],
+    "address": "F. S. Dizon Road, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/145405188",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-151708980",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.427248,
+      121.023074
+    ],
+    "address": "Alabang-Zapote Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/151708980",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-157832205",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.289993,
+      125.676513
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/157832205",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-159269018",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.061412,
+      121.326496
+    ],
+    "address": "Maharlika Highway, San Pablo",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/159269018",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-159546326",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.464033,
+      125.824964
+    ],
+    "address": "Davao-Agusan National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/159546326",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-160912789",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.552643,
+      125.471014
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/160912789",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-165741041",
+    "brand": "Phoenix",
+    "name": "Phoenix People's",
+    "coordinates": [
+      15.016032,
+      120.703799
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/165741041",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-169332662",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.9415,
+      125.497673
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/169332662",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-172632888",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.071453,
+      125.548309
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/172632888",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-177615883",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.125297,
+      125.661131
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/177615883",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-178426057",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.5677,
+      126.566112
+    ],
+    "address": "Surigao-Davao Coastal Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/178426057",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-180826172",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.53697,
+      125.753877
+    ],
+    "address": "Tagum - Panabo Circumferential Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/180826172",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-181601046",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.378047,
+      125.820498
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/181601046",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-183803305",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.062799,
+      121.240901
+    ],
+    "address": "Marcelo H. del Pilar Avenue",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/183803305",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-185940140",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.267891,
+      121.126711
+    ],
+    "address": "National Highway, Cabuyao",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/185940140",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-192456549",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.245966,
+      121.060484
+    ],
+    "address": "Santa Rosa-Tagaytay Road, Santa Rosa",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/192456549",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-192916238",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.454138,
+      124.623576
+    ],
+    "address": "Masterson Avenue, Cagayan de Oro City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/192916238",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-198873420",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.333996,
+      126.564319
+    ],
+    "address": "Davao-Agusan National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/198873420",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-228830008",
+    "brand": "Phoenix",
+    "name": "Lumictin Gas Station",
+    "coordinates": [
+      9.077272,
+      126.183446
+    ],
+    "address": "National Highway, San Agustin Sur, Tandag City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/228830008",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-229489130",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.587554,
+      121.111001
+    ],
+    "address": "Ortigas Avenue Extension, Cainta",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/229489130",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-235252113",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      14.553193,
+      121.125668
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/235252113",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-236421340",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.5354,
+      120.987519
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/236421340",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-239060561",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.436878,
+      120.906404
+    ],
+    "address": "Antero Soriano Highway, Kawit",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/239060561",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-239923660",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.222,
+      120.926283
+    ],
+    "address": "Crisanto M. de los Reyes Avenue, Amadeo",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/239923660",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-241570306",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.325174,
+      120.649695
+    ],
+    "address": "L. Cortez Street, Concepcion",
+    "fuelTypes": [
+      "diesel"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/241570306",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-248447670",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.959671,
+      125.597915
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/248447670",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-253156484",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.471976,
+      120.975146
+    ],
+    "address": "P. Diego Cera Avenue, Las Pinas",
+    "fuelTypes": [
+      "diesel",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/253156484",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-265564186",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.545445,
+      121.01109
+    ],
+    "address": "Evangelista Street, Makati",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/265564186",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-266493618",
+    "brand": "Phoenix",
+    "name": "Star Oil",
+    "coordinates": [
+      14.664437,
+      120.984037
+    ],
+    "address": "MacArthur Highway, Malabon",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/266493618",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-271142005",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.455807,
+      121.039113
+    ],
+    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/271142005",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-274420865",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      6.112579,
+      125.165657
+    ],
+    "address": "General Santos",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/274420865",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-274426166",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.107527,
+      125.183209
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/274426166",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-274426191",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.12693,
+      125.160188
+    ],
+    "address": "Leopoldo D. Dacera Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/274426191",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-274893675",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.068321,
+      125.609356
+    ],
+    "address": "C. Bangoy Street, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/274893675",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-275383586",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.075827,
+      125.573087
+    ],
+    "address": "Diversion Road, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/275383586",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-275497307",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.947084,
+      122.116297
+    ],
+    "address": "MCLL Hi-way, Zamboanga",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/275497307",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-283047081",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.624966,
+      121.13786
+    ],
+    "address": "Marcos Highway, Antipolo",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/283047081",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-287672281",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.980772,
+      120.618318
+    ],
+    "address": "Jose Abad Santos Avenue, Guagua",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/287672281",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-287822885",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.940991,
+      120.592392
+    ],
+    "address": "Jose Abad Santos Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/287822885",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-288171344",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.396984,
+      121.044711
+    ],
+    "address": "National Highway, Muntinlupa",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/288171344",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-289705251",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.697267,
+      122.649794
+    ],
+    "address": "Guimaras Circumferential Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/289705251",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-289838242",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.177806,
+      121.246305
+    ],
+    "address": "National Highway",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/289838242",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-291194341",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.240055,
+      124.264801
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/291194341",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-292257952",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.704083,
+      120.986688
+    ],
+    "address": "Paso de Blas Road, Valenzuela",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/292257952",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-302983430",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.897368,
+      120.775474
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/302983430",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-302984769",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.240906,
+      125.089787
+    ],
+    "address": "Cannery Road",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/302984769",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-313347786",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.070631,
+      125.135781
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/313347786",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-313356714",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.219368,
+      124.251574
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/313356714",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-313504973",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.620005,
+      125.258686
+    ],
+    "address": "Mabini Street, Kiblawan",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/313504973",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314213200",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.013796,
+      125.496949
+    ],
+    "address": "J. Saavedra Street, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314213200",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314213547",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.039947,
+      125.525792
+    ],
+    "address": "MacArthur Highway, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314213547",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314213976",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.09299,
+      125.499728
+    ],
+    "address": "Sampaguita Street, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314213976",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314214780",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.042877,
+      125.568843
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314214780",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314216868",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.102714,
+      125.639019
+    ],
+    "address": "J. P. Laurel Avenue, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314216868",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314216945",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.120431,
+      125.674203
+    ],
+    "address": "Samal",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314216945",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314221633",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.070993,
+      125.620707
+    ],
+    "address": "M. L. Quezon Boulevard, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314221633",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314530796",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.565909,
+      125.669658
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314530796",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314666489",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.141643,
+      125.126815
+    ],
+    "address": "Fortich Street, Malaybalay",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314666489",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314670682",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.476201,
+      124.656501
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314670682",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314670709",
+    "brand": "Phoenix",
+    "name": "Phoenix Fuel",
+    "coordinates": [
+      8.185386,
+      126.351344
+    ],
+    "address": "Pan-Philippine Highway, Bislig",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314670709",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314670887",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.568658,
+      124.51587
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314670887",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-314672611",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      8.633688,
+      125.910374
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/314672611",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-315220707",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.05807,
+      121.229497
+    ],
+    "address": "Maharlika Highway",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/315220707",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-315567324",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.199431,
+      123.749698
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/315567324",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-316549585",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.428062,
+      120.89417
+    ],
+    "address": "Kalayaan Road, Kawit",
+    "fuelTypes": [
+      "diesel"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/316549585",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-322580636",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.254266,
+      120.860431
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/322580636",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-322580637",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.254297,
+      120.860301
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/322580637",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-330890613",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.678048,
+      125.644983
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/330890613",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-354489425",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.407745,
+      120.972849
+    ],
+    "address": "Bacoor",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/354489425",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-354760571",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.721683,
+      121.035392
+    ],
+    "address": "General Luis Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/354760571",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-361370423",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.233818,
+      121.134656
+    ],
+    "address": "National Highway 1, Cabuyao",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/361370423",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-379498889",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.526688,
+      120.400678
+    ],
+    "address": "naguilian road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/379498889",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-388462272",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.914843,
+      121.432254
+    ],
+    "address": "San Juan-Candelaria Road",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/388462272",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-392146821",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.531512,
+      121.034733
+    ],
+    "address": "Lawton Avenue, Taguig",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/392146821",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-405587138",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.52787,
+      121.244333
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/405587138",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-416959817",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.058807,
+      125.567894
+    ],
+    "address": "MacArthur Highway, Davao City",
+    "fuelTypes": [
+      "diesel"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/416959817",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-419381805",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.28502,
+      120.999743
+    ],
+    "address": "General Mariano Alvarez",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/419381805",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-420678104",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.405586,
+      120.99024
+    ],
+    "address": "Magdiwang Road, Bacoor",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/420678104",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-421941530",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.617562,
+      120.988663
+    ],
+    "address": "Dimasalang Street, Manila",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/421941530",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-431787913",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.647743,
+      121.017299
+    ],
+    "address": "Fernando Poe Jr. Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/431787913",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-436381567",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.602254,
+      121.106034
+    ],
+    "address": "F. P. Felix Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/436381567",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-436726117",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.609239,
+      120.310283
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/436726117",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-451814573",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.928845,
+      120.95044
+    ],
+    "address": "J. P. Laurel Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/451814573",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-457050167",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.503576,
+      124.599722
+    ],
+    "address": "Butuan-Cagayan de Oro-Iligan Road, Opol",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/457050167",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-458409674",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.895364,
+      120.906308
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/458409674",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-458980552",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.478194,
+      121.193412
+    ],
+    "address": "Binangonan Diversion Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/458980552",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-461117645",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.845494,
+      121.237223
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/461117645",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-462485704",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.794926,
+      121.070269
+    ],
+    "address": "National Highway 4, Batangas City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/462485704",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-466837556",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.790105,
+      121.014024
+    ],
+    "address": "",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/466837556",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-468174289",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.499721,
+      124.623036
+    ],
+    "address": "Mother of Perpetual Help Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/468174289",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-468611913",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.573484,
+      124.438897
+    ],
+    "address": "Butuan-Cagayan de Oro-Iligan Road, Laguindingan",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/468611913",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-469686762",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.630903,
+      121.011326
+    ],
+    "address": "Gregorio Araneta Avenue, Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/469686762",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-471711048",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.365788,
+      123.937502
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/471711048",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-477396988",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      16.724352,
+      120.350713
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/477396988",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-491248386",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.688193,
+      121.493554
+    ],
+    "address": "",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/491248386",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-501025964",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.928556,
+      121.11023
+    ],
+    "address": "National Road, Lipa",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/501025964",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-513115894",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.784743,
+      122.588139
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/513115894",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-514285131",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.761028,
+      122.577473
+    ],
+    "address": "MacArthur Drive",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/514285131",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-519067543",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.37987,
+      120.889301
+    ],
+    "address": "F. Y. Manalo Road, General Trias",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/519067543",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-529820654",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.026068,
+      126.068771
+    ],
+    "address": "National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/529820654",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-531852693",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.43019,
+      120.964719
+    ],
+    "address": "Bacoor Boulevard",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/531852693",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-538652492",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.671932,
+      121.044492
+    ],
+    "address": "Congressional Avenue Extension",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/538652492",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-551563715",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.735726,
+      121.065941
+    ],
+    "address": "Quirino Highway, Quezon City",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/551563715",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-560679510",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.760177,
+      120.983633
+    ],
+    "address": "16 A Road, Camalig, Meycauayan City, Bulacan 3020, Meycauayan",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/560679510",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-569170584",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.086137,
+      125.571766
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/569170584",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-569197133",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.671845,
+      120.964168
+    ],
+    "address": "M. H. del Pilar Street, Malabon",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/569197133",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-569663960",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.622327,
+      121.107792
+    ],
+    "address": "Marcos Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/569663960",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-570818877",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.306983,
+      120.952914
+    ],
+    "address": "Emilio Aguinaldo Highway, Dasmari\u00f1as",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/570818877",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-573766855",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.414696,
+      125.610306
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/573766855",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-576411122",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.749151,
+      121.037137
+    ],
+    "address": "Camarin Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/576411122",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-577659376",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.079332,
+      120.626771
+    ],
+    "address": "J. P. Laurel Street, Nasugbu",
+    "fuelTypes": [
+      "diesel",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/577659376",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-589806759",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.715137,
+      120.95222
+    ],
+    "address": "M. H. del Pilar Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/589806759",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-591926457",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.425266,
+      120.890115
+    ],
+    "address": "Antero Soriano Highway, Kawit",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/591926457",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-592648803",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      11.716956,
+      122.358544
+    ],
+    "address": "Aklan West Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/592648803",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-601793457",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      14.664061,
+      120.983997
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/601793457",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-603780618",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.914471,
+      121.617631
+    ],
+    "address": "Dalahican Road, Lucena",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/603780618",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-608254315",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.821323,
+      120.902345
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/608254315",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-609498994",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      14.738547,
+      120.964636
+    ],
+    "address": "Malhacan Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/609498994",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-616842299",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.301028,
+      123.29986
+    ],
+    "address": "Jose Romero Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/616842299",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-619599349",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.713496,
+      120.958239
+    ],
+    "address": "MacArthur Highway, Valenzuela",
+    "fuelTypes": [
+      "diesel"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/619599349",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-620879263",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.725883,
+      122.528074
+    ],
+    "address": "Guzman Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/620879263",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-624762994",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.289488,
+      123.878226
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/624762994",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-625597374",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      18.4766,
+      122.152568
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/625597374",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-640781090",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.635778,
+      121.032257
+    ],
+    "address": "Timog Avenue, Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/640781090",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-652749942",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.813527,
+      120.995306
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/652749942",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-653305250",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.462678,
+      120.989578
+    ],
+    "address": "Naga Road, Las Pi\u00f1as",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/653305250",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-671185753",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.015246,
+      120.660955
+    ],
+    "address": "Jose Abad Santos Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/671185753",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-685035597",
+    "brand": "Phoenix",
+    "name": "Phoenix -Salong",
+    "coordinates": [
+      13.925902,
+      120.817955
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/685035597",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-695817897",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.622624,
+      121.125305
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/695817897",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-716744473",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.177684,
+      120.58753
+    ],
+    "address": "MacArthur Highway, Mabalacat",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/716744473",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-719069398",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.867943,
+      121.021768
+    ],
+    "address": "Banaybanay-Mojon-Cuenca Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/719069398",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-742475343",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.029122,
+      125.061166
+    ],
+    "address": "Kidapawan City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/742475343",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-742675882",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.016015,
+      125.085889
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/742675882",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-758384851",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.015533,
+      121.339017
+    ],
+    "address": "Maharlika Highway, San Pablo",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/758384851",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-772595231",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.091603,
+      120.628314
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/772595231",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-772804902",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.940385,
+      121.124196
+    ],
+    "address": "President Jose P. Laurel Highway, Lipa",
+    "fuelTypes": [
+      "diesel",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/772804902",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-774902599",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.491824,
+      120.991455
+    ],
+    "address": "Ninoy Aquino Avenue, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/774902599",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-785330513",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.582728,
+      121.182384
+    ],
+    "address": "Senator L. Sumulong Memorial Circle",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/785330513",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-786085308",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.765869,
+      121.006309
+    ],
+    "address": "Bahay Pare Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/786085308",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-793883221",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.598159,
+      122.917321
+    ],
+    "address": "Araneta Street, Bacolod",
+    "fuelTypes": [
+      "diesel"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/793883221",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-794644148",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.72223,
+      122.961192
+    ],
+    "address": "Paseo Mabini, Talisay",
+    "fuelTypes": [
+      "diesel"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/794644148",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-795186375",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.692289,
+      121.022841
+    ],
+    "address": "Mindanao Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/795186375",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-798049264",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.669359,
+      121.033193
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/798049264",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-803227425",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.684914,
+      120.988057
+    ],
+    "address": "General T. de Leon Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/803227425",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-805208658",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.133496,
+      120.58238
+    ],
+    "address": "",
+    "fuelTypes": [
+      "diesel",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/805208658",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-807002503",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.693841,
+      122.563413
+    ],
+    "address": "Fuentes Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/807002503",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-808996104",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      18.262345,
+      121.998336
+    ],
+    "address": "Camalaniugan-Santa Ana Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/808996104",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-810652891",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.810391,
+      120.955344
+    ],
+    "address": "Bypass Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/810652891",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-812386979",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.841972,
+      120.812177
+    ],
+    "address": "T. Alonzo Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/812386979",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-814071621",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.984426,
+      122.819735
+    ],
+    "address": "Aquiles-Zayco Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/814071621",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-814864593",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.631115,
+      122.974408
+    ],
+    "address": "Bacolod-Murcia Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/814864593",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-815168950",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.694014,
+      122.953351
+    ],
+    "address": "San Juan Street, Bacolod City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/815168950",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-822262081",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.513424,
+      120.330424
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/822262081",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-827099026",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.794409,
+      120.930553
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/827099026",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-834148247",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.377786,
+      120.354319
+    ],
+    "address": "Manila North Road, Aringay",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/834148247",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-837790309",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.448647,
+      120.945642
+    ],
+    "address": "Maharlika Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/837790309",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-840457462",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.743348,
+      125.354765
+    ],
+    "address": "General Lim Extension, Digos City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/840457462",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-840792175",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.95831,
+      126.202282
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/840792175",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-845223138",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.01703,
+      125.492901
+    ],
+    "address": "MacArthur Highway, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/845223138",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-845878335",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.188223,
+      125.45211
+    ],
+    "address": "R. Magsaysay Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/845878335",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-845891027",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.188801,
+      125.457367
+    ],
+    "address": "Davao-Bukidnon National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/845891027",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-848751316",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.033234,
+      120.687273
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/848751316",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-849062869",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.321398,
+      119.985799
+    ],
+    "address": "Rizal Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/849062869",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-850723387",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.115606,
+      125.545626
+    ],
+    "address": "Surigao-Butuan National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/850723387",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-853119073",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.490947,
+      125.248187
+    ],
+    "address": "Davao-Bukidnon National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/853119073",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-855300944",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.335743,
+      123.911135
+    ],
+    "address": "M. Cuenco Avenue",
+    "fuelTypes": [
+      "diesel",
+      "gasoline"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/855300944",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-856219273",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.381972,
+      123.97053
+    ],
+    "address": "Cebu North Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/856219273",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-856661881",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.369651,
+      124.744914
+    ],
+    "address": "Isulan-Surallah Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/856661881",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-859744101",
+    "brand": "Phoenix",
+    "name": "Phoenix Gas Station",
+    "coordinates": [
+      14.41075,
+      121.451126
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/859744101",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-862370333",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.122408,
+      120.959628
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/862370333",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-872869958",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.153337,
+      120.769847
+    ],
+    "address": "Jose Abad Santos Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/872869958",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-876484379",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.481557,
+      120.996083
+    ],
+    "address": "Dr. A. Santos Avenue, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/876484379",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-880843207",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.72361,
+      122.549245
+    ],
+    "address": "Airport Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/880843207",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-880862728",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.970541,
+      120.688332
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/880862728",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-884002269",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.727644,
+      122.55605
+    ],
+    "address": "Simeon Ledesma Street, Iloilo",
+    "fuelTypes": [
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/884002269",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-885601953",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.600131,
+      121.092031
+    ],
+    "address": "Amang Rodriguez Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/885601953",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-886936768",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.125827,
+      120.585287
+    ],
+    "address": "Friendship Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/886936768",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-893202757",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.961647,
+      121.593723
+    ],
+    "address": "Lucena Diversion Road, Lucena",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/893202757",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-898204218",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.051842,
+      120.706488
+    ],
+    "address": "Jose Abad Santos Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/898204218",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-898219122",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.483231,
+      124.730606
+    ],
+    "address": "Claro M. Recto Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/898219122",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-902950128",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.308214,
+      123.887424
+    ],
+    "address": "B. Rodriguez Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/902950128",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-903420320",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.951059,
+      120.729563
+    ],
+    "address": "Tuy-Balayan Road",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/903420320",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-904589323",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.298908,
+      123.894527
+    ],
+    "address": "Natalio Bacalso Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/904589323",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-904593521",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.327473,
+      123.922166
+    ],
+    "address": "Hernan Cortes Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/904593521",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-905663496",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.339952,
+      123.935991
+    ],
+    "address": "Manuel L. Quezon Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/905663496",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-906403006",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.149068,
+      120.596028
+    ],
+    "address": "Magalang Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/906403006",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-908093862",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.646902,
+      122.935315
+    ],
+    "address": "Araneta Avenue, Bacolod",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/908093862",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-911508164",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.494283,
+      121.165449
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/911508164",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-913701621",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      14.553423,
+      121.070502
+    ],
+    "address": "San Guillermo Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/913701621",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-921553430",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.738577,
+      120.964626
+    ],
+    "address": "Malhacan Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/921553430",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-921761874",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.460264,
+      125.820289
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/921761874",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-922789448",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.337633,
+      123.942896
+    ],
+    "address": "M.C. Briones Street, Mandaue City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/922789448",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-923222321",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.859283,
+      121.049202
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/923222321",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-925388681",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.41269,
+      121.015086
+    ],
+    "address": "Daang Hari",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/925388681",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-928354359",
+    "brand": "Phoenix",
+    "name": "Phoenix Station",
+    "coordinates": [
+      14.644209,
+      120.981864
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/928354359",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-934498200",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.076438,
+      125.604593
+    ],
+    "address": "F. Torres Street, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/934498200",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-934632455",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.086232,
+      125.624326
+    ],
+    "address": "J.P. Cabaguio Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/934632455",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-939615513",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.647751,
+      121.017292
+    ],
+    "address": "Fernando Poe Jr. Avenue, Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/939615513",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-940950137",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.563265,
+      121.044552
+    ],
+    "address": "EDSA, Makati",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/940950137",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-942160148",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.55221,
+      121.098648
+    ],
+    "address": "Alfonso Sandoval Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/942160148",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-942945025",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.316187,
+      120.468235
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/942945025",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-952050714",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.460657,
+      120.61659
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/952050714",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-954994914",
+    "brand": "Phoenix",
+    "name": "Phoenix Petroleum",
+    "coordinates": [
+      14.798539,
+      121.069559
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/954994914",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-955581200",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.724069,
+      125.354239
+    ],
+    "address": "Digos Diversion Road, Digos City",
+    "fuelTypes": [
+      "diesel"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/955581200",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-956332196",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.455428,
+      125.816538
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/956332196",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-960979128",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.544441,
+      120.325239
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/960979128",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-961222369",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.572914,
+      121.177503
+    ],
+    "address": "M. L. Quezon Extension",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/961222369",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-963788258",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.130886,
+      120.959434
+    ],
+    "address": "Cagayan Valley Road, San Miguel",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/963788258",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-963788263",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.146309,
+      120.971814
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/963788263",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-964100992",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.613624,
+      121.016473
+    ],
+    "address": "Gregorio Araneta Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/964100992",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-964215657",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.935082,
+      125.099
+    ],
+    "address": "Sayre Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/964215657",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-965348073",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.081511,
+      125.512391
+    ],
+    "address": "Davao-Bukidnon Road, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/965348073",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-965523994",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.272686,
+      120.561366
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/965523994",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-969451068",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.013531,
+      125.493873
+    ],
+    "address": "J. Saavedra Street, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/969451068",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-969825715",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.032693,
+      120.583395
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/969825715",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-970963149",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.93972,
+      120.580789
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/970963149",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-972128829",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.944782,
+      126.252997
+    ],
+    "address": "President Diosdado P. Macapagal Highway, Mati",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/972128829",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-973515978",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.036157,
+      120.347931
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/973515978",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-974390630",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.046574,
+      120.350202
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/974390630",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-975562725",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.844057,
+      121.230619
+    ],
+    "address": "",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/975562725",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-975859590",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.728794,
+      121.056237
+    ],
+    "address": "Belfast Avenue, Quezon City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/975859590",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-976076198",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.023353,
+      120.326094
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/976076198",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-976722939",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.073975,
+      120.401441
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/976722939",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-977012862",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.7582,
+      125.351517
+    ],
+    "address": "Quezon Avenue, Digos City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/977012862",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-978260672",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.84359,
+      121.1961
+    ],
+    "address": "",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/978260672",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-982447811",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.384354,
+      124.553973
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/982447811",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-982860147",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.727266,
+      120.571003
+    ],
+    "address": "MacArthur Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/982860147",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-985412117",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.375189,
+      121.165993
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/985412117",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-985630949",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.061541,
+      125.590693
+    ],
+    "address": "MacArthur Highway, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/985630949",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-987412658",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.04607,
+      120.363166
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/987412658",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-993045370",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.970669,
+      121.679123
+    ],
+    "address": "Maharlika Highway",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/993045370",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-993479282",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.447562,
+      120.597957
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/993479282",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-994015769",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.052551,
+      125.592188
+    ],
+    "address": "Quimpo Boulevard, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/994015769",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1001157023",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.665331,
+      121.10674
+    ],
+    "address": "J. P. Rizal Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1001157023",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1005361197",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.5498,
+      121.072716
+    ],
+    "address": "M. Almeda Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1005361197",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1005612537",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.431075,
+      120.598148
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1005612537",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1012499756",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.012237,
+      120.749158
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1012499756",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1013833062",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.426855,
+      121.002401
+    ],
+    "address": "Marcos Alvarez Avenue, Las Pi\u00f1as",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1013833062",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1023099992",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.931726,
+      120.200873
+    ],
+    "address": "Zambales Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1023099992",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1023147061",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.502444,
+      124.7527
+    ],
+    "address": "C. M. Recto Avenue, Cagayan de Oro City",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1023147061",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1023280593",
+    "brand": "Phoenix",
+    "name": "Phoenix Petroleum",
+    "coordinates": [
+      14.26447,
+      121.433076
+    ],
+    "address": "National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1023280593",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1023462615",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.343063,
+      119.969675
+    ],
+    "address": "Zambales Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1023462615",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1027242467",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.076985,
+      126.18393
+    ],
+    "address": "Surigao-Davao Coastal Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1027242467",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1028594657",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.203088,
+      121.429858
+    ],
+    "address": "Jose P. Rizal Street",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1028594657",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1038584813",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.12298,
+      125.623489
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1038584813",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1038642071",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.129834,
+      125.616778
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1038642071",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1038675257",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.125748,
+      125.633435
+    ],
+    "address": "C. P. Garcia Highway, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1038675257",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1039255600",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      11.703374,
+      122.36826
+    ],
+    "address": "Toting Reyes Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1039255600",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1044619029",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.092906,
+      125.616415
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1044619029",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1051178880",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.329732,
+      124.247281
+    ],
+    "address": "Butuan-Cagayan de Oro-Iligan Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1051178880",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1052183983",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.019707,
+      124.274947
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1052183983",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1052940490",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.475485,
+      124.67922
+    ],
+    "address": "Claro M. Recto Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1052940490",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1052961317",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.469399,
+      124.703122
+    ],
+    "address": "Butuan \u2013 Cagayan de Oro \u2013 Iligan Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1052961317",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1053191015",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.475384,
+      124.715394
+    ],
+    "address": "Butuan \u2013 Cagayan de Oro \u2013 Iligan Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1053191015",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1054319770",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.535083,
+      124.754103
+    ],
+    "address": "Cagayan-Gingoog-Butuan National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1054319770",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1054609065",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.572993,
+      124.770764
+    ],
+    "address": "Butuan \u2013 Cagayan de Oro \u2013 Iligan Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1054609065",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1054978361",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      11.214036,
+      124.993668
+    ],
+    "address": "Maharlika Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1054978361",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1055254906",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.910711,
+      118.703925
+    ],
+    "address": "Puerto Princesa North Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1055254906",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1055866758",
+    "brand": "Phoenix",
+    "name": "Motorlife",
+    "coordinates": [
+      10.748589,
+      122.569113
+    ],
+    "address": "MacArthur Drive, Iloilo",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1055866758",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1058061842",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.402522,
+      121.171834
+    ],
+    "address": "J. P. Rizal Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1058061842",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1063371965",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.854173,
+      120.893789
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1063371965",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1066429538",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.052533,
+      125.536794
+    ],
+    "address": "Libby Road, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1066429538",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1070707073",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.519301,
+      120.951038
+    ],
+    "address": "Maharlika Highway, Cabanatuan",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1070707073",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1071700783",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.483525,
+      120.622746
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1071700783",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1074696531",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.944764,
+      121.152597
+    ],
+    "address": "San Carlos Drive, Lipa",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1074696531",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1079809975",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.771919,
+      121.044491
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1079809975",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1082510610",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.114797,
+      125.602922
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1082510610",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1083847242",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.971516,
+      120.216786
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1083847242",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1087740998",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.144253,
+      119.989982
+    ],
+    "address": "Alaminos-Bugallon Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1087740998",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1092448803",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.657733,
+      120.962769
+    ],
+    "address": "C-4 Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1092448803",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1102665251",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.490646,
+      121.01738
+    ],
+    "address": "Do\u00f1a Soledad Avenue, Para\u00f1aque",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1102665251",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1104412316",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.692692,
+      122.555498
+    ],
+    "address": "West Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1104412316",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1105329309",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.696751,
+      122.541921
+    ],
+    "address": "Avance\u00f1a Street, Iloilo",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1105329309",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1105384834",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.412673,
+      120.951859
+    ],
+    "address": "Buhay na Tubig Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1105384834",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1110899433",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.792367,
+      121.0621
+    ],
+    "address": "Santa Maria - Tungkong Mangga Road, San Jose del Monte",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1110899433",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1111595113",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.813262,
+      120.884887
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1111595113",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1112164470",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.576011,
+      121.059286
+    ],
+    "address": "Shaw Boulevard, Pasig",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1112164470",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1115700734",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.790441,
+      118.748519
+    ],
+    "address": "Puerto Princesa North Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1115700734",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1118205969",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.63456,
+      120.975214
+    ],
+    "address": "Juan Luna Street, Manila",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1118205969",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1126166172",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.3391,
+      123.29097
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1126166172",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1126808781",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.691988,
+      121.007109
+    ],
+    "address": "Que Grande Road, Valenzuela",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1126808781",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1127954877",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.297329,
+      123.982654
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1127954877",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1131829023",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.296173,
+      123.300912
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1131829023",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1132353438",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.662854,
+      123.85798
+    ],
+    "address": "Carlos P. Garcia North Avenue, Tagbilaran",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1132353438",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1137466974",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.472867,
+      124.605454
+    ],
+    "address": "Cagayan de Oro City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1137466974",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1148135220",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.298414,
+      121.463359
+    ],
+    "address": "National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1148135220",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1149465910",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.824081,
+      120.968276
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1149465910",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1150844866",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.71823,
+      122.546396
+    ],
+    "address": "Q. Abeto Street, Iloilo",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1150844866",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1158076759",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.788352,
+      125.209186
+    ],
+    "address": "National Highway, Bansalan",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1158076759",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1158257175",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.272177,
+      121.122196
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1158257175",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1162253682",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.357689,
+      120.925979
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1162253682",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1164236868",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.386678,
+      120.975822
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1164236868",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1165430998",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.477098,
+      120.584494
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1165430998",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1186119850",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.104899,
+      124.836229
+    ],
+    "address": "Rizal Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1186119850",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1186175287",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.304747,
+      124.008227
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1186175287",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1191591216",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.35022,
+      120.962956
+    ],
+    "address": "Jose Abad Santos Avenue, Dasmari\u00f1as",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1191591216",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1191742949",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.455308,
+      125.796818
+    ],
+    "address": "Santa Cruz Avenue, Tagum City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1191742949",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1202333678",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      17.63561,
+      121.736363
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1202333678",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1205567399",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.814603,
+      120.950084
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1205567399",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1207334800",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.469754,
+      120.979989
+    ],
+    "address": "Emilio Vergara Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1207334800",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1217485374",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.656776,
+      122.965472
+    ],
+    "address": "Carlos Hilado Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1217485374",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1226577513",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.463745,
+      120.882726
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1226577513",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1240077425",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.243825,
+      123.791172
+    ],
+    "address": "Natalio Bacalso Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1240077425",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1241857527",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.588575,
+      121.04404
+    ],
+    "address": "Shaw Boulevard",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1241857527",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1243256447",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.498622,
+      120.99764
+    ],
+    "address": "Multinational Avenue, Para\u00f1aque",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1243256447",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1253912813",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      16.627261,
+      120.324507
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1253912813",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1271734817",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.46811,
+      121.045574
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1271734817",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1280164394",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.138575,
+      125.649344
+    ],
+    "address": "C. P. Garcia Highway, Davao City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1280164394",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1281277596",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.442478,
+      121.044953
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1281277596",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1295625717",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.542922,
+      123.250309
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1295625717",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1313482815",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      17.551003,
+      121.783312
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1313482815",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1314402940",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.176498,
+      123.861173
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1314402940",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1315642989",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.258545,
+      123.957281
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1315642989",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1317007267",
+    "brand": "Phoenix",
+    "name": "Foxx",
+    "coordinates": [
+      13.938864,
+      121.153787
+    ],
+    "address": "Altamirano Street, Lipa City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1317007267",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1320225241",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.963559,
+      120.896991
+    ],
+    "address": "Do\u00f1a Remedios Trinidad Highway, Baliwag",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1320225241",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1322059948",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.423289,
+      120.86437
+    ],
+    "address": "Marseilla Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1322059948",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1323783916",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.778599,
+      120.966924
+    ],
+    "address": "Maharlika Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1323783916",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1331578428",
+    "brand": "Phoenix",
+    "name": "Four J Phoenix",
+    "coordinates": [
+      8.715993,
+      125.742034
+    ],
+    "address": "Narra Avenue, Bagyugan City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1331578428",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1331578433",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.716875,
+      125.741642
+    ],
+    "address": "Bagyugan City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1331578433",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1333275132",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      15.114582,
+      120.608232
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1333275132",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1337840544",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.342011,
+      121.069704
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1337840544",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1341747382",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.704105,
+      122.868326
+    ],
+    "address": "Pagadian-Zamboanga City Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1341747382",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1343918580",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.927918,
+      122.069544
+    ],
+    "address": "Saavedra Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1343918580",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1360919117",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      17.650043,
+      121.752403
+    ],
+    "address": "Enrile Boulevard",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1360919117",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1364686267",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.315569,
+      123.926879
+    ],
+    "address": "Ouano Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1364686267",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1365139700",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.76233,
+      122.578353
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1365139700",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1368498424",
+    "brand": "Phoenix",
+    "name": "Phoenix Gas Station",
+    "coordinates": [
+      14.037947,
+      121.159875
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1368498424",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1369414093",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.251518,
+      120.877735
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1369414093",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1369652160",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.970005,
+      120.908947
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1369652160",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1373559946",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      7.281078,
+      124.457432
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1373559946",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1376426487",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      9.777989,
+      118.748459
+    ],
+    "address": "Puerto Princesa North Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1376426487",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1388956670",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      11.167441,
+      123.736203
+    ],
+    "address": "Bantayan-Santa Fe Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1388956670",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1391984914",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      11.678031,
+      122.363082
+    ],
+    "address": "Osme\u00f1a Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1391984914",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1395188405",
+    "brand": "Phoenix",
+    "name": "Phoenix Fuels Life",
+    "coordinates": [
+      16.529283,
+      121.212139
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1395188405",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1416470292",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.491171,
+      124.02884
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1416470292",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1416679374",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.365909,
+      123.985449
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1416679374",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1416681381",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.36059,
+      123.980868
+    ],
+    "address": "Cansaga - Tayud Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1416681381",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1422347342",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.7919,
+      120.990682
+    ],
+    "address": "Bauan-Mabini Road, Bauan",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1422347342",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1422949028",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.335244,
+      123.950221
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1422949028",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1434426811",
+    "brand": "Phoenix",
+    "name": "Phoenix Camarin",
+    "coordinates": [
+      14.762402,
+      121.044216
+    ],
+    "address": "Captain F. S. Samano Street, Caloocan",
+    "fuelTypes": [
+      "diesel",
+      "gasoline"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1434426811",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1434772871",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.627541,
+      123.398746
+    ],
+    "address": "Dipolog-Oroquieta Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1434772871",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1442194557",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      13.945648,
+      121.363321
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1442194557",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1443170647",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      8.156783,
+      123.854735
+    ],
+    "address": "Ozamiz-Oroquieta Road",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1443170647",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1449269183",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.329547,
+      120.778894
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1449269183",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1452315778",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      10.299814,
+      123.886551
+    ],
+    "address": "",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1452315778",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1453375011",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.674745,
+      121.046891
+    ],
+    "address": "Tandang Sora Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1453375011",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1453461079",
+    "brand": "Phoenix",
+    "name": "Phoenix Pulse",
+    "coordinates": [
+      6.920486,
+      122.049532
+    ],
+    "address": "San Jose Street",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1453461079",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1459318139",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.610781,
+      121.075507
+    ],
+    "address": "E. Rodriguez Jr. Avenue",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1459318139",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1475070285",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.227203,
+      121.365967
+    ],
+    "address": "National Highway",
+    "fuelTypes": [
+      "diesel",
+      "gasoline",
+      "premium"
+    ],
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1475070285",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1475085039",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      14.257297,
+      121.396149
+    ],
+    "address": "National Highway",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1475085039",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  },
+  {
+    "id": "phoenix-1489994859",
+    "brand": "Phoenix",
+    "name": "Phoenix",
+    "coordinates": [
+      6.119178,
+      125.160428
+    ],
+    "address": "Digos-Makar Road, General Santos City",
+    "source": {
+      "url": "https://www.openstreetmap.org/way/1489994859",
+      "scrapedAt": "2026-03-27T08:09:45.259514+00:00"
+    }
+  }
+]
