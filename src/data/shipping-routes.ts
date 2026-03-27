@@ -17,6 +17,7 @@ export const shippingRoutes: ShippingRoute[] = [
       [2.0, 104.0],   // Malacca Strait approach
       [14.53, 120.6], // Petron Bataan Refinery
     ],
+    timestamps: [0, 200, 400, 600, 800, 1000],
   },
   {
     id: 'espo',
@@ -33,6 +34,7 @@ export const shippingRoutes: ShippingRoute[] = [
       [22.0, 122.0],   // Luzon Strait approach
       [14.53, 120.6],  // Petron Bataan Refinery
     ],
+    timestamps: [0, 250, 500, 750, 1000],
   },
   {
     id: 'singapore',
@@ -49,6 +51,7 @@ export const shippingRoutes: ShippingRoute[] = [
       [12.5, 118.5],   // Mindoro Strait approach
       [13.76, 121.08], // Shell SHIFT Tabangao, Batangas
     ],
+    timestamps: [0, 250, 500, 750, 1000],
   },
   {
     id: 'skorea',
@@ -65,5 +68,6 @@ export const shippingRoutes: ShippingRoute[] = [
       [15.0, 122.0],   // Eastern Luzon waters
       [10.31, 123.97], // Chevron Lapu-Lapu Terminal, Cebu
     ],
+    timestamps: [0, 250, 500, 750, 1000],
   },
 ];

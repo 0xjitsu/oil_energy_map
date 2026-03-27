@@ -3,6 +3,7 @@ export type FacilityStatus = 'operational' | 'closed' | 'upgraded';
 export type Severity = 'red' | 'yellow' | 'green';
 export type RiskLevel = 'green' | 'yellow' | 'red';
 export type RouteStatus = 'active' | 'disrupted' | 'new';
+export type MapMode = 'live' | 'scenario' | 'timeline';
 
 export interface Facility {
   id: string;
@@ -16,6 +17,7 @@ export interface Facility {
   notes: string;
   color: string;
   isPrimary?: boolean; // true for Petron Bataan
+  productionBpd: number; // numeric capacity for ColumnLayer height
 }
 
 export interface ShippingRoute {
@@ -27,6 +29,7 @@ export interface ShippingRoute {
   label: string;
   notes: string;
   coordinates: [number, number][]; // array of [lat, lng] points forming the route
+  timestamps: number[]; // array of numbers matching coordinates array length
 }
 
 export interface PriceBenchmark {

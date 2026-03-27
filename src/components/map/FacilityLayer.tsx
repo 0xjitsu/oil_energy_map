@@ -1,6 +1,6 @@
-import { ScatterplotLayer } from '@deck.gl/layers';
+import { ColumnLayer } from '@deck.gl/layers';
 import { facilities } from '@/data/facilities';
-import type { Facility, FacilityType } from '@/types';
+import type { Facility, MapMode, ScenarioParams } from '@/types';
 
 function hexToRgb(hex: string): [number, number, number] {
   const r = parseInt(hex.slice(1, 3), 16);
@@ -9,52 +9,67 @@ function hexToRgb(hex: string): [number, number, number] {
   return [r, g, b];
 }
 
-const TYPE_RADIUS: Record<FacilityType, number> = {
-  refinery: 10000,
-  terminal: 6000,
-  depot: 3500,
-};
+const ELEVATION_SCALE = 50; // multiplier for productionBpd → visual height
+
+function getElevationMultiplier(
+  facility: Facility,
+  mapMode: MapMode,
+  scenarioParams: ScenarioParams,
+): number {
+  if (mapMode === 'live') return 1;
+
+  const hormuzFactor = scenarioParams.hormuzWeeks / 16;
+
+  if (facility.id === 'petron-bataan') {
+    if (scenarioParams.refineryOffline) return 0.1;
+    return 1 - hormuzFactor * 0.3; // shrinks as supply disrupted
+  }
+
+  if (facility.type === 'terminal') {
+    // Terminals grow slightly as import dependency increases
+    return 1 + (scenarioParams.refineryOffline ? 0.2 : hormuzFactor * 0.1);
+  }
+
+  return 1;
+}
 
 export function createFacilityLayer(
   visible: boolean,
+  mapMode: MapMode,
+  scenarioParams: ScenarioParams,
+  timelinePosition: number,
   onSelect: (facility: Facility) => void,
   hoveredId: string | null,
   setHoveredId: (id: string | null) => void,
 ) {
-  return new ScatterplotLayer<Facility>({
+  return new ColumnLayer<Facility>({
     id: 'facilities',
     data: facilities,
     visible,
     pickable: true,
-    filled: true,
-    stroked: true,
+    extruded: true,
+    diskResolution: 20,
+    radius: 30000,
     getPosition: (d: Facility) => [d.coordinates[1], d.coordinates[0]],
-    getRadius: (d: Facility) => {
-      const base = TYPE_RADIUS[d.type] ?? 3500;
-      if (d.isPrimary) return base * 1.4;
-      if (d.id === hoveredId) return base * 1.2;
-      return base;
+    getElevation: (d: Facility) => {
+      const multiplier = getElevationMultiplier(d, mapMode, scenarioParams);
+      return d.productionBpd * ELEVATION_SCALE * multiplier;
     },
     getFillColor: (d: Facility) => {
       const rgb = hexToRgb(d.color);
-      const alpha =
-        d.id === hoveredId ? 255 : d.status === 'closed' ? 80 : 200;
+      let alpha = 200;
+      if (d.status === 'closed') alpha = 80;
+      else if (d.status === 'upgraded') alpha = 240;
+      if (d.id === hoveredId) alpha = Math.min(alpha + 55, 255);
+
+      // In SCENARIO mode, dim Petron if offline
+      if (mapMode !== 'live' && d.id === 'petron-bataan' && scenarioParams.refineryOffline) {
+        alpha = 50;
+      }
+
       return [...rgb, alpha] as [number, number, number, number];
     },
-    getLineColor: (d: Facility) => {
-      const rgb = hexToRgb(d.color);
-      return [...rgb, d.isPrimary ? 255 : 100] as [
-        number,
-        number,
-        number,
-        number,
-      ];
-    },
-    getLineWidth: (d: Facility) => (d.isPrimary ? 3 : 1),
-    lineWidthUnits: 'pixels' as const,
-    radiusUnits: 'meters' as const,
-    radiusMinPixels: 4,
-    radiusMaxPixels: 30,
+    material: { ambient: 0.6, diffuse: 0.8, shininess: 32 },
     onClick: ({ object }: { object?: Facility }) => {
       if (object) onSelect(object);
     },
@@ -62,12 +77,12 @@ export function createFacilityLayer(
       setHoveredId(object ? object.id : null);
     },
     transitions: {
-      getRadius: 300,
+      getElevation: 300,
       getFillColor: 300,
     },
     updateTriggers: {
-      getFillColor: hoveredId,
-      getRadius: hoveredId,
+      getFillColor: [hoveredId, mapMode, scenarioParams.refineryOffline],
+      getElevation: [mapMode, scenarioParams.hormuzWeeks, scenarioParams.refineryOffline, timelinePosition],
     },
   });
 }

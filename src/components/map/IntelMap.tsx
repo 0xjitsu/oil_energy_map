@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect, useRef } from 'react';
 import Map, { useControl, NavigationControl } from 'react-map-gl/maplibre';
 import { MapboxOverlay } from '@deck.gl/mapbox';
 import type { MapViewState, Layer } from '@deck.gl/core';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import type { Facility } from '@/types';
+import type { Facility, MapMode, ScenarioParams } from '@/types';
 import { createFacilityLayer } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
 import LayerControls from './LayerControls';
@@ -34,16 +34,47 @@ const INITIAL_VIEW_STATE: MapViewState = {
 const MAP_STYLE =
   'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
 
-export default function IntelMap() {
+export interface IntelMapProps {
+  mapMode: MapMode;
+  scenarioParams: ScenarioParams;
+  timelinePosition: number;
+  onModeChange: (mode: MapMode) => void;
+}
+
+export default function IntelMap({
+  mapMode,
+  scenarioParams,
+  timelinePosition,
+  onModeChange,
+}: IntelMapProps) {
   const [layers, setLayers] = useState<LayerVisibility>({
     facilities: true,
     routes: true,
     labels: true,
   });
-  const [selectedFacility, setSelectedFacility] = useState<Facility | null>(
-    null,
-  );
+  const [selectedFacility, setSelectedFacility] = useState<Facility | null>(null);
   const [hoveredFacility, setHoveredFacility] = useState<string | null>(null);
+  const [currentTime, setCurrentTime] = useState(0);
+  const rafRef = useRef<number>(0);
+
+  // Animation loop for LIVE mode
+  useEffect(() => {
+    if (mapMode !== 'live') {
+      cancelAnimationFrame(rafRef.current);
+      return;
+    }
+
+    const animate = () => {
+      setCurrentTime((t) => (t + 1) % 1000);
+      rafRef.current = requestAnimationFrame(animate);
+    };
+    rafRef.current = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [mapMode]);
+
+  // In TIMELINE mode, currentTime is driven by timelinePosition
+  const effectiveTime = mapMode === 'timeline' ? timelinePosition : currentTime;
 
   const handleToggle = useCallback((layer: string) => {
     setLayers((prev) => ({
@@ -64,13 +95,25 @@ export default function IntelMap() {
     () => [
       createFacilityLayer(
         layers.facilities,
+        mapMode,
+        scenarioParams,
+        timelinePosition,
         handleSelect,
         hoveredFacility,
         setHoveredFacility,
       ),
-      ...createRouteLayers(layers.routes),
+      ...createRouteLayers(layers.routes, mapMode, effectiveTime, scenarioParams),
     ],
-    [layers.facilities, layers.routes, handleSelect, hoveredFacility],
+    [
+      layers.facilities,
+      layers.routes,
+      mapMode,
+      scenarioParams,
+      timelinePosition,
+      effectiveTime,
+      handleSelect,
+      hoveredFacility,
+    ],
   );
 
   return (
@@ -87,7 +130,12 @@ export default function IntelMap() {
         <DeckGLOverlay layers={deckLayers} />
         <NavigationControl position="top-left" showCompass={false} />
       </Map>
-      <LayerControls layers={layers} onToggle={handleToggle} />
+      <LayerControls
+        layers={layers}
+        onToggle={handleToggle}
+        mapMode={mapMode}
+        onModeChange={onModeChange}
+      />
       <FacilityDetail facility={selectedFacility} onClose={handleClose} />
     </div>
   );

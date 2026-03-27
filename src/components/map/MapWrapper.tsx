@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import type { MapMode, ScenarioParams } from '@/types';
 
 const IntelMap = dynamic(() => import('./IntelMap'), {
   ssr: false,
@@ -13,6 +14,13 @@ const IntelMap = dynamic(() => import('./IntelMap'), {
   ),
 });
 
-export default function MapWrapper() {
-  return <IntelMap />;
+interface MapWrapperProps {
+  mapMode: MapMode;
+  scenarioParams: ScenarioParams;
+  timelinePosition: number;
+  onModeChange: (mode: MapMode) => void;
+}
+
+export default function MapWrapper(props: MapWrapperProps) {
+  return <IntelMap {...props} />;
 }

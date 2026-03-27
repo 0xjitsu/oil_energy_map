@@ -1,20 +1,50 @@
-import dynamic from "next/dynamic";
-import { AlertBanner } from "@/components/layout/AlertBanner";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import MapWrapper from "@/components/map/MapWrapper";
-import { PumpPrices } from "@/components/prices/PumpPrices";
-import { ImpactCards } from "@/components/prices/ImpactCards";
-import { VitalSigns } from "@/components/health/VitalSigns";
-import { EventTimeline } from "@/components/health/EventTimeline";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
+'use client';
 
-const PricePanel = dynamic(() => import("@/components/prices/PricePanel").then(m => m.PricePanel), { ssr: false });
-const ScenarioPlanner = dynamic(() => import("@/components/scenarios/ScenarioPlanner").then(m => m.ScenarioPlanner), { ssr: false });
-const MarketShare = dynamic(() => import("@/components/players/MarketShare").then(m => m.MarketShare), { ssr: false });
-const PlayerCards = dynamic(() => import("@/components/players/PlayerCards").then(m => m.PlayerCards), { ssr: false });
+import { useState, useCallback } from 'react';
+import dynamic from 'next/dynamic';
+import { AlertBanner } from '@/components/layout/AlertBanner';
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import MapWrapper from '@/components/map/MapWrapper';
+import TimelineSlider from '@/components/map/TimelineSlider';
+import { PumpPrices } from '@/components/prices/PumpPrices';
+import { ImpactCards } from '@/components/prices/ImpactCards';
+import { VitalSigns } from '@/components/health/VitalSigns';
+import { EventTimeline } from '@/components/health/EventTimeline';
+import { ScrollProgress } from '@/components/ui/ScrollProgress';
+import type { MapMode, ScenarioParams } from '@/types';
+
+const PricePanel = dynamic(
+  () => import('@/components/prices/PricePanel').then((m) => m.PricePanel),
+  { ssr: false },
+);
+const ScenarioPlanner = dynamic(
+  () => import('@/components/scenarios/ScenarioPlanner').then((m) => m.ScenarioPlanner),
+  { ssr: false },
+);
+const MarketShare = dynamic(
+  () => import('@/components/players/MarketShare').then((m) => m.MarketShare),
+  { ssr: false },
+);
+const PlayerCards = dynamic(
+  () => import('@/components/players/PlayerCards').then((m) => m.PlayerCards),
+  { ssr: false },
+);
 
 export default function Home() {
+  const [mapMode, setMapMode] = useState<MapMode>('live');
+  const [scenarioParams, setScenarioParams] = useState<ScenarioParams>({
+    brentPrice: 106,
+    hormuzWeeks: 2,
+    forexRate: 58.42,
+    refineryOffline: false,
+  });
+  const [timelinePosition, setTimelinePosition] = useState(0);
+
+  const handleParamsChange = useCallback((params: ScenarioParams) => {
+    setScenarioParams(params);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[var(--bg-primary)]">
       <ScrollProgress />
@@ -31,7 +61,19 @@ export default function Home() {
                 Supply Chain Map
               </h2>
             </div>
-            <MapWrapper />
+            <div className="relative">
+              <MapWrapper
+                mapMode={mapMode}
+                scenarioParams={scenarioParams}
+                timelinePosition={timelinePosition}
+                onModeChange={setMapMode}
+              />
+              <TimelineSlider
+                position={timelinePosition}
+                onPositionChange={setTimelinePosition}
+                visible={mapMode === 'timeline'}
+              />
+            </div>
           </div>
 
           <div className="space-y-4">
@@ -66,7 +108,12 @@ export default function Home() {
 
         {/* Scenario Planner */}
         <section>
-          <ScenarioPlanner />
+          <ScenarioPlanner
+            params={scenarioParams}
+            onParamsChange={handleParamsChange}
+            mapMode={mapMode}
+            timelinePosition={timelinePosition}
+          />
         </section>
 
         {/* Market Players + System Health */}

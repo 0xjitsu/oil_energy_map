@@ -1,6 +1,7 @@
-import { ArcLayer, PathLayer } from '@deck.gl/layers';
+import { ArcLayer } from '@deck.gl/layers';
+import { TripsLayer } from '@deck.gl/geo-layers';
 import { shippingRoutes } from '@/data/shipping-routes';
-import type { ShippingRoute } from '@/types';
+import type { ShippingRoute, MapMode, ScenarioParams } from '@/types';
 
 function swapCoords(coords: [number, number][]): [number, number][] {
   return coords.map(([lat, lng]) => [lng, lat]);
@@ -13,28 +14,50 @@ function hexToRgb(hex: string): [number, number, number] {
   return [r, g, b];
 }
 
-export function createRouteLayers(visible: boolean) {
-  const pathLayer = new PathLayer<ShippingRoute>({
-    id: 'route-paths',
+function getRouteOpacity(
+  route: ShippingRoute,
+  mapMode: MapMode,
+  scenarioParams: ScenarioParams,
+): number {
+  if (mapMode === 'live') {
+    return route.status === 'disrupted' ? 220 : 180;
+  }
+  // SCENARIO and TIMELINE modes
+  if (route.id === 'hormuz') {
+    const disruption = scenarioParams.hormuzWeeks / 16; // 0 to 1
+    return Math.round(220 * (1 - disruption * 0.8)); // dims to 20% at max disruption
+  }
+  return 200;
+}
+
+export function createRouteLayers(
+  visible: boolean,
+  mapMode: MapMode,
+  currentTime: number,
+  scenarioParams: ScenarioParams,
+) {
+  const tripsLayer = new TripsLayer<ShippingRoute>({
+    id: 'tanker-trips',
     data: shippingRoutes,
     visible,
-    pickable: true,
     getPath: (d: ShippingRoute) => swapCoords(d.coordinates),
+    getTimestamps: (d: ShippingRoute) => d.timestamps,
     getColor: (d: ShippingRoute) => {
       const rgb = hexToRgb(d.color);
-      const alpha = d.status === 'disrupted' ? 220 : 150;
+      const alpha = getRouteOpacity(d, mapMode, scenarioParams);
       return [...rgb, alpha] as [number, number, number, number];
     },
-    getWidth: (d: ShippingRoute) => (d.status === 'disrupted' ? 3 : 2),
-    widthUnits: 'pixels' as const,
-    widthMinPixels: 1,
+    opacity: 0.8,
+    widthMinPixels: 4,
+    trailLength: 150,
+    currentTime,
   });
 
   const arcLayer = new ArcLayer<ShippingRoute>({
     id: 'route-arcs',
     data: shippingRoutes,
     visible,
-    pickable: true,
+    pickable: false,
     getSourcePosition: (d: ShippingRoute) => {
       const first = d.coordinates[0];
       return [first[1], first[0]];
@@ -45,16 +68,16 @@ export function createRouteLayers(visible: boolean) {
     },
     getSourceColor: (d: ShippingRoute) => {
       const rgb = hexToRgb(d.color);
-      return [...rgb, 80] as [number, number, number, number];
+      return [...rgb, 40] as [number, number, number, number];
     },
     getTargetColor: (d: ShippingRoute) => {
       const rgb = hexToRgb(d.color);
-      return [...rgb, 220] as [number, number, number, number];
+      return [...rgb, 40] as [number, number, number, number];
     },
-    getWidth: 2,
+    getWidth: 1,
     getHeight: 0.3,
     greatCircle: true,
   });
 
-  return [pathLayer, arcLayer];
+  return [tripsLayer, arcLayer];
 }

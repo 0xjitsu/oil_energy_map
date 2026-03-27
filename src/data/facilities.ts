@@ -14,6 +14,7 @@ export const facilities: Facility[] = [
     notes: 'SOLE operating refinery in the Philippines. Processes ~60% of national crude throughput.',
     color: '#3b82f6',
     isPrimary: true,
+    productionBpd: 180000,
   },
   {
     id: 'shell-tabangao-refinery',
@@ -26,6 +27,7 @@ export const facilities: Facility[] = [
     type: 'refinery',
     notes: 'Converted to import terminal (now Shell SHIFT Tabangao). Closure left PH with single refinery dependency.',
     color: '#facc15',
+    productionBpd: 110000,
   },
 
   // Terminals
@@ -40,6 +42,7 @@ export const facilities: Facility[] = [
     type: 'terminal',
     notes: 'Primary Luzon fuel import hub. Converted from former refinery site. Receives finished products from Singapore.',
     color: '#facc15',
+    productionBpd: 45000,
   },
   {
     id: 'chevron-batangas',
@@ -52,6 +55,7 @@ export const facilities: Facility[] = [
     type: 'terminal',
     notes: 'Main Caltex supply hub. Largest storage capacity among independent terminals.',
     color: '#ef4444',
+    productionBpd: 40000,
   },
   {
     id: 'phoenix-calaca',
@@ -64,6 +68,7 @@ export const facilities: Facility[] = [
     type: 'terminal',
     notes: 'Phoenix Petroleum primary Luzon receiving terminal.',
     color: '#f97316',
+    productionBpd: 8000,
   },
   {
     id: 'chevron-lapu-lapu',
@@ -76,6 +81,7 @@ export const facilities: Facility[] = [
     type: 'terminal',
     notes: 'Recently completed \u20B1170M upgrade to increase throughput and storage capacity for Visayas distribution.',
     color: '#ef4444',
+    productionBpd: 15000,
   },
   {
     id: 'shell-darong',
@@ -88,6 +94,7 @@ export const facilities: Facility[] = [
     type: 'terminal',
     notes: 'Primary Shell distribution hub for Mindanao region.',
     color: '#facc15',
+    productionBpd: 12000,
   },
 
   // Depots
@@ -102,6 +109,7 @@ export const facilities: Facility[] = [
     type: 'depot',
     notes: 'Serves the Cordillera and Northern Luzon markets.',
     color: '#facc15',
+    productionBpd: 3000,
   },
   {
     id: 'phoenix-davao',
@@ -114,6 +122,7 @@ export const facilities: Facility[] = [
     type: 'depot',
     notes: 'Phoenix Petroleum Mindanao flagship depot.',
     color: '#f97316',
+    productionBpd: 4000,
   },
   {
     id: 'phoenix-cdo',
@@ -126,6 +135,7 @@ export const facilities: Facility[] = [
     type: 'depot',
     notes: 'Serves Northern Mindanao and surrounding provinces.',
     color: '#f97316',
+    productionBpd: 2500,
   },
   {
     id: 'metro-manila',
@@ -138,5 +148,6 @@ export const facilities: Facility[] = [
     type: 'depot',
     notes: 'National Capital Region — largest single demand center, consuming ~40% of national fuel supply.',
     color: '#475569',
+    productionBpd: 50000,
   },
 ];
