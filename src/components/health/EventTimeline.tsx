@@ -19,22 +19,35 @@ const SOURCE_TYPE_STYLES: Record<SourceType, string> = {
   market: 'text-yellow-400/70',
 };
 
-type Filter = 'all' | Severity;
+type SeverityFilter = 'all' | Severity;
+type SourceFilter = 'all' | SourceType;
 
-const FILTERS: { key: Filter; label: string }[] = [
+const SEVERITY_FILTERS: { key: SeverityFilter; label: string }[] = [
   { key: 'all', label: 'All' },
   { key: 'red', label: 'Critical' },
   { key: 'yellow', label: 'Watch' },
   { key: 'green', label: 'Positive' },
 ];
 
+const SOURCE_FILTERS: { key: SourceFilter; label: string }[] = [
+  { key: 'all', label: 'All' },
+  { key: 'news', label: 'News' },
+  { key: 'government', label: 'Gov' },
+  { key: 'social', label: 'Social' },
+  { key: 'ai', label: 'AI' },
+  { key: 'market', label: 'Market' },
+];
+
 export function EventTimeline() {
   const { events: timelineEvents } = useEvents();
-  const [filter, setFilter] = useState<Filter>('all');
+  const [filter, setFilter] = useState<SeverityFilter>('all');
+  const [sourceFilter, setSourceFilter] = useState<SourceFilter>('all');
 
-  const filtered = filter === 'all'
-    ? timelineEvents
-    : timelineEvents.filter(e => e.severity === filter);
+  const filtered = timelineEvents.filter(e => {
+    if (filter !== 'all' && e.severity !== filter) return false;
+    if (sourceFilter !== 'all' && e.sourceType !== sourceFilter) return false;
+    return true;
+  });
 
   return (
     <div className="glass-card p-5">
@@ -42,9 +55,9 @@ export function EventTimeline() {
         Event Timeline
       </h3>
 
-      {/* Filter tabs */}
-      <div className="flex gap-1 mb-4">
-        {FILTERS.map(f => (
+      {/* Severity filter tabs */}
+      <div className="flex gap-1 mb-2">
+        {SEVERITY_FILTERS.map(f => (
           <button
             key={f.key}
             onClick={() => setFilter(f.key)}
@@ -52,6 +65,23 @@ export function EventTimeline() {
               filter === f.key
                 ? 'bg-[rgba(255,255,255,0.08)] text-[rgba(255,255,255,0.9)]'
                 : 'text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.5)] hover:bg-[rgba(255,255,255,0.03)]'
+            }`}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Source type filter tabs */}
+      <div className="flex gap-1 mb-4">
+        {SOURCE_FILTERS.map(f => (
+          <button
+            key={f.key}
+            onClick={() => setSourceFilter(f.key)}
+            className={`px-2 py-0.5 text-[9px] font-mono rounded transition-all ${
+              sourceFilter === f.key
+                ? 'bg-[rgba(255,255,255,0.06)] text-[rgba(255,255,255,0.8)]'
+                : 'text-[rgba(255,255,255,0.25)] hover:text-[rgba(255,255,255,0.45)] hover:bg-[rgba(255,255,255,0.03)]'
             }`}
           >
             {f.label}

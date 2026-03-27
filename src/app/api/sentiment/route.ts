@@ -31,7 +31,19 @@ export async function GET() {
   }
 
   try {
-    const headlines = timelineEvents.slice(0, 5).map((e) => e.event);
+    // Try to get live headlines from events API, fall back to static
+    let headlines: string[];
+    try {
+      const eventsRes = await fetch(new URL('/api/events', process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000').toString());
+      if (eventsRes.ok) {
+        const events = await eventsRes.json();
+        headlines = (Array.isArray(events) ? events : timelineEvents).slice(0, 5).map((e: { event: string }) => e.event);
+      } else {
+        headlines = timelineEvents.slice(0, 5).map((e) => e.event);
+      }
+    } catch {
+      headlines = timelineEvents.slice(0, 5).map((e) => e.event);
+    }
 
     const response = await fetch(HF_API, {
       method: 'POST',

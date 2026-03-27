@@ -154,6 +154,10 @@ body {
   animation: ticker-scroll 30s linear infinite;
 }
 
+.ticker-mask:hover .ticker-animate {
+  animation-play-state: paused;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }

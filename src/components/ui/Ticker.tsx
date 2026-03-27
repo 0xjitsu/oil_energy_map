@@ -47,7 +47,7 @@ export function Ticker() {
 
   return (
     <div className="overflow-hidden border-t border-b border-[rgba(255,255,255,0.04)] bg-[#060a12] ticker-mask">
-      <div className="flex animate-ticker whitespace-nowrap py-1.5">
+      <div className="flex ticker-animate whitespace-nowrap py-1.5">
         {tickerContent.map((item, i) => (
           <span key={i} className="mx-3 inline-flex items-center gap-1.5 text-[10px] font-mono">
             {item.kind === 'price' ? (

@@ -18,9 +18,27 @@ function useCurrentDate() {
   return date;
 }
 
+function useRelativeTime(date: Date | null) {
+  const [text, setText] = useState('');
+  useEffect(() => {
+    if (!date) return;
+    const update = () => {
+      const secs = Math.floor((Date.now() - date.getTime()) / 1000);
+      if (secs < 60) setText('just now');
+      else if (secs < 3600) setText(`${Math.floor(secs / 60)}m ago`);
+      else setText(`${Math.floor(secs / 3600)}h ago`);
+    };
+    update();
+    const id = setInterval(update, 30_000);
+    return () => clearInterval(id);
+  }, [date]);
+  return text;
+}
+
 export function Header() {
   const currentDate = useCurrentDate();
-  const { isLive } = useEvents();
+  const { isLive, lastUpdated } = useEvents();
+  const updatedAgo = useRelativeTime(lastUpdated);
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-[rgba(6,10,16,0.85)]">
@@ -57,6 +75,11 @@ export function Header() {
             </span>
             {isLive ? 'LIVE' : 'STATIC'}
           </span>
+          {updatedAgo && (
+            <span className="text-[10px] font-mono text-[rgba(255,255,255,0.2)] tracking-wider">
+              {updatedAgo}
+            </span>
+          )}
           <span className="text-[10px] font-mono text-[rgba(255,255,255,0.3)] tracking-wider">
             {currentDate}
           </span>

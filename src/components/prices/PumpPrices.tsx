@@ -5,6 +5,7 @@ import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 
 function PriceCard({ label, value, change }: { label: string; value: number; change: number }) {
   const animatedValue = useAnimatedNumber(value);
+  const isUp = change > 0;
 
   return (
     <div className="glass-card p-6 border-[rgba(59,130,246,0.12)] shadow-[0_0_20px_rgba(59,130,246,0.06)]">
@@ -17,8 +18,8 @@ function PriceCard({ label, value, change }: { label: string; value: number; cha
         </span>
         <span className="text-sm text-[rgba(255,255,255,0.3)] font-mono">/L</span>
       </div>
-      <p className="mt-2 text-sm font-mono text-red-400">
-        ↑₱{change.toFixed(2)} week-over-week
+      <p className={`mt-2 text-sm font-mono ${isUp ? 'text-red-400' : 'text-emerald-400'}`}>
+        {isUp ? '↑' : '↓'}₱{Math.abs(change).toFixed(2)} week-over-week
       </p>
     </div>
   );

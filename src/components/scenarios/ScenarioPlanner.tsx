@@ -1,16 +1,25 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { ScenarioParams } from '@/types';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
+import { usePrices } from '@/hooks/usePrices';
 import { ResultPanel } from './ResultPanel';
 import { RiskMatrix } from './RiskMatrix';
 import { Tooltip } from '@/components/ui/Tooltip';
 
 export function ScenarioPlanner() {
+  const { prices } = usePrices();
+  const liveBrent = prices.find((b) => b.id === 'brent-crude')?.value ?? 106;
+  const liveForex = prices.find((b) => b.id === 'php-usd')?.value ?? 58.42;
+
   const [brentPrice, setBrentPrice] = useState(106);
   const [hormuzWeeks, setHormuzWeeks] = useState(2);
   const [forexRate, setForexRate] = useState(58.42);
+
+  // Sync initial slider values with live prices once loaded
+  useEffect(() => { setBrentPrice(Math.round(liveBrent)); }, [liveBrent]);
+  useEffect(() => { setForexRate(liveForex); }, [liveForex]);
   const [refineryOffline, setRefineryOffline] = useState(false);
 
   const params: ScenarioParams = useMemo(
