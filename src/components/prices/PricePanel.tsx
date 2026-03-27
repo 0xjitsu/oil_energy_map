@@ -16,28 +16,39 @@ function generateSparkData(value: number): number[] {
   return points;
 }
 
-function BenchmarkCard({ benchmark }: { benchmark: PriceBenchmark }) {
+function BenchmarkCard({
+  benchmark,
+  history,
+}: {
+  benchmark: PriceBenchmark;
+  history?: number[];
+}) {
   const change = benchmark.value - benchmark.previousWeek;
   const changePct = ((change / benchmark.previousWeek) * 100).toFixed(1);
   const isUp = change > 0;
-  const sparkData = useMemo(() => generateSparkData(benchmark.value), [benchmark.value]);
+
+  // Use real history when we have at least 2 data points, otherwise synthetic fallback
+  const sparkData = useMemo(
+    () => (history && history.length >= 2 ? history : generateSparkData(benchmark.value)),
+    [history, benchmark.value],
+  );
 
   const changeColor = isUp ? 'text-red-400' : 'text-emerald-400';
   const sparkColor = isUp ? '#f87171' : '#34d399';
 
   return (
     <div className="glass-card card-interactive p-4">
-      <p className="text-[10px] uppercase tracking-widest text-[rgba(255,255,255,0.25)] mb-1">
+      <p className="text-[10px] uppercase tracking-widest text-text-muted mb-1">
         {benchmark.name}
       </p>
       <div className="flex items-end justify-between gap-2">
         <div>
           <Tooltip text={benchmark.tooltip}>
-            <span className="text-2xl font-mono font-bold text-[rgba(255,255,255,0.9)]">
+            <span className="text-2xl font-mono font-bold text-text-primary">
               {benchmark.value.toLocaleString('en-US', { minimumFractionDigits: 2 })}
             </span>
           </Tooltip>
-          <span className="ml-1 text-[10px] text-[rgba(255,255,255,0.3)] font-mono">
+          <span className="ml-1 text-[10px] text-text-subtle font-mono">
             {benchmark.unit}
           </span>
         </div>
@@ -51,13 +62,13 @@ function BenchmarkCard({ benchmark }: { benchmark: PriceBenchmark }) {
 }
 
 export function PricePanel() {
-  const { prices: priceBenchmarks } = usePrices();
+  const { prices: priceBenchmarks, priceHistory } = usePrices();
   const benchmarks = priceBenchmarks.slice(0, 5);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
       {benchmarks.map((b) => (
-        <BenchmarkCard key={b.id} benchmark={b} />
+        <BenchmarkCard key={b.id} benchmark={b} history={priceHistory[b.id]} />
       ))}
     </div>
   );

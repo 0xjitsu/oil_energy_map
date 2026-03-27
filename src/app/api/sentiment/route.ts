@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { timelineEvents } from '@/data/events';
 
 const HF_MODEL = 'distilbert-base-uncased-finetuned-sst-2-english';
 const HF_API = `https://api-inference.huggingface.co/models/${HF_MODEL}`;
@@ -20,6 +19,28 @@ function mapLabel(label: string, score: number): SentimentResult['sentiment'] {
   return label === 'POSITIVE' ? 'positive' : 'negative';
 }
 
+async function getHeadlines(): Promise<string[]> {
+  // Try live headlines first
+  try {
+    const base = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000';
+    const res = await fetch(new URL('/api/events', base).toString());
+    if (res.ok) {
+      const events = await res.json();
+      if (Array.isArray(events) && events.length > 0) {
+        return events.slice(0, 5).map((e: { event: string }) => e.event);
+      }
+    }
+  } catch {
+    // Fall through to static
+  }
+
+  // Lazy-load static fallback only when needed
+  const { timelineEvents } = await import('@/data/events');
+  return timelineEvents.slice(0, 5).map((e) => e.event);
+}
+
 export async function GET() {
   const token = process.env.HUGGINGFACE_API_TOKEN;
 
@@ -31,7 +52,7 @@ export async function GET() {
   }
 
   try {
-    const headlines = timelineEvents.slice(0, 5).map((e) => e.event);
+    const headlines = await getHeadlines();
 
     const response = await fetch(HF_API, {
       method: 'POST',

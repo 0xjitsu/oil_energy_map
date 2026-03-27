@@ -32,33 +32,33 @@ export function PlayerCards() {
                 height={24}
                 className="rounded"
               />
-              <h4 className="text-sm font-sans font-semibold text-[rgba(255,255,255,0.9)]">
+              <h4 className="text-sm font-sans font-semibold text-text-primary">
                 {player.name}
               </h4>
             </div>
             <div className="space-y-1.5 text-[11px]">
               <div className="flex justify-between">
-                <span className="text-[rgba(255,255,255,0.4)] font-sans">Market Share</span>
-                <span className="font-mono text-[rgba(255,255,255,0.8)]">{player.marketShare}%</span>
+                <span className="text-text-label font-sans">Market Share</span>
+                <span className="font-mono text-text-primary">{player.marketShare}%</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-[rgba(255,255,255,0.4)] font-sans">Stations</span>
-                <span className="font-mono text-[rgba(255,255,255,0.8)]">
+                <span className="text-text-label font-sans">Stations</span>
+                <span className="font-mono text-text-primary">
                   {player.stations.toLocaleString()}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-[rgba(255,255,255,0.4)] font-sans">Strategy</span>
-                <span className="font-mono text-[rgba(255,255,255,0.8)]">{player.strategy}</span>
+                <span className="text-text-label font-sans">Strategy</span>
+                <span className="font-mono text-text-primary">{player.strategy}</span>
               </div>
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="text-[rgba(255,255,255,0.4)] font-sans">Vulnerability</span>
-                  <span className="font-mono text-[rgba(255,255,255,0.8)]">
+                  <span className="text-text-label font-sans">Vulnerability</span>
+                  <span className="font-mono text-text-primary">
                     {player.vulnerabilityScore}/100
                   </span>
                 </div>
-                <div className="h-1.5 rounded-full bg-[rgba(255,255,255,0.06)] overflow-hidden">
+                <div className="h-1.5 rounded-full bg-border-subtle overflow-hidden">
                   <div
                     className={`h-full rounded-full bg-gradient-to-r ${BAR_GRADIENTS[level]}`}
                     style={{ width: `${player.vulnerabilityScore}%` }}

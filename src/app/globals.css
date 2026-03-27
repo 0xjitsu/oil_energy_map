@@ -7,10 +7,16 @@
   --bg-card: #0a0f1a;
   --bg-elevated: #111827;
   --border: rgba(255, 255, 255, 0.04);
+  --border-subtle: rgba(255, 255, 255, 0.06);
   --border-hover: rgba(255, 255, 255, 0.08);
+  --surface-hover: rgba(255, 255, 255, 0.03);
   --text-primary: rgba(255, 255, 255, 0.9);
+  --text-body: rgba(255, 255, 255, 0.6);
   --text-secondary: rgba(255, 255, 255, 0.5);
+  --text-label: rgba(255, 255, 255, 0.4);
+  --text-subtle: rgba(255, 255, 255, 0.3);
   --text-muted: rgba(255, 255, 255, 0.25);
+  --text-dim: rgba(255, 255, 255, 0.2);
   --accent-petron: #3b82f6;
   --accent-shell: #facc15;
   --accent-chevron: #ef4444;
@@ -152,6 +158,10 @@ body {
 
 .ticker-animate {
   animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-mask:hover .ticker-animate {
+  animation-play-state: paused;
 }
 
 ::-webkit-scrollbar {

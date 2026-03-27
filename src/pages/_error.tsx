@@ -1,26 +1,11 @@
 function Error({ statusCode }: { statusCode?: number }) {
   return (
-    <div style={{
-      minHeight: '100vh',
-      background: '#060a10',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }}>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={{
-          fontFamily: 'monospace',
-          fontSize: '48px',
-          color: 'rgba(255,255,255,0.25)',
-          marginBottom: '8px'
-        }}>
+    <div className="min-h-screen bg-bg-primary flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="font-mono text-5xl text-text-muted mb-2">
           {statusCode || 'Error'}
         </h1>
-        <p style={{
-          fontFamily: 'sans-serif',
-          fontSize: '14px',
-          color: 'rgba(255,255,255,0.5)'
-        }}>
+        <p className="font-sans text-sm text-text-secondary">
           {statusCode === 404 ? 'Page not found' : 'An error occurred'}
         </p>
       </div>

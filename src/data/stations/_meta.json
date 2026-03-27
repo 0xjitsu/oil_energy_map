@@ -1,0 +1,23 @@
+{
+  "source": "OpenStreetMap via Overpass API",
+  "license": "ODbL (https://opendatacommons.org/licenses/odbl/)",
+  "query": "[out:json];area[\"ISO3166-1\"=\"PH\"]->.ph;(node[\"amenity\"=\"fuel\"](area.ph);way[\"amenity\"=\"fuel\"](area.ph););out center tags;",
+  "processedAt": "2026-03-27T08:09:45.259514+00:00",
+  "totalStations": 10469,
+  "brandBreakdown": {
+    "Other": 4520,
+    "Petron": 1887,
+    "Shell": 1163,
+    "Caltex": 630,
+    "SeaOil": 518,
+    "Phoenix": 410,
+    "FlyingV": 350,
+    "Total": 301,
+    "Jetti": 143,
+    "PTT": 139,
+    "Unioil": 121,
+    "PetroGazz": 101,
+    "Cleanfuel": 97,
+    "Rephil": 89
+  }
+}

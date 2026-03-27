@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 import { AlertTriangle, X } from 'lucide-react';
-import { timelineEvents } from '@/data/events';
+import { useEvents } from '@/hooks/useEvents';
 
 export function AlertBanner() {
   const [dismissed, setDismissed] = useState(false);
+  const { events } = useEvents();
 
-  // Pull from latest critical (red) event
-  const critical = timelineEvents.find((e) => e.severity === 'red');
+  const critical = events.find((e) => e.severity === 'red');
 
   if (dismissed || !critical) return null;
 

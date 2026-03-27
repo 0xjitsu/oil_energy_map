@@ -25,17 +25,17 @@ export default function FacilityDetail({ facility, onClose }: FacilityDetailProp
 
   return (
     <div
-      className="absolute bottom-4 left-4 z-50 max-w-sm rounded-xl overflow-hidden bg-[rgba(10,15,26,0.75)] backdrop-blur-xl border border-[rgba(255,255,255,0.08)] shadow-2xl animate-[slideUp_0.25s_ease-out]"
+      className="absolute bottom-4 left-4 z-50 max-w-sm rounded-xl overflow-hidden bg-[rgba(10,15,26,0.75)] backdrop-blur-xl border border-border-hover shadow-2xl animate-[slideUp_0.25s_ease-out]"
       style={{ borderLeft: `4px solid ${facility.color}` }}
     >
       <div className="p-4">
         <div className="flex items-start justify-between gap-3">
-          <h3 className="font-mono font-bold text-sm text-[rgba(255,255,255,0.9)] leading-tight">
+          <h3 className="font-mono font-bold text-sm text-text-primary leading-tight">
             {facility.name}
           </h3>
           <button
             onClick={onClose}
-            className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-[rgba(255,255,255,0.3)] hover:text-[rgba(255,255,255,0.7)] hover:bg-[rgba(255,255,255,0.06)] transition-all duration-150 text-lg leading-none"
+            className="shrink-0 w-6 h-6 flex items-center justify-center rounded-md text-text-subtle hover:text-text-body hover:bg-border-subtle transition-all duration-150 text-lg leading-none"
             aria-label="Close detail panel"
           >
             &times;
@@ -51,24 +51,24 @@ export default function FacilityDetail({ facility, onClose }: FacilityDetailProp
           </div>
 
           <div className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1.5 text-[11px]">
-            <span className="font-mono text-[rgba(255,255,255,0.35)] uppercase tracking-wider text-[9px]">
+            <span className="font-mono text-text-subtle uppercase tracking-wider text-[9px]">
               Location
             </span>
-            <span className="text-[rgba(255,255,255,0.7)]">{facility.location}</span>
+            <span className="text-text-body">{facility.location}</span>
 
-            <span className="font-mono text-[rgba(255,255,255,0.35)] uppercase tracking-wider text-[9px]">
+            <span className="font-mono text-text-subtle uppercase tracking-wider text-[9px]">
               Operator
             </span>
-            <span className="text-[rgba(255,255,255,0.7)]">{facility.operator}</span>
+            <span className="text-text-body">{facility.operator}</span>
 
-            <span className="font-mono text-[rgba(255,255,255,0.35)] uppercase tracking-wider text-[9px]">
+            <span className="font-mono text-text-subtle uppercase tracking-wider text-[9px]">
               Capacity
             </span>
-            <span className="text-[rgba(255,255,255,0.7)]">{facility.capacity}</span>
+            <span className="text-text-body">{facility.capacity}</span>
           </div>
 
           {facility.notes && (
-            <p className="text-[10px] text-[rgba(255,255,255,0.4)] leading-relaxed mt-2 font-sans">
+            <p className="text-[10px] text-text-label leading-relaxed mt-2 font-sans">
               {facility.notes}
             </p>
           )}
