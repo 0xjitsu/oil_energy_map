@@ -10,6 +10,7 @@ import TimelineSlider from '@/components/map/TimelineSlider';
 import { PumpPrices } from '@/components/prices/PumpPrices';
 import { ImpactCards } from '@/components/prices/ImpactCards';
 import { VitalSigns } from '@/components/health/VitalSigns';
+import { SentimentGauge } from '@/components/health/SentimentGauge';
 import { EventTimeline } from '@/components/health/EventTimeline';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import type { MapMode, ScenarioParams } from '@/types';
@@ -91,7 +92,7 @@ export default function Home() {
                 What This Means For You
               </h2>
             </div>
-            <ImpactCards />
+            <ImpactCards scenarioParams={scenarioParams} />
           </div>
         </section>
 
@@ -138,7 +139,16 @@ export default function Home() {
                 System Health
               </h2>
             </div>
-            <VitalSigns />
+            <VitalSigns scenarioParams={scenarioParams} mapMode={mapMode} />
+            <div className="mt-4">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-2 h-2 rounded-full bg-[var(--accent-shell)]" />
+                <h2 className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-muted)]">
+                  NLP Sentiment
+                </h2>
+              </div>
+              <SentimentGauge />
+            </div>
             <div className="mt-4">
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-2 h-2 rounded-full bg-[var(--status-yellow)]" />

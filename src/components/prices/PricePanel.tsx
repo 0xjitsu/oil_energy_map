@@ -16,11 +16,22 @@ function generateSparkData(value: number): number[] {
   return points;
 }
 
-function BenchmarkCard({ benchmark }: { benchmark: PriceBenchmark }) {
+function BenchmarkCard({
+  benchmark,
+  history,
+}: {
+  benchmark: PriceBenchmark;
+  history?: number[];
+}) {
   const change = benchmark.value - benchmark.previousWeek;
   const changePct = ((change / benchmark.previousWeek) * 100).toFixed(1);
   const isUp = change > 0;
-  const sparkData = useMemo(() => generateSparkData(benchmark.value), [benchmark.value]);
+
+  // Use real history when we have at least 2 data points, otherwise synthetic fallback
+  const sparkData = useMemo(
+    () => (history && history.length >= 2 ? history : generateSparkData(benchmark.value)),
+    [history, benchmark.value],
+  );
 
   const changeColor = isUp ? 'text-red-400' : 'text-emerald-400';
   const sparkColor = isUp ? '#f87171' : '#34d399';
@@ -51,13 +62,13 @@ function BenchmarkCard({ benchmark }: { benchmark: PriceBenchmark }) {
 }
 
 export function PricePanel() {
-  const { prices: priceBenchmarks } = usePrices();
+  const { prices: priceBenchmarks, priceHistory } = usePrices();
   const benchmarks = priceBenchmarks.slice(0, 5);
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
       {benchmarks.map((b) => (
-        <BenchmarkCard key={b.id} benchmark={b} />
+        <BenchmarkCard key={b.id} benchmark={b} history={priceHistory[b.id]} />
       ))}
     </div>
   );
