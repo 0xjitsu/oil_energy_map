@@ -179,12 +179,19 @@ interface GasStation {
 
 ---
 
+## Future Work (Parked)
+
+- **Regional filtering**: Filter stations by Metro Manila, province, or region. Requires enriching station data with region/province tags (from reverse geocoding or OSM admin boundaries).
+- **Live price data per station**: Pull real-time pump prices from DOE weekly price monitor and display per-station in the tooltip.
+- **Google Maps photos**: Enrich station tooltips with storefront photos via Google Places API (requires API key + budget ~$73 for full coverage).
+- **Station clustering**: IconClusterLayer at zoom < 8 to aggregate dense station clusters into count badges.
+
 ## Implementation Order
 
-1. Executive Snapshot KPI cards (immediate visual impact, uses existing data)
-2. Gas station data scraping (Firecrawl, one-time, background task)
-3. Gas station map layer (render scraped data)
-4. Oil primer page (content + interactivity)
+1. ~~Executive Snapshot KPI cards~~ ✅ (immediate visual impact, uses existing data)
+2. ~~Gas station data scraping~~ ✅ (OpenStreetMap Overpass API, 10,469 stations)
+3. ~~Gas station map layer~~ ✅ (render with brand colors + per-brand toggles + hover tooltip)
+4. ~~Oil primer page~~ ✅ (content + interactivity)
 5. References page (auto-generated from data metadata)
 6. Autoresearch directory structure (program.md files)
 
