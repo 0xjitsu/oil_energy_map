@@ -51,6 +51,11 @@ body {
 .maplibregl-ctrl-group button { color: rgba(255,255,255,0.9) !important; }
 .maplibregl-ctrl-group button + button { border-top: 1px solid rgba(255,255,255,0.06) !important; }
 
+/* Header background — uses CSS variable with alpha */
+.header-bg {
+  background: rgba(6, 10, 16, 0.85);
+}
+
 /* Glass morphism utility classes */
 .glass-card {
   background: rgba(10, 15, 26, 0.7);

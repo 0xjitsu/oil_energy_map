@@ -33,6 +33,24 @@ const PlayerCards = dynamic(
   { ssr: false },
 );
 
+function SectionHeader({
+  color,
+  label,
+}: {
+  color: string;
+  label: string;
+}) {
+  return (
+    <div className="flex items-center gap-2 mb-3">
+      <div className={`w-2 h-2 rounded-full ${color}`} />
+      <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
+        {label}
+      </h2>
+      <div className="flex-1 h-px bg-border-subtle ml-2" />
+    </div>
+  );
+}
+
 export default function Home() {
   const [mapMode, setMapMode] = useState<MapMode>('live');
   const [scenarioParams, setScenarioParams] = useState<ScenarioParams>({
@@ -53,19 +71,14 @@ export default function Home() {
       <AlertBanner />
       <Header />
 
-      <main className="max-w-[1600px] mx-auto px-4 py-6 space-y-6">
-        {/* Executive Snapshot — Bloomberg-style KPI row */}
+      <main className="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-8">
+        {/* Executive Snapshot — Hero KPIs */}
         <ExecutiveSnapshot scenarioParams={scenarioParams} />
 
         {/* Hero: Map + Price Sidebar */}
-        <section className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4">
+        <section className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4 lg:gap-6">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-petron" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                Supply Chain Map
-              </h2>
-            </div>
+            <SectionHeader color="bg-petron" label="Supply Chain Map" />
             <div className="relative">
               <MapWrapper
                 mapMode={mapMode}
@@ -81,33 +94,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            <div className="flex items-center gap-2 mb-1">
-              <div className="w-2 h-2 rounded-full bg-status-red" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                Pump Prices
-              </h2>
+          <div className="space-y-6">
+            <div>
+              <SectionHeader color="bg-status-red" label="Pump Prices" />
+              <PumpPrices />
             </div>
-            <PumpPrices />
 
-            <div className="flex items-center gap-2 mt-4 mb-1">
-              <div className="w-2 h-2 rounded-full bg-phoenix" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                What This Means For You
-              </h2>
+            <div>
+              <SectionHeader color="bg-phoenix" label="What This Means For You" />
+              <ImpactCards scenarioParams={scenarioParams} />
             </div>
-            <ImpactCards scenarioParams={scenarioParams} />
           </div>
         </section>
 
-        {/* Price Intelligence */}
+        {/* Price Intelligence — Full-width benchmark grid */}
         <section>
-          <div className="flex items-center gap-2 mb-3">
-            <div className="w-2 h-2 rounded-full bg-shell" />
-            <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-              Price Intelligence
-            </h2>
-          </div>
+          <SectionHeader color="bg-shell" label="Price Intelligence" />
           <PricePanel />
         </section>
 
@@ -121,45 +123,29 @@ export default function Home() {
           />
         </section>
 
-        {/* Market Players + System Health */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Market Players + System Health — 2 column on desktop */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-seaoil" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                Market Players
-              </h2>
-            </div>
+            <SectionHeader color="bg-seaoil" label="Market Players" />
             <div className="grid grid-cols-1 xl:grid-cols-[280px_1fr] gap-4">
               <MarketShare />
               <PlayerCards />
             </div>
           </div>
 
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-2 h-2 rounded-full bg-status-green" />
-              <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                System Health
-              </h2>
+          <div className="space-y-6">
+            <div>
+              <SectionHeader color="bg-status-green" label="System Health" />
+              <VitalSigns scenarioParams={scenarioParams} mapMode={mapMode} />
             </div>
-            <VitalSigns scenarioParams={scenarioParams} mapMode={mapMode} />
-            <div className="mt-4">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2 h-2 rounded-full bg-shell" />
-                <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                  NLP Sentiment
-                </h2>
-              </div>
+
+            <div>
+              <SectionHeader color="bg-shell" label="NLP Sentiment" />
               <SentimentGauge />
             </div>
-            <div className="mt-4">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-2 h-2 rounded-full bg-status-yellow" />
-                <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                  Event Timeline
-                </h2>
-              </div>
+
+            <div>
+              <SectionHeader color="bg-status-yellow" label="Event Timeline" />
               <EventTimeline />
             </div>
           </div>

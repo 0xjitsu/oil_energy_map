@@ -50,7 +50,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
   const updatedAgo = useRelativeTime(lastUpdated);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-[rgba(6,10,16,0.85)]">
+    <header className="sticky top-0 z-50 backdrop-blur-xl header-bg">
       {/* Philippine flag accent bars */}
       <div className="flex h-[3px]">
         <div className="flex-1 bg-ph-blue" />
