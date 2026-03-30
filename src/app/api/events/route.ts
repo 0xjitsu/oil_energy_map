@@ -24,7 +24,62 @@ const RSS_FEEDS: { url: string; source: string; sourceType: SourceType }[] = [
     source: 'Google News',
     sourceType: 'news',
   },
+  {
+    url: 'https://news.google.com/rss/search?q=OPEC+crude+oil+supply&hl=en&gl=US&ceid=US:en',
+    source: 'Google News',
+    sourceType: 'news',
+  },
 ];
+
+// Reddit public JSON API — no auth needed for search
+const REDDIT_SEARCHES = [
+  { subreddit: 'Philippines', query: 'oil gas fuel price', source: 'r/Philippines' },
+  { subreddit: 'energy', query: 'crude oil OPEC supply', source: 'r/energy' },
+];
+
+interface RedditPost {
+  data: {
+    title: string;
+    created_utc: number;
+    permalink: string;
+    score: number;
+  };
+}
+
+interface RedditSearchResponse {
+  data: {
+    children: RedditPost[];
+  };
+}
+
+async function fetchRedditPosts(
+  subreddit: string,
+  query: string,
+  source: string,
+): Promise<TimelineEvent[]> {
+  try {
+    const url = `https://www.reddit.com/r/${subreddit}/search.json?q=${encodeURIComponent(query)}&sort=new&restrict_sr=on&limit=5&t=week`;
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'ph-oil-intel/1.0' },
+      signal: AbortSignal.timeout(5000),
+    });
+    if (!res.ok) return [];
+
+    const data: RedditSearchResponse = await res.json();
+    return (data?.data?.children ?? [])
+      .filter((post) => ENERGY_KEYWORDS.test(post.data.title))
+      .map((post): TimelineEvent => ({
+        date: formatDate(new Date(post.data.created_utc * 1000).toISOString()),
+        event: post.data.title.slice(0, 120),
+        severity: estimateSeverity(post.data.title),
+        source,
+        sourceUrl: `https://reddit.com${post.data.permalink}`,
+        sourceType: 'social',
+      }));
+  } catch {
+    return [];
+  }
+}
 
 function estimateSeverity(title: string): Severity {
   const critical = /record|crisis|surge|spike|war|conflict|shortage|emergency|strike/i;
@@ -64,8 +119,16 @@ export async function GET() {
       }
     });
 
-    const feedResults = await Promise.all(feedPromises);
-    const rssEvents = feedResults.flat();
+    // Fetch Reddit posts in parallel with RSS
+    const redditPromises = REDDIT_SEARCHES.map((r) =>
+      fetchRedditPosts(r.subreddit, r.query, r.source),
+    );
+
+    const [feedResults, redditResults] = await Promise.all([
+      Promise.all(feedPromises),
+      Promise.all(redditPromises),
+    ]);
+    const rssEvents = [...feedResults.flat(), ...redditResults.flat()];
 
     // Merge RSS events with static events, deduplicate by source+date
     const seen = new Set<string>();
@@ -79,10 +142,10 @@ export async function GET() {
       }
     }
 
-    // Sort by date descending, limit to 25
+    // Sort by date descending
     merged.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    return NextResponse.json(merged.slice(0, 25), {
+    return NextResponse.json(merged.slice(0, 40), {
       headers: { 'Cache-Control': 's-maxage=900, stale-while-revalidate=1800' },
     });
   } catch {
