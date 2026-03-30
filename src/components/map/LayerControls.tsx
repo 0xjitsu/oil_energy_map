@@ -47,7 +47,7 @@ export default function LayerControls({
   onRegionChange,
 }: LayerControlsProps) {
   return (
-    <div className="absolute top-4 right-4 z-50 rounded-xl p-3 flex flex-col gap-3 bg-[rgba(10,15,26,0.7)] backdrop-blur-md border border-border-hover shadow-lg">
+    <div className="absolute top-4 right-4 z-50 rounded-xl p-3 flex flex-col gap-3 glass-card">
       {/* Mode selector */}
       <div className="flex gap-0.5 p-0.5 rounded-lg bg-border">
         {modeConfig.map(({ key, label }) => (

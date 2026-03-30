@@ -164,6 +164,40 @@ body {
   animation-play-state: paused;
 }
 
+/* Hero KPI accent top border glow */
+.kpi-glow {
+  position: relative;
+}
+.kpi-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: inherit;
+  filter: blur(4px);
+  opacity: 0.5;
+}
+
+/* Smooth accordion for collapsible sections */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.accordion-content.open {
+  grid-template-rows: 1fr;
+}
+.accordion-inner {
+  overflow: hidden;
+}
+
+/* Number counter transition */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }

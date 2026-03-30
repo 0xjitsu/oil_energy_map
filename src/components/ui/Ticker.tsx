@@ -53,10 +53,10 @@ export function Ticker() {
             {item.kind === 'price' ? (
               <>
                 <span className="text-text-subtle">{item.name}</span>
-                <span className="text-text-primary font-semibold">
-                  {item.value} {item.unit}
+                <span className="text-text-primary font-semibold tabular-nums">
+                  {item.value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.unit}
                 </span>
-                <span className={item.isUp ? 'text-red-400' : 'text-emerald-400'}>
+                <span className={`font-semibold ${item.isUp ? 'text-red-400' : 'text-emerald-400'}`}>
                   {item.isUp ? '▲' : '▼'} {item.pct}%
                 </span>
               </>
