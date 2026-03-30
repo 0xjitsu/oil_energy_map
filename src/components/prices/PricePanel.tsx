@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { usePrices } from '@/hooks/usePrices';
 import { PriceBenchmark } from '@/types';
 import { SparkChart } from './SparkChart';
-import { Tooltip } from '@/components/ui/Tooltip';
+import { InfoTip } from '@/components/ui/Tooltip';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 
 function generateSparkData(value: number): number[] {
@@ -40,8 +40,9 @@ function BenchmarkCard({
   return (
     <div className="glass-card card-interactive p-4">
       <div className="flex items-center justify-between mb-2">
-        <p className="text-[10px] uppercase tracking-widest text-text-muted">
+        <p className="text-[10px] uppercase tracking-widest text-text-muted flex items-center gap-1.5">
           {benchmark.name}
+          <InfoTip text={benchmark.tooltip} />
         </p>
         <span
           className={`text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded ${
@@ -53,11 +54,9 @@ function BenchmarkCard({
       </div>
       <div className="flex items-end justify-between gap-2">
         <div>
-          <Tooltip text={benchmark.tooltip}>
-            <span className="text-2xl lg:text-3xl font-mono font-bold text-text-primary tabular-nums">
-              {animated.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-            </span>
-          </Tooltip>
+          <span className="text-2xl lg:text-3xl font-mono font-bold text-text-primary tabular-nums">
+            {animated.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </span>
           <span className="ml-1 text-[10px] text-text-subtle font-mono">
             {benchmark.unit}
           </span>

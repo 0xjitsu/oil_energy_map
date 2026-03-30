@@ -1,5 +1,5 @@
 import { VITAL_SIGNS } from '@/lib/constants';
-import { Tooltip } from '@/components/ui/Tooltip';
+import { InfoTip } from '@/components/ui/Tooltip';
 import type { RiskLevel, ScenarioParams, MapMode, VitalSign } from '@/types';
 
 const STATUS_STYLES: Record<RiskLevel, { badge: string; label: string; pulse: boolean }> = {
@@ -62,8 +62,9 @@ export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
             className="glass-card p-4"
           >
             <div className="flex items-center justify-between mb-2">
-              <p className="text-[10px] uppercase tracking-widest text-text-muted font-sans">
+              <p className="text-[10px] uppercase tracking-widest text-text-muted font-sans flex items-center gap-1.5">
                 {sign.label}
+                <InfoTip text={sign.tooltip} />
               </p>
               <span
                 className={`inline-flex items-center gap-1 rounded border px-1.5 py-0.5 text-[9px] font-mono tracking-wider ${style.badge}`}
@@ -77,11 +78,9 @@ export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
                 {style.label}
               </span>
             </div>
-            <Tooltip text={sign.tooltip}>
-              <span className="text-2xl font-mono font-bold text-text-primary cursor-help">
-                {sign.value}
-              </span>
-            </Tooltip>
+            <span className="text-2xl font-mono font-bold text-text-primary">
+              {sign.value}
+            </span>
           </div>
         );
       })}

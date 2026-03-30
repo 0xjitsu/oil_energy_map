@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react';
 import { IMPACT_ITEMS } from '@/lib/constants';
-import { Tooltip } from '@/components/ui/Tooltip';
+import { InfoTip } from '@/components/ui/Tooltip';
 import type { ScenarioParams, ImpactItem } from '@/types';
 
 const BASELINE_BRENT = 106;
@@ -68,22 +68,21 @@ export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {impacts.map((item) => (
-          <Tooltip key={item.label} text={item.tooltip}>
-            <div className={`glass-card card-interactive p-4 cursor-default border-l-2 ${borderColor}`}>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-lg" role="img" aria-label={item.label}>
-                  {item.icon}
-                </span>
-                <span className="text-xs font-sans text-text-secondary">
-                  {item.label}
-                </span>
-              </div>
-              <p className={`text-sm font-mono font-semibold ${changeColor}`}>{item.change}</p>
-              <p className="text-[10px] font-mono text-text-subtle mt-1">
-                from {item.current}
-              </p>
+          <div key={item.label} className={`glass-card card-interactive p-4 cursor-default border-l-2 ${borderColor}`}>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-lg" role="img" aria-label={item.label}>
+                {item.icon}
+              </span>
+              <span className="text-xs font-sans text-text-secondary flex items-center gap-1.5">
+                {item.label}
+                <InfoTip text={item.tooltip} />
+              </span>
             </div>
-          </Tooltip>
+            <p className={`text-sm font-mono font-semibold ${changeColor}`}>{item.change}</p>
+            <p className="text-[10px] font-mono text-text-subtle mt-1">
+              from {item.current}
+            </p>
+          </div>
         ))}
       </div>
     </div>

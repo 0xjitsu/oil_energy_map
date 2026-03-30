@@ -4,6 +4,7 @@ import { usePrices } from '@/hooks/usePrices';
 import { useEvents } from '@/hooks/useEvents';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 import { SparkChart } from '@/components/prices/SparkChart';
+import { InfoTip } from '@/components/ui/Tooltip';
 import type { ScenarioParams } from '@/types';
 
 function getRiskLevel(params: ScenarioParams): { label: string; color: string; bg: string } {
@@ -32,6 +33,7 @@ function HeroKPI({
   sparkData,
   sparkColor,
   accentBorder,
+  tooltip,
 }: {
   label: string;
   value: number;
@@ -41,6 +43,7 @@ function HeroKPI({
   sparkData: number[];
   sparkColor: string;
   accentBorder: string;
+  tooltip: string;
 }) {
   const animated = useAnimatedNumber(value);
   const isUp = delta > 0;
@@ -54,8 +57,9 @@ function HeroKPI({
     >
       {/* Label row */}
       <div className="flex items-center justify-between mb-3">
-        <p className="text-[10px] uppercase tracking-widest text-text-label font-mono">
+        <p className="text-[10px] uppercase tracking-widest text-text-label font-mono flex items-center gap-1.5">
           {label}
+          <InfoTip text={tooltip} />
         </p>
         <span
           className={`text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded ${
@@ -202,6 +206,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
             sparkData={priceHistory[benchmark.id] ?? [benchmark.value]}
             sparkColor={sparkColor}
             accentBorder={accentBorder}
+            tooltip={benchmark.tooltip}
           />
         ))}
       </div>

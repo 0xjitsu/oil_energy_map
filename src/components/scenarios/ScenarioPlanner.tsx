@@ -6,7 +6,7 @@ import { calculatePumpPrice } from '@/lib/scenario-engine';
 import { usePrices } from '@/hooks/usePrices';
 import { ResultPanel } from './ResultPanel';
 import { RiskMatrix } from './RiskMatrix';
-import { Tooltip } from '@/components/ui/Tooltip';
+import { InfoTip } from '@/components/ui/Tooltip';
 
 interface ScenarioPlannerProps {
   params: ScenarioParams;
@@ -76,11 +76,10 @@ export function ScenarioPlanner({
           {/* Brent Crude */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <Tooltip text="The global benchmark crude oil price. PH imports are priced against this.">
-                <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
-                  Brent Crude
-                </label>
-              </Tooltip>
+              <label className="text-[10px] uppercase tracking-widest text-text-label font-sans flex items-center gap-1.5">
+                Brent Crude
+                <InfoTip text="The global benchmark crude oil price. PH imports are priced against this." />
+              </label>
               <span className="text-sm font-mono font-bold text-text-primary">
                 ${params.brentPrice}/bbl
               </span>
@@ -104,11 +103,10 @@ export function ScenarioPlanner({
           {/* Hormuz Disruption */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <Tooltip text="Weeks the Strait of Hormuz is partially or fully blocked. 70% of PH crude transits here.">
-                <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
-                  Hormuz Disruption
-                </label>
-              </Tooltip>
+              <label className="text-[10px] uppercase tracking-widest text-text-label font-sans flex items-center gap-1.5">
+                Hormuz Disruption
+                <InfoTip text="Weeks the Strait of Hormuz is partially or fully blocked. 70% of PH crude transits here." />
+              </label>
               <span className="text-sm font-mono font-bold text-text-primary">
                 {params.hormuzWeeks} {params.hormuzWeeks === 1 ? 'week' : 'weeks'}
               </span>
@@ -132,11 +130,10 @@ export function ScenarioPlanner({
           {/* PHP/USD Rate */}
           <div>
             <div className="flex items-center justify-between mb-2">
-              <Tooltip text="The Philippine Peso to US Dollar exchange rate. Weaker peso = more expensive imports.">
-                <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
-                  PHP/USD Rate
-                </label>
-              </Tooltip>
+              <label className="text-[10px] uppercase tracking-widest text-text-label font-sans flex items-center gap-1.5">
+                PHP/USD Rate
+                <InfoTip text="The Philippine Peso to US Dollar exchange rate. Weaker peso = more expensive imports." />
+              </label>
               <span className="text-sm font-mono font-bold text-text-primary">
                 ₱{params.forexRate.toFixed(2)}
               </span>
@@ -159,11 +156,10 @@ export function ScenarioPlanner({
 
           {/* Refinery Toggle */}
           <div className="flex items-center justify-between">
-            <Tooltip text="Petron Bataan is the only refinery in the Philippines. If offline, the country goes to 100% import dependency.">
-              <label className="text-[10px] uppercase tracking-widest text-text-label font-sans cursor-help">
-                Bataan Refinery Offline
-              </label>
-            </Tooltip>
+            <label className="text-[10px] uppercase tracking-widest text-text-label font-sans flex items-center gap-1.5">
+              Bataan Refinery Offline
+              <InfoTip text="Petron Bataan is the only refinery in the Philippines. If offline, the country goes to 100% import dependency." />
+            </label>
             <button
               type="button"
               role="switch"
