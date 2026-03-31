@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import type { PriceBenchmark, AlertRule, AlertNotification } from '@/types';
 
 const RULES_KEY = 'oil-intel-alert-rules';
@@ -8,39 +8,30 @@ const HISTORY_KEY = 'oil-intel-alert-history';
 const MAX_HISTORY = 50;
 const COOLDOWN_MS = 30 * 60 * 1000;
 
-function loadRules(): AlertRule[] {
+function loadFromStorage<T>(key: string): T[] {
   if (typeof window === 'undefined') return [];
   try {
-    return JSON.parse(localStorage.getItem(RULES_KEY) ?? '[]');
+    return JSON.parse(localStorage.getItem(key) ?? '[]');
   } catch { return []; }
 }
 
-function loadHistory(): AlertNotification[] {
-  if (typeof window === 'undefined') return [];
-  try {
-    return JSON.parse(localStorage.getItem(HISTORY_KEY) ?? '[]');
-  } catch { return []; }
+function persistRules(rules: AlertRule[]): void {
+  localStorage.setItem(RULES_KEY, JSON.stringify(rules));
+}
+
+function persistHistory(history: AlertNotification[]): void {
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
 }
 
 export function useAlerts() {
-  const [rules, setRules] = useState<AlertRule[]>(loadRules);
-  const [history, setHistory] = useState<AlertNotification[]>(loadHistory);
+  const [rules, setRules] = useState<AlertRule[]>(() => loadFromStorage<AlertRule>(RULES_KEY));
+  const [history, setHistory] = useState<AlertNotification[]>(() => loadFromStorage<AlertNotification>(HISTORY_KEY));
   const permissionRef = useRef<NotificationPermission>('default');
 
   useEffect(() => {
     if (typeof Notification !== 'undefined') {
       permissionRef.current = Notification.permission;
     }
-  }, []);
-
-  const saveRules = useCallback((updated: AlertRule[]) => {
-    setRules(updated);
-    localStorage.setItem(RULES_KEY, JSON.stringify(updated));
-  }, []);
-
-  const saveHistory = useCallback((updated: AlertNotification[]) => {
-    setHistory(updated);
-    localStorage.setItem(HISTORY_KEY, JSON.stringify(updated));
   }, []);
 
   const addRule = useCallback((rule: Omit<AlertRule, 'id' | 'createdAt' | 'enabled'>) => {
@@ -53,34 +44,49 @@ export function useAlerts() {
       createdAt: new Date().toISOString(),
       enabled: true,
     };
-    saveRules([...rules, newRule]);
-  }, [rules, saveRules]);
+    setRules((prev) => {
+      const updated = [...prev, newRule];
+      persistRules(updated);
+      return updated;
+    });
+  }, []);
 
   const removeRule = useCallback((id: string) => {
-    saveRules(rules.filter((r) => r.id !== id));
-  }, [rules, saveRules]);
+    setRules((prev) => {
+      const updated = prev.filter((r) => r.id !== id);
+      persistRules(updated);
+      return updated;
+    });
+  }, []);
 
   const toggleRule = useCallback((id: string) => {
-    saveRules(rules.map((r) => r.id === id ? { ...r, enabled: !r.enabled } : r));
-  }, [rules, saveRules]);
+    setRules((prev) => {
+      const updated = prev.map((r) => r.id === id ? { ...r, enabled: !r.enabled } : r);
+      persistRules(updated);
+      return updated;
+    });
+  }, []);
 
   const checkPrices = useCallback((prices: PriceBenchmark[]) => {
     const now = Date.now();
-    const newNotifications: AlertNotification[] = [];
 
-    for (const rule of rules) {
-      if (!rule.enabled) continue;
-      if (rule.lastTriggeredAt && now - new Date(rule.lastTriggeredAt).getTime() < COOLDOWN_MS) continue;
+    setRules((prevRules) => {
+      const newNotifications: AlertNotification[] = [];
+      const updatedRules = prevRules.map((rule) => {
+        if (!rule.enabled) return rule;
+        if (rule.lastTriggeredAt && now - new Date(rule.lastTriggeredAt).getTime() < COOLDOWN_MS) return rule;
 
-      const benchmark = prices.find((p) => p.id === rule.benchmarkId);
-      if (!benchmark) continue;
+        const benchmark = prices.find((p) => p.id === rule.benchmarkId);
+        if (!benchmark) return rule;
 
-      const triggered =
-        (rule.direction === 'above' && benchmark.value >= rule.threshold) ||
-        (rule.direction === 'below' && benchmark.value <= rule.threshold);
+        const triggered =
+          (rule.direction === 'above' && benchmark.value >= rule.threshold) ||
+          (rule.direction === 'below' && benchmark.value <= rule.threshold);
 
-      if (triggered) {
-        const notification: AlertNotification = {
+        if (!triggered) return rule;
+
+        const timestamp = new Date().toISOString();
+        newNotifications.push({
           id: crypto.randomUUID(),
           ruleId: rule.id,
           benchmarkId: rule.benchmarkId,
@@ -88,11 +94,9 @@ export function useAlerts() {
           value: benchmark.value,
           threshold: rule.threshold,
           direction: rule.direction,
-          timestamp: new Date().toISOString(),
+          timestamp,
           read: false,
-        };
-        newNotifications.push(notification);
-        rule.lastTriggeredAt = notification.timestamp;
+        });
 
         if (typeof Notification !== 'undefined' && permissionRef.current === 'granted') {
           new Notification('Price Alert', {
@@ -100,25 +104,41 @@ export function useAlerts() {
             icon: '/favicon.ico',
           });
         }
-      }
-    }
 
-    if (newNotifications.length > 0) {
-      saveRules([...rules]);
-      const updated = [...newNotifications, ...history].slice(0, MAX_HISTORY);
-      saveHistory(updated);
-    }
-  }, [rules, history, saveRules, saveHistory]);
+        return { ...rule, lastTriggeredAt: timestamp };
+      });
+
+      if (newNotifications.length > 0) {
+        persistRules(updatedRules);
+        setHistory((prevHistory) => {
+          const updated = [...newNotifications, ...prevHistory].slice(0, MAX_HISTORY);
+          persistHistory(updated);
+          return updated;
+        });
+        return updatedRules;
+      }
+
+      return prevRules;
+    });
+  }, []);
 
   const markRead = useCallback((id: string) => {
-    saveHistory(history.map((n) => n.id === id ? { ...n, read: true } : n));
-  }, [history, saveHistory]);
+    setHistory((prev) => {
+      const updated = prev.map((n) => n.id === id ? { ...n, read: true } : n);
+      persistHistory(updated);
+      return updated;
+    });
+  }, []);
 
   const markAllRead = useCallback(() => {
-    saveHistory(history.map((n) => ({ ...n, read: true })));
-  }, [history, saveHistory]);
+    setHistory((prev) => {
+      const updated = prev.map((n) => ({ ...n, read: true }));
+      persistHistory(updated);
+      return updated;
+    });
+  }, []);
 
-  const unreadCount = history.filter((n) => !n.read).length;
+  const unreadCount = useMemo(() => history.filter((n) => !n.read).length, [history]);
 
   return { rules, history, unreadCount, addRule, removeRule, toggleRule, checkPrices, markRead, markAllRead };
 }

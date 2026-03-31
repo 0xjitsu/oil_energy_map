@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useAlerts } from '@/hooks/useAlerts';
+import type { AlertRule } from '@/types';
 import AlertDrawer from './AlertDrawer';
 import AlertRuleModal from './AlertRuleModal';
 
@@ -10,10 +11,24 @@ export function AlertBell() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
+  const openDrawer = useCallback(() => setDrawerOpen(true), []);
+  const closeDrawer = useCallback(() => setDrawerOpen(false), []);
+  const closeModal = useCallback(() => setModalOpen(false), []);
+
+  const handleAddRule = useCallback(() => {
+    setDrawerOpen(false);
+    setModalOpen(true);
+  }, []);
+
+  const handleSaveRule = useCallback((rule: Omit<AlertRule, 'id' | 'createdAt' | 'enabled'>) => {
+    alerts.addRule(rule);
+    setModalOpen(false);
+  }, [alerts.addRule]);
+
   return (
     <>
       <button
-        onClick={() => setDrawerOpen(true)}
+        onClick={openDrawer}
         className="relative p-1.5 rounded-md hover:bg-surface-hover transition-colors"
         title="Price alerts"
       >
@@ -27,18 +42,15 @@ export function AlertBell() {
 
       <AlertDrawer
         open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
+        onClose={closeDrawer}
         alerts={alerts}
-        onAddRule={() => { setDrawerOpen(false); setModalOpen(true); }}
+        onAddRule={handleAddRule}
       />
 
       <AlertRuleModal
         open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        onSave={(rule) => {
-          alerts.addRule(rule);
-          setModalOpen(false);
-        }}
+        onClose={closeModal}
+        onSave={handleSaveRule}
       />
     </>
   );

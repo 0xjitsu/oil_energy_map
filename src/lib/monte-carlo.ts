@@ -18,9 +18,37 @@ function uniformRandom(min: number, max: number): number {
 function percentile(sorted: number[], p: number): number {
   const i = (p / 100) * (sorted.length - 1);
   const lo = Math.floor(i);
-  const hi = Math.ceil(i);
-  if (lo === hi) return sorted[lo];
-  return sorted[lo] + (sorted[hi] - sorted[lo]) * (i - lo);
+  if (lo === Math.ceil(i)) return sorted[lo];
+  return sorted[lo] + (sorted[lo + 1] - sorted[lo]) * (i - lo);
+}
+
+function roundTwo(n: number): number {
+  return Math.round(n * 100) / 100;
+}
+
+function percentileBand(sorted: number[]): { p10: number; p25: number; p50: number; p75: number; p90: number } {
+  return {
+    p10: roundTwo(percentile(sorted, 10)),
+    p25: roundTwo(percentile(sorted, 25)),
+    p50: roundTwo(percentile(sorted, 50)),
+    p75: roundTwo(percentile(sorted, 75)),
+    p90: roundTwo(percentile(sorted, 90)),
+  };
+}
+
+/** Binary search for count of elements > threshold in a sorted array */
+function countAbove(sorted: number[], threshold: number): number {
+  let lo = 0;
+  let hi = sorted.length;
+  while (lo < hi) {
+    const mid = (lo + hi) >>> 1;
+    if (sorted[mid] <= threshold) {
+      lo = mid + 1;
+    } else {
+      hi = mid;
+    }
+  }
+  return sorted.length - lo;
 }
 
 export function runMonteCarlo(
@@ -54,26 +82,14 @@ export function runMonteCarlo(
   const thresholds = [70, 75, 80, 85, 90, 95, 100];
   const probabilityAbove = thresholds.map((t) => ({
     threshold: t,
-    gasoline: Math.round((gasolineResults.filter((v) => v > t).length / runs) * 100),
-    diesel: Math.round((dieselResults.filter((v) => v > t).length / runs) * 100),
+    gasoline: Math.round((countAbove(gasolineResults, t) / runs) * 100),
+    diesel: Math.round((countAbove(dieselResults, t) / runs) * 100),
   }));
 
   return {
     runs,
-    pumpGasoline: {
-      p10: Math.round(percentile(gasolineResults, 10) * 100) / 100,
-      p25: Math.round(percentile(gasolineResults, 25) * 100) / 100,
-      p50: Math.round(percentile(gasolineResults, 50) * 100) / 100,
-      p75: Math.round(percentile(gasolineResults, 75) * 100) / 100,
-      p90: Math.round(percentile(gasolineResults, 90) * 100) / 100,
-    },
-    pumpDiesel: {
-      p10: Math.round(percentile(dieselResults, 10) * 100) / 100,
-      p25: Math.round(percentile(dieselResults, 25) * 100) / 100,
-      p50: Math.round(percentile(dieselResults, 50) * 100) / 100,
-      p75: Math.round(percentile(dieselResults, 75) * 100) / 100,
-      p90: Math.round(percentile(dieselResults, 90) * 100) / 100,
-    },
+    pumpGasoline: percentileBand(gasolineResults),
+    pumpDiesel: percentileBand(dieselResults),
     probabilityAbove,
     computeTimeMs: Math.round(performance.now() - start),
   };

@@ -15,6 +15,10 @@ function getPainColor(index: number): string {
   return 'bg-red-500';
 }
 
+function getDeltaColor(delta: number): string {
+  return delta > 0 ? 'text-red-400' : 'text-emerald-400';
+}
+
 export function PersonaCard({ persona, impact, selected, onClick }: PersonaCardProps) {
   return (
     <button
@@ -32,7 +36,7 @@ export function PersonaCard({ persona, impact, selected, onClick }: PersonaCardP
       </div>
 
       <div className="mt-3">
-        <p className={`text-xl font-mono font-bold ${impact.monthlyCostDelta > 0 ? 'text-red-400' : 'text-emerald-400'}`}>
+        <p className={`text-xl font-mono font-bold ${getDeltaColor(impact.monthlyCostDelta)}`}>
           {impact.monthlyCostDelta > 0 ? '+' : ''}₱{Math.abs(impact.monthlyCostDelta).toLocaleString()}
         </p>
         <p className="text-[9px] font-mono text-text-dim">per month</p>

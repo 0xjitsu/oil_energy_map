@@ -4,6 +4,8 @@ import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import historicalPrices from '@/data/historical-prices.json';
 import historicalEvents from '@/data/historical-events.json';
 
+const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
+
 export interface HistoricalSnapshot {
   date: string;
   brent: number;
@@ -35,9 +37,10 @@ export function useHistoricalData() {
     const current = new Date(currentSnapshot.date).getTime();
     return events.filter((e) => {
       const diff = Math.abs(new Date(e.date).getTime() - current);
-      return diff < 30 * 24 * 60 * 60 * 1000;
+      return diff < THIRTY_DAYS_MS;
     });
-  }, [currentSnapshot.date, events]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- events is a static module import
+  }, [currentSnapshot.date]);
 
   useEffect(() => {
     if (!playing) {

@@ -87,7 +87,7 @@ After each phase: one sequential integration task wires everything into `page.ts
 - Create: `src/hooks/useKeyboardShortcuts.ts`
 - Modify: `src/app/globals.css`
 
-- [ ] **Step 1:** Create `src/hooks/useKeyboardShortcuts.ts`
+- [x] **Step 1:** Create `src/hooks/useKeyboardShortcuts.ts`
 
 ```typescript
 'use client';
@@ -135,7 +135,7 @@ export function useKeyboardShortcuts(
 }
 ```
 
-- [ ] **Step 2:** Add CSS utilities to `src/app/globals.css` — append after the last rule (line 239):
+- [x] **Step 2:** Add CSS utilities to `src/app/globals.css` — append after the last rule (line 239):
 
 ```css
 /* Command palette overlay */
@@ -191,9 +191,9 @@ export function useKeyboardShortcuts(
 }
 ```
 
-- [ ] **Step 3:** Run `pnpm build` from `/Users/bbmisa/oil_energy_map` — verify clean
+- [x] **Step 3:** Run `pnpm build` from `/Users/bbmisa/oil_energy_map` — verify clean
 
-- [ ] **Step 4:** Commit: `git add src/hooks/useKeyboardShortcuts.ts src/app/globals.css && git commit -m "add keyboard shortcuts hook and CSS utilities for v2 map controls"`
+- [x] **Step 4:** Commit: `git add src/hooks/useKeyboardShortcuts.ts src/app/globals.css && git commit -m "add keyboard shortcuts hook and CSS utilities for v2 map controls"`
 
 ---
 
@@ -207,7 +207,7 @@ export function useKeyboardShortcuts(
 
 **Pattern reference:** Follow `.glass-card` class for backgrounds. Use design tokens from `globals.css` — never hardcode `rgba()` values. Interactive buttons use the same pattern as `LayerControls`: `text-text-primary bg-border-hover` for active, `text-text-muted bg-transparent hover:bg-surface-hover` for inactive.
 
-- [ ] **Step 1:** Create `src/components/map/MapToolbar.tsx`
+- [x] **Step 1:** Create `src/components/map/MapToolbar.tsx`
 
 ```typescript
 'use client';
@@ -371,7 +371,7 @@ export default function MapToolbar({
 }
 ```
 
-- [ ] **Step 2:** Create `src/components/map/MapToolbarPanel.tsx`
+- [x] **Step 2:** Create `src/components/map/MapToolbarPanel.tsx`
 
 ```typescript
 'use client';
@@ -512,9 +512,9 @@ export default function MapToolbarPanel({
 }
 ```
 
-- [ ] **Step 3:** Run `pnpm build` — verify clean
+- [x] **Step 3:** Run `pnpm build` — verify clean
 
-- [ ] **Step 4:** Commit: `git add src/components/map/MapToolbar.tsx src/components/map/MapToolbarPanel.tsx && git commit -m "add map toolbar icon strip and expandable detail panel"`
+- [x] **Step 4:** Commit: `git add src/components/map/MapToolbar.tsx src/components/map/MapToolbarPanel.tsx && git commit -m "add map toolbar icon strip and expandable detail panel"`
 
 ---
 
@@ -525,7 +525,7 @@ export default function MapToolbarPanel({
 
 **Context:** The palette is triggered by ⌘K (or Ctrl+K). It searches across stations (10,469 from `src/data/stations/`), facilities (from `src/data/facilities.ts`), regions (from `src/data/regions.ts`), and layer toggle actions. Results are navigable with ↑↓ keys and Enter. Selecting a station could trigger a map fly-to in the future; for now it logs the selection.
 
-- [ ] **Step 1:** Create `src/components/map/CommandPalette.tsx`
+- [x] **Step 1:** Create `src/components/map/CommandPalette.tsx`
 
 ```typescript
 'use client';
@@ -730,11 +730,11 @@ export default function CommandPalette({
 }
 ```
 
-- [ ] **Step 2:** Verify `ALL_STATIONS` is exported from `src/data/stations/index.ts` and `FACILITIES` from `src/data/facilities.ts`. If `ALL_STATIONS` doesn't exist as a named export, check what's available and adjust the import accordingly.
+- [x] **Step 2:** Verify `ALL_STATIONS` is exported from `src/data/stations/index.ts` and `FACILITIES` from `src/data/facilities.ts`. If `ALL_STATIONS` doesn't exist as a named export, check what's available and adjust the import accordingly.
 
-- [ ] **Step 3:** Run `pnpm build` — verify clean
+- [x] **Step 3:** Run `pnpm build` — verify clean
 
-- [ ] **Step 4:** Commit: `git add src/components/map/CommandPalette.tsx && git commit -m "add command palette for station/region/layer search"`
+- [x] **Step 4:** Commit: `git add src/components/map/CommandPalette.tsx && git commit -m "add command palette for station/region/layer search"`
 
 ---
 
@@ -745,7 +745,7 @@ export default function CommandPalette({
 
 **Context:** Replace the `LayerControls` component (line 165) with the new `MapToolbar` and `CommandPalette`. Move the mode tabs (LIVE/SCENARIO/TIMELINE) out of LayerControls into floating pills at the top center of the map. Wire up keyboard shortcuts.
 
-- [ ] **Step 1:** Modify `src/components/map/IntelMap.tsx`:
+- [x] **Step 1:** Modify `src/components/map/IntelMap.tsx`:
 
 1. Replace the `import LayerControls from './LayerControls';` with:
 ```typescript
@@ -823,18 +823,18 @@ useKeyboardShortcuts(
 />
 ```
 
-- [ ] **Step 2:** Run `pnpm build` — verify clean
+- [x] **Step 2:** Run `pnpm build` — verify clean
 
-- [ ] **Step 3:** Visual verify with `preview_start` — icon strip renders on left, mode tabs centered top, ⌘K opens palette, shortcut keys toggle layers
+- [x] **Step 3:** Visual verify with `preview_start` — icon strip renders on left, mode tabs centered top, ⌘K opens palette, shortcut keys toggle layers
 
-- [ ] **Step 4:** Commit: `git add src/components/map/IntelMap.tsx && git commit -m "integrate map toolbar, command palette, and keyboard shortcuts into IntelMap"`
+- [x] **Step 4:** Commit: `git add src/components/map/IntelMap.tsx && git commit -m "integrate map toolbar, command palette, and keyboard shortcuts into IntelMap"`
 
 ---
 
 ## Phase 1 Build Gate
 
-- [ ] Run `pnpm build` — entire project must compile clean
-- [ ] Commit: `"phase 1 complete: map controls overhaul"`
+- [x] Run `pnpm build` — entire project must compile clean
+- [x] Commit: `"phase 1 complete: map controls overhaul"`
 
 ---
 
@@ -852,7 +852,7 @@ useKeyboardShortcuts(
 
 **Context:** The `usePrices` hook (48 lines in `src/hooks/usePrices.ts`) polls `/api/prices` every 5 minutes and returns `prices: PriceBenchmark[]`. Each `PriceBenchmark` has `id`, `name`, `value`, `previousWeek`, `unit`, `tooltip`. Alert rules are checked against these values after each poll. The Header component (144 lines) has a right section with LIVE badge + date.
 
-- [ ] **Step 1:** Add types to `src/types/index.ts` — append after line 91:
+- [x] **Step 1:** Add types to `src/types/index.ts` — append after line 91:
 
 ```typescript
 
@@ -879,7 +879,7 @@ export interface AlertNotification {
 }
 ```
 
-- [ ] **Step 2:** Create `src/hooks/useAlerts.ts`
+- [x] **Step 2:** Create `src/hooks/useAlerts.ts`
 
 ```typescript
 'use client';
@@ -1014,7 +1014,7 @@ export function useAlerts() {
 }
 ```
 
-- [ ] **Step 3:** Create `src/components/alerts/AlertBell.tsx`
+- [x] **Step 3:** Create `src/components/alerts/AlertBell.tsx`
 
 ```typescript
 'use client';
@@ -1064,7 +1064,7 @@ export function AlertBell() {
 }
 ```
 
-- [ ] **Step 4:** Create `src/components/alerts/AlertDrawer.tsx`
+- [x] **Step 4:** Create `src/components/alerts/AlertDrawer.tsx`
 
 ```typescript
 'use client';
@@ -1165,7 +1165,7 @@ export default function AlertDrawer({ open, onClose, alerts, onAddRule }: AlertD
 }
 ```
 
-- [ ] **Step 5:** Create `src/components/alerts/AlertRuleModal.tsx`
+- [x] **Step 5:** Create `src/components/alerts/AlertRuleModal.tsx`
 
 ```typescript
 'use client';
@@ -1260,7 +1260,7 @@ export default function AlertRuleModal({ open, onClose, onSave }: AlertRuleModal
 }
 ```
 
-- [ ] **Step 6:** Add AlertBell to Header. In `src/components/layout/Header.tsx`:
+- [x] **Step 6:** Add AlertBell to Header. In `src/components/layout/Header.tsx`:
 - Add import: `import { AlertBell } from '@/components/alerts/AlertBell';`
 - Insert `<AlertBell />` before the LIVE badge span (line 96), inside the right div (line 95):
 ```tsx
@@ -1269,9 +1269,9 @@ export default function AlertRuleModal({ open, onClose, onSave }: AlertRuleModal
   <span className={`inline-flex ...`}>
 ```
 
-- [ ] **Step 7:** Run `pnpm build` — verify clean
+- [x] **Step 7:** Run `pnpm build` — verify clean
 
-- [ ] **Step 8:** Commit: `git add src/types/index.ts src/hooks/useAlerts.ts src/components/alerts/ src/components/layout/Header.tsx && git commit -m "add price alert system with browser notifications and localStorage persistence"`
+- [x] **Step 8:** Commit: `git add src/types/index.ts src/hooks/useAlerts.ts src/components/alerts/ src/components/layout/Header.tsx && git commit -m "add price alert system with browser notifications and localStorage persistence"`
 
 ---
 
@@ -1285,7 +1285,7 @@ export default function AlertRuleModal({ open, onClose, onSave }: AlertRuleModal
 
 **Context:** `ScenarioPlanner.tsx` (195 lines) manages `ScenarioParams` via props. It calculates pump prices via `calculatePumpPrice(params)` from `src/lib/scenario-engine.ts`. The `ResultPanel` shows gasoline/diesel prices and risk level. We add save/load functionality with localStorage and a comparison view.
 
-- [ ] **Step 1:** Add `SavedScenario` type to `src/types/index.ts` — append:
+- [x] **Step 1:** Add `SavedScenario` type to `src/types/index.ts` — append:
 
 ```typescript
 
@@ -1302,7 +1302,7 @@ export interface SavedScenario {
 }
 ```
 
-- [ ] **Step 2:** Create `src/hooks/useScenarios.ts`
+- [x] **Step 2:** Create `src/hooks/useScenarios.ts`
 
 ```typescript
 'use client';
@@ -1350,7 +1350,7 @@ export function useScenarios() {
 }
 ```
 
-- [ ] **Step 3:** Create `src/components/scenarios/ScenarioSlots.tsx`
+- [x] **Step 3:** Create `src/components/scenarios/ScenarioSlots.tsx`
 
 ```typescript
 'use client';
@@ -1425,7 +1425,7 @@ export function ScenarioSlots({ scenarios, onLoad, onRemove, onSave, disabled }:
 }
 ```
 
-- [ ] **Step 4:** Create `src/components/scenarios/ScenarioCompare.tsx`
+- [x] **Step 4:** Create `src/components/scenarios/ScenarioCompare.tsx`
 
 ```typescript
 'use client';
@@ -1499,7 +1499,7 @@ export function ScenarioCompare({ scenarios }: ScenarioCompareProps) {
 }
 ```
 
-- [ ] **Step 5:** Modify `src/components/scenarios/ScenarioPlanner.tsx` — add ScenarioSlots and Compare:
+- [x] **Step 5:** Modify `src/components/scenarios/ScenarioPlanner.tsx` — add ScenarioSlots and Compare:
 
 1. Add imports at top:
 ```typescript
@@ -1529,9 +1529,9 @@ const { scenarios, saveScenario, removeScenario } = useScenarios();
 <ScenarioCompare scenarios={scenarios} />
 ```
 
-- [ ] **Step 6:** Run `pnpm build` — verify clean
+- [x] **Step 6:** Run `pnpm build` — verify clean
 
-- [ ] **Step 7:** Commit: `git add src/types/index.ts src/hooks/useScenarios.ts src/components/scenarios/ && git commit -m "add scenario save, load, and side-by-side comparison"`
+- [x] **Step 7:** Commit: `git add src/types/index.ts src/hooks/useScenarios.ts src/components/scenarios/ && git commit -m "add scenario save, load, and side-by-side comparison"`
 
 ---
 
@@ -1545,7 +1545,7 @@ const { scenarios, saveScenario, removeScenario } = useScenarios();
 
 **Context:** The existing `ImpactCards.tsx` (91 lines) does rough impact estimation using `deriveImpacts()` based on `scenarioParams`. The Consumer Impact Calculator is a separate section that provides more detailed, persona-based calculations using actual fuel consumption data.
 
-- [ ] **Step 1:** Create `src/lib/consumer-models.ts`
+- [x] **Step 1:** Create `src/lib/consumer-models.ts`
 
 ```typescript
 import type { ScenarioParams } from '@/types';
@@ -1645,7 +1645,7 @@ export function calculateImpact(
 }
 ```
 
-- [ ] **Step 2:** Create `src/components/consumer/PersonaCard.tsx`
+- [x] **Step 2:** Create `src/components/consumer/PersonaCard.tsx`
 
 ```typescript
 'use client';
@@ -1705,7 +1705,7 @@ export function PersonaCard({ persona, impact, selected, onClick }: PersonaCardP
 }
 ```
 
-- [ ] **Step 3:** Create `src/components/consumer/ImpactResult.tsx`
+- [x] **Step 3:** Create `src/components/consumer/ImpactResult.tsx`
 
 ```typescript
 'use client';
@@ -1755,7 +1755,7 @@ export function ImpactResult({ persona, impact }: ImpactResultProps) {
 }
 ```
 
-- [ ] **Step 4:** Create `src/components/consumer/ImpactCalculator.tsx`
+- [x] **Step 4:** Create `src/components/consumer/ImpactCalculator.tsx`
 
 ```typescript
 'use client';
@@ -1811,9 +1811,9 @@ export function ImpactCalculator({ scenarioParams }: ImpactCalculatorProps) {
 }
 ```
 
-- [ ] **Step 5:** Run `pnpm build` — verify clean
+- [x] **Step 5:** Run `pnpm build` — verify clean
 
-- [ ] **Step 6:** Commit: `git add src/lib/consumer-models.ts src/components/consumer/ && git commit -m "add consumer impact calculator with 4 persona models"`
+- [x] **Step 6:** Commit: `git add src/lib/consumer-models.ts src/components/consumer/ && git commit -m "add consumer impact calculator with 4 persona models"`
 
 ---
 
@@ -1827,7 +1827,7 @@ export function ImpactCalculator({ scenarioParams }: ImpactCalculatorProps) {
 
 **Note:** The deck.gl GeoJsonLayer for clickable region polygons (`RegionLayer.ts`) and the `regions-geo.json` GeoJSON file require significantly more data preparation work. For this implementation phase, we focus on the RegionPanel as a sidebar that is triggered by clicking a region name in the existing dropdown or the command palette. The full map polygon overlay is deferred to a follow-up task.
 
-- [ ] **Step 1:** Create `src/lib/region-analytics.ts`
+- [x] **Step 1:** Create `src/lib/region-analytics.ts`
 
 ```typescript
 import { ALL_STATIONS } from '@/data/stations';
@@ -1914,7 +1914,7 @@ export function computeRegionAnalytics(regionName: string): RegionAnalytics {
 }
 ```
 
-- [ ] **Step 2:** Create `src/components/map/RegionPanel.tsx`
+- [x] **Step 2:** Create `src/components/map/RegionPanel.tsx`
 
 ```typescript
 'use client';
@@ -2005,9 +2005,9 @@ export default function RegionPanel({ region, onClose }: RegionPanelProps) {
 }
 ```
 
-- [ ] **Step 3:** Run `pnpm build` — verify clean. If `ALL_STATIONS` or `FACILITIES` imports fail, check the actual exports from those files and adjust imports.
+- [x] **Step 3:** Run `pnpm build` — verify clean. If `ALL_STATIONS` or `FACILITIES` imports fail, check the actual exports from those files and adjust imports.
 
-- [ ] **Step 4:** Commit: `git add src/lib/region-analytics.ts src/components/map/RegionPanel.tsx && git commit -m "add regional drill-down panel with station analytics and infrastructure proximity"`
+- [x] **Step 4:** Commit: `git add src/lib/region-analytics.ts src/components/map/RegionPanel.tsx && git commit -m "add regional drill-down panel with station analytics and infrastructure proximity"`
 
 ---
 
@@ -2019,7 +2019,7 @@ export default function RegionPanel({ region, onClose }: RegionPanelProps) {
 - Modify: `src/app/page.tsx`
 - Modify: `src/components/map/IntelMap.tsx`
 
-- [ ] **Step 1:** Add imports to `src/app/page.tsx`:
+- [x] **Step 1:** Add imports to `src/app/page.tsx`:
 
 ```typescript
 import { ImpactCalculator } from '@/components/consumer/ImpactCalculator';
@@ -2035,7 +2035,7 @@ Add after the ScenarioPlanner section (after line 124):
 </section>
 ```
 
-- [ ] **Step 2:** Add RegionPanel to `src/components/map/IntelMap.tsx`:
+- [x] **Step 2:** Add RegionPanel to `src/components/map/IntelMap.tsx`:
 
 Add import:
 ```typescript
@@ -2052,9 +2052,9 @@ Add RegionPanel rendering (after the StationTooltip block, before the closing `<
 )}
 ```
 
-- [ ] **Step 3:** Run `pnpm build` — verify clean
+- [x] **Step 3:** Run `pnpm build` — verify clean
 
-- [ ] **Step 4:** Commit: `git add src/app/page.tsx src/components/map/IntelMap.tsx && git commit -m "integrate consumer impact calculator and regional drill-down panel"`
+- [x] **Step 4:** Commit: `git add src/app/page.tsx src/components/map/IntelMap.tsx && git commit -m "integrate consumer impact calculator and regional drill-down panel"`
 
 ---
 
@@ -2071,7 +2071,7 @@ Add RegionPanel rendering (after the StationTooltip block, before the closing `<
 
 **Context:** The Monte Carlo simulation runs client-side. Due to Next.js bundling complexity with Web Workers, we use a synchronous implementation wrapped in `requestIdleCallback`/`setTimeout` rather than a true Web Worker. This avoids webpack worker-loader configuration. The simulation runs 1,000 iterations of the `calculatePumpPrice` model with randomized inputs.
 
-- [ ] **Step 1:** Add Monte Carlo types to `src/types/index.ts`:
+- [x] **Step 1:** Add Monte Carlo types to `src/types/index.ts`:
 
 ```typescript
 
@@ -2084,7 +2084,7 @@ export interface MonteCarloResult {
 }
 ```
 
-- [ ] **Step 2:** Create `src/lib/monte-carlo.ts`
+- [x] **Step 2:** Create `src/lib/monte-carlo.ts`
 
 ```typescript
 import { calculatePumpPrice } from '@/lib/scenario-engine';
@@ -2173,7 +2173,7 @@ export function runMonteCarlo(
 }
 ```
 
-- [ ] **Step 3:** Create `src/components/ui/Disclaimer.tsx`
+- [x] **Step 3:** Create `src/components/ui/Disclaimer.tsx`
 
 ```typescript
 'use client';
@@ -2230,7 +2230,7 @@ export function Disclaimer({ showRoadmap = true }: DisclaimerProps) {
 }
 ```
 
-- [ ] **Step 4:** Create `src/components/scenarios/ConfidenceFan.tsx`
+- [x] **Step 4:** Create `src/components/scenarios/ConfidenceFan.tsx`
 
 ```typescript
 'use client';
@@ -2297,7 +2297,7 @@ export function ConfidenceFan({ result, fuelType }: ConfidenceFanProps) {
 }
 ```
 
-- [ ] **Step 5:** Create `src/components/scenarios/StressTest.tsx`
+- [x] **Step 5:** Create `src/components/scenarios/StressTest.tsx`
 
 ```typescript
 'use client';
@@ -2406,9 +2406,9 @@ export function StressTest({ scenarioParams }: StressTestProps) {
 }
 ```
 
-- [ ] **Step 6:** Run `pnpm build` — verify clean
+- [x] **Step 6:** Run `pnpm build` — verify clean
 
-- [ ] **Step 7:** Commit: `git add src/types/index.ts src/lib/monte-carlo.ts src/components/ui/Disclaimer.tsx src/components/scenarios/ConfidenceFan.tsx src/components/scenarios/StressTest.tsx && git commit -m "add Monte Carlo stress test with confidence fan charts and mandatory disclaimer"`
+- [x] **Step 7:** Commit: `git add src/types/index.ts src/lib/monte-carlo.ts src/components/ui/Disclaimer.tsx src/components/scenarios/ConfidenceFan.tsx src/components/scenarios/StressTest.tsx && git commit -m "add Monte Carlo stress test with confidence fan charts and mandatory disclaimer"`
 
 ---
 
@@ -2422,7 +2422,7 @@ export function StressTest({ scenarioParams }: StressTestProps) {
 
 **Context:** The existing `TimelineSlider.tsx` (in `src/components/map/`) is a simple range input that sets `timelinePosition` (0–1000). The new `TimelineScrubber` replaces it with a richer component that maps to actual dates (2022–2026) and shows event markers.
 
-- [ ] **Step 1:** Create `src/data/historical-prices.json` — weekly snapshots. Include ~20 representative data points spanning 2022-2026:
+- [x] **Step 1:** Create `src/data/historical-prices.json` — weekly snapshots. Include ~20 representative data points spanning 2022-2026:
 
 ```json
 [
@@ -2447,7 +2447,7 @@ export function StressTest({ scenarioParams }: StressTestProps) {
 ]
 ```
 
-- [ ] **Step 2:** Create `src/data/historical-events.json`:
+- [x] **Step 2:** Create `src/data/historical-events.json`:
 
 ```json
 [
@@ -2466,7 +2466,7 @@ export function StressTest({ scenarioParams }: StressTestProps) {
 ]
 ```
 
-- [ ] **Step 3:** Create `src/hooks/useHistoricalData.ts`
+- [x] **Step 3:** Create `src/hooks/useHistoricalData.ts`
 
 ```typescript
 'use client';
@@ -2549,7 +2549,7 @@ export function useHistoricalData() {
 }
 ```
 
-- [ ] **Step 4:** Create `src/components/timeline/TimelineScrubber.tsx`
+- [x] **Step 4:** Create `src/components/timeline/TimelineScrubber.tsx`
 
 ```typescript
 'use client';
@@ -2690,9 +2690,9 @@ export function TimelineScrubber({ visible }: TimelineScrubberProps) {
 }
 ```
 
-- [ ] **Step 5:** Run `pnpm build` — verify clean
+- [x] **Step 5:** Run `pnpm build` — verify clean
 
-- [ ] **Step 6:** Commit: `git add src/data/historical-prices.json src/data/historical-events.json src/hooks/useHistoricalData.ts src/components/timeline/TimelineScrubber.tsx && git commit -m "add historical playback with price snapshots, event markers, and timeline scrubber"`
+- [x] **Step 6:** Commit: `git add src/data/historical-prices.json src/data/historical-events.json src/hooks/useHistoricalData.ts src/components/timeline/TimelineScrubber.tsx && git commit -m "add historical playback with price snapshots, event markers, and timeline scrubber"`
 
 ---
 
@@ -2703,7 +2703,7 @@ export function TimelineScrubber({ visible }: TimelineScrubberProps) {
 **Files:**
 - Modify: `src/app/page.tsx`
 
-- [ ] **Step 1:** Add new imports to `page.tsx`:
+- [x] **Step 1:** Add new imports to `page.tsx`:
 
 ```typescript
 import { StressTest } from '@/components/scenarios/StressTest';
@@ -2712,7 +2712,7 @@ import { TimelineScrubber } from '@/components/timeline/TimelineScrubber';
 
 Note: `ImpactCalculator` was already added in Task 9.
 
-- [ ] **Step 2:** Add StressTest section after ScenarioPlanner (after the Consumer Impact section):
+- [x] **Step 2:** Add StressTest section after ScenarioPlanner (after the Consumer Impact section):
 
 ```tsx
 {/* Monte Carlo Stress Test */}
@@ -2722,7 +2722,7 @@ Note: `ImpactCalculator` was already added in Task 9.
 </section>
 ```
 
-- [ ] **Step 3:** Add TimelineScrubber. Replace the existing `<TimelineSlider>` (lines 89–93) with:
+- [x] **Step 3:** Add TimelineScrubber. Replace the existing `<TimelineSlider>` (lines 89–93) with:
 
 ```tsx
 <TimelineSlider
@@ -2733,9 +2733,9 @@ Note: `ImpactCalculator` was already added in Task 9.
 <TimelineScrubber visible={mapMode === 'timeline'} />
 ```
 
-- [ ] **Step 4:** Run `pnpm build` — verify entire project compiles clean
+- [x] **Step 4:** Run `pnpm build` — verify entire project compiles clean
 
-- [ ] **Step 5:** Visual verify with `preview_start`:
+- [x] **Step 5:** Visual verify with `preview_start`:
   - Map has icon strip on left, mode tabs centered top
   - ⌘K opens command palette
   - I/S/R/L keyboard shortcuts toggle layers
@@ -2746,9 +2746,9 @@ Note: `ImpactCalculator` was already added in Task 9.
   - Stress test runs and shows confidence fan + disclaimer
   - Timeline scrubber shows historical data with event markers
 
-- [ ] **Step 6:** Commit: `git add src/app/page.tsx && git commit -m "wire all v2 features into dashboard layout"`
+- [x] **Step 6:** Commit: `git add src/app/page.tsx && git commit -m "wire all v2 features into dashboard layout"`
 
-- [ ] **Step 7:** Final commit: `git add -A && git commit -m "PH Oil Intelligence v2: map controls overhaul, price alerts, scenario comparison, regional drill-down, consumer impact calculator, Monte Carlo stress test, historical playback"`
+- [x] **Step 7:** Final commit: `git add -A && git commit -m "PH Oil Intelligence v2: map controls overhaul, price alerts, scenario comparison, regional drill-down, consumer impact calculator, Monte Carlo stress test, historical playback"`
 
 ---
 
@@ -2760,8 +2760,8 @@ Note: `ImpactCalculator` was already added in Task 9.
 3. **Phase 3:** Monte Carlo completes in <2s, confidence fan renders, disclaimer always visible, timeline scrub updates KPIs
 
 ### End-to-End
-- [ ] `pnpm build` passes clean
-- [ ] All 3 map modes (LIVE/SCENARIO/TIMELINE) still work
-- [ ] Dashboard falls back gracefully when APIs unreachable
-- [ ] No hardcoded `rgba()` values (design token discipline)
-- [ ] Disclaimer badge cannot be dismissed on stress test results
+- [x] `pnpm build` passes clean
+- [x] All 3 map modes (LIVE/SCENARIO/TIMELINE) still work
+- [x] Dashboard falls back gracefully when APIs unreachable
+- [x] No hardcoded `rgba()` values (design token discipline)
+- [x] Disclaimer badge cannot be dismissed on stress test results

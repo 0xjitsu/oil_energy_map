@@ -73,9 +73,7 @@ export default function Home() {
   });
   const [timelinePosition, setTimelinePosition] = useState(0);
 
-  const handleParamsChange = useCallback((params: ScenarioParams) => {
-    setScenarioParams(params);
-  }, []);
+  const handleParamsChange = useCallback(setScenarioParams, []);
 
   return (
     <div className="min-h-screen bg-bg-primary">

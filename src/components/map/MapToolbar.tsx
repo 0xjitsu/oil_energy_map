@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import MapToolbarPanel from './MapToolbarPanel';
 
 type LayerKey = 'facilities' | 'routes' | 'labels' | 'stations';
@@ -44,11 +44,8 @@ export default function MapToolbar({
 }: MapToolbarProps) {
   const [expandedLayer, setExpandedLayer] = useState<LayerKey | null>(null);
 
-  const isLayerActive = useCallback(
-    (key: LayerKey) => {
-      if (key === 'stations') return stationsVisible;
-      return layers[key as keyof typeof layers];
-    },
+  const layerActiveMap = useMemo(
+    () => ({ ...layers, stations: stationsVisible }),
     [layers, stationsVisible],
   );
 
@@ -70,12 +67,14 @@ export default function MapToolbar({
     [],
   );
 
+  const handleClosePanel = useCallback(() => setExpandedLayer(null), []);
+
   return (
     <>
       {/* Vertical icon strip */}
       <div className="absolute left-4 top-1/2 -translate-y-1/2 z-50 glass-card p-1.5 flex flex-col gap-1">
         {TOOLBAR_BUTTONS.map(({ key, icon, label, shortcut }) => {
-          const active = isLayerActive(key);
+          const active = layerActiveMap[key];
           const expanded = expandedLayer === key;
           return (
             <div key={key} className="relative group">
@@ -84,7 +83,7 @@ export default function MapToolbar({
                 onDoubleClick={() => handleExpand(key)}
                 className={`w-9 h-9 flex items-center justify-center rounded-lg transition-all duration-200 text-sm ${
                   active
-                    ? 'bg-[rgba(59,130,246,0.15)] border border-[rgba(59,130,246,0.3)] text-text-primary'
+                    ? 'bg-blue-500/15 border border-blue-500/30 text-text-primary'
                     : 'bg-surface-hover text-text-muted hover:text-text-secondary'
                 } ${expanded ? 'ring-1 ring-blue-500/30' : ''}`}
                 title={`${label} (${shortcut})`}
@@ -132,7 +131,7 @@ export default function MapToolbar({
           onBrandToggle={onBrandToggle}
           selectedRegion={selectedRegion}
           onRegionChange={onRegionChange}
-          onClose={() => setExpandedLayer(null)}
+          onClose={handleClosePanel}
         />
       )}
 

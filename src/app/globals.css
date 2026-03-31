@@ -94,10 +94,6 @@ body {
 }
 
 /* Section fade-in animation */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 .fade-in-section {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
@@ -198,11 +194,6 @@ body {
   overflow: hidden;
 }
 
-/* Number counter transition */
-.tabular-nums {
-  font-variant-numeric: tabular-nums;
-}
-
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -265,14 +256,14 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 9px;
   padding: 1px 4px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.3);
+  background: var(--border-subtle);
+  border: 1px solid var(--border-hover);
+  color: var(--text-subtle);
 }
 
 /* Disclaimer card */
 .disclaimer-card {
-  border-left: 3px solid #f59e0b;
+  border-left: 3px solid var(--status-yellow, #f59e0b);
 }
 
 /* Live pulse indicator */

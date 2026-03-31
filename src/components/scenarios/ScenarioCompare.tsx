@@ -6,10 +6,12 @@ interface ScenarioCompareProps {
   scenarios: SavedScenario[];
 }
 
-function getRiskColor(level: string) {
-  if (level === 'red') return 'text-red-400';
-  if (level === 'yellow') return 'text-yellow-400';
-  return 'text-emerald-400';
+function getRiskColor(level: string): string {
+  switch (level) {
+    case 'red': return 'text-red-400';
+    case 'yellow': return 'text-yellow-400';
+    default: return 'text-emerald-400';
+  }
 }
 
 export function ScenarioCompare({ scenarios }: ScenarioCompareProps) {

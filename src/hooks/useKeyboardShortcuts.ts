@@ -12,9 +12,10 @@ export function useKeyboardShortcuts(
 ) {
   const handler = useCallback(
     (e: KeyboardEvent) => {
-      // Don't fire shortcuts when typing in inputs
-      const tag = (e.target as HTMLElement).tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      // Don't fire shortcuts when typing in inputs or contentEditable
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') return;
+      if (target.isContentEditable) return;
 
       // ⌘K / Ctrl+K is special — always handle
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {

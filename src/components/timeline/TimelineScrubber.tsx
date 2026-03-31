@@ -1,5 +1,6 @@
 'use client';
 
+import { useMemo } from 'react';
 import { useHistoricalData } from '@/hooks/useHistoricalData';
 
 interface TimelineScrubberProps {
@@ -26,6 +27,25 @@ export function TimelineScrubber({ visible }: TimelineScrubberProps) {
     setIndex,
     totalSnapshots,
   } = useHistoricalData();
+
+  // Memoize event marker positions — events and price range are static
+  const eventMarkers = useMemo(() => {
+    const startDate = new Date(prices[0].date).getTime();
+    const endDate = new Date(prices[prices.length - 1].date).getTime();
+    const range = endDate - startDate;
+    return events
+      .map((event, i) => {
+        const position = ((new Date(event.date).getTime() - startDate) / range) * 100;
+        if (position < 0 || position > 100) return null;
+        return { ...event, position, key: i };
+      })
+      .filter(Boolean) as Array<{ position: number; key: number; title: string; severity: string; date: string; priceImpact: number }>;
+  }, [prices, events]);
+
+  const dateLabels = useMemo(() => {
+    const fmt = (d: string) => new Date(d).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    return { start: fmt(prices[0].date), end: fmt(prices[prices.length - 1].date) };
+  }, [prices]);
 
   if (!visible) return null;
 
@@ -74,31 +94,20 @@ export function TimelineScrubber({ visible }: TimelineScrubberProps) {
 
         {/* Event markers on the timeline */}
         <div className="relative h-4 mt-1">
-          {events.map((event, i) => {
-            const eventDate = new Date(event.date).getTime();
-            const startDate = new Date(prices[0].date).getTime();
-            const endDate = new Date(prices[prices.length - 1].date).getTime();
-            const position = ((eventDate - startDate) / (endDate - startDate)) * 100;
-            if (position < 0 || position > 100) return null;
-            return (
-              <div
-                key={i}
-                className={`absolute top-0 w-1.5 h-1.5 rounded-full ${severityColor(event.severity)} cursor-pointer`}
-                style={{ left: `${position}%`, transform: 'translateX(-50%)' }}
-                title={event.title}
-              />
-            );
-          })}
+          {eventMarkers.map((m) => (
+            <div
+              key={m.key}
+              className={`absolute top-0 w-1.5 h-1.5 rounded-full ${severityColor(m.severity)} cursor-pointer`}
+              style={{ left: `${m.position}%`, transform: 'translateX(-50%)' }}
+              title={m.title}
+            />
+          ))}
         </div>
 
         {/* Date range labels */}
         <div className="flex justify-between mt-1">
-          <span className="text-[8px] font-mono text-text-dim">
-            {new Date(prices[0].date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
-          </span>
-          <span className="text-[8px] font-mono text-text-dim">
-            {new Date(prices[prices.length - 1].date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
-          </span>
+          <span className="text-[8px] font-mono text-text-dim">{dateLabels.start}</span>
+          <span className="text-[8px] font-mono text-text-dim">{dateLabels.end}</span>
         </div>
       </div>
 

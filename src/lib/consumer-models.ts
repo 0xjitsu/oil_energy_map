@@ -79,9 +79,8 @@ export function calculateImpact(
   const currentPrice = persona.fuelType === 'gasoline' ? result.gasoline : result.diesel;
   const baselinePrice = persona.fuelType === 'gasoline' ? BASELINE_PUMP_GASOLINE : BASELINE_PUMP_DIESEL;
 
-  const priceDelta = currentPrice - baselinePrice;
   const monthlyLiters = persona.dailyLiters * persona.workDaysPerMonth;
-  const monthlyCostDelta = monthlyLiters * priceDelta;
+  const monthlyCostDelta = monthlyLiters * (currentPrice - baselinePrice);
   const percentOfIncome = (monthlyCostDelta / persona.incomeEstimate) * 100;
   const painIndex = Math.min(10, Math.max(1, Math.round(Math.abs(percentOfIncome) * 2)));
 

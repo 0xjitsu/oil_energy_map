@@ -75,6 +75,20 @@ export default function IntelMap({
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const rafRef = useRef<number>(0);
 
+  const handleBrandToggle = useCallback((brand: string) => {
+    setVisibleBrands((prev) => {
+      const next = new Set(prev);
+      if (next.has(brand)) next.delete(brand);
+      else next.add(brand);
+      return next;
+    });
+  }, []);
+
+  const handleStationsToggle = useCallback(() => setStationsVisible((v) => !v), []);
+  const handleRegionClose = useCallback(() => setSelectedRegion(null), []);
+  const handleCommandPaletteOpen = useCallback(() => setCommandPaletteOpen(true), []);
+  const handleCommandPaletteClose = useCallback(() => setCommandPaletteOpen(false), []);
+
   // Animation loop for LIVE mode
   useEffect(() => {
     if (mapMode !== 'live') {
@@ -100,6 +114,11 @@ export default function IntelMap({
       [layer]: !prev[layer as keyof LayerVisibility],
     }));
   }, []);
+
+  const handleCommandPaletteToggleLayer = useCallback((layer: string) => {
+    if (layer === 'stations') setStationsVisible((v) => !v);
+    else handleToggle(layer);
+  }, [handleToggle]);
 
   useKeyboardShortcuts(
     useMemo(
@@ -200,28 +219,18 @@ export default function IntelMap({
         layers={layers}
         onToggle={handleToggle}
         stationsVisible={stationsVisible}
-        onStationsToggle={() => setStationsVisible((v) => !v)}
+        onStationsToggle={handleStationsToggle}
         visibleBrands={visibleBrands}
-        onBrandToggle={(brand: string) => {
-          setVisibleBrands((prev) => {
-            const next = new Set(prev);
-            if (next.has(brand)) next.delete(brand);
-            else next.add(brand);
-            return next;
-          });
-        }}
+        onBrandToggle={handleBrandToggle}
         selectedRegion={selectedRegion}
         onRegionChange={setSelectedRegion}
-        onCommandPalette={() => setCommandPaletteOpen(true)}
+        onCommandPalette={handleCommandPaletteOpen}
       />
 
       <CommandPalette
         open={commandPaletteOpen}
-        onClose={() => setCommandPaletteOpen(false)}
-        onToggleLayer={(layer) => {
-          if (layer === 'stations') setStationsVisible((v) => !v);
-          else handleToggle(layer);
-        }}
+        onClose={handleCommandPaletteClose}
+        onToggleLayer={handleCommandPaletteToggleLayer}
       />
       <FacilityDetail facility={selectedFacility} onClose={handleClose} />
       {hoveredStationInfo && (
@@ -234,7 +243,7 @@ export default function IntelMap({
       {selectedRegion && (
         <RegionPanel
           region={selectedRegion}
-          onClose={() => setSelectedRegion(null)}
+          onClose={handleRegionClose}
         />
       )}
     </div>
