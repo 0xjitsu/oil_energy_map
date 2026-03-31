@@ -11,7 +11,10 @@ import { createFacilityLayers } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
 import { createStationLayer } from './StationLayer';
 import { BRAND_LIST } from '@/data/stations';
-import LayerControls from './LayerControls';
+import MapToolbar from './MapToolbar';
+import CommandPalette from './CommandPalette';
+import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
+import RegionPanel from './RegionPanel';
 import FacilityDetail from './FacilityDetail';
 import StationTooltip from './StationTooltip';
 
@@ -69,6 +72,7 @@ export default function IntelMap({
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
   const [currentZoom, setCurrentZoom] = useState(INITIAL_VIEW_STATE.zoom);
   const [currentTime, setCurrentTime] = useState(0);
+  const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const rafRef = useRef<number>(0);
 
   // Animation loop for LIVE mode
@@ -96,6 +100,19 @@ export default function IntelMap({
       [layer]: !prev[layer as keyof LayerVisibility],
     }));
   }, []);
+
+  useKeyboardShortcuts(
+    useMemo(
+      () => ({
+        'I': () => handleToggle('facilities'),
+        'S': () => setStationsVisible((v) => !v),
+        'R': () => handleToggle('routes'),
+        'L': () => handleToggle('labels'),
+        '⌘K': () => setCommandPaletteOpen(true),
+      }),
+      [handleToggle],
+    ),
+  );
 
   const handleSelect = useCallback((facility: Facility) => {
     setSelectedFacility(facility);
@@ -162,11 +179,26 @@ export default function IntelMap({
         <DeckGLOverlay layers={deckLayers} />
         <NavigationControl position="top-left" showCompass={false} />
       </Map>
-      <LayerControls
+      {/* Mode tabs — floating center top */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-50 glass-card p-0.5 flex gap-0.5 rounded-lg">
+        {(['live', 'scenario', 'timeline'] as const).map((mode) => (
+          <button
+            key={mode}
+            onClick={() => onModeChange(mode)}
+            className={`px-3 py-1.5 rounded-md transition-all duration-200 font-mono text-[9px] uppercase tracking-widest ${
+              mapMode === mode
+                ? 'text-text-primary bg-border-hover'
+                : 'text-text-muted hover:text-text-secondary'
+            }`}
+          >
+            {mode}
+          </button>
+        ))}
+      </div>
+
+      <MapToolbar
         layers={layers}
         onToggle={handleToggle}
-        mapMode={mapMode}
-        onModeChange={onModeChange}
         stationsVisible={stationsVisible}
         onStationsToggle={() => setStationsVisible((v) => !v)}
         visibleBrands={visibleBrands}
@@ -180,6 +212,16 @@ export default function IntelMap({
         }}
         selectedRegion={selectedRegion}
         onRegionChange={setSelectedRegion}
+        onCommandPalette={() => setCommandPaletteOpen(true)}
+      />
+
+      <CommandPalette
+        open={commandPaletteOpen}
+        onClose={() => setCommandPaletteOpen(false)}
+        onToggleLayer={(layer) => {
+          if (layer === 'stations') setStationsVisible((v) => !v);
+          else handleToggle(layer);
+        }}
       />
       <FacilityDetail facility={selectedFacility} onClose={handleClose} />
       {hoveredStationInfo && (
@@ -187,6 +229,12 @@ export default function IntelMap({
           station={hoveredStationInfo.station}
           x={hoveredStationInfo.x}
           y={hoveredStationInfo.y}
+        />
+      )}
+      {selectedRegion && (
+        <RegionPanel
+          region={selectedRegion}
+          onClose={() => setSelectedRegion(null)}
         />
       )}
     </div>

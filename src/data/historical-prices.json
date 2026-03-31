@@ -1,0 +1,20 @@
+[
+  {"date":"2022-01-07","brent":80.0,"phpUsd":51.0,"pumpGasoline":58.5,"pumpDiesel":52.1},
+  {"date":"2022-03-11","brent":112.0,"phpUsd":52.3,"pumpGasoline":73.4,"pumpDiesel":67.0},
+  {"date":"2022-06-10","brent":123.0,"phpUsd":53.5,"pumpGasoline":81.0,"pumpDiesel":74.5},
+  {"date":"2022-09-09","brent":88.0,"phpUsd":57.0,"pumpGasoline":66.2,"pumpDiesel":60.1},
+  {"date":"2022-12-09","brent":76.0,"phpUsd":56.0,"pumpGasoline":61.5,"pumpDiesel":55.8},
+  {"date":"2023-03-10","brent":82.0,"phpUsd":55.0,"pumpGasoline":63.0,"pumpDiesel":57.2},
+  {"date":"2023-06-09","brent":74.0,"phpUsd":56.2,"pumpGasoline":59.8,"pumpDiesel":54.0},
+  {"date":"2023-09-08","brent":90.0,"phpUsd":56.8,"pumpGasoline":68.5,"pumpDiesel":62.1},
+  {"date":"2023-12-08","brent":77.0,"phpUsd":55.5,"pumpGasoline":62.0,"pumpDiesel":56.0},
+  {"date":"2024-03-08","brent":83.0,"phpUsd":56.0,"pumpGasoline":64.5,"pumpDiesel":58.3},
+  {"date":"2024-06-07","brent":79.0,"phpUsd":58.5,"pumpGasoline":64.0,"pumpDiesel":57.8},
+  {"date":"2024-09-06","brent":72.0,"phpUsd":56.5,"pumpGasoline":60.0,"pumpDiesel":54.5},
+  {"date":"2024-12-06","brent":74.0,"phpUsd":58.0,"pumpGasoline":62.0,"pumpDiesel":56.0},
+  {"date":"2025-03-07","brent":70.0,"phpUsd":57.5,"pumpGasoline":60.5,"pumpDiesel":55.0},
+  {"date":"2025-06-06","brent":68.0,"phpUsd":56.8,"pumpGasoline":59.0,"pumpDiesel":53.5},
+  {"date":"2025-09-05","brent":75.0,"phpUsd":57.2,"pumpGasoline":62.5,"pumpDiesel":56.5},
+  {"date":"2025-12-05","brent":72.0,"phpUsd":58.0,"pumpGasoline":61.0,"pumpDiesel":55.5},
+  {"date":"2026-03-06","brent":78.0,"phpUsd":58.4,"pumpGasoline":63.5,"pumpDiesel":57.5}
+]

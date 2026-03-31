@@ -1,0 +1,154 @@
+'use client';
+
+import { useState, useCallback } from 'react';
+import MapToolbarPanel from './MapToolbarPanel';
+
+type LayerKey = 'facilities' | 'routes' | 'labels' | 'stations';
+
+interface ToolbarButton {
+  key: LayerKey;
+  icon: string;
+  label: string;
+  shortcut: string;
+}
+
+const TOOLBAR_BUTTONS: ToolbarButton[] = [
+  { key: 'facilities', icon: '\u{1F3ED}', label: 'Infra', shortcut: 'I' },
+  { key: 'stations', icon: '\u26FD', label: 'Stations', shortcut: 'S' },
+  { key: 'routes', icon: '\u{1F6A2}', label: 'Routes', shortcut: 'R' },
+  { key: 'labels', icon: '\u{1F3F7}\uFE0F', label: 'Labels', shortcut: 'L' },
+];
+
+interface MapToolbarProps {
+  layers: { facilities: boolean; routes: boolean; labels: boolean };
+  onToggle: (layer: string) => void;
+  stationsVisible: boolean;
+  onStationsToggle: () => void;
+  visibleBrands: Set<string>;
+  onBrandToggle: (brand: string) => void;
+  selectedRegion: string | null;
+  onRegionChange: (region: string | null) => void;
+  onCommandPalette: () => void;
+}
+
+export default function MapToolbar({
+  layers,
+  onToggle,
+  stationsVisible,
+  onStationsToggle,
+  visibleBrands,
+  onBrandToggle,
+  selectedRegion,
+  onRegionChange,
+  onCommandPalette,
+}: MapToolbarProps) {
+  const [expandedLayer, setExpandedLayer] = useState<LayerKey | null>(null);
+
+  const isLayerActive = useCallback(
+    (key: LayerKey) => {
+      if (key === 'stations') return stationsVisible;
+      return layers[key as keyof typeof layers];
+    },
+    [layers, stationsVisible],
+  );
+
+  const handleToggle = useCallback(
+    (key: LayerKey) => {
+      if (key === 'stations') {
+        onStationsToggle();
+      } else {
+        onToggle(key);
+      }
+    },
+    [onToggle, onStationsToggle],
+  );
+
+  const handleExpand = useCallback(
+    (key: LayerKey) => {
+      setExpandedLayer((prev) => (prev === key ? null : key));
+    },
+    [],
+  );
+
+  return (
+    <>
+      {/* Vertical icon strip */}
+      <div className="absolute left-4 top-1/2 -translate-y-1/2 z-50 glass-card p-1.5 flex flex-col gap-1">
+        {TOOLBAR_BUTTONS.map(({ key, icon, label, shortcut }) => {
+          const active = isLayerActive(key);
+          const expanded = expandedLayer === key;
+          return (
+            <div key={key} className="relative group">
+              <button
+                onClick={() => handleToggle(key)}
+                onDoubleClick={() => handleExpand(key)}
+                className={`w-9 h-9 flex items-center justify-center rounded-lg transition-all duration-200 text-sm ${
+                  active
+                    ? 'bg-[rgba(59,130,246,0.15)] border border-[rgba(59,130,246,0.3)] text-text-primary'
+                    : 'bg-surface-hover text-text-muted hover:text-text-secondary'
+                } ${expanded ? 'ring-1 ring-blue-500/30' : ''}`}
+                title={`${label} (${shortcut})`}
+              >
+                {icon}
+              </button>
+              {/* Hover tooltip */}
+              <div className="absolute left-full ml-2 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-1.5 px-2 py-1 rounded-md glass-card whitespace-nowrap pointer-events-none">
+                <span className="text-[10px] font-mono text-text-secondary">{label}</span>
+                <span className="shortcut-badge">{shortcut}</span>
+              </div>
+            </div>
+          );
+        })}
+
+        {/* Separator */}
+        <div className="h-px bg-border-subtle my-0.5" />
+
+        {/* Expand/collapse panel */}
+        <button
+          onClick={() => setExpandedLayer((prev) => (prev ? null : 'stations'))}
+          className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-all duration-200 text-sm"
+          title="Toggle panel ([)"
+        >
+          {expandedLayer ? '\u25C0' : '\u25B6'}
+        </button>
+
+        {/* Command palette */}
+        <button
+          onClick={onCommandPalette}
+          className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-all duration-200 text-xs font-mono"
+          title="Search (\u2318K)"
+        >
+          \u2318K
+        </button>
+      </div>
+
+      {/* Expandable panel */}
+      {expandedLayer && (
+        <MapToolbarPanel
+          activeLayer={expandedLayer}
+          layers={layers}
+          stationsVisible={stationsVisible}
+          visibleBrands={visibleBrands}
+          onBrandToggle={onBrandToggle}
+          selectedRegion={selectedRegion}
+          onRegionChange={onRegionChange}
+          onClose={() => setExpandedLayer(null)}
+        />
+      )}
+
+      {/* Keyboard shortcut hint bar */}
+      <div className="absolute bottom-4 right-4 z-40 flex items-center gap-2 px-3 py-1.5 rounded-lg glass-card">
+        <span className="shortcut-badge">\u2318K</span>
+        <span className="text-[9px] font-mono text-text-dim">search</span>
+        <span className="text-text-dim">\u00B7</span>
+        {['I', 'S', 'R', 'L'].map((k) => (
+          <span key={k} className="shortcut-badge">{k}</span>
+        ))}
+        <span className="text-[9px] font-mono text-text-dim">layers</span>
+        <span className="text-text-dim">\u00B7</span>
+        <span className="shortcut-badge">?</span>
+        <span className="text-[9px] font-mono text-text-dim">help</span>
+      </div>
+    </>
+  );
+}

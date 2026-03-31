@@ -1,0 +1,14 @@
+[
+  {"date":"2022-02-24","title":"Russia invades Ukraine — Brent spikes above $100","severity":"red","priceImpact":35},
+  {"date":"2022-06-01","title":"PH fuel excise tax suspension takes effect","severity":"green","priceImpact":-3},
+  {"date":"2022-07-15","title":"PHP hits record low ₱56.7 vs USD","severity":"yellow","priceImpact":4},
+  {"date":"2023-04-02","title":"OPEC+ announces surprise production cut","severity":"red","priceImpact":8},
+  {"date":"2023-10-07","title":"Israel-Hamas conflict — Strait of Hormuz fears","severity":"yellow","priceImpact":5},
+  {"date":"2024-01-12","title":"Houthi Red Sea attacks disrupt tanker routes","severity":"red","priceImpact":6},
+  {"date":"2024-04-14","title":"Iran-Israel direct military exchange","severity":"red","priceImpact":4},
+  {"date":"2024-07-01","title":"PH fuel excise tax increase resumes","severity":"yellow","priceImpact":2},
+  {"date":"2024-11-05","title":"US election outcome — energy policy shift expected","severity":"yellow","priceImpact":-3},
+  {"date":"2025-01-20","title":"New US administration takes office — drill policy","severity":"green","priceImpact":-5},
+  {"date":"2025-06-15","title":"Typhoon season disrupts Bataan refinery operations","severity":"yellow","priceImpact":3},
+  {"date":"2026-01-15","title":"OPEC+ extends production cuts through 2026","severity":"yellow","priceImpact":4}
+]

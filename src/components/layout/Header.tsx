@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Ticker } from '@/components/ui/Ticker';
 import { useEvents } from '@/hooks/useEvents';
+import { AlertBell } from '@/components/alerts/AlertBell';
 
 const NAV_LINKS = [
   { href: '/', label: 'Dashboard' },
@@ -91,8 +92,9 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
           </nav>
         </div>
 
-        {/* Right — live badge + date */}
+        {/* Right — alerts + live badge + date */}
         <div className="flex items-center gap-3">
+          <AlertBell />
           <span className={`inline-flex items-center gap-1.5 rounded-md border px-2 py-1 text-[10px] font-mono tracking-wider ${
             isLive
               ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-400'

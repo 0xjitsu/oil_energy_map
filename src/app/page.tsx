@@ -32,6 +32,18 @@ const PlayerCards = dynamic(
   () => import('@/components/players/PlayerCards').then((m) => m.PlayerCards),
   { ssr: false },
 );
+const ImpactCalculator = dynamic(
+  () => import('@/components/consumer/ImpactCalculator').then((m) => m.ImpactCalculator),
+  { ssr: false },
+);
+const StressTest = dynamic(
+  () => import('@/components/scenarios/StressTest').then((m) => m.StressTest),
+  { ssr: false },
+);
+const TimelineScrubber = dynamic(
+  () => import('@/components/timeline/TimelineScrubber').then((m) => m.TimelineScrubber),
+  { ssr: false },
+);
 
 function SectionHeader({
   color,
@@ -91,6 +103,7 @@ export default function Home() {
                 onPositionChange={setTimelinePosition}
                 visible={mapMode === 'timeline'}
               />
+              <TimelineScrubber visible={mapMode === 'timeline'} />
             </div>
           </div>
 
@@ -121,6 +134,18 @@ export default function Home() {
             mapMode={mapMode}
             timelinePosition={timelinePosition}
           />
+        </section>
+
+        {/* Monte Carlo Stress Test */}
+        <section>
+          <SectionHeader color="bg-status-yellow" label="Stress Test" />
+          <StressTest scenarioParams={scenarioParams} />
+        </section>
+
+        {/* Consumer Impact Calculator */}
+        <section>
+          <SectionHeader color="bg-phoenix" label="Consumer Impact" />
+          <ImpactCalculator scenarioParams={scenarioParams} />
         </section>
 
         {/* Market Players + System Health — 2 column on desktop */}

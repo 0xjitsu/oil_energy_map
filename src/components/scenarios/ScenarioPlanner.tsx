@@ -4,8 +4,11 @@ import { useMemo, useEffect } from 'react';
 import { ScenarioParams, MapMode } from '@/types';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
 import { usePrices } from '@/hooks/usePrices';
+import { useScenarios } from '@/hooks/useScenarios';
 import { ResultPanel } from './ResultPanel';
 import { RiskMatrix } from './RiskMatrix';
+import { ScenarioSlots } from './ScenarioSlots';
+import { ScenarioCompare } from './ScenarioCompare';
 import { InfoTip } from '@/components/ui/Tooltip';
 
 interface ScenarioPlannerProps {
@@ -58,6 +61,7 @@ export function ScenarioPlanner({
   };
 
   const result = useMemo(() => calculatePumpPrice(params), [params]);
+  const { scenarios, saveScenario, removeScenario } = useScenarios();
 
   return (
     <div>
@@ -68,6 +72,13 @@ export function ScenarioPlanner({
         <p className="text-xs font-sans text-text-label mt-1">
           {isTimelineDriven ? 'Driven by timeline — scrub to explore' : 'What happens if...'}
         </p>
+        <ScenarioSlots
+          scenarios={scenarios}
+          onLoad={(p) => onParamsChange(p)}
+          onRemove={removeScenario}
+          onSave={(name) => saveScenario(name, params)}
+          disabled={isTimelineDriven}
+        />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -189,6 +200,8 @@ export function ScenarioPlanner({
           <RiskMatrix params={params} riskLevel={result.riskLevel} />
         </div>
       </div>
+
+      <ScenarioCompare scenarios={scenarios} />
     </div>
   );
 }

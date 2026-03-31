@@ -89,3 +89,45 @@ export interface VitalSign {
   status: RiskLevel;
   tooltip: string;
 }
+
+export interface AlertRule {
+  id: string;
+  benchmarkId: string;
+  direction: 'above' | 'below';
+  threshold: number;
+  enabled: boolean;
+  createdAt: string;
+  lastTriggeredAt?: string;
+}
+
+export interface AlertNotification {
+  id: string;
+  ruleId: string;
+  benchmarkId: string;
+  benchmarkName: string;
+  value: number;
+  threshold: number;
+  direction: 'above' | 'below';
+  timestamp: string;
+  read: boolean;
+}
+
+export interface SavedScenario {
+  id: string;
+  name: string;
+  params: ScenarioParams;
+  derived: {
+    gasoline: number;
+    diesel: number;
+    riskLevel: RiskLevel;
+  };
+  savedAt: string;
+}
+
+export interface MonteCarloResult {
+  runs: number;
+  pumpGasoline: { p10: number; p25: number; p50: number; p75: number; p90: number };
+  pumpDiesel: { p10: number; p25: number; p50: number; p75: number; p90: number };
+  probabilityAbove: { threshold: number; gasoline: number; diesel: number }[];
+  computeTimeMs: number;
+}
