@@ -116,9 +116,9 @@ export default function MapToolbar({
         <button
           onClick={onCommandPalette}
           className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-all duration-200 text-xs font-mono"
-          title="Search (\u2318K)"
+          title="Search (⌘K)"
         >
-          \u2318K
+          {'\u2318'}K
         </button>
       </div>
 
@@ -138,14 +138,14 @@ export default function MapToolbar({
 
       {/* Keyboard shortcut hint bar */}
       <div className="absolute bottom-4 right-4 z-40 flex items-center gap-2 px-3 py-1.5 rounded-lg glass-card">
-        <span className="shortcut-badge">\u2318K</span>
+        <span className="shortcut-badge">{'\u2318'}K</span>
         <span className="text-[9px] font-mono text-text-dim">search</span>
-        <span className="text-text-dim">\u00B7</span>
+        <span className="text-text-dim">{'\u00B7'}</span>
         {['I', 'S', 'R', 'L'].map((k) => (
           <span key={k} className="shortcut-badge">{k}</span>
         ))}
         <span className="text-[9px] font-mono text-text-dim">layers</span>
-        <span className="text-text-dim">\u00B7</span>
+        <span className="text-text-dim">{'\u00B7'}</span>
         <span className="shortcut-badge">?</span>
         <span className="text-[9px] font-mono text-text-dim">help</span>
       </div>
