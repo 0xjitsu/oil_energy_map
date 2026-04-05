@@ -9,12 +9,24 @@ import { dataReferences } from '../src/data/references';
 
 async function checkLink(url: string): Promise<{ url: string; ok: boolean; status: number }> {
   try {
-    const res = await fetch(url, {
+    // Try HEAD first (faster), fall back to GET if blocked (401/403/405)
+    const head = await fetch(url, {
       method: 'HEAD',
       signal: AbortSignal.timeout(10000),
       headers: { 'User-Agent': 'ph-oil-intel-link-checker/1.0' },
+      redirect: 'follow',
     });
-    return { url, ok: res.ok, status: res.status };
+    if (head.ok) return { url, ok: true, status: head.status };
+    if ([401, 403, 405, 503].includes(head.status)) {
+      const get = await fetch(url, {
+        method: 'GET',
+        signal: AbortSignal.timeout(10000),
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ph-oil-intel-link-checker/1.0)' },
+        redirect: 'follow',
+      });
+      return { url, ok: get.ok, status: get.status };
+    }
+    return { url, ok: false, status: head.status };
   } catch {
     return { url, ok: false, status: 0 };
   }
