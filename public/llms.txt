@@ -42,3 +42,31 @@ If you are an AI agent exploring this site:
 3. Use GET /api/events for latest energy news with severity ratings
 4. Visit /references for full data source documentation
 5. To contribute: clone https://github.com/0xjitsu/oil_energy_map, read CLAUDE.md for project rules and patterns
+
+## Roadmap
+
+The project follows a phased expansion plan:
+
+### Phase 1: Philippines Foundation (Current)
+Live Brent crude and PHP/USD feeds, 10,469 mapped gas stations, RSS news aggregation with NLP sentiment, scenario planner, Monte Carlo stress testing.
+
+### Phase 2: Philippine Data Enrichment (Next)
+- DOE actual pump prices (replacing derived estimates)
+- Google Places station enrichment (photos, ratings, hours)
+- Historical price charts and trend indicators
+- Weather disruption correlation (typhoon impact on supply routes)
+
+### Phase 3: ASEAN Expansion
+- Malaysia, Indonesia, Thailand fuel market integration
+- Malacca Strait ship tracking (AIS vessel data)
+- Cross-border price arbitrage analysis
+
+### Phase 4: Global Energy Intelligence
+- Global chokepoint monitoring (Hormuz, Suez, Bab el-Mandeb)
+- OPEC production data and quota compliance
+- Refinery utilization dashboard
+- Sanctions and trade flow mapping
+
+### Contributing
+See /roadmap for the full interactive roadmap with contributor opportunities.
+Clone https://github.com/0xjitsu/oil_energy_map and read CLAUDE.md for coding conventions.

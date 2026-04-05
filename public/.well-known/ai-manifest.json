@@ -65,5 +65,43 @@
     "dev_command": "pnpm dev",
     "build_command": "pnpm build",
     "port": 3007
+  },
+  "roadmap": {
+    "page": "/roadmap",
+    "phases": [
+      {
+        "id": "ph-foundation",
+        "title": "Philippines Foundation",
+        "status": "current",
+        "summary": "Live oil price feeds, 10K gas stations, RSS news, scenario planning"
+      },
+      {
+        "id": "ph-enrichment",
+        "title": "Philippine Data Enrichment",
+        "status": "next",
+        "summary": "DOE actual pump prices, Google Places station photos, historical charts, weather disruption"
+      },
+      {
+        "id": "asean-expansion",
+        "title": "ASEAN Expansion",
+        "status": "planned",
+        "summary": "Malaysia, Indonesia, Thailand markets, Malacca Strait ship tracking"
+      },
+      {
+        "id": "global-vision",
+        "title": "Global Energy Intelligence",
+        "status": "future",
+        "summary": "Chokepoint monitoring, OPEC production, refinery utilization, sanctions mapping"
+      }
+    ],
+    "data_source_upgrades": [
+      "DOE pump prices (replacing derived estimates)",
+      "AIS ship tracking for tanker movements",
+      "OPEC/JODI production data",
+      "Refinery maintenance schedules",
+      "PAGASA typhoon correlation",
+      "Google Places station enrichment"
+    ],
+    "contributor_guide": "https://github.com/0xjitsu/oil_energy_map/blob/main/CLAUDE.md"
   }
 }
