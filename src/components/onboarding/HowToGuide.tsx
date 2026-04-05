@@ -9,6 +9,7 @@ export function HowToGuide() {
   const { dismissed, dismiss } = useDismissable('how-to-guide');
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
+  const [autoOpened, setAutoOpened] = useState(false);
 
   const handleOpen = useCallback(() => {
     setStep(0);
@@ -50,12 +51,12 @@ export function HowToGuide() {
     }
   }, [step, handleClose]);
 
-  // Auto-show on first visit
-  if (!dismissed && !open) {
+  // Auto-show on first visit (only once per session)
+  if (!dismissed && !open && !autoOpened) {
     return (
       <>
         <HowToTrigger onClick={handleOpen} />
-        <AutoOpen onOpen={handleOpen} />
+        <AutoOpen onOpen={() => { setAutoOpened(true); handleOpen(); }} />
       </>
     );
   }
@@ -65,7 +66,7 @@ export function HowToGuide() {
       <HowToTrigger onClick={handleOpen} />
 
       {open && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center command-palette-overlay">
+        <div className="fixed inset-0 z-[200] flex items-center justify-center command-palette-overlay" onClick={handleClose}>
           <div onClick={(e) => e.stopPropagation()}>
             <GuideStep
               icon={GUIDE_STEPS[step].icon}
@@ -88,16 +89,18 @@ export function HowToGuide() {
               </button>
 
               {/* Progress dots */}
-              <div className="flex gap-1">
+              <div className="flex gap-0">
                 {GUIDE_STEPS.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setStep(i)}
                     aria-label={`Go to step ${i + 1}`}
-                    className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                    className="p-2"
+                  >
+                    <span className={`block w-1.5 h-1.5 rounded-full transition-colors ${
                       i === step ? 'bg-petron' : 'bg-border-hover'
-                    }`}
-                  />
+                    }`} />
+                  </button>
                 ))}
               </div>
 

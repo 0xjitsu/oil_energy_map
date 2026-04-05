@@ -10,8 +10,10 @@ const MOBILE_SECTIONS = [
   { id: 'health', label: 'Health', icon: '🩺' },
 ];
 
+const MOBILE_SECTION_IDS = MOBILE_SECTIONS.map((s) => s.id);
+
 export function MobileBottomNav() {
-  const activeId = useScrollSpy(MOBILE_SECTIONS.map((s) => s.id));
+  const activeId = useScrollSpy(MOBILE_SECTION_IDS);
 
   return (
     <nav

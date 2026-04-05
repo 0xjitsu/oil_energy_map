@@ -1,15 +1,18 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 
 const STORAGE_PREFIX = 'oil-intel-dismissed-';
 
 export function useDismissable(key: string) {
-  const [dismissed, setDismissed] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    try { return localStorage.getItem(STORAGE_PREFIX + key) === '1'; }
-    catch { return false; }
-  });
+  const [dismissed, setDismissed] = useState(false);
+
+  // Sync from localStorage after mount (SSR-safe)
+  useEffect(() => {
+    try {
+      if (localStorage.getItem(STORAGE_PREFIX + key) === '1') setDismissed(true);
+    } catch { /* noop */ }
+  }, [key]);
 
   const dismiss = useCallback(() => {
     setDismissed(true);

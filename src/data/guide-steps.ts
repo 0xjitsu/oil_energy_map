@@ -18,14 +18,14 @@ export const GUIDE_STEPS: GuideStepData[] = [
     id: 'map',
     icon: '🗺️',
     title: 'Intelligence Map',
-    description: 'Zoom in/out with +/- buttons or pinch gestures. Toggle layers (Infrastructure, Stations, Routes, Labels) with the left toolbar or keyboard shortcuts I, S, R, L. Press \u2318K to search 10,000+ stations.',
+    description: 'Zoom in/out with +/- buttons or pinch gestures. Toggle layers (Infrastructure, Stations, Routes, Labels) with the left toolbar or keyboard shortcuts I, S, R, L. Press ⌘K to search 10,000+ stations.',
     targetSection: 'map',
   },
   {
     id: 'map-modes',
     icon: '🔄',
     title: 'Map Modes',
-    description: 'LIVE shows real-time activity. SCENARIO syncs with the planner sliders below. TIMELINE lets you scrub through historical data from 2022\u20132026.',
+    description: 'LIVE shows real-time activity. SCENARIO syncs with the planner sliders below. TIMELINE lets you scrub through historical data from 2022–2026.',
     targetSection: 'map',
   },
   {
@@ -39,7 +39,7 @@ export const GUIDE_STEPS: GuideStepData[] = [
     id: 'stress-test',
     icon: '🎲',
     title: 'Monte Carlo Stress Test',
-    description: 'Run 1,000 randomized simulations to see the probability distribution of pump prices. The confidence fan shows P10\u2013P90 ranges \u2014 the range where prices are most likely to fall.',
+    description: 'Run 1,000 randomized simulations to see the probability distribution of pump prices. The confidence fan shows P10–P90 ranges — the range where prices are most likely to fall.',
     targetSection: 'stress-test',
   },
   {
@@ -60,6 +60,6 @@ export const GUIDE_STEPS: GuideStepData[] = [
     id: 'nav',
     icon: '🧭',
     title: 'Navigation',
-    description: 'On desktop, use the right-side pill nav to jump between sections. On mobile, use the bottom nav bar. Press \u2318K anywhere for the command palette.',
+    description: 'On desktop, use the right-side pill nav to jump between sections. On mobile, use the bottom nav bar. Press ⌘K anywhere for the command palette.',
   },
 ];

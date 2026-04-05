@@ -13,8 +13,10 @@ const SECTIONS: Section[] = [
   { id: 'health', label: 'Health', icon: '🩺' },
 ];
 
+const SECTION_IDS = SECTIONS.map((s) => s.id);
+
 export function SectionNav() {
-  const activeId = useScrollSpy(SECTIONS.map((s) => s.id));
+  const activeId = useScrollSpy(SECTION_IDS);
 
   return (
     <nav

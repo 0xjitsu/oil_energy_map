@@ -156,6 +156,6 @@ export async function GET() {
     );
   } catch {
     // Fallback to static data on any error
-    return NextResponse.json(timelineEvents);
+    return NextResponse.json({ events: timelineEvents, lastChecked: null });
   }
 }
