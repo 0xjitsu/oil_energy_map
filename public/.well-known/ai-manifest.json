@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "name": "PH Energy Intelligence Map",
+  "description": "Real-time intelligence dashboard for the Philippine oil supply chain",
+  "url": "https://energy-intelligence-map.vercel.app",
+  "repository": "https://github.com/0xjitsu/oil_energy_map",
+  "license": "MIT",
+  "contact": "https://github.com/0xjitsu",
+  "apis": [
+    {
+      "path": "/api/prices",
+      "method": "GET",
+      "description": "Live oil price benchmarks — Brent crude, Dubai crude, MOPS gasoline/diesel, PHP/USD forex, pump prices",
+      "cache": "15 minutes (s-maxage=900)",
+      "response_type": "application/json",
+      "response_shape": "PriceBenchmark[]",
+      "sources": ["Yahoo Finance (Brent)", "FloatRates (PHP/USD)", "Import parity derivation"]
+    },
+    {
+      "path": "/api/events",
+      "method": "GET",
+      "description": "Aggregated Philippine energy news from RSS feeds with severity ratings",
+      "cache": "5 minutes (s-maxage=300)",
+      "response_type": "application/json",
+      "response_shape": "TimelineEvent[]",
+      "sources": ["PhilStar", "Al Jazeera", "DOE Philippines", "Google News", "Reddit"]
+    },
+    {
+      "path": "/api/sentiment",
+      "method": "GET",
+      "description": "NLP sentiment analysis of energy headlines",
+      "cache": "on-demand",
+      "response_type": "application/json",
+      "response_shape": "SentimentResult[]",
+      "sources": ["HuggingFace Inference API (distilbert-sst-2)"]
+    },
+    {
+      "path": "/api/index",
+      "method": "GET",
+      "description": "API discovery endpoint — returns this manifest's API section as JSON",
+      "cache": "static",
+      "response_type": "application/json"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Philippine Gas Stations",
+      "description": "10,469 gas stations from OpenStreetMap with brand, coordinates, fuel types, and region classification",
+      "records": 10469,
+      "source": "OpenStreetMap Overpass API",
+      "license": "ODbL",
+      "update_frequency": "static (infrastructure data)"
+    },
+    {
+      "name": "Oil Supply Chain Infrastructure",
+      "description": "Refineries, import terminals, and fuel depots across the Philippines",
+      "source": "DOE Philippines + manual research",
+      "update_frequency": "static (baseline data)"
+    }
+  ],
+  "contributing": {
+    "guidelines_file": "CLAUDE.md",
+    "branch": "main",
+    "package_manager": "pnpm",
+    "dev_command": "pnpm dev",
+    "build_command": "pnpm build",
+    "port": 3007
+  }
+}
