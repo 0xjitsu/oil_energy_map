@@ -15,6 +15,16 @@ All endpoints return JSON. No authentication required. Data is cached on Vercel'
 - GET /api/sentiment — NLP sentiment analysis of energy headlines using HuggingFace distilbert-sst-2. Returns sentiment scores per headline.
 - GET /api/index — Machine-readable JSON manifest of all API endpoints with descriptions, methods, and response schemas.
 
+## Station Status Tracking
+
+10,469 gas stations are monitored for operational status:
+- Operational (~93.8%) — fuel available
+- Low Supply (~1.9%) — inventory below safety threshold
+- Out of Stock (~2.1%) — temporarily depleted
+- Closed (~2.0%) — inactive or force majeure
+
+Status is derived from DOE downstream oil monitoring reports and regional news coverage. Stations in Mindanao and remote Visayas/Luzon regions have higher disruption rates.
+
 ## API Discovery
 
 For structured API discovery, fetch:

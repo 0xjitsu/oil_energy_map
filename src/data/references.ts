@@ -184,4 +184,28 @@ export const dataReferences: DataReference[] = [
     license: 'Reddit API Terms',
     lastVerified: '2026-04-05',
   },
+  {
+    name: 'DOE Licensed Fuel Retail Outlets (LFRO)',
+    url: 'https://legacy.doe.gov.ph/downstream-oil/lfro-with-valid-coc-lfo',
+    dataType: 'Station Classification',
+    recordCount: '10,469',
+    updateFrequency: 'Weekly',
+    status: 'active',
+    description:
+      'Licensed fuel retail outlets with valid Certificate of Compliance. Used for brand classification and operational status baseline.',
+    license: 'Philippine Open Data',
+    lastVerified: '2026-04-05',
+  },
+  {
+    name: 'DOE Oil Supply/Demand Reports',
+    url: 'https://doe.gov.ph/articles/group/reports-information-resources',
+    dataType: 'Supply Monitoring',
+    recordCount: 'Reports',
+    updateFrequency: 'Weekly',
+    status: 'active',
+    description:
+      'Weekly supply inventory and days-of-supply data by region. Powers station status assignment for low-supply and out-of-stock classifications.',
+    license: 'Philippine Open Data',
+    lastVerified: '2026-04-05',
+  },
 ];

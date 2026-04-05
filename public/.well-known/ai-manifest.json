@@ -45,11 +45,12 @@
   "datasets": [
     {
       "name": "Philippine Gas Stations",
-      "description": "10,469 gas stations from OpenStreetMap with brand, coordinates, fuel types, and region classification",
+      "description": "10,469 gas stations from OpenStreetMap with brand, coordinates, fuel types, region classification, and operational status tracking",
       "records": 10469,
-      "source": "OpenStreetMap Overpass API",
+      "source": "OpenStreetMap Overpass API + DOE Downstream Oil Monitoring",
       "license": "ODbL",
-      "update_frequency": "static (infrastructure data)"
+      "update_frequency": "static (infrastructure) + weekly (status)",
+      "status_categories": ["operational", "low-supply", "out-of-stock", "closed"]
     },
     {
       "name": "Oil Supply Chain Infrastructure",
