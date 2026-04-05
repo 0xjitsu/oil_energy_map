@@ -7,7 +7,6 @@ import {
   dataSourceUpgrades,
   contributorOpportunities,
   type RoadmapItem,
-  type DataSourceUpgrade,
   type ContributorOpportunity,
 } from '@/data/roadmap';
 
