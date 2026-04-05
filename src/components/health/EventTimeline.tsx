@@ -52,8 +52,15 @@ const SOURCE_FILTERS: { key: SourceFilter; label: string }[] = [
   { key: 'market', label: 'Market' },
 ];
 
+function relativeTime(date: Date): string {
+  const secs = Math.floor((Date.now() - date.getTime()) / 1000);
+  if (secs < 60) return 'just now';
+  if (secs < 3600) return `${Math.floor(secs / 60)}m ago`;
+  return `${Math.floor(secs / 3600)}h ago`;
+}
+
 export function EventTimeline() {
-  const { events: timelineEvents } = useEvents();
+  const { events: timelineEvents, lastUpdated } = useEvents();
   const [filter, setFilter] = useState<SeverityFilter>('all');
   const [sourceFilter, setSourceFilter] = useState<SourceFilter>('all');
 
@@ -68,6 +75,12 @@ export function EventTimeline() {
       <h3 className="text-[10px] uppercase tracking-widest text-text-muted mb-3 font-sans">
         Event Timeline
       </h3>
+
+      {lastUpdated && (
+        <p className="text-[9px] font-mono text-text-dim mb-2">
+          Updated {relativeTime(lastUpdated)}
+        </p>
+      )}
 
       {/* Legends */}
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-3">
