@@ -14,6 +14,7 @@ import { SentimentGauge } from '@/components/health/SentimentGauge';
 import { EventTimeline } from '@/components/health/EventTimeline';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
+import { SectionNav } from '@/components/layout/SectionNav';
 import type { MapMode, ScenarioParams } from '@/types';
 
 const PricePanel = dynamic(
@@ -80,13 +81,16 @@ export default function Home() {
       <ScrollProgress />
       <AlertBanner />
       <Header />
+      <SectionNav />
 
       <main className="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-8">
         {/* Executive Snapshot — Hero KPIs */}
-        <ExecutiveSnapshot scenarioParams={scenarioParams} />
+        <div id="snapshot" className="scroll-mt-20">
+          <ExecutiveSnapshot scenarioParams={scenarioParams} />
+        </div>
 
         {/* Hero: Map + Price Sidebar */}
-        <section className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4 lg:gap-6">
+        <section id="map" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4 lg:gap-6">
           <div>
             <SectionHeader color="bg-petron" label="Supply Chain Map" />
             <div className="relative">
@@ -119,13 +123,13 @@ export default function Home() {
         </section>
 
         {/* Price Intelligence — Full-width benchmark grid */}
-        <section>
+        <section id="prices" className="scroll-mt-20">
           <SectionHeader color="bg-shell" label="Price Intelligence" />
           <PricePanel />
         </section>
 
         {/* Scenario Planner */}
-        <section>
+        <section id="scenario" className="scroll-mt-20">
           <ScenarioPlanner
             params={scenarioParams}
             onParamsChange={handleParamsChange}
@@ -135,19 +139,19 @@ export default function Home() {
         </section>
 
         {/* Monte Carlo Stress Test */}
-        <section>
+        <section id="stress-test" className="scroll-mt-20">
           <SectionHeader color="bg-status-yellow" label="Stress Test" />
           <StressTest scenarioParams={scenarioParams} />
         </section>
 
         {/* Consumer Impact Calculator */}
-        <section>
+        <section id="impact" className="scroll-mt-20">
           <SectionHeader color="bg-phoenix" label="Consumer Impact" />
           <ImpactCalculator scenarioParams={scenarioParams} />
         </section>
 
         {/* Market Players + System Health — 2 column on desktop */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <section id="players" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div>
             <SectionHeader color="bg-seaoil" label="Market Players" />
             <div className="grid grid-cols-1 xl:grid-cols-[280px_1fr] gap-4">
