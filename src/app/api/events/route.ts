@@ -29,6 +29,11 @@ const RSS_FEEDS: { url: string; source: string; sourceType: SourceType }[] = [
     source: 'Google News',
     sourceType: 'news',
   },
+  {
+    url: 'https://www.doe.gov.ph/news-and-media?format=feed&type=rss',
+    source: 'DOE Philippines',
+    sourceType: 'government',
+  },
 ];
 
 // Reddit public JSON API — no auth needed for search
@@ -145,9 +150,10 @@ export async function GET() {
     // Sort by date descending
     merged.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-    return NextResponse.json(merged.slice(0, 40), {
-      headers: { 'Cache-Control': 's-maxage=900, stale-while-revalidate=1800' },
-    });
+    return NextResponse.json(
+      { events: merged.slice(0, 50), lastChecked: new Date().toISOString() },
+      { headers: { 'Cache-Control': 's-maxage=300, stale-while-revalidate=600' } },
+    );
   } catch {
     // Fallback to static data on any error
     return NextResponse.json(timelineEvents);
