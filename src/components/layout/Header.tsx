@@ -94,6 +94,15 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
 
         {/* Right — alerts + live badge + date */}
         <div className="flex items-center gap-3">
+          <button
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('open-how-to-guide'));
+            }}
+            className="p-1.5 rounded-md hover:bg-surface-hover transition-colors text-text-dim hover:text-text-secondary"
+            title="How to use"
+          >
+            <span className="text-[10px] font-mono">?</span>
+          </button>
           <AlertBell />
           <span className={`inline-flex items-center gap-1.5 rounded-md border px-2 py-1 text-[10px] font-mono tracking-wider ${
             isLive

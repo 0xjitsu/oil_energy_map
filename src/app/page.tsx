@@ -46,6 +46,10 @@ const TimelineScrubber = dynamic(
   () => import('@/components/timeline/TimelineScrubber').then((m) => m.TimelineScrubber),
   { ssr: false },
 );
+const HowToGuide = dynamic(
+  () => import('@/components/onboarding/HowToGuide').then((m) => m.HowToGuide),
+  { ssr: false },
+);
 
 function SectionHeader({
   color,
@@ -181,6 +185,7 @@ export default function Home() {
       </main>
 
       <MobileBottomNav />
+      <HowToGuide />
       <Footer />
     </div>
   );
