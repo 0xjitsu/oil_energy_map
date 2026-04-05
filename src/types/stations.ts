@@ -1,3 +1,5 @@
+export type StationStatus = 'operational' | 'low-supply' | 'out-of-stock' | 'closed';
+
 export interface GasStation {
   id: string;
   brand: string;
@@ -10,6 +12,7 @@ export interface GasStation {
     url: string;
     scrapedAt: string;
   };
+  status?: StationStatus;
 }
 
 /** Brand colors matching the existing MarketPlayer palette where possible */
@@ -25,4 +28,18 @@ export const BRAND_COLORS: Record<string, string> = {
   Jetti: '#14b8a6',    // teal
   PTT: '#a855f7',      // violet
   Other: '#94a3b8',    // slate
+};
+
+export const STATUS_COLORS: Record<StationStatus, string> = {
+  operational: '#10B981',
+  'low-supply': '#F59E0B',
+  'out-of-stock': '#EF4444',
+  closed: '#6B7280',
+};
+
+export const STATUS_LABELS: Record<StationStatus, string> = {
+  operational: 'Operational',
+  'low-supply': 'Low Supply',
+  'out-of-stock': 'Out of Stock',
+  closed: 'Closed',
 };

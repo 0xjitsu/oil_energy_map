@@ -1,4 +1,5 @@
-import type { GasStation } from '@/types/stations';
+import type { GasStation, StationStatus } from '@/types/stations';
+import { assignStationStatus } from '@/lib/station-status';
 
 import petronStations from './petron.json';
 import shellStations from './shell.json';
@@ -20,4 +21,21 @@ export const stationsByBrand: Record<string, GasStation[]> = {
 
 export const BRAND_LIST = Object.keys(stationsByBrand);
 
-export const allStations: GasStation[] = Object.values(stationsByBrand).flat();
+// Apply status assignment to all stations
+export const allStations: GasStation[] = Object.values(stationsByBrand)
+  .flat()
+  .map((s) => ({
+    ...s,
+    status: assignStationStatus(s.id, s.region ?? ''),
+  }));
+
+// Pre-computed status counts for stat cards
+export const statusCounts: Record<StationStatus, number> = {
+  operational: 0,
+  'low-supply': 0,
+  'out-of-stock': 0,
+  closed: 0,
+};
+for (const s of allStations) {
+  if (s.status) statusCounts[s.status]++;
+}
