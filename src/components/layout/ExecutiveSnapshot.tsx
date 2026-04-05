@@ -170,7 +170,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       sparkColor: '#ef4444',
       accentBorder: '#ef4444',
       deltaLabel: `₱${Math.abs(gasoline.value - gasoline.previousWeek).toFixed(2)}`,
-      source: 'derived' as const,
+      source: 'live' as const,
     },
     {
       label: 'Diesel',
@@ -179,7 +179,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       sparkColor: '#f59e0b',
       accentBorder: '#f59e0b',
       deltaLabel: `₱${Math.abs(diesel.value - diesel.previousWeek).toFixed(2)}`,
-      source: 'derived' as const,
+      source: 'live' as const,
     },
   ];
 

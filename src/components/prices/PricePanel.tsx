@@ -37,8 +37,9 @@ function BenchmarkCard({
   const changeColor = isUp ? 'text-red-400' : 'text-emerald-400';
   const sparkColor = isUp ? '#f87171' : '#34d399';
   // Live feeds: brent-crude (Yahoo Finance), php-usd (FloatRates)
-  // All others are derived from these two sources
-  const isDerived = !['brent-crude', 'php-usd'].includes(benchmark.id);
+  // DOE-sourced: pump-gasoline, pump-diesel (DOE Oil Monitor weekly SRP)
+  // Derived from live feeds: dubai-crude, mops-gasoline, mops-diesel, sg-refining-margin
+  const isDerived = !['brent-crude', 'php-usd', 'pump-gasoline', 'pump-diesel'].includes(benchmark.id);
 
   return (
     <div className="glass-card card-interactive p-4">

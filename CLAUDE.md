@@ -163,15 +163,16 @@ const deckLayers = useMemo(() => [
 - Header is `sticky top-0 z-50` — never wrap it in an `overflow-hidden` ancestor
 
 ### Data Fetching
-- Prices: `usePrices` hook (5-min polling) — Brent via Yahoo Finance, forex via FloatRates, pump prices derived via import parity formula
+- Prices: `usePrices` hook (5-min polling) — Brent via Yahoo Finance, forex via FloatRates, pump prices from DOE Oil Monitor weekly SRP
 - Events: `useEvents` hook (3-min polling, retry with exponential backoff) — live RSS from PhilStar, Al Jazeera, DOE, Google News, Reddit
 - Sentiment: `useSentiment` hook (15-min polling)
 - Static data: direct imports from `@/data/`
 
 ### Price Source Transparency
 - Brent Crude and PHP/USD are **live** feeds (Yahoo Finance, FloatRates)
-- All other prices (Dubai, MOPS, pump prices, refining margin) are **derived** from those two
-- Derived prices show an "Est." badge (`bg-status-yellow/10 text-status-yellow/70`) — never use amber tokens for this
+- Pump gasoline and pump diesel are **DOE-sourced** (Oil Monitor weekly SRP) — updated in `src/data/prices.ts`
+- Dubai, MOPS, and refining margin are **derived** from Brent + forex
+- Derived prices show an "Est." badge (`bg-status-yellow/10 text-status-yellow/70`) — pump prices do NOT show this badge since they're DOE-sourced
 
 ---
 

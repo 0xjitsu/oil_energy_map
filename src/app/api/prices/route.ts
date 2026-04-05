@@ -5,7 +5,6 @@ import {
   fetchBrentPrice,
   fetchForexRate,
   deriveDubaiFromBrent,
-  derivePumpPrices,
 } from '@/lib/priceSources';
 
 export async function GET() {
@@ -16,15 +15,17 @@ export async function GET() {
       fetchForexRate(),
     ]);
 
-    // If both succeed, build prices from real data
+    // If both succeed, enrich with live Brent + forex data.
+    // Pump prices use DOE Oil Monitor SRP (static data) — NOT derived from
+    // Brent, because the import parity formula underestimates during supply
+    // disruptions (e.g. Hormuz crisis premium, shipping surcharges).
     if (brent && forex) {
       const dubai = deriveDubaiFromBrent(brent);
-      const pump = derivePumpPrices(brent.value, forex.value);
-
-      // Previous week values: use previousClose for Brent/Dubai,
-      // estimate ~1% weekly forex movement, derive previous pump from previous Brent
       const prevForex = Number((forex.value * 0.995).toFixed(2));
-      const prevPump = derivePumpPrices(brent.previousClose, prevForex);
+
+      // Use DOE-sourced pump prices from static data
+      const staticGasoline = priceBenchmarks.find((b) => b.id === 'pump-gasoline')!;
+      const staticDiesel = priceBenchmarks.find((b) => b.id === 'pump-diesel')!;
 
       const prices: PriceBenchmark[] = [
         {
@@ -46,7 +47,7 @@ export async function GET() {
         {
           id: 'mops-gasoline',
           name: 'MOPS Gasoline (95)',
-          value: pump.mopsGasoline,
+          value: Number((brent.value + 13.5).toFixed(2)),
           previousWeek: Number((brent.previousClose + 13.5).toFixed(2)),
           unit: '$/bbl',
           tooltip: `Derived. Singapore gasoline benchmark = Brent + crack spread.`,
@@ -54,7 +55,7 @@ export async function GET() {
         {
           id: 'mops-diesel',
           name: 'MOPS Diesel',
-          value: pump.mopsDiesel,
+          value: Number((brent.value + 17).toFixed(2)),
           previousWeek: Number((brent.previousClose + 17).toFixed(2)),
           unit: '$/bbl',
           tooltip: `Derived. Singapore diesel benchmark = Brent + crack spread.`,
@@ -70,24 +71,24 @@ export async function GET() {
         {
           id: 'pump-gasoline',
           name: 'Pump Gasoline',
-          value: pump.pumpGasoline,
-          previousWeek: prevPump.pumpGasoline,
+          value: staticGasoline.value,
+          previousWeek: staticGasoline.previousWeek,
           unit: '₱/liter',
-          tooltip: `Derived. Import parity: MOPS × forex + taxes + margin.`,
+          tooltip: staticGasoline.tooltip,
         },
         {
           id: 'pump-diesel',
           name: 'Pump Diesel',
-          value: pump.pumpDiesel,
-          previousWeek: prevPump.pumpDiesel,
+          value: staticDiesel.value,
+          previousWeek: staticDiesel.previousWeek,
           unit: '₱/liter',
-          tooltip: `Derived. Import parity: MOPS × forex + taxes + margin.`,
+          tooltip: staticDiesel.tooltip,
         },
         {
           id: 'sg-refining-margin',
           name: 'SG Refining Margin',
-          value: pump.refiningMargin,
-          previousWeek: pump.refiningMargin, // Crack spread is a constant in our model
+          value: 15.3,
+          previousWeek: 15.3,
           unit: '$/bbl',
           tooltip: `Average gasoline/diesel crack spread over Brent.`,
         },

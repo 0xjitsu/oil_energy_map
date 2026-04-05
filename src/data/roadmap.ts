@@ -81,8 +81,8 @@ export const roadmapPhases: RoadmapPhase[] = [
       {
         title: 'DOE actual pump price feeds',
         description:
-          'Direct ingestion of the Department of Energy weekly pump price CSV releases, replacing derived import-parity estimates with official per-brand, per-region prices. Closes the gap between modeled and actual consumer prices.',
-        status: 'in-progress',
+          'Pump prices now sourced from DOE Oil Monitor weekly SRP instead of derived import-parity estimates. Reflects actual Metro Manila prices including disruption premiums not captured by the Brent + forex model.',
+        status: 'done',
         tags: ['prices', 'government'],
       },
       {

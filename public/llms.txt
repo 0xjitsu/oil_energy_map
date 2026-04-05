@@ -10,7 +10,7 @@ This is a live dashboard that monitors Philippine fuel prices and supply chain h
 
 All endpoints return JSON. No authentication required. Data is cached on Vercel's edge CDN.
 
-- GET /api/prices — Live oil benchmarks (Brent crude, Dubai crude, MOPS, pump prices, forex). Updates every 15 minutes. Source: Yahoo Finance + FloatRates + import parity derivation.
+- GET /api/prices — Live oil benchmarks (Brent crude, Dubai crude, MOPS, pump prices, forex). Updates every 15 minutes. Source: Yahoo Finance (Brent), FloatRates (forex), DOE Oil Monitor (pump prices).
 - GET /api/events — Aggregated energy news from RSS feeds (PhilStar, Al Jazeera, DOE Philippines, Google News, Reddit). Updates every 5 minutes. Filtered for Philippine energy relevance.
 - GET /api/sentiment — NLP sentiment analysis of energy headlines using HuggingFace distilbert-sst-2. Returns sentiment scores per headline.
 - GET /api/index — Machine-readable JSON manifest of all API endpoints with descriptions, methods, and response schemas.
@@ -61,7 +61,7 @@ The project follows a phased expansion plan:
 Live Brent crude and PHP/USD feeds, 10,469 mapped gas stations, RSS news aggregation with NLP sentiment, scenario planner, Monte Carlo stress testing.
 
 ### Phase 2: Philippine Data Enrichment (Next)
-- DOE actual pump prices (replacing derived estimates)
+- DOE actual pump prices (shipped — SRP from DOE Oil Monitor)
 - Google Places station enrichment (photos, ratings, hours)
 - Historical price charts and trend indicators
 - Weather disruption correlation (typhoon impact on supply routes)
