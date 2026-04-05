@@ -63,7 +63,7 @@ function HeroKPI({
           {label}
           <InfoTip text={tooltip} />
           {source === 'derived' && (
-            <span className="text-[8px] px-1 py-0.5 rounded bg-amber-400/10 text-amber-400/70 uppercase tracking-wider">
+            <span className="bg-status-yellow/10 text-status-yellow/70 text-[8px] px-1 py-0.5 rounded uppercase tracking-wider">
               Est.
             </span>
           )}

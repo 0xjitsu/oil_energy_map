@@ -36,6 +36,8 @@ function BenchmarkCard({
 
   const changeColor = isUp ? 'text-red-400' : 'text-emerald-400';
   const sparkColor = isUp ? '#f87171' : '#34d399';
+  // Live feeds: brent-crude (Yahoo Finance), php-usd (FloatRates)
+  // All others are derived from these two sources
   const isDerived = !['brent-crude', 'php-usd'].includes(benchmark.id);
 
   return (
@@ -45,7 +47,7 @@ function BenchmarkCard({
           {benchmark.name}
           <InfoTip text={benchmark.tooltip} />
           {isDerived && (
-            <span className="text-[8px] px-1 py-0.5 rounded bg-amber-400/10 text-amber-400/70">
+            <span className="bg-status-yellow/10 text-status-yellow/70 text-[8px] px-1 py-0.5 rounded uppercase tracking-wider">
               EST
             </span>
           )}

@@ -52,7 +52,7 @@ interface TooltipPortalProps {
 }
 
 function TooltipPortal({ text, anchorRef }: TooltipPortalProps) {
-  const [style, setStyle] = useState<React.CSSProperties>({});
+  const [style, setStyle] = useState<React.CSSProperties>({ visibility: 'hidden' as const });
   // Fix 1: SSR guard — only call createPortal after mount
   const [mounted, setMounted] = useState(false);
 
@@ -85,6 +85,7 @@ function TooltipPortal({ text, anchorRef }: TooltipPortalProps) {
         width: TOOLTIP_WIDTH,
         transform,
         zIndex: 9999,
+        visibility: 'visible' as const,
       });
     };
 
@@ -148,14 +149,14 @@ export function InfoTip({ text }: { text: string }) {
   useEffect(() => {
     if (!visible) return;
 
-    const handlePointerDown = (e: PointerEvent) => {
+    const handleOutsidePointerDown = (e: PointerEvent) => {
       if (triggerRef.current && triggerRef.current.contains(e.target as Node)) return;
       setVisible(false);
     };
 
-    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('pointerdown', handleOutsidePointerDown);
     return () => {
-      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('pointerdown', handleOutsidePointerDown);
     };
   }, [visible]);
 
@@ -178,6 +179,7 @@ export function InfoTip({ text }: { text: string }) {
       tabIndex={0}
       role="button"
       aria-label="More info"
+      aria-expanded={visible}
     >
       <Info className="w-3 h-3 text-text-dim hover:text-text-subtle transition-colors cursor-help" />
       {visible && <TooltipPortal text={text} anchorRef={triggerRef} />}
