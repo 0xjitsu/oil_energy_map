@@ -53,30 +53,52 @@ interface TooltipPortalProps {
 
 function TooltipPortal({ text, anchorRef }: TooltipPortalProps) {
   const [style, setStyle] = useState<React.CSSProperties>({});
+  // Fix 1: SSR guard — only call createPortal after mount
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Fix 2: Recompute position on scroll/resize while tooltip is open
   useEffect(() => {
     const el = anchorRef.current;
     if (!el) return;
 
-    const rect = el.getBoundingClientRect();
-    const vw = window.innerWidth;
+    const recompute = () => {
+      const rect = el.getBoundingClientRect();
+      const vw = window.innerWidth;
 
-    // Default: centered above the anchor, 8px gap
-    let left = rect.left + rect.width / 2 - TOOLTIP_WIDTH / 2;
-    const top = rect.top - 8; // we'll use translateY(-100%) to pin to bottom of tooltip
+      // Fix 4: Vertical viewport clamping — flip below if not enough room above
+      const fitsAbove = rect.top > 60; // rough tooltip height estimate
+      const top = fitsAbove ? rect.top - 8 : rect.bottom + 8;
+      const transform = fitsAbove ? 'translateY(-100%)' : 'translateY(0)';
 
-    // Clamp horizontally within viewport
-    left = Math.max(VIEWPORT_PADDING, Math.min(left, vw - TOOLTIP_WIDTH - VIEWPORT_PADDING));
+      // Clamp horizontally within viewport
+      let left = rect.left + rect.width / 2 - TOOLTIP_WIDTH / 2;
+      left = Math.max(VIEWPORT_PADDING, Math.min(left, vw - TOOLTIP_WIDTH - VIEWPORT_PADDING));
 
-    setStyle({
-      position: 'fixed',
-      top,
-      left,
-      width: TOOLTIP_WIDTH,
-      transform: 'translateY(-100%)',
-      zIndex: 9999,
-    });
+      setStyle({
+        position: 'fixed',
+        top,
+        left,
+        width: TOOLTIP_WIDTH,
+        transform,
+        zIndex: 9999,
+      });
+    };
+
+    recompute();
+
+    window.addEventListener('scroll', recompute, { capture: true, passive: true });
+    window.addEventListener('resize', recompute, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', recompute, { capture: true });
+      window.removeEventListener('resize', recompute);
+    };
   }, [anchorRef]);
+
+  if (!mounted) return null;
 
   return createPortal(
     <span
@@ -114,8 +136,12 @@ export function InfoTip({ text }: { text: string }) {
     timeoutRef.current = setTimeout(() => setVisible(false), 200);
   }, []);
 
-  const toggle = useCallback(() => {
-    setVisible((v) => !v);
+  // Fix 3: Only toggle on touch — desktop uses hover (avoids click fighting hover state)
+  const handlePointerDown = useCallback((e: React.PointerEvent) => {
+    if (e.pointerType === 'touch') {
+      e.preventDefault();
+      setVisible((v) => !v);
+    }
   }, []);
 
   // Close when tapping anywhere outside on touch devices
@@ -148,7 +174,7 @@ export function InfoTip({ text }: { text: string }) {
       onMouseLeave={hide}
       onFocus={show}
       onBlur={hide}
-      onClick={toggle}
+      onPointerDown={handlePointerDown}
       tabIndex={0}
       role="button"
       aria-label="More info"
