@@ -1,7 +1,7 @@
 'use client';
 
 import type { GasStation } from '@/types/stations';
-import { BRAND_COLORS } from '@/types/stations';
+import { BRAND_COLORS, STATUS_COLORS, STATUS_LABELS } from '@/types/stations';
 
 interface StationTooltipProps {
   station: GasStation | null;
@@ -37,6 +37,21 @@ export default function StationTooltip({ station, x, y }: StationTooltipProps) {
               {station.brand}
             </span>
           </div>
+
+          {station.status && station.status !== 'operational' && (
+            <div className="flex items-center gap-1.5 mt-1">
+              <span
+                className="w-1.5 h-1.5 rounded-full shrink-0"
+                style={{ backgroundColor: STATUS_COLORS[station.status] }}
+              />
+              <span
+                className="font-mono text-[8px] uppercase tracking-widest"
+                style={{ color: STATUS_COLORS[station.status] }}
+              >
+                {STATUS_LABELS[station.status]}
+              </span>
+            </div>
+          )}
 
           <h4 className="font-mono font-bold text-xs text-text-primary leading-tight">
             {station.name}

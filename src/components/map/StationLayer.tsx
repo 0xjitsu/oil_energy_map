@@ -1,7 +1,8 @@
 import { ScatterplotLayer, TextLayer } from '@deck.gl/layers';
 import { allStations } from '@/data/stations';
 import type { GasStation } from '@/types/stations';
-import { BRAND_COLORS } from '@/types/stations';
+import { BRAND_COLORS, STATUS_COLORS } from '@/types/stations';
+import type { StationStatus } from '@/types/stations';
 import type { Layer } from '@deck.gl/core';
 import Supercluster from 'supercluster';
 import type { PointFeature } from 'supercluster';
@@ -59,11 +60,13 @@ export function createStationLayer(
   onHoverInfo?: (info: { station: GasStation; x: number; y: number } | null) => void,
   zoom?: number,
   selectedRegion?: string | null,
+  statusFilter?: StationStatus | 'all',
 ): Layer[] {
   const filtered = allStations.filter(
     (s) =>
       visibleBrands.has(s.brand) &&
-      (!selectedRegion || s.region === selectedRegion),
+      (!selectedRegion || s.region === selectedRegion) &&
+      (!statusFilter || statusFilter === 'all' || s.status === statusFilter),
   );
   const currentZoom = zoom ?? 10; // default to unclustered if zoom not provided
 
@@ -80,7 +83,10 @@ export function createStationLayer(
       radiusMinPixels: 2,
       radiusMaxPixels: 8,
       getFillColor: (d: GasStation) => {
-        const rgb = hexToRgb(BRAND_COLORS[d.brand] ?? BRAND_COLORS.Other);
+        const colorSource = statusFilter && statusFilter !== 'all'
+          ? STATUS_COLORS[d.status ?? 'operational']
+          : (BRAND_COLORS[d.brand] ?? BRAND_COLORS.Other);
+        const rgb = hexToRgb(colorSource);
         const alpha = d.id === hoveredId ? 255 : 180;
         return [...rgb, alpha] as [number, number, number, number];
       },
@@ -96,16 +102,16 @@ export function createStationLayer(
         getRadius: 300,
       },
       updateTriggers: {
-        getFillColor: [hoveredId],
+        getFillColor: [hoveredId, statusFilter],
         getRadius: [hoveredId],
-        data: [visibleBrands, selectedRegion],
+        data: [visibleBrands, selectedRegion, statusFilter],
       },
     });
     return [dotLayer];
   }
 
   // Clustered view for low zoom levels
-  const brandsKey = Array.from(visibleBrands).sort().join(',') + '|' + (selectedRegion ?? '');
+  const brandsKey = Array.from(visibleBrands).sort().join(',') + '|' + (selectedRegion ?? '') + '|' + (statusFilter ?? 'all');
   const index = getClusterIndex(filtered, brandsKey);
   const rawClusters = index.getClusters([-180, -85, 180, 85], Math.floor(currentZoom));
 

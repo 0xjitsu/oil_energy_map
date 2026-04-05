@@ -1,7 +1,8 @@
 'use client';
 
 import { BRAND_LIST } from '@/data/stations';
-import { BRAND_COLORS } from '@/types/stations';
+import { BRAND_COLORS, STATUS_COLORS } from '@/types/stations';
+import type { StationStatus } from '@/types/stations';
 import { REGION_NAMES } from '@/data/regions';
 
 interface MapToolbarPanelProps {
@@ -12,8 +13,18 @@ interface MapToolbarPanelProps {
   onBrandToggle: (brand: string) => void;
   selectedRegion: string | null;
   onRegionChange: (region: string | null) => void;
+  statusFilter: StationStatus | 'all';
+  onStatusFilterChange: (status: StationStatus | 'all') => void;
   onClose: () => void;
 }
+
+const STATUS_OPTIONS: { key: StationStatus | 'all'; label: string }[] = [
+  { key: 'all', label: 'All Status' },
+  { key: 'operational', label: 'Operational' },
+  { key: 'low-supply', label: 'Low Supply' },
+  { key: 'out-of-stock', label: 'Out of Stock' },
+  { key: 'closed', label: 'Closed' },
+];
 
 export default function MapToolbarPanel({
   activeLayer,
@@ -21,6 +32,8 @@ export default function MapToolbarPanel({
   onBrandToggle,
   selectedRegion,
   onRegionChange,
+  statusFilter,
+  onStatusFilterChange,
   onClose,
 }: MapToolbarPanelProps) {
   return (
@@ -50,7 +63,7 @@ export default function MapToolbarPanel({
                   <button
                     key={brand}
                     onClick={() => onBrandToggle(brand)}
-                    className={`px-1.5 py-0.5 rounded transition-all duration-200 font-mono text-[8px] uppercase tracking-widest ${
+                    className={`px-1.5 py-0.5 rounded transition-colors duration-200 font-mono text-[8px] uppercase tracking-widest ${
                       isActive
                         ? 'text-text-primary bg-border-subtle'
                         : 'text-text-dim bg-transparent'
@@ -58,6 +71,30 @@ export default function MapToolbarPanel({
                     style={{ borderLeft: `2px solid ${BRAND_COLORS[brand] ?? BRAND_COLORS.Other}` }}
                   >
                     {brand}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-[9px] font-mono text-text-dim uppercase tracking-widest mb-2">Status</p>
+            <div className="flex flex-wrap gap-1">
+              {STATUS_OPTIONS.map(({ key, label }) => {
+                const isActive = statusFilter === key;
+                const color = key !== 'all' ? STATUS_COLORS[key] : undefined;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => onStatusFilterChange(key)}
+                    className={`px-1.5 py-0.5 rounded transition-colors duration-200 font-mono text-[8px] uppercase tracking-widest ${
+                      isActive
+                        ? 'text-text-primary bg-border-subtle'
+                        : 'text-text-dim bg-transparent'
+                    }`}
+                    style={color ? { borderLeft: `2px solid ${color}` } : undefined}
+                  >
+                    {label}
                   </button>
                 );
               })}

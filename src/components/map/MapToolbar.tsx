@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useMemo } from 'react';
 import MapToolbarPanel from './MapToolbarPanel';
+import type { StationStatus } from '@/types/stations';
 
 type LayerKey = 'facilities' | 'routes' | 'labels' | 'stations';
 
@@ -28,6 +29,8 @@ interface MapToolbarProps {
   onBrandToggle: (brand: string) => void;
   selectedRegion: string | null;
   onRegionChange: (region: string | null) => void;
+  statusFilter: StationStatus | 'all';
+  onStatusFilterChange: (status: StationStatus | 'all') => void;
   onCommandPalette: () => void;
 }
 
@@ -40,6 +43,8 @@ export default function MapToolbar({
   onBrandToggle,
   selectedRegion,
   onRegionChange,
+  statusFilter,
+  onStatusFilterChange,
   onCommandPalette,
 }: MapToolbarProps) {
   const [expandedLayer, setExpandedLayer] = useState<LayerKey | null>(null);
@@ -81,7 +86,7 @@ export default function MapToolbar({
               <button
                 onClick={() => handleToggle(key)}
                 onDoubleClick={() => handleExpand(key)}
-                className={`w-9 h-9 flex items-center justify-center rounded-lg transition-all duration-200 text-sm ${
+                className={`w-9 h-9 flex items-center justify-center rounded-lg transition-colors duration-200 text-sm ${
                   active
                     ? 'bg-blue-500/15 border border-blue-500/30 text-text-primary'
                     : 'bg-surface-hover text-text-muted hover:text-text-secondary'
@@ -105,7 +110,7 @@ export default function MapToolbar({
         {/* Expand/collapse panel */}
         <button
           onClick={() => setExpandedLayer((prev) => (prev ? null : 'stations'))}
-          className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-all duration-200 text-sm"
+          className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-colors duration-200 text-sm"
           title="Toggle panel ([)"
         >
           {expandedLayer ? '\u25C0' : '\u25B6'}
@@ -114,7 +119,7 @@ export default function MapToolbar({
         {/* Command palette */}
         <button
           onClick={onCommandPalette}
-          className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-all duration-200 text-xs font-mono"
+          className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-colors duration-200 text-xs font-mono"
           title="Search (⌘K)"
         >
           {'\u2318'}K
@@ -131,6 +136,8 @@ export default function MapToolbar({
           onBrandToggle={onBrandToggle}
           selectedRegion={selectedRegion}
           onRegionChange={onRegionChange}
+          statusFilter={statusFilter}
+          onStatusFilterChange={onStatusFilterChange}
           onClose={handleClosePanel}
         />
       )}

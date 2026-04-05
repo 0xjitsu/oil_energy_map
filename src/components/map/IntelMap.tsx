@@ -7,6 +7,7 @@ import type { MapViewState, Layer } from '@deck.gl/core';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import type { Facility, MapMode, ScenarioParams } from '@/types';
 import type { GasStation } from '@/types/stations';
+import type { StationStatus } from '@/types/stations';
 import { createFacilityLayers } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
 import { createStationLayer } from './StationLayer';
@@ -71,6 +72,7 @@ export default function IntelMap({
     y: number;
   } | null>(null);
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [statusFilter, setStatusFilter] = useState<StationStatus | 'all'>('all');
   const [currentZoom, setCurrentZoom] = useState(INITIAL_VIEW_STATE.zoom);
   const [currentTime, setCurrentTime] = useState(0);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
@@ -186,6 +188,7 @@ export default function IntelMap({
         setHoveredStationInfo,
         currentZoom,
         selectedRegion,
+        statusFilter,
       ),
     ],
     [
@@ -202,6 +205,7 @@ export default function IntelMap({
       hoveredStation,
       currentZoom,
       selectedRegion,
+      statusFilter,
     ],
   );
 
@@ -227,7 +231,7 @@ export default function IntelMap({
           <button
             key={mode}
             onClick={() => onModeChange(mode)}
-            className={`px-3 py-1.5 rounded-md transition-all duration-200 font-mono text-[9px] uppercase tracking-widest ${
+            className={`px-3 py-1.5 rounded-md transition-colors duration-200 font-mono text-[9px] uppercase tracking-widest ${
               mapMode === mode
                 ? 'text-text-primary bg-border-hover'
                 : 'text-text-muted hover:text-text-secondary'
@@ -247,6 +251,8 @@ export default function IntelMap({
         onBrandToggle={handleBrandToggle}
         selectedRegion={selectedRegion}
         onRegionChange={setSelectedRegion}
+        statusFilter={statusFilter}
+        onStatusFilterChange={setStatusFilter}
         onCommandPalette={handleCommandPaletteOpen}
       />
 
