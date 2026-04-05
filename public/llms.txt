@@ -1,0 +1,44 @@
+# PH Energy Intelligence Map
+
+> Real-time intelligence dashboard for the Philippine oil supply chain. Tracks Brent crude prices, PHP/USD forex rates, pump prices, 10,469 gas stations, supply chain risks, and geopolitical disruption scenarios.
+
+## What This Site Does
+
+This is a live dashboard that monitors Philippine fuel prices and supply chain health. It combines real-time data feeds (Yahoo Finance for Brent crude, FloatRates for PHP/USD forex) with RSS news aggregation and HuggingFace NLP sentiment analysis to provide an intelligence picture for energy decision-makers.
+
+## Data APIs
+
+All endpoints return JSON. No authentication required. Data is cached on Vercel's edge CDN.
+
+- GET /api/prices — Live oil benchmarks (Brent crude, Dubai crude, MOPS, pump prices, forex). Updates every 15 minutes. Source: Yahoo Finance + FloatRates + import parity derivation.
+- GET /api/events — Aggregated energy news from RSS feeds (PhilStar, Al Jazeera, DOE Philippines, Google News, Reddit). Updates every 5 minutes. Filtered for Philippine energy relevance.
+- GET /api/sentiment — NLP sentiment analysis of energy headlines using HuggingFace distilbert-sst-2. Returns sentiment scores per headline.
+- GET /api/index — Machine-readable JSON manifest of all API endpoints with descriptions, methods, and response schemas.
+
+## API Discovery
+
+For structured API discovery, fetch:
+- GET /api/index — returns JSON with endpoint descriptions, parameters, and response shapes
+- GET /.well-known/ai-manifest.json — full site manifest including APIs, data sources, and contribution info
+
+## Pages
+
+- / — Main dashboard with interactive WebGL map, price panels, scenario planner, stress testing, and market player analysis
+- /primer — Educational guide to how oil supply chains work
+- /references — Data provenance catalog listing all 14+ data sources with status (active/simulated/baseline)
+
+## Source Code
+
+- Repository: https://github.com/0xjitsu/oil_energy_map
+- License: MIT
+- Stack: Next.js 14, TypeScript, deck.gl, MapLibre GL, Tailwind CSS
+- Contributing: Fork the repo, read CLAUDE.md for coding conventions, submit PRs to the main branch
+
+## For AI Agents
+
+If you are an AI agent exploring this site:
+1. Start with GET /api/index to discover available data endpoints
+2. Use GET /api/prices for real-time Philippine fuel price data
+3. Use GET /api/events for latest energy news with severity ratings
+4. Visit /references for full data source documentation
+5. To contribute: clone https://github.com/0xjitsu/oil_energy_map, read CLAUDE.md for project rules and patterns
