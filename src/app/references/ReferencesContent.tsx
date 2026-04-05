@@ -80,7 +80,7 @@ export function ReferencesContent({ references }: { references: DataReference[] 
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-border-subtle">
-                  {['Source', 'Data Type', 'Records', 'Frequency', 'Status', 'License'].map(
+                  {['Source', 'Data Type', 'Records', 'Frequency', 'Status', 'License', 'Verified'].map(
                     (col) => (
                       <th
                         key={col}
@@ -128,6 +128,9 @@ export function ReferencesContent({ references }: { references: DataReference[] 
                     </td>
                     <td className="px-5 py-4 font-mono text-[11px] text-text-subtle">
                       {ref.license ?? '—'}
+                    </td>
+                    <td className="px-5 py-4 font-mono text-[11px] text-text-subtle">
+                      {ref.lastVerified}
                     </td>
                   </tr>
                 ))}

@@ -7,6 +7,7 @@ export interface DataReference {
   status: 'active' | 'baseline' | 'simulated';
   description: string;
   license?: string;
+  lastVerified: string;
 }
 
 export const dataReferences: DataReference[] = [
@@ -20,6 +21,7 @@ export const dataReferences: DataReference[] = [
     description:
       'Complete fuel station dataset for the Philippines extracted via Overpass QL. Includes brand, coordinates, and amenity tags for every mapped station.',
     license: 'ODbL',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'DOE Weekly Price Monitor',
@@ -31,6 +33,7 @@ export const dataReferences: DataReference[] = [
     description:
       'Department of Energy weekly prevailing price monitor for diesel, gasoline, and kerosene across NCR and provincial areas.',
     license: 'Philippine Open Data',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'Reuters Energy RSS',
@@ -42,6 +45,7 @@ export const dataReferences: DataReference[] = [
     description:
       'Real-time energy news feed powering the event timeline and NLP sentiment analysis pipeline.',
     license: 'Fair Use',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'HuggingFace Inference API',
@@ -53,6 +57,7 @@ export const dataReferences: DataReference[] = [
     description:
       'Serverless transformer models for headline sentiment classification. Powers the real-time sentiment gauge.',
     license: 'Apache 2.0',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'Philippine Statistics Authority',
@@ -64,6 +69,7 @@ export const dataReferences: DataReference[] = [
     description:
       'Official Philippine peso exchange rate data used for crude import cost calculations and scenario modeling.',
     license: 'Philippine Open Data',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'Petron Corporation',
@@ -74,6 +80,7 @@ export const dataReferences: DataReference[] = [
     status: 'baseline',
     description:
       'Bataan refinery capacity and operational data. Petron operates the only refinery in the Philippines (180,000 bpd).',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'Shell Philippines',
@@ -84,6 +91,7 @@ export const dataReferences: DataReference[] = [
     status: 'baseline',
     description:
       'Import terminal and depot locations across Luzon, Visayas, and Mindanao for Shell/Pilipinas Shell.',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'Phoenix Petroleum',
@@ -94,6 +102,7 @@ export const dataReferences: DataReference[] = [
     status: 'baseline',
     description:
       'Depot and terminal infrastructure for Phoenix Petroleum, the largest independent oil company in the Philippines.',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'Chevron Philippines',
@@ -104,6 +113,7 @@ export const dataReferences: DataReference[] = [
     status: 'baseline',
     description:
       'Caltex-branded import terminal and distribution depot locations across the Philippine archipelago.',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'CARTO Dark Matter',
@@ -115,6 +125,7 @@ export const dataReferences: DataReference[] = [
     description:
       'Dark-themed vector basemap tiles used as the WebGL map background. Served via CartoCDN with global edge caching.',
     license: 'CC BY 3.0',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'EIA (US Energy Information)',
@@ -126,6 +137,7 @@ export const dataReferences: DataReference[] = [
     description:
       'International crude oil benchmark prices (Brent and WTI) used as inputs for the scenario planner and price intelligence panels.',
     license: 'Public Domain',
+    lastVerified: '2026-04-05',
   },
   {
     name: 'Bangko Sentral ng Pilipinas',
@@ -137,5 +149,39 @@ export const dataReferences: DataReference[] = [
     description:
       'Official central bank exchange rate data for PHP/USD conversion in crude import cost modeling.',
     license: 'Philippine Open Data',
+    lastVerified: '2026-04-05',
+  },
+  {
+    name: 'PhilStar Business RSS',
+    url: 'https://www.philstar.com/rss/business',
+    dataType: 'News Events',
+    recordCount: 'Live',
+    updateFrequency: 'Every 5 min',
+    status: 'active',
+    description: 'Philippine business news RSS feed. Primary domestic energy news source for the event timeline.',
+    license: 'Fair Use',
+    lastVerified: '2026-04-05',
+  },
+  {
+    name: 'Google News RSS',
+    url: 'https://news.google.com/rss/search?q=Philippines+oil+energy',
+    dataType: 'News Events',
+    recordCount: 'Live',
+    updateFrequency: 'Every 5 min',
+    status: 'active',
+    description: 'Aggregated news search for Philippines oil and OPEC topics. Feeds the event timeline with global coverage.',
+    license: 'Fair Use',
+    lastVerified: '2026-04-05',
+  },
+  {
+    name: 'Reddit Public API',
+    url: 'https://www.reddit.com',
+    dataType: 'Social Sentiment',
+    recordCount: 'Live',
+    updateFrequency: 'Every 5 min',
+    status: 'active',
+    description: 'Public search API for r/Philippines and r/energy subreddits. Provides crowd-sourced energy discussion signals.',
+    license: 'Reddit API Terms',
+    lastVerified: '2026-04-05',
   },
 ];
