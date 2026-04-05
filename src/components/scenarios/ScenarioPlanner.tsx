@@ -66,9 +66,19 @@ export function ScenarioPlanner({
   return (
     <div>
       <div className="mb-6">
-        <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
-          Scenario Planner
-        </h2>
+        <div className="flex items-center gap-2">
+          <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
+            Scenario Planner
+          </h2>
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent('open-how-to-guide'))}
+            className="p-1 rounded-md hover:bg-surface-hover transition-colors text-text-dim hover:text-text-secondary"
+            aria-label="How to use scenario planner"
+            title="How to use scenario planner"
+          >
+            <span className="text-[10px] font-mono">?</span>
+          </button>
+        </div>
         <p className="text-xs font-sans text-text-label mt-1">
           {isTimelineDriven ? 'Driven by timeline — scrub to explore' : 'What happens if...'}
         </p>
