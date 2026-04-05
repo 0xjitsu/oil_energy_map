@@ -7,7 +7,7 @@
 - **Styling**: Tailwind CSS + CSS custom properties (dark theme)
 - **Fonts**: IBM Plex Mono (monospace UI) + IBM Plex Sans (body text)
 - **Package manager**: pnpm
-- **Branch**: `feat/animated-map-modes` — do NOT push without explicit permission
+- **Branch**: `main` — push only with explicit permission
 
 ---
 
@@ -92,12 +92,13 @@ Do NOT create inline headers in page components.
 | Directory | Purpose |
 |-----------|---------|
 | `src/app/` | Next.js routes + API endpoints |
-| `src/components/layout/` | Shared layout (Header) |
+| `src/components/layout/` | Shared layout (Header, SectionNav, MobileBottomNav) |
 | `src/components/map/` | Map layers, controls, tooltips |
 | `src/components/health/` | System health indicators |
 | `src/components/prices/` | Price panels, impact cards |
 | `src/components/primer/` | Oil Primer page components |
-| `src/components/ui/` | Shared UI primitives (Ticker, ScrollProgress) |
+| `src/components/ui/` | Shared UI primitives (Ticker, ScrollProgress, Tooltip) |
+| `src/components/onboarding/` | How-to guide and onboarding components |
 | `src/data/` | Static data (stations, references, primer content) |
 | `src/data/stations/` | Per-brand station JSON files |
 | `src/hooks/` | Custom React hooks |
@@ -148,12 +149,29 @@ const deckLayers = useMemo(() => [
 - Never default `opacity: 0` with IntersectionObserver — check viewport on mount
 - Use `useEffect` for DOM-dependent logic, not module scope
 - Client components need `'use client'` directive
+- `createPortal` must be gated behind a `mounted` state set in `useEffect`
+- Never read `localStorage` in `useState` initializer — use `useEffect` sync with a `loaded` flag
+
+### Tooltips
+- `InfoTip` renders via React Portal (`createPortal` to `document.body`) to escape `overflow:hidden` and `contain:layout` on `.glass-card`
+- Positioned with `getBoundingClientRect()` + `position: fixed` — do NOT add `window.scrollY`
+- Mobile: tap-to-toggle via `onPointerDown` (only `pointerType === 'touch'`), close on outside tap
+- Repositions on scroll/resize via event listeners
+
+### Overflow & Sticky
+- Use `overflow-x-clip` (NOT `overflow-x-hidden`) on page wrapper divs — `hidden` creates a scroll container per CSS spec, breaking `position: sticky`
+- Header is `sticky top-0 z-50` — never wrap it in an `overflow-hidden` ancestor
 
 ### Data Fetching
-- Prices: `usePrices` hook (5-min polling)
-- Events: `useEvents` hook (live RSS ingestion)
+- Prices: `usePrices` hook (5-min polling) — Brent via Yahoo Finance, forex via FloatRates, pump prices derived via import parity formula
+- Events: `useEvents` hook (3-min polling, retry with exponential backoff) — live RSS from PhilStar, Al Jazeera, DOE, Google News, Reddit
 - Sentiment: `useSentiment` hook (15-min polling)
 - Static data: direct imports from `@/data/`
+
+### Price Source Transparency
+- Brent Crude and PHP/USD are **live** feeds (Yahoo Finance, FloatRates)
+- All other prices (Dubai, MOPS, pump prices, refining margin) are **derived** from those two
+- Derived prices show an "Est." badge (`bg-status-yellow/10 text-status-yellow/70`) — never use amber tokens for this
 
 ---
 
