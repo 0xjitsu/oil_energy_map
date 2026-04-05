@@ -279,3 +279,15 @@ input[type="range"]::-webkit-slider-thumb {
 .region-highlight {
   transition: opacity 0.2s ease;
 }
+
+/* Mobile bottom nav safe area */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Ensure main content doesn't hide behind bottom nav */
+@media (max-width: 1279px) {
+  main {
+    padding-bottom: 80px;
+  }
+}

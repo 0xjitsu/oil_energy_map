@@ -15,6 +15,7 @@ import { EventTimeline } from '@/components/health/EventTimeline';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
+import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 import type { MapMode, ScenarioParams } from '@/types';
 
 const PricePanel = dynamic(
@@ -179,6 +180,7 @@ export default function Home() {
         </section>
       </main>
 
+      <MobileBottomNav />
       <Footer />
     </div>
   );
