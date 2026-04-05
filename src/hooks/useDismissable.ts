@@ -6,12 +6,14 @@ const STORAGE_PREFIX = 'oil-intel-dismissed-';
 
 export function useDismissable(key: string) {
   const [dismissed, setDismissed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   // Sync from localStorage after mount (SSR-safe)
   useEffect(() => {
     try {
       if (localStorage.getItem(STORAGE_PREFIX + key) === '1') setDismissed(true);
     } catch { /* noop */ }
+    setLoaded(true);
   }, [key]);
 
   const dismiss = useCallback(() => {
@@ -26,5 +28,5 @@ export function useDismissable(key: string) {
     catch { /* noop */ }
   }, [key]);
 
-  return { dismissed, dismiss, reset };
+  return { dismissed, dismiss, reset, loaded };
 }

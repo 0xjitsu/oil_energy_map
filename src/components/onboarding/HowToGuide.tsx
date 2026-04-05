@@ -6,7 +6,7 @@ import { useDismissable } from '@/hooks/useDismissable';
 import { GuideStep } from './GuideStep';
 
 export function HowToGuide() {
-  const { dismissed, dismiss } = useDismissable('how-to-guide');
+  const { dismissed, dismiss, loaded } = useDismissable('how-to-guide');
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   const [autoOpened, setAutoOpened] = useState(false);
@@ -50,6 +50,9 @@ export function HowToGuide() {
       }, 100);
     }
   }, [step, handleClose]);
+
+  // Wait for localStorage to load before deciding
+  if (!loaded) return null;
 
   // Auto-show on first visit (only once per session)
   if (!dismissed && !open && !autoOpened) {
