@@ -9,7 +9,7 @@ import { CrudeOilTypes } from '@/components/primer/CrudeOilTypes';
 
 export function PrimerPage() {
   return (
-    <div className="min-h-screen bg-bg-primary">
+    <div className="min-h-screen bg-bg-primary overflow-x-hidden">
       <ScrollProgress />
       <Header showTicker={false} />
 
