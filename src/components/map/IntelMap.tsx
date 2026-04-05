@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback, useMemo, useEffect, useRef } from 'react';
-import Map, { useControl, NavigationControl } from 'react-map-gl/maplibre';
+import Map, { useControl, type MapRef } from 'react-map-gl/maplibre';
 import { MapboxOverlay } from '@deck.gl/mapbox';
 import type { MapViewState, Layer } from '@deck.gl/core';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -17,6 +17,7 @@ import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import RegionPanel from './RegionPanel';
 import FacilityDetail from './FacilityDetail';
 import StationTooltip from './StationTooltip';
+import { ZoomControls } from './ZoomControls';
 
 function DeckGLOverlay(props: { layers: Layer[] }) {
   const overlay = useControl(() => new MapboxOverlay({ layers: [] }));
@@ -74,6 +75,27 @@ export default function IntelMap({
   const [currentTime, setCurrentTime] = useState(0);
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const rafRef = useRef<number>(0);
+  const mapRef = useRef<MapRef>(null);
+
+  const handleZoomIn = useCallback(() => {
+    const map = mapRef.current?.getMap();
+    if (map) map.zoomIn({ duration: 300 });
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    const map = mapRef.current?.getMap();
+    if (map) map.zoomOut({ duration: 300 });
+  }, []);
+
+  const handleResetView = useCallback(() => {
+    mapRef.current?.flyTo({
+      center: [122, 12],
+      zoom: 5.5,
+      pitch: 30,
+      bearing: 0,
+      duration: 1000,
+    });
+  }, []);
 
   const handleBrandToggle = useCallback((brand: string) => {
     setVisibleBrands((prev) => {
@@ -189,6 +211,7 @@ export default function IntelMap({
       style={{ cursor: hoveredFacility || hoveredStation ? 'pointer' : 'grab' }}
     >
       <Map
+        ref={mapRef}
         initialViewState={INITIAL_VIEW_STATE}
         mapStyle={MAP_STYLE}
         style={{ width: '100%', height: '100%' }}
@@ -196,8 +219,8 @@ export default function IntelMap({
         onMove={(evt) => setCurrentZoom(evt.viewState.zoom)}
       >
         <DeckGLOverlay layers={deckLayers} />
-        <NavigationControl position="top-left" showCompass={false} />
       </Map>
+      <ZoomControls onZoomIn={handleZoomIn} onZoomOut={handleZoomOut} onReset={handleResetView} />
       {/* Mode tabs — floating center top */}
       <div className="absolute top-4 left-1/2 -translate-x-1/2 z-50 glass-card p-0.5 flex gap-0.5 rounded-lg">
         {(['live', 'scenario', 'timeline'] as const).map((mode) => (
