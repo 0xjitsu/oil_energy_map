@@ -17,20 +17,21 @@ const plexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "PH Oil Intelligence — Supply Chain Dashboard",
+  title: "PH Energy Intelligence Map — Live Oil Supply Chain Dashboard",
   description:
-    "Real-time intelligence dashboard for Philippine oil supply chain. Track crude prices, refinery status, shipping routes, and geopolitical risk factors affecting fuel costs.",
+    "Monitor Philippine fuel prices, crude oil benchmarks, and supply chain risks in real time. 10,469 gas stations mapped, live RSS news feeds, Monte Carlo stress testing, and what-if scenario planning — built for everyday drivers and cabinet-level decision makers alike.",
   metadataBase: new URL("https://energy-intelligence-map.vercel.app"),
   openGraph: {
-    title: "PH Oil Intelligence",
-    description: "Philippine Oil Supply Chain Intelligence Dashboard — WebGL mapping, multi-channel event feeds, scenario planning",
+    title: "PH Energy Intelligence Map",
+    description: "Live Philippine oil supply chain dashboard — track Brent crude, pump prices, 10,469 stations, and geopolitical risks with scenario planning and Monte Carlo simulation.",
     type: "website",
     url: "https://energy-intelligence-map.vercel.app",
+    siteName: "PH Energy Intelligence Map",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PH Oil Intelligence",
-    description: "Real-time Philippine oil supply chain intelligence dashboard",
+    title: "PH Energy Intelligence Map",
+    description: "Live Philippine oil supply chain dashboard — track Brent crude, pump prices, 10,469 stations, and geopolitical risks with scenario planning and Monte Carlo simulation.",
   },
 };
 
