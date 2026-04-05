@@ -22,6 +22,13 @@ export function Footer() {
         </div>
         <div className="flex items-center gap-3">
           <a
+            href="/roadmap"
+            className="inline-flex items-center text-[10px] font-mono text-text-dim hover:text-text-secondary transition-colors duration-150"
+          >
+            Roadmap
+          </a>
+          <span className="text-text-dim">·</span>
+          <a
             href="https://github.com/0xjitsu/oil_energy_map"
             target="_blank"
             rel="noopener noreferrer"

@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: '/', label: 'Dashboard' },
   { href: '/primer', label: 'Oil Primer' },
   { href: '/references', label: 'References' },
+  { href: '/roadmap', label: 'Roadmap' },
 ];
 
 function useCurrentDate() {
@@ -79,7 +80,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
                 <Link
                   key={href}
                   href={href}
-                  className={`px-3 py-1.5 rounded-md font-mono text-[10px] uppercase tracking-widest transition-all duration-200 ${
+                  className={`px-3 py-1.5 rounded-md font-mono text-[10px] uppercase tracking-widest transition-colors duration-200 ${
                     isActive
                       ? 'text-text-primary bg-border-hover'
                       : 'text-text-subtle hover:text-text-body hover:bg-surface-hover'
@@ -136,7 +137,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
             <Link
               key={href}
               href={href}
-              className={`flex-1 text-center px-2 py-1.5 rounded-md font-mono text-[9px] uppercase tracking-widest transition-all duration-200 ${
+              className={`flex-1 text-center px-2 py-1.5 rounded-md font-mono text-[9px] uppercase tracking-widest transition-colors duration-200 ${
                 isActive
                   ? 'text-text-primary bg-border-hover'
                   : 'text-text-subtle hover:text-text-body'
