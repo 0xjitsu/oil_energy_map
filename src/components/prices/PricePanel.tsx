@@ -36,6 +36,7 @@ function BenchmarkCard({
 
   const changeColor = isUp ? 'text-red-400' : 'text-emerald-400';
   const sparkColor = isUp ? '#f87171' : '#34d399';
+  const isDerived = !['brent-crude', 'php-usd'].includes(benchmark.id);
 
   return (
     <div className="glass-card card-interactive p-4">
@@ -43,6 +44,11 @@ function BenchmarkCard({
         <p className="text-[10px] uppercase tracking-widest text-text-muted flex items-center gap-1.5">
           {benchmark.name}
           <InfoTip text={benchmark.tooltip} />
+          {isDerived && (
+            <span className="text-[8px] px-1 py-0.5 rounded bg-amber-400/10 text-amber-400/70">
+              EST
+            </span>
+          )}
         </p>
         <span
           className={`text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded ${

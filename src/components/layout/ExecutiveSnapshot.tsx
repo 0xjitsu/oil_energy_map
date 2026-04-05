@@ -34,6 +34,7 @@ function HeroKPI({
   sparkColor,
   accentBorder,
   tooltip,
+  source,
 }: {
   label: string;
   value: number;
@@ -44,6 +45,7 @@ function HeroKPI({
   sparkColor: string;
   accentBorder: string;
   tooltip: string;
+  source?: 'live' | 'derived';
 }) {
   const animated = useAnimatedNumber(value);
   const isUp = delta > 0;
@@ -60,6 +62,11 @@ function HeroKPI({
         <p className="text-[10px] uppercase tracking-widest text-text-label font-mono flex items-center gap-1.5">
           {label}
           <InfoTip text={tooltip} />
+          {source === 'derived' && (
+            <span className="text-[8px] px-1 py-0.5 rounded bg-amber-400/10 text-amber-400/70 uppercase tracking-wider">
+              Est.
+            </span>
+          )}
         </p>
         <span
           className={`text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded ${
@@ -145,6 +152,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       sparkColor: '#3b82f6',
       accentBorder: '#3b82f6',
       deltaLabel: `$${Math.abs(brent.value - brent.previousWeek).toFixed(1)}`,
+      source: 'live' as const,
     },
     {
       label: 'PHP / USD',
@@ -153,6 +161,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       sparkColor: '#a855f7',
       accentBorder: '#a855f7',
       deltaLabel: `₱${Math.abs(forex.value - forex.previousWeek).toFixed(2)}`,
+      source: 'live' as const,
     },
     {
       label: 'Gasoline',
@@ -161,6 +170,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       sparkColor: '#ef4444',
       accentBorder: '#ef4444',
       deltaLabel: `₱${Math.abs(gasoline.value - gasoline.previousWeek).toFixed(2)}`,
+      source: 'derived' as const,
     },
     {
       label: 'Diesel',
@@ -169,6 +179,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       sparkColor: '#f59e0b',
       accentBorder: '#f59e0b',
       deltaLabel: `₱${Math.abs(diesel.value - diesel.previousWeek).toFixed(2)}`,
+      source: 'derived' as const,
     },
   ];
 
@@ -195,7 +206,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
 
       {/* Hero KPI grid — 4 big cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
-        {kpis.map(({ label, benchmark, unit, sparkColor, accentBorder, deltaLabel }) => (
+        {kpis.map(({ label, benchmark, unit, sparkColor, accentBorder, deltaLabel, source }) => (
           <HeroKPI
             key={benchmark.id}
             label={label}
@@ -207,6 +218,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
             sparkColor={sparkColor}
             accentBorder={accentBorder}
             tooltip={benchmark.tooltip}
+            source={source}
           />
         ))}
       </div>

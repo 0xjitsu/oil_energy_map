@@ -54,6 +54,9 @@ function PriceCard({
       <p className={`mt-2 text-xs font-mono ${isUp ? 'text-red-400/80' : 'text-emerald-400/80'}`}>
         {isUp ? '↑' : '↓'} ₱{Math.abs(change).toFixed(2)} vs prev week
       </p>
+      <p className="mt-1 text-[9px] font-mono text-text-dim">
+        Est. from Brent crude + PHP/USD
+      </p>
     </div>
   );
 }
