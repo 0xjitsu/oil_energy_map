@@ -12,6 +12,7 @@ import { ImpactCards } from '@/components/prices/ImpactCards';
 import { VitalSigns } from '@/components/health/VitalSigns';
 import { SentimentGauge } from '@/components/health/SentimentGauge';
 import { EventTimeline } from '@/components/health/EventTimeline';
+import { StationTrackerSection } from '@/components/health/StationTrackerSection';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
@@ -125,6 +126,11 @@ export default function Home() {
               <ImpactCards scenarioParams={scenarioParams} />
             </div>
           </div>
+        </section>
+
+        {/* Station Tracker */}
+        <section id="tracker" className="scroll-mt-20">
+          <StationTrackerSection />
         </section>
 
         {/* Price Intelligence — Full-width benchmark grid */}
