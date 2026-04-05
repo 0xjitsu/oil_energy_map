@@ -82,7 +82,7 @@ export default function Home() {
   const handleParamsChange = useCallback(setScenarioParams, []);
 
   return (
-    <div className="min-h-screen bg-bg-primary overflow-x-hidden">
+    <div className="min-h-screen bg-bg-primary overflow-x-clip">
       <ScrollProgress />
       <AlertBanner />
       <Header />

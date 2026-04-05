@@ -30,7 +30,7 @@ export function ReferencesContent({ references }: { references: DataReference[] 
   const baselineCount = references.filter((r) => r.status === 'baseline').length;
 
   return (
-    <div className="min-h-screen bg-bg-primary overflow-x-hidden">
+    <div className="min-h-screen bg-bg-primary overflow-x-clip">
       <Header showTicker={false} />
 
       <main className="max-w-[1600px] mx-auto px-4 py-8 sm:px-6">
