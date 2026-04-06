@@ -1,3 +1,9 @@
+export interface StageDataPoint {
+  value: string;
+  label: string;
+  source?: string;
+}
+
 export interface SupplyChainStage {
   id: string;
   number: number;
@@ -7,6 +13,9 @@ export interface SupplyChainStage {
   what: string;
   phContext: string;
   keyPlayers: string[];
+  headline: string;
+  dataPoints: StageDataPoint[];
+  visualType: 'animation' | 'diagram' | 'map-preview';
 }
 
 export interface CrudeOilType {
@@ -33,6 +42,13 @@ export const supplyChainStages: SupplyChainStage[] = [
     what: 'Crude oil is pumped from underground reservoirs in oil-producing countries. The Middle East (Saudi Arabia, UAE, Iraq) accounts for ~31% of global production.',
     phContext: 'Philippines produces virtually zero crude oil domestically. The country imports 95% of its petroleum needs, primarily Dubai crude from the Middle East.',
     keyPlayers: ['Saudi Aramco', 'ADNOC (UAE)', 'Iraq National Oil Company'],
+    headline: 'Zero Domestic Production',
+    dataPoints: [
+      { value: '95%', label: 'petroleum imported', source: 'DOE 2026' },
+      { value: '31%', label: 'global supply from Middle East' },
+      { value: '2M', label: 'barrels per VLCC tanker' },
+    ],
+    visualType: 'diagram',
   },
   {
     id: 'maritime',
@@ -43,6 +59,13 @@ export const supplyChainStages: SupplyChainStage[] = [
     what: 'Crude oil travels via supertankers (VLCCs carrying 2M barrels each) through critical chokepoints. A single disruption can spike global prices within hours.',
     phContext: 'Philippine-bound crude passes through the Strait of Hormuz (35% of seaborne oil) and the Strait of Malacca before entering the South China Sea.',
     keyPlayers: ['International shipping companies', 'Philippine Navy (SCS patrols)'],
+    headline: 'Two Chokepoints, One Lifeline',
+    dataPoints: [
+      { value: '20%', label: 'seaborne oil through Hormuz', source: 'EIA' },
+      { value: '80%', label: 'ASEAN imports via Malacca' },
+      { value: '21 days', label: 'voyage from Middle East' },
+    ],
+    visualType: 'diagram',
   },
   {
     id: 'refinery',
@@ -53,6 +76,13 @@ export const supplyChainStages: SupplyChainStage[] = [
     what: 'Refineries heat crude oil to 400\u00B0C+ in distillation columns, separating it into gasoline, diesel, jet fuel, LPG, and other products. Each crude type yields different product ratios.',
     phContext: 'Petron Bataan Refinery is the ONLY operating refinery in the Philippines (180,000 bpd capacity). All other fuel is imported as finished product from Singapore and South Korea.',
     keyPlayers: ['Petron Corporation (San Miguel Group)'],
+    headline: 'One Refinery for 115 Million People',
+    dataPoints: [
+      { value: '180,000', label: 'bpd capacity', source: 'Petron Corp' },
+      { value: '1', label: 'major refinery in the country' },
+      { value: '~30%', label: 'domestic refining share' },
+    ],
+    visualType: 'diagram',
   },
   {
     id: 'terminals',
@@ -63,6 +93,13 @@ export const supplyChainStages: SupplyChainStage[] = [
     what: 'Import terminals receive both crude oil (for Bataan) and finished petroleum products. Tank farms store fuel before distribution to regional depots.',
     phContext: 'Major import terminals in Batangas, Subic, Limay, and Rosario handle the bulk of Philippine fuel imports. Terminal capacity determines how many days of supply the country holds.',
     keyPlayers: ['Petron', 'Shell', 'Phoenix', 'Chevron Philippines'],
+    headline: 'Gateway Terminals Under Pressure',
+    dataPoints: [
+      { value: '4', label: 'major import terminals' },
+      { value: '~70%', label: 'of fuel enters as finished product' },
+      { value: '15–30', label: 'days of supply buffer' },
+    ],
+    visualType: 'diagram',
   },
   {
     id: 'depots',
@@ -73,6 +110,13 @@ export const supplyChainStages: SupplyChainStage[] = [
     what: 'Regional depots receive fuel from terminals via pipeline, barge, or tanker truck. They serve as last-mile distribution hubs for gas stations in their area.',
     phContext: 'The Philippines has ~50 depots nationwide. Island geography means many areas rely on inter-island barges, adding cost and vulnerability to weather disruptions.',
     keyPlayers: ['All major oil companies operate depot networks'],
+    headline: 'Island Logistics, Mainland Costs',
+    dataPoints: [
+      { value: '~50', label: 'depots nationwide' },
+      { value: '7,641', label: 'islands to service' },
+      { value: '₱2–5/L', label: 'transport cost adder for remote areas' },
+    ],
+    visualType: 'diagram',
   },
   {
     id: 'stations',
@@ -83,6 +127,13 @@ export const supplyChainStages: SupplyChainStage[] = [
     what: 'Retail outlets sell fuel to consumers. Station count and geographic coverage determine market accessibility. Prices vary by location due to transport costs.',
     phContext: 'Over 10,000 gas stations nationwide across 7+ brands. Petron leads with ~2,400 stations, followed by Shell (~1,100) and Caltex (~600).',
     keyPlayers: ['Petron', 'Shell', 'Caltex', 'Phoenix', 'SeaOil', 'Unioil'],
+    headline: '10,469 Stations Mapped',
+    dataPoints: [
+      { value: '10,469', label: 'stations tracked', source: 'OpenStreetMap' },
+      { value: '2,400+', label: 'Petron stations (market leader)' },
+      { value: '7', label: 'major fuel brands' },
+    ],
+    visualType: 'map-preview',
   },
   {
     id: 'consumer',
@@ -93,6 +144,13 @@ export const supplyChainStages: SupplyChainStage[] = [
     what: 'Every \u20B11 increase in pump price ripples through the entire economy \u2014 from jeepney fares to food delivery costs to cooking gas prices.',
     phContext: 'Transport accounts for ~10% of household spending in the Philippines. A \u20B15/liter diesel increase can raise jeepney minimum fare by \u20B11\u20132 and food prices by 2\u20133%.',
     keyPlayers: ['LTFRB (fare regulation)', 'DTI (price monitoring)', 'DOE (weekly price updates)'],
+    headline: 'Every Peso Ripples',
+    dataPoints: [
+      { value: '₱130.75', label: 'diesel per liter (DOE SRP)', source: 'DOE Oil Monitor' },
+      { value: '10%', label: 'of household spending on transport' },
+      { value: '₱1–2', label: 'fare increase per ₱5/L diesel hike' },
+    ],
+    visualType: 'diagram',
   },
 ];
 
