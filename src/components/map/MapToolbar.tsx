@@ -39,12 +39,6 @@ export default function MapToolbar({
   onToggle,
   stationsVisible,
   onStationsToggle,
-  visibleBrands,
-  onBrandToggle,
-  selectedRegion,
-  onRegionChange,
-  statusFilter,
-  onStatusFilterChange,
   onCommandPalette,
 }: MapToolbarProps) {
   const [expandedLayer, setExpandedLayer] = useState<LayerKey | null>(null);
@@ -67,6 +61,8 @@ export default function MapToolbar({
 
   const handleExpand = useCallback(
     (key: LayerKey) => {
+      // Station filters are now in StationFilterBar — don't open panel for stations
+      if (key === 'stations') return;
       setExpandedLayer((prev) => (prev === key ? null : key));
     },
     [],
@@ -109,7 +105,7 @@ export default function MapToolbar({
 
         {/* Expand/collapse panel */}
         <button
-          onClick={() => setExpandedLayer((prev) => (prev ? null : 'stations'))}
+          onClick={() => setExpandedLayer((prev) => (prev ? null : 'facilities'))}
           className="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-hover text-text-muted hover:text-text-secondary transition-colors duration-200 text-sm"
           title="Toggle panel ([)"
         >
@@ -126,18 +122,11 @@ export default function MapToolbar({
         </button>
       </div>
 
-      {/* Expandable panel */}
-      {expandedLayer && (
+      {/* Expandable panel — stations filters moved to StationFilterBar */}
+      {expandedLayer && expandedLayer !== 'stations' && (
         <MapToolbarPanel
           activeLayer={expandedLayer}
           layers={layers}
-          stationsVisible={stationsVisible}
-          visibleBrands={visibleBrands}
-          onBrandToggle={onBrandToggle}
-          selectedRegion={selectedRegion}
-          onRegionChange={onRegionChange}
-          statusFilter={statusFilter}
-          onStatusFilterChange={onStatusFilterChange}
           onClose={handleClosePanel}
         />
       )}

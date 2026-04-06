@@ -11,8 +11,9 @@ import type { StationStatus } from '@/types/stations';
 import { createFacilityLayers } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
 import { createStationLayer } from './StationLayer';
-import { BRAND_LIST } from '@/data/stations';
+import { BRAND_LIST, allStations } from '@/data/stations';
 import MapToolbar from './MapToolbar';
+import StationFilterBar from './StationFilterBar';
 import CommandPalette from './CommandPalette';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import RegionPanel from './RegionPanel';
@@ -151,7 +152,7 @@ export default function IntelMap({
         'S': () => setStationsVisible((v) => !v),
         'R': () => handleToggle('routes'),
         'L': () => handleToggle('labels'),
-        '⌘K': () => setCommandPaletteOpen(true),
+        '\u2318K': () => setCommandPaletteOpen(true),
       }),
       [handleToggle],
     ),
@@ -209,9 +210,20 @@ export default function IntelMap({
     ],
   );
 
+  const totalStationCount = allStations.length;
+
+  const filteredStationCount = useMemo(() => {
+    return allStations.filter(
+      (s) =>
+        visibleBrands.has(s.brand) &&
+        (!selectedRegion || s.region === selectedRegion) &&
+        (!statusFilter || statusFilter === 'all' || s.status === statusFilter),
+    ).length;
+  }, [visibleBrands, selectedRegion, statusFilter]);
+
   return (
     <div
-      className="relative h-[600px] lg:h-[700px] w-full rounded-xl overflow-hidden border border-border-subtle"
+      className="relative h-[500px] sm:h-[600px] lg:h-[75vh] lg:max-h-[900px] w-full rounded-xl overflow-hidden border border-border-subtle"
       style={{ cursor: hoveredFacility || hoveredStation ? 'pointer' : 'grab' }}
     >
       <Map
@@ -241,6 +253,20 @@ export default function IntelMap({
           </button>
         ))}
       </div>
+
+      {/* Station filter bar — visible when stations layer is on */}
+      {stationsVisible && (
+        <StationFilterBar
+          visibleBrands={visibleBrands}
+          onBrandToggle={handleBrandToggle}
+          statusFilter={statusFilter}
+          onStatusFilterChange={setStatusFilter}
+          selectedRegion={selectedRegion}
+          onRegionChange={setSelectedRegion}
+          filteredCount={filteredStationCount}
+          totalCount={totalStationCount}
+        />
+      )}
 
       <MapToolbar
         layers={layers}

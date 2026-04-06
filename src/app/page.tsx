@@ -96,36 +96,34 @@ export default function Home() {
           <ExecutiveSnapshot scenarioParams={scenarioParams} />
         </div>
 
-        {/* Hero: Map + Price Sidebar */}
-        <section id="map" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-4 lg:gap-6">
-          <div>
-            <SectionHeader color="bg-petron" label="Supply Chain Map" />
-            <div className="relative">
-              <MapWrapper
-                mapMode={mapMode}
-                scenarioParams={scenarioParams}
-                timelinePosition={timelinePosition}
-                onModeChange={setMapMode}
-              />
-              <TimelineSlider
-                position={timelinePosition}
-                onPositionChange={setTimelinePosition}
-                visible={mapMode === 'timeline'}
-              />
-              <TimelineScrubber visible={mapMode === 'timeline'} />
-            </div>
+        {/* Hero: Full-Width Map */}
+        <section id="map" className="scroll-mt-20">
+          <SectionHeader color="bg-petron" label="Supply Chain Map" />
+          <div className="relative">
+            <MapWrapper
+              mapMode={mapMode}
+              scenarioParams={scenarioParams}
+              timelinePosition={timelinePosition}
+              onModeChange={setMapMode}
+            />
+            <TimelineSlider
+              position={timelinePosition}
+              onPositionChange={setTimelinePosition}
+              visible={mapMode === 'timeline'}
+            />
+            <TimelineScrubber visible={mapMode === 'timeline'} />
           </div>
+        </section>
 
-          <div className="space-y-6">
-            <div>
-              <SectionHeader color="bg-status-red" label="Pump Prices" />
-              <PumpPrices />
-            </div>
-
-            <div>
-              <SectionHeader color="bg-phoenix" label="What This Means For You" />
-              <ImpactCards scenarioParams={scenarioParams} />
-            </div>
+        {/* Pump Prices + Impact Cards — 2 columns */}
+        <section className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          <div>
+            <SectionHeader color="bg-status-red" label="Pump Prices" />
+            <PumpPrices />
+          </div>
+          <div>
+            <SectionHeader color="bg-phoenix" label="What This Means For You" />
+            <ImpactCards scenarioParams={scenarioParams} />
           </div>
         </section>
 

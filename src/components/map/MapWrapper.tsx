@@ -6,7 +6,7 @@ import type { MapMode, ScenarioParams } from '@/types';
 const IntelMap = dynamic(() => import('./IntelMap'), {
   ssr: false,
   loading: () => (
-    <div className="h-[600px] lg:h-[700px] w-full rounded-xl bg-bg-card border border-border flex items-center justify-center">
+    <div className="h-[500px] sm:h-[600px] lg:h-[75vh] lg:max-h-[900px] w-full rounded-xl bg-bg-card border border-border flex items-center justify-center">
       <div className="text-text-muted font-mono text-xs uppercase tracking-widest">
         Initializing MapLibre GL...
       </div>
