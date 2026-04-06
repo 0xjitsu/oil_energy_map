@@ -33,7 +33,7 @@ export function PrimerHero() {
   return (
     <section
       ref={ref}
-      className={`text-center py-16 px-4 fade-in-section ${visible ? 'visible' : 'pending'}`}
+      className={`text-center min-h-[70vh] flex flex-col justify-center px-4 fade-in-section ${visible ? 'visible' : 'pending'}`}
     >
       <div className="inline-flex items-center gap-2 mb-6 rounded-full border border-border-hover bg-surface-hover px-4 py-1.5">
         <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--text-muted)]">
@@ -57,6 +57,27 @@ export function PrimerHero() {
         <span>3 crude benchmarks</span>
         <span className="w-1 h-1 rounded-full bg-[var(--text-muted)]" />
         <span>100% PH context</span>
+      </div>
+
+      {/* Scroll CTA */}
+      <div className="mt-12 flex flex-col items-center gap-2">
+        <span className="text-[10px] font-mono uppercase tracking-widest text-text-muted">
+          Scroll to explore
+        </span>
+        <svg
+          className="w-5 h-5 text-text-muted animate-bounce"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
       </div>
     </section>
   );

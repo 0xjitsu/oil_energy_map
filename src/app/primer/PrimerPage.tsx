@@ -13,10 +13,12 @@ export function PrimerPage() {
       <ScrollProgress />
       <Header showTicker={false} />
 
-      <main className="max-w-[1600px] mx-auto px-4 py-6">
+      <main className="px-4 sm:px-6 py-6">
         <PrimerHero />
         <SupplyChainFlow />
-        <CrudeOilTypes />
+        <div className="max-w-4xl mx-auto">
+          <CrudeOilTypes />
+        </div>
       </main>
 
       <Footer />

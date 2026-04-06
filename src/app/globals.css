@@ -283,6 +283,23 @@ input[type="range"]::-webkit-slider-thumb {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+/* Stage divider gradient */
+.stage-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-hover) 20%, var(--border-hover) 80%, transparent);
+}
+
+/* Primer stage reduced-motion override */
+@media (prefers-reduced-motion: reduce) {
+  .primer-stage,
+  .primer-stage * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
 /* Ensure main content doesn't hide behind bottom nav */
 @media (max-width: 1279px) {
   main {
