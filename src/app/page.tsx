@@ -17,6 +17,7 @@ import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
+import { CascadeSection } from '@/components/cascade/CascadeSection';
 import type { MapMode, ScenarioParams } from '@/types';
 
 const PricePanel = dynamic(
@@ -131,6 +132,12 @@ export default function Home() {
         {/* Station Tracker */}
         <section id="tracker" className="scroll-mt-20">
           <StationTrackerSection />
+        </section>
+
+        {/* Cascade Effects — Second-order impact tracker */}
+        <section id="cascade" className="scroll-mt-20">
+          <SectionHeader color="bg-status-red" label="Cascade Effects" />
+          <CascadeSection />
         </section>
 
         {/* Price Intelligence — Full-width benchmark grid */}

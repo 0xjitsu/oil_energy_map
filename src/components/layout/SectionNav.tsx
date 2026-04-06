@@ -5,6 +5,7 @@ import { useScrollSpy, type Section } from '@/hooks/useScrollSpy';
 const SECTIONS: Section[] = [
   { id: 'snapshot', label: 'Overview', icon: '📊' },
   { id: 'map', label: 'Map', icon: '🗺️' },
+  { id: 'cascade', label: 'Cascade', icon: '🔗' },
   { id: 'prices', label: 'Prices', icon: '💰' },
   { id: 'scenario', label: 'Scenarios', icon: '🎛️' },
   { id: 'stress-test', label: 'Stress Test', icon: '🎲' },
