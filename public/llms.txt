@@ -53,6 +53,17 @@ If you are an AI agent exploring this site:
 4. Visit /references for full data source documentation
 5. To contribute: clone https://github.com/0xjitsu/oil_energy_map, read CLAUDE.md for project rules and patterns
 
+## Cascade Effects
+
+The dashboard includes a second-order cascade tracker that visualizes how oil price shocks ripple through the Philippine economy. Starting from crude oil (Brent), the cascade maps 11 nodes across 5 categories (energy, agriculture, transport, consumer, industry) connected by 16 causal links:
+
+- Energy: Crude oil (+43.7%), diesel (+125.4%), gasoline (+82.7%), LPG (+64.7%)
+- Agriculture: Fertilizer (+6.5%), rice (+38.1%), fish (+25%)
+- Transport: Jeepney fares (+15.4%), delivery costs (+20-30%)
+- Consumer: Food inflation (+8.2%), household budget (+18%)
+
+Each node shows current values, baseline comparisons, severity ratings (low/moderate/high/critical), and source attribution. The cascade model is based on a Strait of Hormuz disruption scenario.
+
 ## Roadmap
 
 The project follows a phased expansion plan:
@@ -62,6 +73,7 @@ Live Brent crude and PHP/USD feeds, 10,469 mapped gas stations, RSS news aggrega
 
 ### Phase 2: Philippine Data Enrichment (Next)
 - DOE actual pump prices (shipped — SRP from DOE Oil Monitor)
+- Second-order cascade effects tracker (shipped — 11 nodes, 16 causal links)
 - Google Places station enrichment (photos, ratings, hours)
 - Historical price charts and trend indicators
 - Weather disruption correlation (typhoon impact on supply routes)

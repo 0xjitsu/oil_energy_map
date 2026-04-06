@@ -86,6 +86,13 @@ export const roadmapPhases: RoadmapPhase[] = [
         tags: ['prices', 'government'],
       },
       {
+        title: 'Second-order cascade effects tracker',
+        description:
+          'Visual cascade map showing how oil price shocks ripple through the Philippine economy — from crude oil to diesel, agriculture, transport, and household budgets. Tracks 11 nodes across 5 categories with 16 causal links.',
+        status: 'done',
+        tags: ['analysis', 'visualization'],
+      },
+      {
         title: 'Google Places station enrichment',
         description:
           'Augment OSM station data with Google Places attributes including operating hours, user ratings, photos, and amenities. Transforms raw coordinate data into actionable consumer information.',
