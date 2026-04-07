@@ -181,7 +181,8 @@ export function EventTimeline() {
                 key={idx}
                 type="button"
                 onClick={() => setExpanded(isOpen ? null : idx)}
-                className={`relative flex gap-3 w-full text-left rounded-lg px-2 py-2 transition-colors ${
+                aria-expanded={isOpen}
+                className={`relative flex gap-3 w-full text-left rounded-lg px-2 py-2 transition-colors cursor-pointer ${
                   isCritical ? severity.bg : 'hover:bg-surface-hover'
                 } ${isCritical ? 'border' : ''}`}
               >

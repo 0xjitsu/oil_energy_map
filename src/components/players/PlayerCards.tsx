@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { marketPlayers } from '@/data/players';
 import { RiskLevel } from '@/types';
+import { ChevronDown } from 'lucide-react';
 import { useHighlight } from '@/lib/HighlightContext';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
@@ -41,7 +42,8 @@ export function PlayerCards() {
             key={player.name}
             type="button"
             onClick={() => setExpanded(isExpanded ? null : player.name)}
-            className="glass-card card-interactive p-4 text-left w-full transition-all duration-200"
+            className="glass-card card-interactive p-4 text-left w-full transition-all duration-200 cursor-pointer"
+            aria-expanded={isExpanded}
             style={{
               borderLeftColor: player.color,
               borderLeftWidth: 3,
@@ -73,6 +75,11 @@ export function PlayerCards() {
               >
                 {player.marketShare}%
               </span>
+              <ChevronDown
+                className={`w-3.5 h-3.5 text-text-dim transition-transform duration-200 ${
+                  isExpanded ? 'rotate-180' : ''
+                }`}
+              />
             </div>
 
             {/* Key metrics row */}
@@ -115,6 +122,12 @@ export function PlayerCards() {
                 />
               </div>
             </div>
+
+            {!isExpanded && (
+              <p className="text-[9px] font-mono text-text-dim mt-2 text-center">
+                Tap for details
+              </p>
+            )}
 
             {/* Expanded detail */}
             <div

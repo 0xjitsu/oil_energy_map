@@ -46,7 +46,7 @@ function BenchmarkCard({
 
   return (
     <div
-      className="glass-card card-interactive p-4"
+      className="glass-card p-4"
       style={
         exceedsRange
           ? {

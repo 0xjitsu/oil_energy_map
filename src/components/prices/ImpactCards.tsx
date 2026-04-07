@@ -69,7 +69,7 @@ export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {impacts.map((item) => (
-          <div key={item.label} className={`glass-card card-interactive p-4 cursor-default border-l-2 ${borderColor}`}>
+          <div key={item.label} className={`glass-card p-4 cursor-default border-l-2 ${borderColor}`}>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-lg" role="img" aria-label={item.label}>
                 {item.icon}
