@@ -9,6 +9,7 @@ import { AlertBell } from '@/components/alerts/AlertBell';
 
 const NAV_LINKS = [
   { href: '/', label: 'Dashboard' },
+  { href: '/cascade', label: 'Cascade' },
   { href: '/primer', label: 'Oil Primer' },
   { href: '/references', label: 'References' },
   { href: '/roadmap', label: 'Roadmap' },
