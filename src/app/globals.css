@@ -289,10 +289,29 @@ input[type="range"]::-webkit-slider-thumb {
   background: linear-gradient(90deg, transparent, var(--border-hover) 20%, var(--border-hover) 80%, transparent);
 }
 
+/* Pipeline flow animation */
+@keyframes pipeline-flow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.pipeline-animated {
+  background: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 8px,
+    var(--accent-petron) 8px,
+    var(--accent-petron) 16px
+  );
+  background-size: 100% 32px;
+  animation: pipeline-flow 2s linear infinite;
+}
+
 /* Primer stage reduced-motion override */
 @media (prefers-reduced-motion: reduce) {
   .primer-stage,
-  .primer-stage * {
+  .primer-stage *,
+  .pipeline-animated {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

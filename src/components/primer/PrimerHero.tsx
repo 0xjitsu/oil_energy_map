@@ -41,6 +41,18 @@ export function PrimerHero() {
         </span>
       </div>
 
+      {/* Animated pipeline icon */}
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="w-16 h-px bg-gradient-to-r from-transparent to-petron" />
+        <div className="w-10 h-10 rounded-xl bg-petron/10 border border-petron/20 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-petron">
+            <circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5" />
+            <circle cx="10" cy="10" r="3" fill="currentColor" className="animate-pulse" />
+          </svg>
+        </div>
+        <div className="w-16 h-px bg-gradient-to-l from-transparent to-petron" />
+      </div>
+
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-[var(--text-primary)] mb-4">
         How Energy Reaches You
       </h1>
@@ -51,12 +63,21 @@ export function PrimerHero() {
         understand why pump prices move the way they do.
       </p>
 
-      <div className="mt-8 flex items-center justify-center gap-6 text-[10px] font-mono uppercase tracking-widest text-[var(--text-muted)]">
-        <span>7 stages</span>
-        <span className="w-1 h-1 rounded-full bg-[var(--text-muted)]" />
-        <span>3 crude benchmarks</span>
-        <span className="w-1 h-1 rounded-full bg-[var(--text-muted)]" />
-        <span>100% PH context</span>
+      <div className="mt-8 flex items-center justify-center gap-8">
+        {[
+          { value: '7', label: 'Stages' },
+          { value: '10,469', label: 'Stations' },
+          { value: '₱130.75', label: 'Diesel/L' },
+        ].map((stat) => (
+          <div key={stat.label} className="text-center">
+            <div className="text-xl sm:text-2xl font-mono font-bold text-text-primary tabular-nums">
+              {stat.value}
+            </div>
+            <div className="text-[10px] font-mono uppercase tracking-widest text-text-muted mt-1">
+              {stat.label}
+            </div>
+          </div>
+        ))}
       </div>
 
       {/* Scroll CTA */}
