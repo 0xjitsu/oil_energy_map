@@ -129,6 +129,7 @@ export function EventTimeline() {
             key={f.key}
             type="button"
             onClick={() => setSeverityFilter(f.key)}
+            aria-pressed={severityFilter === f.key}
             className={`px-2 py-1 text-[10px] font-mono rounded-md transition-colors ${
               severityFilter === f.key
                 ? 'bg-border-hover text-text-primary'
@@ -150,6 +151,7 @@ export function EventTimeline() {
               key={key}
               type="button"
               onClick={() => setSourceFilter(active ? 'all' : key)}
+              aria-pressed={sourceFilter === key}
               className={`inline-flex items-center gap-1 px-2 py-1 text-[10px] font-mono rounded-md transition-colors ${
                 active
                   ? `bg-border-hover ${src.color}`

@@ -44,6 +44,7 @@ export function PlayerCards() {
             onClick={() => setExpanded(isExpanded ? null : player.name)}
             className="glass-card card-interactive p-4 text-left w-full transition-all duration-200 cursor-pointer"
             aria-expanded={isExpanded}
+            aria-label={`${player.name} market details`}
             style={{
               borderLeftColor: player.color,
               borderLeftWidth: 3,

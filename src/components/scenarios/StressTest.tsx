@@ -38,7 +38,7 @@ function RiskRadar({ dimensions }: { dimensions: { label: string; value: number 
   });
 
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="mx-auto">
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="mx-auto" role="img" aria-label={`Risk radar: ${dimensions.map(d => `${d.label} ${d.value}%`).join(', ')}`}>
       {/* Background rings */}
       {ringPaths.map((points, i) => (
         <polygon
