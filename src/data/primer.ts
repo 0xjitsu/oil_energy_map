@@ -4,6 +4,12 @@ export interface StageDataPoint {
   source?: string;
 }
 
+export interface StageBar {
+  label: string;
+  value: number;   // 0-100
+  color?: string;  // defaults to stage color
+}
+
 export interface SupplyChainStage {
   id: string;
   number: number;
@@ -16,6 +22,8 @@ export interface SupplyChainStage {
   headline: string;
   dataPoints: StageDataPoint[];
   visualType: 'animation' | 'diagram' | 'map-preview';
+  bars?: StageBar[];           // proportional bar charts for this stage
+  pipelineLabel?: string;      // label on the connector to next stage
 }
 
 export interface CrudeOilType {
@@ -49,6 +57,12 @@ export const supplyChainStages: SupplyChainStage[] = [
       { value: '2M', label: 'barrels per VLCC tanker' },
     ],
     visualType: 'diagram',
+    bars: [
+      { label: 'Middle East production share', value: 31 },
+      { label: 'PH domestic production', value: 5 },
+      { label: 'Import dependency', value: 95 },
+    ],
+    pipelineLabel: 'Loaded onto VLCCs',
   },
   {
     id: 'maritime',
@@ -66,6 +80,11 @@ export const supplyChainStages: SupplyChainStage[] = [
       { value: '21 days', label: 'voyage from Middle East' },
     ],
     visualType: 'diagram',
+    bars: [
+      { label: 'Hormuz seaborne oil transit', value: 20 },
+      { label: 'Malacca ASEAN import share', value: 80 },
+    ],
+    pipelineLabel: 'Arrives at port',
   },
   {
     id: 'refinery',
@@ -83,6 +102,11 @@ export const supplyChainStages: SupplyChainStage[] = [
       { value: '~30%', label: 'domestic refining share' },
     ],
     visualType: 'diagram',
+    bars: [
+      { label: 'Domestic refining capacity', value: 30 },
+      { label: 'Imported as finished product', value: 70 },
+    ],
+    pipelineLabel: 'Refined products',
   },
   {
     id: 'terminals',
@@ -100,6 +124,11 @@ export const supplyChainStages: SupplyChainStage[] = [
       { value: '15–30', label: 'days of supply buffer' },
     ],
     visualType: 'diagram',
+    bars: [
+      { label: 'Finished product imports', value: 70 },
+      { label: 'From Bataan refinery', value: 30 },
+    ],
+    pipelineLabel: 'Tank truck dispatch',
   },
   {
     id: 'depots',
@@ -117,6 +146,12 @@ export const supplyChainStages: SupplyChainStage[] = [
       { value: '₱2–5/L', label: 'transport cost adder for remote areas' },
     ],
     visualType: 'diagram',
+    bars: [
+      { label: 'Luzon depot coverage', value: 60 },
+      { label: 'Visayas depot coverage', value: 25 },
+      { label: 'Mindanao depot coverage', value: 15 },
+    ],
+    pipelineLabel: 'Last-mile delivery',
   },
   {
     id: 'stations',
@@ -134,6 +169,14 @@ export const supplyChainStages: SupplyChainStage[] = [
       { value: '7', label: 'major fuel brands' },
     ],
     visualType: 'map-preview',
+    bars: [
+      { label: 'Petron market share', value: 23 },
+      { label: 'Shell market share', value: 11 },
+      { label: 'Caltex market share', value: 6 },
+      { label: 'Phoenix market share', value: 15 },
+      { label: 'Others', value: 45 },
+    ],
+    pipelineLabel: 'Consumer purchase',
   },
   {
     id: 'consumer',
@@ -151,6 +194,11 @@ export const supplyChainStages: SupplyChainStage[] = [
       { value: '₱1–2', label: 'fare increase per ₱5/L diesel hike' },
     ],
     visualType: 'diagram',
+    bars: [
+      { label: 'Transport share of household budget', value: 10 },
+      { label: 'Food share of household budget', value: 40 },
+      { label: 'Energy share of household budget', value: 8 },
+    ],
   },
 ];
 

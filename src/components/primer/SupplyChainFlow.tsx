@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import { supplyChainStages } from '@/data/primer';
 import { TimelineProgress } from './TimelineProgress';
 import { StageSection } from './StageSection';
+import { PipelineConnector } from './PipelineConnector';
 
 export function SupplyChainFlow() {
   const [activeStage, setActiveStage] = useState(1);
@@ -24,12 +25,21 @@ export function SupplyChainFlow() {
       <TimelineProgress activeStage={activeStage} />
 
       <div className="lg:pl-16 xl:pl-48">
-        {supplyChainStages.map((stage) => (
-          <StageSection
-            key={stage.id}
-            stage={stage}
-            onInView={handleInView}
-          />
+        {supplyChainStages.map((stage, idx) => (
+          <div key={stage.id}>
+            <StageSection
+              stage={stage}
+              onInView={handleInView}
+            />
+            {/* Pipeline connector to next stage */}
+            {idx < supplyChainStages.length - 1 && (
+              <PipelineConnector
+                fromColor={stage.color}
+                toColor={supplyChainStages[idx + 1].color}
+                label={stage.pipelineLabel}
+              />
+            )}
+          </div>
         ))}
       </div>
     </section>

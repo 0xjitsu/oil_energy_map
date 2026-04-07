@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import type { SupplyChainStage } from '@/data/primer';
 import { DataCallout } from './DataCallout';
+import { ProportionalBar } from './ProportionalBar';
+import { AnimatedCounter } from './AnimatedCounter';
 
 interface StageSectionProps {
   stage: SupplyChainStage;
@@ -44,12 +46,18 @@ export function StageSection({ stage, onInView }: StageSectionProps) {
       className="primer-stage min-h-[80vh] flex items-center scroll-mt-20"
     >
       <div
-        className="w-full max-w-4xl mx-auto transition-all duration-700 ease-out"
+        className="relative w-full max-w-4xl mx-auto transition-all duration-700 ease-out"
         style={{
           opacity: visible ? 1 : 0,
           transform: visible ? 'translateY(0)' : 'translateY(30px)',
         }}
       >
+        {/* Stage number accent strip */}
+        <div
+          className="absolute left-0 right-0 h-px opacity-20"
+          style={{ backgroundColor: stage.color, top: '2rem' }}
+        />
+
         {/* Stage divider */}
         {stage.number > 1 && <div className="stage-divider mb-12" />}
 
@@ -134,16 +142,56 @@ export function StageSection({ stage, onInView }: StageSectionProps) {
 
           {/* Right: data callouts */}
           <div className="flex flex-col gap-6 lg:pt-2">
-            {stage.dataPoints.map((dp, i) => (
-              <DataCallout
-                key={dp.label}
-                value={dp.value}
-                label={dp.label}
-                source={dp.source}
-                color={stage.color}
-                delay={i * 150}
-              />
-            ))}
+            {stage.dataPoints.map((dp, i) => {
+              // Parse numeric values for animated counter
+              const numericMatch = dp.value.match(/^([₱$]?)([0-9,.]+)(.*)$/);
+              if (numericMatch) {
+                const [, prefix, numStr, suffix] = numericMatch;
+                const num = parseFloat(numStr.replace(/,/g, ''));
+                if (!isNaN(num)) {
+                  return (
+                    <AnimatedCounter
+                      key={dp.label}
+                      end={num}
+                      prefix={prefix}
+                      suffix={suffix}
+                      decimals={numStr.includes('.') ? numStr.split('.')[1].length : 0}
+                      color={stage.color}
+                      label={dp.label}
+                      source={dp.source}
+                    />
+                  );
+                }
+              }
+              // Fallback to DataCallout for non-numeric values
+              return (
+                <DataCallout
+                  key={dp.label}
+                  value={dp.value}
+                  label={dp.label}
+                  source={dp.source}
+                  color={stage.color}
+                  delay={i * 150}
+                />
+              );
+            })}
+
+            {/* Proportional bars */}
+            {stage.bars && stage.bars.length > 0 && (
+              <div className="space-y-3 mt-2">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-text-dim">
+                  By the numbers
+                </span>
+                {stage.bars.map((bar) => (
+                  <ProportionalBar
+                    key={bar.label}
+                    value={bar.value}
+                    label={bar.label}
+                    color={bar.color ?? stage.color}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
