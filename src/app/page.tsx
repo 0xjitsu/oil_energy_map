@@ -71,6 +71,33 @@ function SectionHeader({
   );
 }
 
+function ActDivider({
+  number,
+  title,
+  description,
+}: {
+  number: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="pt-6 pb-2">
+      <div className="flex items-center gap-3 mb-2">
+        <span className="font-mono text-[11px] font-bold text-text-dim tracking-widest">
+          {number}
+        </span>
+        <div className="flex-1 h-px bg-border-subtle" />
+      </div>
+      <h2 className="text-lg sm:text-xl font-bold text-text-primary tracking-tight">
+        {title}
+      </h2>
+      <p className="text-sm text-text-secondary mt-1 max-w-xl">
+        {description}
+      </p>
+    </div>
+  );
+}
+
 export default function Home() {
   const [mapMode, setMapMode] = useState<MapMode>('live');
   const [scenarioParams, setScenarioParams] = useState<ScenarioParams>({
@@ -92,6 +119,12 @@ export default function Home() {
 
       <main className="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-8">
         {/* ━━━ ACT 1: WHAT'S HAPPENING NOW ━━━ */}
+        <ActDivider
+          number="01"
+          title="What's Happening Now"
+          description="Live supply chain status — crude benchmarks, forex, pump prices, and the infrastructure that moves oil across the Philippines."
+        />
+
         {/* Executive Snapshot — Hero KPIs */}
         <div id="snapshot" className="scroll-mt-20">
           <ExecutiveSnapshot scenarioParams={scenarioParams} />
@@ -117,6 +150,12 @@ export default function Home() {
         </section>
 
         {/* ━━━ ACT 2: WHAT IT COSTS ━━━ */}
+        <ActDivider
+          number="02"
+          title="What It Costs"
+          description="Pump prices, price benchmarks, and where to fill up — the direct impact on your wallet and the stations near you."
+        />
+
         {/* Pump Prices + Impact Cards — 2 columns */}
         <section className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           <div>
@@ -141,6 +180,12 @@ export default function Home() {
         </section>
 
         {/* ━━━ ACT 3: WHAT-IF ANALYSIS ━━━ */}
+        <ActDivider
+          number="03"
+          title="What-If Analysis"
+          description="Model disruption scenarios, stress-test the supply chain, and estimate the consumer impact of price shocks."
+        />
+
         {/* Scenario Planner */}
         <section id="scenario" className="scroll-mt-20">
           <ScenarioPlanner
@@ -164,6 +209,12 @@ export default function Home() {
         </section>
 
         {/* ━━━ ACT 4: WHO'S INVOLVED ━━━ */}
+        <ActDivider
+          number="04"
+          title="Who's Involved"
+          description="Market players, system health indicators, sentiment analysis, and the latest intelligence from news and social feeds."
+        />
+
         {/* Market Players + System Health — 2 column on desktop */}
         <section id="players" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div>
