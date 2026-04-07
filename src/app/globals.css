@@ -28,6 +28,12 @@
   --ph-blue: #0038a8;
   --ph-red: #ce1126;
   --ph-yellow: #fcd116;
+
+  /* Crisis UI tokens — overridden by CrisisProvider */
+  --accent-primary: #3b82f6;
+  --bg-card-crisis: rgba(10, 15, 26, 0.7);
+  --border-crisis: rgba(255, 255, 255, 0.06);
+  --scan-line-opacity: 0;
 }
 
 * {
@@ -40,6 +46,17 @@ html,
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
+}
+
+/* Scan line overlay — NERV crisis effect */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, var(--scan-line-opacity)) 2px, rgba(255, 255, 255, var(--scan-line-opacity)) 4px);
+  transition: opacity 1.5s ease;
 }
 
 /* MapLibre dark overrides */
@@ -56,6 +73,7 @@ body {
 
 /* Glass morphism utility classes */
 .glass-card {
+  position: relative;
   background: rgba(10, 15, 26, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -64,6 +82,35 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   contain: layout style;
 }
+
+/* Crisis UI — glass-card transitions */
+.glass-card { transition: border-color 1.5s ease, background 1.5s ease; }
+
+[data-crisis-level="elevated"] .glass-card,
+[data-crisis-level="crisis"] .glass-card {
+  border-color: var(--border-crisis);
+  background: var(--bg-card-crisis);
+}
+
+/* NERV corner accents */
+.glass-card::before, .glass-card::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--border-crisis);
+  border-style: solid;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  pointer-events: none;
+}
+.glass-card::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+.glass-card::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+[data-crisis-level="elevated"] .glass-card::before,
+[data-crisis-level="elevated"] .glass-card::after { opacity: 0.5; }
+[data-crisis-level="crisis"] .glass-card::before,
+[data-crisis-level="crisis"] .glass-card::after { opacity: 1; }
 
 .card-interactive {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -307,15 +354,12 @@ input[type="range"]::-webkit-slider-thumb {
   animation: pipeline-flow 2s linear infinite;
 }
 
-/* Primer stage reduced-motion override */
+/* Reduced-motion override */
 @media (prefers-reduced-motion: reduce) {
-  .primer-stage,
-  .primer-stage *,
-  .pipeline-animated {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

@@ -18,6 +18,7 @@ import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 
+import { CrisisProvider } from '@/lib/CrisisProvider';
 import type { MapMode, ScenarioParams } from '@/types';
 
 const PricePanel = dynamic(
@@ -111,6 +112,7 @@ export default function Home() {
   const handleParamsChange = useCallback(setScenarioParams, []);
 
   return (
+    <CrisisProvider scenarioParams={scenarioParams}>
     <div className="min-h-screen bg-bg-primary overflow-x-clip">
       <ScrollProgress />
       <AlertBanner />
@@ -247,5 +249,6 @@ export default function Home() {
       <HowToGuide />
       <Footer />
     </div>
+    </CrisisProvider>
   );
 }

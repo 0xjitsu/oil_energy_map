@@ -44,6 +44,8 @@ const config: Config = {
           muted: "var(--text-muted)",
           dim: "var(--text-dim)",
         },
+        accent: { primary: "var(--accent-primary)" },
+        crisis: { card: "var(--bg-card-crisis)", border: "var(--border-crisis)" },
         petron: "var(--accent-petron)",
         shell: "var(--accent-shell)",
         chevron: "var(--accent-chevron)",

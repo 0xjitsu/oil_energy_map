@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Ticker } from '@/components/ui/Ticker';
 import { useEvents } from '@/hooks/useEvents';
 import { AlertBell } from '@/components/alerts/AlertBell';
+import { useCrisis } from '@/lib/CrisisProvider';
 
 const NAV_LINKS = [
   { href: '/', label: 'Dashboard' },
@@ -51,14 +52,15 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
   const pathname = usePathname();
   const { isLive, lastUpdated } = useEvents();
   const updatedAgo = useRelativeTime(lastUpdated);
+  const { crisisLevel } = useCrisis();
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl header-bg">
       {/* Philippine flag accent bars */}
       <div className="flex h-[3px]">
-        <div className="flex-1 bg-ph-blue" />
+        <div className={`flex-1 ${crisisLevel === 'CRISIS' ? 'bg-status-red' : 'bg-ph-blue'}`} />
         <div className="flex-1 bg-ph-red" />
-        <div className="flex-1 bg-ph-yellow" />
+        <div className={`flex-1 ${crisisLevel === 'CRISIS' ? 'bg-status-red' : 'bg-ph-yellow'}`} />
       </div>
 
       <div className="flex items-center justify-between px-4 py-3 sm:px-6">
@@ -66,7 +68,9 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
         <div className="flex items-center gap-6">
           <Link href="/" className="group">
             <h1 className="text-sm font-mono tracking-widest text-text-primary uppercase group-hover:text-white transition-colors">
+              {crisisLevel === 'CRISIS' && <span aria-hidden="true" className="animate-pulse text-status-red">&laquo; </span>}
               Energy Intelligence Map
+              {crisisLevel === 'CRISIS' && <span aria-hidden="true" className="animate-pulse text-status-red"> &raquo;</span>}
             </h1>
             <p className="text-[10px] font-mono tracking-widest text-text-subtle uppercase mt-0.5">
               Philippines Supply Chain
