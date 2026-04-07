@@ -215,32 +215,31 @@ export default function Home() {
           description="Market players, system health indicators, sentiment analysis, and the latest intelligence from news and social feeds."
         />
 
-        {/* Market Players + System Health — 2 column on desktop */}
-        <section id="players" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        {/* Market Players — full width with donut + cards side by side */}
+        <section id="players" className="scroll-mt-20">
+          <SectionHeader color="bg-seaoil" label="Market Players" />
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4">
+            <MarketShare />
+            <PlayerCards />
+          </div>
+        </section>
+
+        {/* System Health + Sentiment — 2 column */}
+        <section className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           <div>
-            <SectionHeader color="bg-seaoil" label="Market Players" />
-            <div className="grid grid-cols-1 xl:grid-cols-[280px_1fr] gap-4">
-              <MarketShare />
-              <PlayerCards />
-            </div>
+            <SectionHeader color="bg-status-green" label="System Health" />
+            <VitalSigns scenarioParams={scenarioParams} mapMode={mapMode} />
           </div>
-
-          <div className="space-y-6">
-            <div>
-              <SectionHeader color="bg-status-green" label="System Health" />
-              <VitalSigns scenarioParams={scenarioParams} mapMode={mapMode} />
-            </div>
-
-            <div>
-              <SectionHeader color="bg-shell" label="NLP Sentiment" />
-              <SentimentGauge />
-            </div>
-
-            <div>
-              <SectionHeader color="bg-status-yellow" label="Event Timeline" />
-              <EventTimeline />
-            </div>
+          <div>
+            <SectionHeader color="bg-shell" label="NLP Sentiment" />
+            <SentimentGauge />
           </div>
+        </section>
+
+        {/* Event Timeline — full width */}
+        <section className="scroll-mt-20">
+          <SectionHeader color="bg-status-yellow" label="Event Timeline" />
+          <EventTimeline />
         </section>
       </main>
 
