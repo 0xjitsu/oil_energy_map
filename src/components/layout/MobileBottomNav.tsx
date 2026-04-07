@@ -5,9 +5,9 @@ import { useScrollSpy } from '@/hooks/useScrollSpy';
 const MOBILE_SECTIONS = [
   { id: 'snapshot', label: 'Home', icon: '📊' },
   { id: 'map', label: 'Map', icon: '🗺️' },
+  { id: 'prices', label: 'Prices', icon: '💰' },
   { id: 'scenario', label: 'Plan', icon: '🎛️' },
   { id: 'players', label: 'Market', icon: '🏢' },
-  { id: 'health', label: 'Health', icon: '🩺' },
 ];
 
 const MOBILE_SECTION_IDS = MOBILE_SECTIONS.map((s) => s.id);

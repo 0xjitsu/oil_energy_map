@@ -17,7 +17,7 @@ import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
-import { CascadeSection } from '@/components/cascade/CascadeSection';
+
 import type { MapMode, ScenarioParams } from '@/types';
 
 const PricePanel = dynamic(
@@ -91,6 +91,7 @@ export default function Home() {
       <SectionNav />
 
       <main className="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-8">
+        {/* ━━━ ACT 1: WHAT'S HAPPENING NOW ━━━ */}
         {/* Executive Snapshot — Hero KPIs */}
         <div id="snapshot" className="scroll-mt-20">
           <ExecutiveSnapshot scenarioParams={scenarioParams} />
@@ -115,6 +116,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ━━━ ACT 2: WHAT IT COSTS ━━━ */}
         {/* Pump Prices + Impact Cards — 2 columns */}
         <section className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           <div>
@@ -127,23 +129,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Station Tracker */}
-        <section id="tracker" className="scroll-mt-20">
-          <StationTrackerSection />
-        </section>
-
-        {/* Cascade Effects — Second-order impact tracker */}
-        <section id="cascade" className="scroll-mt-20">
-          <SectionHeader color="bg-status-red" label="Cascade Effects" />
-          <CascadeSection />
-        </section>
-
         {/* Price Intelligence — Full-width benchmark grid */}
         <section id="prices" className="scroll-mt-20">
           <SectionHeader color="bg-shell" label="Price Intelligence" />
           <PricePanel />
         </section>
 
+        {/* Station Tracker */}
+        <section id="tracker" className="scroll-mt-20">
+          <StationTrackerSection />
+        </section>
+
+        {/* ━━━ ACT 3: WHAT-IF ANALYSIS ━━━ */}
         {/* Scenario Planner */}
         <section id="scenario" className="scroll-mt-20">
           <ScenarioPlanner
@@ -154,18 +151,19 @@ export default function Home() {
           />
         </section>
 
-        {/* Monte Carlo Stress Test */}
-        <section id="stress-test" className="scroll-mt-20">
-          <SectionHeader color="bg-status-yellow" label="Stress Test" />
-          <StressTest scenarioParams={scenarioParams} />
+        {/* Stress Test + Consumer Impact — 2 columns */}
+        <section id="stress-test" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          <div>
+            <SectionHeader color="bg-status-yellow" label="Stress Test" />
+            <StressTest scenarioParams={scenarioParams} />
+          </div>
+          <div>
+            <SectionHeader color="bg-phoenix" label="Consumer Impact" />
+            <ImpactCalculator scenarioParams={scenarioParams} />
+          </div>
         </section>
 
-        {/* Consumer Impact Calculator */}
-        <section id="impact" className="scroll-mt-20">
-          <SectionHeader color="bg-phoenix" label="Consumer Impact" />
-          <ImpactCalculator scenarioParams={scenarioParams} />
-        </section>
-
+        {/* ━━━ ACT 4: WHO'S INVOLVED ━━━ */}
         {/* Market Players + System Health — 2 column on desktop */}
         <section id="players" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div>
