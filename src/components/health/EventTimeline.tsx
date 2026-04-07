@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useEvents } from '@/hooks/useEvents';
 import { Severity, SourceType } from '@/types';
 import { ExternalLink, Newspaper, Landmark, MessageCircle, Bot, TrendingUp, ChevronDown } from 'lucide-react';
+import { SourceAttribution } from '@/components/ui/SourceAttribution';
+import { EmptyState } from '@/components/ui/EmptyState';
 
 const SEVERITY_COLORS: Record<Severity, { dot: string; bg: string; text: string; label: string }> = {
   red: {
@@ -241,6 +243,15 @@ export function EventTimeline() {
         </div>
       </div>
 
+      {/* Empty state */}
+      {displayed.length === 0 && (
+        <EmptyState
+          icon={<Newspaper className="w-6 h-6" />}
+          message="No events match the current filters"
+          minH="80px"
+        />
+      )}
+
       {/* Show more / less */}
       {filtered.length > 8 && (
         <button
@@ -251,6 +262,10 @@ export function EventTimeline() {
           {showAll ? `Show less` : `Show all ${filtered.length} events`}
         </button>
       )}
+
+      <SourceAttribution
+        source={isLive ? 'RSS Intelligence Feeds' : 'Cached events'}
+      />
     </div>
   );
 }

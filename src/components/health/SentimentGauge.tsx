@@ -1,6 +1,9 @@
 'use client';
 
+import { useRef, useEffect } from 'react';
 import { useSentiment, SentimentResult } from '@/hooks/useSentiment';
+import { SparkChart } from '@/components/prices/SparkChart';
+import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
 const SENTIMENT_BADGE: Record<SentimentResult['sentiment'], { bg: string; text: string }> = {
   positive: { bg: 'bg-emerald-500/20 border-emerald-500/30', text: 'text-emerald-400' },
@@ -17,9 +20,37 @@ function overallLabel(score: number): { label: string; color: string; bgColor: s
 export function SentimentGauge() {
   const { sentiments, overallScore, isLoading, error } = useSentiment();
   const overall = overallLabel(overallScore);
+  const historyRef = useRef<number[]>([]);
+
+  // Track sentiment history (last 10 readings)
+  useEffect(() => {
+    if (!isLoading && !error && sentiments.length > 0) {
+      const history = historyRef.current;
+      history.push(overallScore);
+      if (history.length > 10) history.shift();
+    }
+  }, [overallScore, isLoading, error, sentiments.length]);
 
   // Normalize score from [-1, 1] to [0, 100] for the gauge bar
   const gaugePercent = Math.round((overallScore + 1) * 50);
+
+  // Determine trend
+  const history = historyRef.current;
+  const trend = (() => {
+    if (history.length < 2) return 'stable' as const;
+    const recent = history[history.length - 1];
+    const prev = history[history.length - 2];
+    const diff = recent - prev;
+    if (diff > 0.05) return 'improving' as const;
+    if (diff < -0.05) return 'deteriorating' as const;
+    return 'stable' as const;
+  })();
+
+  const trendConfig = {
+    improving: { arrow: '▲', color: 'text-emerald-400', sparkColor: '#34d399' },
+    deteriorating: { arrow: '▼', color: 'text-red-400', sparkColor: '#f87171' },
+    stable: { arrow: '–', color: 'text-text-subtle', sparkColor: '#71717a' },
+  }[trend];
 
   if (isLoading) {
     return (
@@ -85,6 +116,24 @@ export function SentimentGauge() {
         </div>
       </div>
 
+      {/* Trend sparkline + shift arrow */}
+      {history.length >= 2 && (
+        <div className="flex items-center gap-2 mb-3">
+          <span className={`text-xs font-mono font-bold ${trendConfig.color}`}>
+            {trendConfig.arrow}
+          </span>
+          <SparkChart
+            data={history.map((v) => (v + 1) * 50)}
+            color={trendConfig.sparkColor}
+            width={80}
+            height={20}
+          />
+          <span className="text-[9px] font-mono text-text-dim">
+            {trend === 'improving' ? 'Improving' : trend === 'deteriorating' ? 'Deteriorating' : 'Stable'}
+          </span>
+        </div>
+      )}
+
       {/* Sentiment breakdown counts */}
       <div className="flex items-center gap-4 mb-3">
         <div className="flex items-center gap-1.5">
@@ -119,6 +168,8 @@ export function SentimentGauge() {
           );
         })}
       </div>
+
+      <SourceAttribution source="NLP Sentiment Analysis" updated="Polled every 15m" />
     </div>
   );
 }

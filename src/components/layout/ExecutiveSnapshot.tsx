@@ -97,9 +97,23 @@ function HeroKPI({
       </div>
 
       {/* Delta detail */}
-      <p className={`mt-3 text-xs font-mono ${isUp ? 'text-red-400/80' : 'text-emerald-400/80'}`}>
-        {isUp ? '↑' : '↓'} {deltaLabel} vs prev week
-      </p>
+      <div className="mt-3 flex items-center justify-between">
+        <p className={`text-xs font-mono flex items-center gap-1 ${isUp ? 'text-red-400/80' : 'text-emerald-400/80'}`}>
+          <span
+            style={{
+              display: 'inline-block',
+              transform: `scale(${1 + Math.min(Math.abs(pctChange) / 10, 1.5)})`,
+              transition: 'transform 300ms ease-out',
+            }}
+          >
+            {isUp ? '▲' : '▼'}
+          </span>
+          {deltaLabel} vs prev week
+        </p>
+        <span className="text-[10px] font-mono text-text-dim">
+          prev: {formatValue(base, unit)}
+        </span>
+      </div>
     </div>
   );
 }

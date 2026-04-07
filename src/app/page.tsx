@@ -19,39 +19,51 @@ import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 
 import { CrisisProvider } from '@/lib/CrisisProvider';
+import { HighlightProvider } from '@/lib/HighlightContext';
+import { FadeIn } from '@/components/ui/FadeIn';
+import {
+  PricePanelSkeleton,
+  ScenarioPlannerSkeleton,
+  MarketShareSkeleton,
+  PlayerCardsSkeleton,
+  ImpactCalculatorSkeleton,
+  StressTestSkeleton,
+  TimelineScrubberSkeleton,
+  HowToGuideSkeleton,
+} from '@/components/ui/Skeleton';
 import type { MapMode, ScenarioParams } from '@/types';
 
 const PricePanel = dynamic(
   () => import('@/components/prices/PricePanel').then((m) => m.PricePanel),
-  { ssr: false },
+  { ssr: false, loading: () => <PricePanelSkeleton /> },
 );
 const ScenarioPlanner = dynamic(
   () => import('@/components/scenarios/ScenarioPlanner').then((m) => m.ScenarioPlanner),
-  { ssr: false },
+  { ssr: false, loading: () => <ScenarioPlannerSkeleton /> },
 );
 const MarketShare = dynamic(
   () => import('@/components/players/MarketShare').then((m) => m.MarketShare),
-  { ssr: false },
+  { ssr: false, loading: () => <MarketShareSkeleton /> },
 );
 const PlayerCards = dynamic(
   () => import('@/components/players/PlayerCards').then((m) => m.PlayerCards),
-  { ssr: false },
+  { ssr: false, loading: () => <PlayerCardsSkeleton /> },
 );
 const ImpactCalculator = dynamic(
   () => import('@/components/consumer/ImpactCalculator').then((m) => m.ImpactCalculator),
-  { ssr: false },
+  { ssr: false, loading: () => <ImpactCalculatorSkeleton /> },
 );
 const StressTest = dynamic(
   () => import('@/components/scenarios/StressTest').then((m) => m.StressTest),
-  { ssr: false },
+  { ssr: false, loading: () => <StressTestSkeleton /> },
 );
 const TimelineScrubber = dynamic(
   () => import('@/components/timeline/TimelineScrubber').then((m) => m.TimelineScrubber),
-  { ssr: false },
+  { ssr: false, loading: () => <TimelineScrubberSkeleton /> },
 );
 const HowToGuide = dynamic(
   () => import('@/components/onboarding/HowToGuide').then((m) => m.HowToGuide),
-  { ssr: false },
+  { ssr: false, loading: () => <HowToGuideSkeleton /> },
 );
 
 function SectionHeader({
@@ -128,11 +140,14 @@ export default function Home() {
         />
 
         {/* Executive Snapshot — Hero KPIs */}
-        <div id="snapshot" className="scroll-mt-20">
-          <ExecutiveSnapshot scenarioParams={scenarioParams} />
-        </div>
+        <FadeIn delay={0}>
+          <div id="snapshot" className="scroll-mt-20">
+            <ExecutiveSnapshot scenarioParams={scenarioParams} />
+          </div>
+        </FadeIn>
 
         {/* Hero: Full-Width Map */}
+        <FadeIn delay={100}>
         <section id="map" className="scroll-mt-20">
           <SectionHeader color="bg-petron" label="Supply Chain Map" />
           <div className="relative">
@@ -150,13 +165,16 @@ export default function Home() {
             <TimelineScrubber visible={mapMode === 'timeline'} />
           </div>
         </section>
+        </FadeIn>
 
         {/* ━━━ ACT 2: WHAT IT COSTS ━━━ */}
+        <FadeIn>
         <ActDivider
           number="02"
           title="What It Costs"
           description="Pump prices, price benchmarks, and where to fill up — the direct impact on your wallet and the stations near you."
         />
+        </FadeIn>
 
         {/* Pump Prices + Impact Cards — 2 columns */}
         <section className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
@@ -182,11 +200,13 @@ export default function Home() {
         </section>
 
         {/* ━━━ ACT 3: WHAT-IF ANALYSIS ━━━ */}
+        <FadeIn>
         <ActDivider
           number="03"
           title="What-If Analysis"
           description="Model disruption scenarios, stress-test the supply chain, and estimate the consumer impact of price shocks."
         />
+        </FadeIn>
 
         {/* Scenario Planner */}
         <section id="scenario" className="scroll-mt-20">
@@ -211,19 +231,23 @@ export default function Home() {
         </section>
 
         {/* ━━━ ACT 4: WHO'S INVOLVED ━━━ */}
+        <FadeIn>
         <ActDivider
           number="04"
           title="Who's Involved"
           description="Market players, system health indicators, sentiment analysis, and the latest intelligence from news and social feeds."
         />
+        </FadeIn>
 
         {/* Market Players — full width with donut + cards side by side */}
         <section id="players" className="scroll-mt-20">
           <SectionHeader color="bg-seaoil" label="Market Players" />
-          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4">
-            <MarketShare />
-            <PlayerCards />
-          </div>
+          <HighlightProvider>
+            <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4">
+              <MarketShare />
+              <PlayerCards />
+            </div>
+          </HighlightProvider>
         </section>
 
         {/* System Health + Sentiment — 2 column */}

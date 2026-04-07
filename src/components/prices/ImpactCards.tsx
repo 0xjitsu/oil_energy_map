@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { IMPACT_ITEMS } from '@/lib/constants';
 import { InfoTip } from '@/components/ui/Tooltip';
 import type { ScenarioParams, ImpactItem } from '@/types';
+import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
 const BASELINE_BRENT = 106;
 
@@ -85,6 +86,7 @@ export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
           </div>
         ))}
       </div>
+      <SourceAttribution derived="Derived from Brent + Forex" />
     </div>
   );
 }

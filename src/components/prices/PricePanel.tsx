@@ -6,6 +6,7 @@ import { PriceBenchmark } from '@/types';
 import { SparkChart } from './SparkChart';
 import { InfoTip } from '@/components/ui/Tooltip';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
+import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
 function generateSparkData(value: number): number[] {
   const points: number[] = [];
@@ -41,8 +42,20 @@ function BenchmarkCard({
   // Derived from live feeds: dubai-crude, mops-gasoline, mops-diesel, sg-refining-margin
   const isDerived = !['brent-crude', 'php-usd', 'pump-gasoline', 'pump-diesel'].includes(benchmark.id);
 
+  const exceedsRange = Math.abs(parseFloat(changePct)) > 5;
+
   return (
-    <div className="glass-card card-interactive p-4">
+    <div
+      className="glass-card card-interactive p-4"
+      style={
+        exceedsRange
+          ? {
+              boxShadow: `0 0 16px ${isUp ? 'rgba(239,68,68,0.25)' : 'rgba(16,185,129,0.25)'}`,
+              borderColor: isUp ? 'rgba(239,68,68,0.4)' : 'rgba(16,185,129,0.4)',
+            }
+          : undefined
+      }
+    >
       <div className="flex items-center justify-between mb-2">
         <p className="text-[10px] uppercase tracking-widest text-text-muted flex items-center gap-1.5">
           {benchmark.name}
@@ -105,6 +118,9 @@ export function PricePanel() {
           <BenchmarkCard key={b.id} benchmark={b} history={priceHistory[b.id]} />
         ))}
       </div>
+      <SourceAttribution
+        source={isLive ? 'Yahoo Finance + FloatRates' : 'Static fallback data'}
+      />
     </div>
   );
 }

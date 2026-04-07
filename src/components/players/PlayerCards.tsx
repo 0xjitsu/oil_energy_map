@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { marketPlayers } from '@/data/players';
 import { RiskLevel } from '@/types';
+import { useHighlight } from '@/lib/HighlightContext';
+import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
 function vulnerabilityLevel(score: number): RiskLevel {
   if (score > 75) return 'red';
@@ -23,13 +25,16 @@ const STRATEGY_ICON: Record<string, string> = {
 
 export function PlayerCards() {
   const [expanded, setExpanded] = useState<string | null>(null);
+  const { highlightedPlayer } = useHighlight();
 
   return (
+    <div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {marketPlayers.map((player) => {
         const level = vulnerabilityLevel(player.vulnerabilityScore);
         const risk = RISK_COLORS[level];
         const isExpanded = expanded === player.name;
+        const isHighlighted = highlightedPlayer === player.name;
 
         return (
           <button
@@ -37,7 +42,16 @@ export function PlayerCards() {
             type="button"
             onClick={() => setExpanded(isExpanded ? null : player.name)}
             className="glass-card card-interactive p-4 text-left w-full transition-all duration-200"
-            style={{ borderLeftColor: player.color, borderLeftWidth: 3 }}
+            style={{
+              borderLeftColor: player.color,
+              borderLeftWidth: 3,
+              ...(isHighlighted
+                ? {
+                    boxShadow: `0 0 16px ${player.color}33, 0 0 4px ${player.color}22`,
+                    borderColor: player.color,
+                  }
+                : {}),
+            }}
           >
             {/* Header: logo + name + share */}
             <div className="flex items-center justify-between mb-3">
@@ -130,6 +144,8 @@ export function PlayerCards() {
           </button>
         );
       })}
+    </div>
+      <SourceAttribution source="Company filings + DOE data" />
     </div>
   );
 }

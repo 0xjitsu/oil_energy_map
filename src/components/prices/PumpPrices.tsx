@@ -3,6 +3,7 @@
 import { usePrices } from '@/hooks/usePrices';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 import { SparkChart } from './SparkChart';
+import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
 function PriceCard({
   label,
@@ -74,21 +75,24 @@ export function PumpPrices() {
   ] as const;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      {fuels.map(({ label, benchmark, sparkColor, accentColor }) => {
-        const change = benchmark.value - benchmark.previousWeek;
-        return (
-          <PriceCard
-            key={benchmark.id}
-            label={label}
-            value={benchmark.value}
-            change={change}
-            sparkData={priceHistory[benchmark.id] ?? [benchmark.value]}
-            sparkColor={sparkColor}
-            accentColor={accentColor}
-          />
-        );
-      })}
+    <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {fuels.map(({ label, benchmark, sparkColor, accentColor }) => {
+          const change = benchmark.value - benchmark.previousWeek;
+          return (
+            <PriceCard
+              key={benchmark.id}
+              label={label}
+              value={benchmark.value}
+              change={change}
+              sparkData={priceHistory[benchmark.id] ?? [benchmark.value]}
+              sparkColor={sparkColor}
+              accentColor={accentColor}
+            />
+          );
+        })}
+      </div>
+      <SourceAttribution source="DOE Oil Monitor" updated="Weekly SRP update" />
     </div>
   );
 }
