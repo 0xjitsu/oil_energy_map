@@ -176,6 +176,118 @@ const deckLayers = useMemo(() => [
 
 ---
 
+## Crisis UI System
+
+The dashboard has an adaptive visual system that shifts appearance based on a computed risk score.
+
+### Architecture
+
+- **CrisisProvider** (`src/lib/CrisisProvider.tsx`) wraps the entire page in a React Context
+- Computes a 0–100 crisis score from live signals, maps to three discrete levels
+- Injects CSS custom properties on `document.documentElement` — zero JS per frame after initial set
+- Sets `data-crisis-level` attribute on `<html>` for CSS-only visual shifts
+
+### Crisis Score Formula (`src/lib/crisisLevel.ts`)
+
+| Signal | Weight | Max |
+|--------|--------|-----|
+| Red events × 8 | Event severity | 40 |
+| Yellow events × 2 | Event severity | 20 |
+| Brent Δ% from prev week | Price volatility | 20 |
+| Hormuz weeks / 4 × 20 | Supply disruption | 20 |
+| **Total** | min(100, sum) | **100** |
+
+Returns 25 on error (safe CALM default).
+
+### Level Thresholds
+
+| Level | Score Range | Accent Color | Card BG | Border | Scan Lines |
+|-------|-----------|--------------|---------|--------|------------|
+| CALM | 0–30 | `#3b82f6` (blue) | `rgba(10,15,26,0.7)` | `rgba(255,255,255,0.06)` | Off |
+| ELEVATED | 31–60 | `#f59e0b` (amber) | `rgba(20,15,10,0.7)` | `rgba(245,158,11,0.15)` | Off |
+| CRISIS | 61–100 | `#ef4444` (red) | `rgba(30,10,10,0.7)` | `rgba(239,68,68,0.2)` | `0.03` |
+
+### CSS Integration
+
+Glass cards get NERV-style corner accents via `::before`/`::after` pseudo-elements, controlled by `[data-crisis-level]` selectors in `globals.css`. No component changes needed — the crisis level cascades through CSS.
+
+---
+
+## UI Primitives
+
+### Skeleton Loaders (`src/components/ui/Skeleton.tsx`)
+
+Three base primitives (`SkeletonBar`, `SkeletonCircle`, `SkeletonCard`) compose into 8 component-specific skeletons. All use `animate-pulse` with fixed `min-h` to prevent CLS.
+
+Wire to `dynamic()` imports:
+```tsx
+const PricePanel = dynamic(
+  () => import('@/components/prices/PricePanel').then((m) => m.PricePanel),
+  { ssr: false, loading: () => <PricePanelSkeleton /> },
+);
+```
+
+Available skeletons: `PricePanelSkeleton`, `ScenarioPlannerSkeleton`, `MarketShareSkeleton`, `PlayerCardsSkeleton`, `ImpactCalculatorSkeleton`, `StressTestSkeleton`, `TimelineScrubberSkeleton`, `HowToGuideSkeleton`
+
+### FadeIn (`src/components/ui/FadeIn.tsx`)
+
+IntersectionObserver-based scroll animation with SSR-safe state machine (`idle` → `pending` → `visible`).
+
+- Checks viewport on mount — items above fold render immediately (no flash)
+- Supports `delay` prop for stagger effects
+- Respects `prefers-reduced-motion` — skips all animation
+- Does NOT default `opacity: 0` — avoids SSR flash of invisible content
+
+```tsx
+<FadeIn delay={100}>
+  <section>...</section>
+</FadeIn>
+```
+
+### SourceAttribution (`src/components/ui/SourceAttribution.tsx`)
+
+Standardized source line for data cards. Three modes:
+- `source="DOE Oil Monitor"` — shows "Source: DOE Oil Monitor"
+- `updated="2024-03-15"` — appends relative time (e.g., "· 3d ago")
+- `derived="Derived from Brent + Forex"` — shows derived label instead
+
+All data cards MUST include a SourceAttribution footer.
+
+### GaugeBar (`src/components/ui/GaugeBar.tsx`)
+
+Horizontal bar with color-coded threshold zones (red/yellow/green). Props: `value` (0–100), `zones` (ThresholdZone[]), `height`, `showMarkers`.
+
+### HighlightContext (`src/lib/HighlightContext.tsx`)
+
+Cross-component hover linking. Wrap related components with `<HighlightProvider>`, consume with `useHighlight()`. Currently used for MarketShare donut ↔ PlayerCards glow synchronization.
+
+---
+
+## Lib Modules
+
+| Module | File | Purpose |
+|--------|------|---------|
+| crisisLevel | `src/lib/crisisLevel.ts` | Pure crisis score computation + level mapping + token lookup |
+| CrisisProvider | `src/lib/CrisisProvider.tsx` | React context, CSS token injection on `document.documentElement` |
+| HighlightContext | `src/lib/HighlightContext.tsx` | Cross-component hover state (highlightedPlayer) |
+| constants | `src/lib/constants.ts` | Impact items, vital sign defaults |
+| consumer-models | `src/lib/consumer-models.ts` | Consumer persona definitions, monthly cost calculations |
+| monte-carlo | `src/lib/monte-carlo.ts` | Monte Carlo simulation for price range projections |
+| priceSources | `src/lib/priceSources.ts` | Typed fetcher functions for Brent, forex, DOE prices |
+| region-analytics | `src/lib/region-analytics.ts` | Per-region station counts, brand breakdown, nearest infrastructure |
+| scenario-engine | `src/lib/scenario-engine.ts` | Pump price model from ScenarioParams (Brent/forex/Hormuz/refinery) |
+| station-status | `src/lib/station-status.ts` | Deterministic station status simulation (djb2 hash, regional disruption rates) |
+
+---
+
+## Error Handling
+
+- **Error boundary** (`src/app/error.tsx`): NERV-themed UI with retry button. Catches render errors in the main page.
+- **API fallback pattern**: All API routes return HTTP 200 with static fallback data when upstream sources fail. The dashboard never shows an empty state from API failure.
+- **Hook retry logic**: `useEvents` uses exponential backoff on fetch failure. `usePrices` polls every 5 minutes with silent retry.
+
+---
+
 ## Build & Deploy
 
 - Build: `pnpm build` — must pass clean before any commit

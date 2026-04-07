@@ -13,7 +13,7 @@
 [![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-000?style=flat-square&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/0xjitsu/oil_energy_map)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-[Live Demo](https://energy-intelligence-map.vercel.app) | [Quick Start](#quick-start) | [Features](#features) | [Intelligence Sources](#intelligence-sources) | [Architecture](#architecture) | [Deploy](#deploy)
+[Live Demo](https://energy-intelligence-map.vercel.app) | [Quick Start](#quick-start) | [Features](#features) | [Intelligence Sources](#intelligence-sources) | [Architecture](docs/ARCHITECTURE.md) | [Components](docs/COMPONENTS.md) | [API](docs/API.md) | [Contributing](CONTRIBUTING.md) | [Deploy](#deploy)
 
 </div>
 
