@@ -97,6 +97,9 @@ export function SentimentGauge() {
         </p>
         <span className={`text-sm font-mono font-bold ${overall.color}`}>
           {overall.label}
+          <span className="text-xs font-mono text-text-subtle ml-2">
+            ({overallScore > 0 ? '+' : ''}{overallScore.toFixed(2)})
+          </span>
         </span>
       </div>
 

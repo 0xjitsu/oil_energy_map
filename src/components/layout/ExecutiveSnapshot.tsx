@@ -35,6 +35,7 @@ function HeroKPI({
   accentBorder,
   tooltip,
   source,
+  targetId,
 }: {
   label: string;
   value: number;
@@ -46,6 +47,7 @@ function HeroKPI({
   accentBorder: string;
   tooltip: string;
   source?: 'live' | 'derived';
+  targetId?: string;
 }) {
   const animated = useAnimatedNumber(value);
   const isUp = delta > 0;
@@ -54,8 +56,13 @@ function HeroKPI({
 
   return (
     <div
-      className="glass-card p-5 lg:p-6 flex flex-col justify-between min-w-0 relative overflow-hidden"
+      className="glass-card p-5 lg:p-6 flex flex-col justify-between min-w-0 relative overflow-hidden cursor-pointer hover:border-border-hover transition-colors duration-200"
       style={{ borderTop: `2px solid ${accentBorder}` }}
+      onClick={() => {
+        if (targetId) {
+          document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+        }
+      }}
     >
       {/* Label row */}
       <div className="flex items-center justify-between mb-3">
@@ -114,6 +121,7 @@ function HeroKPI({
           prev: {formatValue(base, unit)}
         </span>
       </div>
+      <span className="text-[9px] font-mono text-text-dim mt-1">View details ↓</span>
     </div>
   );
 }
@@ -167,6 +175,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       accentBorder: '#3b82f6',
       deltaLabel: `$${Math.abs(brent.value - brent.previousWeek).toFixed(1)}`,
       source: 'live' as const,
+      targetId: 'prices',
     },
     {
       label: 'PHP / USD',
@@ -176,6 +185,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       accentBorder: '#a855f7',
       deltaLabel: `₱${Math.abs(forex.value - forex.previousWeek).toFixed(2)}`,
       source: 'live' as const,
+      targetId: 'prices',
     },
     {
       label: 'Gasoline',
@@ -185,6 +195,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       accentBorder: '#ef4444',
       deltaLabel: `₱${Math.abs(gasoline.value - gasoline.previousWeek).toFixed(2)}`,
       source: 'live' as const,
+      targetId: 'tracker',
     },
     {
       label: 'Diesel',
@@ -194,6 +205,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       accentBorder: '#f59e0b',
       deltaLabel: `₱${Math.abs(diesel.value - diesel.previousWeek).toFixed(2)}`,
       source: 'live' as const,
+      targetId: 'tracker',
     },
   ];
 
@@ -220,7 +232,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
 
       {/* Hero KPI grid — 4 big cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
-        {kpis.map(({ label, benchmark, unit, sparkColor, accentBorder, deltaLabel, source }) => (
+        {kpis.map(({ label, benchmark, unit, sparkColor, accentBorder, deltaLabel, source, targetId }) => (
           <HeroKPI
             key={benchmark.id}
             label={label}
@@ -233,6 +245,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
             accentBorder={accentBorder}
             tooltip={benchmark.tooltip}
             source={source}
+            targetId={targetId}
           />
         ))}
       </div>

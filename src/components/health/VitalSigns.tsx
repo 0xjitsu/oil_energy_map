@@ -140,12 +140,17 @@ export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
             <span className="text-2xl font-mono font-bold text-text-primary">
               {sign.value}
             </span>
-            <GaugeBar
-              value={getGaugeConfig(sign).value}
-              zones={getGaugeConfig(sign).zones}
-              height={6}
-              className="mt-3"
-            />
+            <div className="flex items-center gap-2 mt-3">
+              <GaugeBar
+                value={getGaugeConfig(sign).value}
+                zones={getGaugeConfig(sign).zones}
+                height={6}
+                className="flex-1"
+              />
+              <span className="text-[10px] font-mono text-text-subtle whitespace-nowrap">
+                {sign.value}
+              </span>
+            </div>
           </div>
         );
       })}

@@ -71,7 +71,7 @@ export function MarketShare() {
       <h3 className="text-[10px] uppercase tracking-widest text-text-muted mb-2 font-sans">
         Market Share
       </h3>
-      <div className="w-full" style={{ height: 220 }}>
+      <div className="w-full cursor-pointer" style={{ height: 220 }}>
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
@@ -100,7 +100,7 @@ export function MarketShare() {
             {/* Dynamic center label */}
             <text
               x="50%"
-              y={activePlayer ? '46%' : '50%'}
+              y={activePlayer ? '36%' : '50%'}
               textAnchor="middle"
               dominantBaseline="central"
               fill={activePlayer ? activePlayer.color : 'rgba(255,255,255,0.3)'}
@@ -111,17 +111,41 @@ export function MarketShare() {
               {activePlayer ? activePlayer.name : 'Market Share'}
             </text>
             {activePlayer && (
-              <text
-                x="50%"
-                y="56%"
-                textAnchor="middle"
-                dominantBaseline="central"
-                fill="rgba(255,255,255,0.5)"
-                fontSize={10}
-                fontFamily="monospace"
-              >
-                {activePlayer.marketShare}%
-              </text>
+              <>
+                <text
+                  x="50%"
+                  y="48%"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fill="rgba(255,255,255,0.5)"
+                  fontSize={10}
+                  fontFamily="monospace"
+                >
+                  {activePlayer.marketShare}%
+                </text>
+                <text
+                  x="50%"
+                  y="58%"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fill="rgba(255,255,255,0.4)"
+                  fontSize={9}
+                  fontFamily="monospace"
+                >
+                  {activePlayer.stations.toLocaleString()} stations
+                </text>
+                <text
+                  x="50%"
+                  y="66%"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fill="rgba(255,255,255,0.35)"
+                  fontSize={8}
+                  fontFamily="monospace"
+                >
+                  {activePlayer.strategy}
+                </text>
+              </>
             )}
           </PieChart>
         </ResponsiveContainer>
