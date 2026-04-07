@@ -125,7 +125,7 @@ export default function Home() {
 
   return (
     <CrisisProvider scenarioParams={scenarioParams}>
-    <div className="min-h-screen bg-bg-primary overflow-x-clip">
+      <div className="min-h-screen bg-bg-primary overflow-x-clip">
       <ScrollProgress />
       <AlertBanner />
       <Header />
@@ -272,7 +272,7 @@ export default function Home() {
       <MobileBottomNav />
       <HowToGuide />
       <Footer />
-    </div>
+      </div>
     </CrisisProvider>
   );
 }
