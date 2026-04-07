@@ -231,7 +231,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
       </div>
 
       {/* Hero KPI grid — 4 big cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
+      <div aria-live="polite" aria-label="Key market indicators" className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-3">
         {kpis.map(({ label, benchmark, unit, sparkColor, accentBorder, deltaLabel, source, targetId }) => (
           <HeroKPI
             key={benchmark.id}
