@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useId } from 'react';
+import { useElementScrollProgress } from '@/hooks/useElementScrollProgress';
 
 interface PipelineConnectorProps {
   fromColor: string;
@@ -9,38 +10,19 @@ interface PipelineConnectorProps {
 }
 
 export function PipelineConnector({ fromColor, toColor, label }: PipelineConnectorProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const uniqueId = useId();
+  const gradientId = `pipe-grad-${uniqueId.replace(/:/g, '')}`;
+  const clipId = `pipe-clip-${uniqueId.replace(/:/g, '')}`;
+  const { ref, progress, isInView } = useElementScrollProgress<HTMLDivElement>();
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      setVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  // Map scroll progress to fill (0 at entry, 1 at exit)
+  const fill = Math.max(0, Math.min(1, (progress - 0.1) / 0.8));
 
   return (
     <div
       ref={ref}
       className="primer-stage flex flex-col items-center py-8 sm:py-12"
     >
-      {/* Animated pipe */}
       <svg
         width="48"
         height="120"
@@ -48,7 +30,22 @@ export function PipelineConnector({ fromColor, toColor, label }: PipelineConnect
         className="overflow-visible"
         aria-hidden="true"
       >
-        {/* Pipe body */}
+        <defs>
+          <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={fromColor} stopOpacity="0.6" />
+            <stop offset="100%" stopColor={toColor} stopOpacity="0.6" />
+          </linearGradient>
+          <clipPath id={clipId}>
+            <rect
+              x="0"
+              y="0"
+              width="48"
+              height={120 * fill}
+            />
+          </clipPath>
+        </defs>
+
+        {/* Pipe body (background) */}
         <rect
           x="18"
           y="0"
@@ -59,51 +56,73 @@ export function PipelineConnector({ fromColor, toColor, label }: PipelineConnect
           stroke="var(--border-hover)"
           strokeWidth="1"
         />
-        {/* Animated flow fill */}
+
+        {/* Scroll-synced fill */}
         <rect
           x="20"
           y="0"
           width="8"
           height="120"
           rx="4"
-          style={{
-            fill: `url(#flow-${fromColor.replace(/[^a-z0-9]/gi, '')})`,
-            clipPath: visible ? 'inset(0 0 0 0)' : 'inset(0 0 100% 0)',
-            transition: 'clip-path 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
-          }}
+          fill={`url(#${gradientId})`}
+          clipPath={`url(#${clipId})`}
         />
-        {/* Gradient definition */}
-        <defs>
-          <linearGradient
-            id={`flow-${fromColor.replace(/[^a-z0-9]/gi, '')}`}
-            x1="0"
-            y1="0"
-            x2="0"
-            y2="1"
-          >
-            <stop offset="0%" stopColor={fromColor} stopOpacity="0.6" />
-            <stop offset="100%" stopColor={toColor} stopOpacity="0.6" />
-          </linearGradient>
-        </defs>
-        {/* Arrow at bottom */}
+
+        {/* Animated flow particles */}
+        {isInView && (
+          <>
+            <circle cx="24" cy="20" r="1.5" fill={fromColor} opacity="0.6">
+              <animate
+                attributeName="cy"
+                from="10"
+                to="110"
+                dur="2s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="opacity"
+                values="0;0.6;0.6;0"
+                dur="2s"
+                repeatCount="indefinite"
+              />
+            </circle>
+            <circle cx="24" cy="60" r="1" fill={toColor} opacity="0.4">
+              <animate
+                attributeName="cy"
+                from="30"
+                to="120"
+                dur="2.5s"
+                repeatCount="indefinite"
+              />
+              <animate
+                attributeName="opacity"
+                values="0;0.4;0.4;0"
+                dur="2.5s"
+                repeatCount="indefinite"
+              />
+            </circle>
+          </>
+        )}
+
+        {/* Arrow at bottom — appears when fill > 80% */}
         <path
           d="M24 115 L18 105 L30 105 Z"
           fill={toColor}
           style={{
-            opacity: visible ? 0.8 : 0,
-            transition: 'opacity 0.5s ease 1s',
+            opacity: fill > 0.8 ? 0.8 : 0,
+            transition: 'opacity 0.4s ease',
           }}
         />
       </svg>
 
-      {/* Optional label */}
+      {/* Label — fades in when fill > 50% */}
       {label && (
         <span
           className="text-[9px] font-mono uppercase tracking-widest mt-2"
           style={{
             color: 'var(--text-dim)',
-            opacity: visible ? 1 : 0,
-            transition: 'opacity 0.5s ease 1.2s',
+            opacity: fill > 0.5 ? 1 : 0,
+            transition: 'opacity 0.5s ease',
           }}
         >
           {label}

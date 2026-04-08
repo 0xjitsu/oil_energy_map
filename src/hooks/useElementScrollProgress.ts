@@ -3,11 +3,11 @@
 import { useEffect, useState, useRef, type RefObject } from 'react';
 
 export function useElementScrollProgress<T extends HTMLElement = HTMLDivElement>(): {
-  ref: RefObject<T | null>;
+  ref: RefObject<T>;
   progress: number;
   isInView: boolean;
 } {
-  const ref = useRef<T | null>(null);
+  const ref = useRef<T>(null);
   const [progress, setProgress] = useState(0);
   const [isInView, setIsInView] = useState(false);
 
