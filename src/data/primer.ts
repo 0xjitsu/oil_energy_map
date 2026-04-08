@@ -24,6 +24,10 @@ export interface SupplyChainStage {
   visualType: 'animation' | 'diagram' | 'map-preview';
   bars?: StageBar[];           // proportional bar charts for this stage
   pipelineLabel?: string;      // label on the connector to next stage
+  layoutTemplate: 'hero-bleed' | 'split-narrative' | 'stacked-cards' | 'big-number';
+  imageUrl: string;
+  imageAlt: string;
+  videoUrl?: string;
 }
 
 export interface CrudeOilType {
@@ -63,6 +67,9 @@ export const supplyChainStages: SupplyChainStage[] = [
       { label: 'Import dependency', value: 95 },
     ],
     pipelineLabel: 'Loaded onto VLCCs',
+    layoutTemplate: 'hero-bleed',
+    imageUrl: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1200&q=75',
+    imageAlt: 'Offshore oil drilling platform at sunset',
   },
   {
     id: 'maritime',
@@ -85,6 +92,9 @@ export const supplyChainStages: SupplyChainStage[] = [
       { label: 'Malacca ASEAN import share', value: 80 },
     ],
     pipelineLabel: 'Arrives at port',
+    layoutTemplate: 'split-narrative',
+    imageUrl: 'https://images.unsplash.com/photo-1524522173746-f628baad3644?w=1200&q=75',
+    imageAlt: 'VLCC oil tanker sailing through open ocean',
   },
   {
     id: 'refinery',
@@ -107,6 +117,9 @@ export const supplyChainStages: SupplyChainStage[] = [
       { label: 'Imported as finished product', value: 70 },
     ],
     pipelineLabel: 'Refined products',
+    layoutTemplate: 'stacked-cards',
+    imageUrl: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1200&q=75',
+    imageAlt: 'Oil refinery illuminated at night with industrial towers',
   },
   {
     id: 'terminals',
@@ -129,6 +142,9 @@ export const supplyChainStages: SupplyChainStage[] = [
       { label: 'From Bataan refinery', value: 30 },
     ],
     pipelineLabel: 'Tank truck dispatch',
+    layoutTemplate: 'big-number',
+    imageUrl: 'https://images.unsplash.com/photo-1590846083693-f23fdede3a7e?w=1200&q=75',
+    imageAlt: 'Aerial view of fuel storage terminal with cylindrical tanks',
   },
   {
     id: 'depots',
@@ -152,6 +168,9 @@ export const supplyChainStages: SupplyChainStage[] = [
       { label: 'Mindanao depot coverage', value: 15 },
     ],
     pipelineLabel: 'Last-mile delivery',
+    layoutTemplate: 'split-narrative',
+    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&q=75',
+    imageAlt: 'Fuel tanker truck at a loading depot',
   },
   {
     id: 'stations',
@@ -177,6 +196,9 @@ export const supplyChainStages: SupplyChainStage[] = [
       { label: 'Others', value: 45 },
     ],
     pipelineLabel: 'Consumer purchase',
+    layoutTemplate: 'big-number',
+    imageUrl: 'https://images.unsplash.com/photo-1565620731-02cfdd6e9a36?w=1200&q=75',
+    imageAlt: 'Gas station with illuminated price sign at dusk',
   },
   {
     id: 'consumer',
@@ -199,6 +221,9 @@ export const supplyChainStages: SupplyChainStage[] = [
       { label: 'Food share of household budget', value: 40 },
       { label: 'Energy share of household budget', value: 8 },
     ],
+    layoutTemplate: 'hero-bleed',
+    imageUrl: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=1200&q=75',
+    imageAlt: 'Filipino family at a busy local market',
   },
 ];
 
