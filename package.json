@@ -13,6 +13,9 @@
     "@deck.gl/geo-layers": "^9.2.11",
     "@deck.gl/layers": "^9.2.11",
     "@deck.gl/mapbox": "^9.2.11",
+    "d3-sankey": "^0.12.3",
+    "d3-selection": "^3.0.0",
+    "d3-shape": "^3.2.0",
     "lucide-react": "^1.6.0",
     "maplibre-gl": "^5.21.1",
     "next": "14.2.35",
@@ -24,6 +27,9 @@
     "supercluster": "^8.0.1"
   },
   "devDependencies": {
+    "@types/d3-sankey": "^0.12.5",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-shape": "^3.1.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

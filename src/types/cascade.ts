@@ -20,6 +20,7 @@ export interface CascadeLink {
   to: string;
   mechanism: string;
   lag: string;
+  magnitude: number; // 0-100 scale, proportional to impact for Sankey link width
 }
 
 export interface CascadeChain {
