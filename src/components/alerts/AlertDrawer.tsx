@@ -15,7 +15,7 @@ export default function AlertDrawer({ open, onClose, alerts, onAddRule }: AlertD
   return (
     <div className="fixed inset-0 z-[100]" onClick={onClose}>
       <div
-        className="absolute right-0 top-0 bottom-0 w-[360px] glass-card border-l border-border-subtle overflow-y-auto"
+        className="absolute right-0 top-0 bottom-0 w-full sm:w-[360px] glass-card border-l border-border-subtle overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="sticky top-0 flex items-center justify-between px-4 py-3 border-b border-border-subtle bg-bg-card/90 backdrop-blur">

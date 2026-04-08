@@ -25,7 +25,7 @@ export default function FacilityDetail({ facility, onClose }: FacilityDetailProp
 
   return (
     <div
-      className="absolute bottom-4 left-4 z-50 max-w-sm rounded-xl overflow-hidden bg-[rgba(10,15,26,0.75)] backdrop-blur-xl border border-border-hover shadow-2xl animate-[slideUp_0.25s_ease-out]"
+      className="absolute bottom-4 left-4 z-50 max-w-[calc(100vw-2rem)] sm:max-w-sm rounded-xl overflow-hidden bg-[rgba(10,15,26,0.75)] backdrop-blur-xl border border-border-hover shadow-2xl animate-[slideUp_0.25s_ease-out]"
       style={{ borderLeft: `4px solid ${facility.color}` }}
     >
       <div className="p-4">

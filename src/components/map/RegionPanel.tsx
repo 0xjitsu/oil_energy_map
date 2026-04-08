@@ -13,7 +13,7 @@ export default function RegionPanel({ region, onClose }: RegionPanelProps) {
   const maxBrandCount = analytics.brandBreakdown[0]?.count ?? 1;
 
   return (
-    <div className="absolute right-4 top-4 bottom-4 z-50 w-[320px] glass-card overflow-y-auto">
+    <div className="absolute right-4 top-4 bottom-4 z-50 w-full sm:w-[320px] glass-card overflow-y-auto">
       <div className="sticky top-0 flex items-center justify-between px-4 py-3 border-b border-border-subtle bg-bg-card/90 backdrop-blur">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-widest text-text-muted">Regional Intelligence</p>
