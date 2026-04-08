@@ -17,6 +17,7 @@ import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
+import { ActDivider } from '@/components/layout/ActDivider';
 
 import { CrisisProvider } from '@/lib/CrisisProvider';
 import { HighlightProvider } from '@/lib/HighlightContext';
@@ -84,32 +85,6 @@ function SectionHeader({
   );
 }
 
-function ActDivider({
-  number,
-  title,
-  description,
-}: {
-  number: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <div className="pt-6 pb-2">
-      <div className="flex items-center gap-3 mb-2">
-        <span className="font-mono text-[11px] font-bold text-text-dim tracking-widest">
-          {number}
-        </span>
-        <div className="flex-1 h-px bg-border-subtle" />
-      </div>
-      <h2 className="text-lg sm:text-xl font-bold text-text-primary tracking-tight">
-        {title}
-      </h2>
-      <p className="text-sm text-text-secondary mt-1 max-w-xl">
-        {description}
-      </p>
-    </div>
-  );
-}
 
 export default function Home() {
   const [mapMode, setMapMode] = useState<MapMode>('live');
@@ -135,20 +110,22 @@ export default function Home() {
         {/* ━━━ ACT 1: WHAT'S HAPPENING NOW ━━━ */}
         <ActDivider
           number="01"
-          title="What's Happening Now"
-          description="Live supply chain status — crude benchmarks, forex, pump prices, and the infrastructure that moves oil across the Philippines."
+          question="What's Happening Now"
+          hook="Live supply chain status — crude benchmarks, forex, pump prices, and the infrastructure that moves oil across the Philippines."
+          gradientFrom="#060a10"
+          gradientTo="#0a1628"
         />
 
         {/* Executive Snapshot — Hero KPIs */}
         <FadeIn delay={0}>
-          <div id="snapshot" className="scroll-mt-20">
+          <div id="snapshot" className="scroll-mt-24">
             <ExecutiveSnapshot scenarioParams={scenarioParams} />
           </div>
         </FadeIn>
 
         {/* Hero: Full-Width Map */}
         <FadeIn delay={100}>
-        <section id="map" className="scroll-mt-20">
+        <section id="map" className="scroll-mt-24">
           <SectionHeader color="bg-petron" label="Supply Chain Map" />
           <div className="relative">
             <MapWrapper
@@ -168,16 +145,16 @@ export default function Home() {
         </FadeIn>
 
         {/* ━━━ ACT 2: WHAT IT COSTS ━━━ */}
-        <FadeIn>
         <ActDivider
           number="02"
-          title="What It Costs"
-          description="Pump prices, price benchmarks, and where to fill up — the direct impact on your wallet and the stations near you."
+          question="What does it cost you?"
+          hook="The supply chain above sets the stage. Now let's see what it means at the pump — and in your wallet."
+          gradientFrom="#0a1628"
+          gradientTo="#1e1b4b"
         />
-        </FadeIn>
 
         {/* Pump Prices + Impact Cards — 2 columns */}
-        <section className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+        <section className="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           <div>
             <SectionHeader color="bg-status-red" label="Pump Prices" />
             <PumpPrices />
@@ -189,27 +166,27 @@ export default function Home() {
         </section>
 
         {/* Price Intelligence — Full-width benchmark grid */}
-        <section id="prices" className="scroll-mt-20">
+        <section id="prices" className="scroll-mt-24">
           <SectionHeader color="bg-shell" label="Price Intelligence" />
           <PricePanel />
         </section>
 
         {/* Station Tracker */}
-        <section id="tracker" className="scroll-mt-20">
+        <section id="tracker" className="scroll-mt-24">
           <StationTrackerSection />
         </section>
 
         {/* ━━━ ACT 3: WHAT-IF ANALYSIS ━━━ */}
-        <FadeIn>
         <ActDivider
           number="03"
-          title="What-If Analysis"
-          description="Model disruption scenarios, stress-test the supply chain, and estimate the consumer impact of price shocks."
+          question="What could happen next?"
+          hook="Prices are one thing. But what if Hormuz closes for 8 weeks? Model the scenarios yourself."
+          gradientFrom="#1e1b4b"
+          gradientTo="#1c1408"
         />
-        </FadeIn>
 
         {/* Scenario Planner */}
-        <section id="scenario" className="scroll-mt-20">
+        <section id="scenario" className="scroll-mt-24">
           <ScenarioPlanner
             params={scenarioParams}
             onParamsChange={handleParamsChange}
@@ -219,7 +196,7 @@ export default function Home() {
         </section>
 
         {/* Stress Test + Consumer Impact — 2 columns */}
-        <section id="stress-test" className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+        <section id="stress-test" className="scroll-mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-6">
           <div>
             <SectionHeader color="bg-status-yellow" label="Stress Test" />
             <StressTest scenarioParams={scenarioParams} />
@@ -231,16 +208,16 @@ export default function Home() {
         </section>
 
         {/* ━━━ ACT 4: WHO'S INVOLVED ━━━ */}
-        <FadeIn>
         <ActDivider
           number="04"
-          title="Who's Involved"
-          description="Market players, system health indicators, sentiment analysis, and the latest intelligence from news and social feeds."
+          question="Who controls the supply?"
+          hook="Behind every price movement are market players, system health indicators, and global events."
+          gradientFrom="#1c1408"
+          gradientTo="#0f172a"
         />
-        </FadeIn>
 
         {/* Market Players — full width with donut + cards side by side */}
-        <section id="players" className="scroll-mt-20">
+        <section id="players" className="scroll-mt-24">
           <SectionHeader color="bg-seaoil" label="Market Players" />
           <HighlightProvider>
             <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-4">
@@ -251,7 +228,7 @@ export default function Home() {
         </section>
 
         {/* System Health + Sentiment — 2 column */}
-        <section className="scroll-mt-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+        <section className="scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
           <div>
             <SectionHeader color="bg-status-green" label="System Health" />
             <VitalSigns scenarioParams={scenarioParams} mapMode={mapMode} />
@@ -263,7 +240,7 @@ export default function Home() {
         </section>
 
         {/* Event Timeline — full width */}
-        <section className="scroll-mt-20">
+        <section className="scroll-mt-24">
           <SectionHeader color="bg-status-yellow" label="Event Timeline" />
           <EventTimeline />
         </section>
