@@ -1,10 +1,34 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { supplyChainStages } from '@/data/primer';
+import { supplyChainStages, type SupplyChainStage } from '@/data/primer';
 import { TimelineProgress } from './TimelineProgress';
-import { StageSection } from './StageSection';
 import { PipelineConnector } from './PipelineConnector';
+import { StageHeroBleed } from './StageHeroBleed';
+import { StageSplitNarrative } from './StageSplitNarrative';
+import { StageStackedCards } from './StageStackedCards';
+import { StageBigNumber } from './StageBigNumber';
+
+function StageRouter({
+  stage,
+  onInView,
+}: {
+  stage: SupplyChainStage;
+  onInView: (stageNumber: number) => void;
+}) {
+  switch (stage.layoutTemplate) {
+    case 'hero-bleed':
+      return <StageHeroBleed stage={stage} onInView={onInView} />;
+    case 'split-narrative':
+      return <StageSplitNarrative stage={stage} onInView={onInView} />;
+    case 'stacked-cards':
+      return <StageStackedCards stage={stage} onInView={onInView} />;
+    case 'big-number':
+      return <StageBigNumber stage={stage} onInView={onInView} />;
+    default:
+      return <StageHeroBleed stage={stage} onInView={onInView} />;
+  }
+}
 
 export function SupplyChainFlow() {
   const [activeStage, setActiveStage] = useState(1);
@@ -27,11 +51,7 @@ export function SupplyChainFlow() {
       <div className="lg:pl-16 xl:pl-48">
         {supplyChainStages.map((stage, idx) => (
           <div key={stage.id}>
-            <StageSection
-              stage={stage}
-              onInView={handleInView}
-            />
-            {/* Pipeline connector to next stage */}
+            <StageRouter stage={stage} onInView={handleInView} />
             {idx < supplyChainStages.length - 1 && (
               <PipelineConnector
                 fromColor={stage.color}
