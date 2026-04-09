@@ -189,3 +189,74 @@ export const cascadeStats = {
   highCount: philippineCascade.nodes.filter((n) => n.severity === 'high').length,
   categories: Array.from(new Set(philippineCascade.nodes.map((n) => n.category))).length,
 };
+
+export const cascadeHeadline = {
+  crudePrice: philippineCascade.nodes.find(n => n.id === 'crude-oil')!.currentValue,
+  crudeChange: philippineCascade.nodes.find(n => n.id === 'crude-oil')!.changePercent,
+  householdImpact: philippineCascade.nodes.find(n => n.id === 'household')!.currentValue,
+  householdChange: philippineCascade.nodes.find(n => n.id === 'household')!.changePercent,
+  foodInflation: philippineCascade.nodes.find(n => n.id === 'food-inflation')!.currentValue,
+  dieselPrice: philippineCascade.nodes.find(n => n.id === 'diesel')!.currentValue,
+  ricePrice: philippineCascade.nodes.find(n => n.id === 'rice')!.currentValue,
+};
+
+export const cascadeChainPath = [
+  { nodeId: 'crude-oil', arrow: '→' },
+  { nodeId: 'diesel', arrow: '→' },
+  { nodeId: 'rice', arrow: '→' },
+  { nodeId: 'food-inflation', arrow: '→' },
+  { nodeId: 'household', arrow: null },
+].map(step => ({
+  ...step,
+  node: philippineCascade.nodes.find(n => n.id === step.nodeId)!,
+}));
+
+export const cascadeStages: Array<{
+  category: CascadeCategory;
+  label: string;
+  shortLabel: string;
+  description: string;
+  color: string;
+  nodeCount: number;
+}> = [
+  {
+    category: 'energy',
+    label: 'Energy Sources',
+    shortLabel: 'Energy',
+    description: 'Global crude and refined fuel prices set the baseline',
+    color: CATEGORY_COLORS.energy,
+    nodeCount: philippineCascade.nodes.filter(n => n.category === 'energy').length,
+  },
+  {
+    category: 'agriculture',
+    label: 'Agriculture & Food',
+    shortLabel: 'Agriculture',
+    description: 'Fuel costs flow into fertilizer, fishing, and farm-to-market transport',
+    color: CATEGORY_COLORS.agriculture,
+    nodeCount: philippineCascade.nodes.filter(n => n.category === 'agriculture').length,
+  },
+  {
+    category: 'transport',
+    label: 'Transport & Logistics',
+    shortLabel: 'Transport',
+    description: 'Public transport fares and delivery costs absorb diesel price hikes',
+    color: CATEGORY_COLORS.transport,
+    nodeCount: philippineCascade.nodes.filter(n => n.category === 'transport').length,
+  },
+  {
+    category: 'consumer',
+    label: 'Consumer Impact',
+    shortLabel: 'Consumer',
+    description: 'All cost pressures converge on the Filipino household budget',
+    color: CATEGORY_COLORS.consumer,
+    nodeCount: philippineCascade.nodes.filter(n => n.category === 'consumer').length,
+  },
+];
+
+export const criticalInsight = {
+  headline: 'Diesel is the hidden multiplier',
+  body: `Diesel touches 5 of 11 cascade nodes directly — more than any other fuel. When diesel crosses ₱100/L, fishing fleets dock, jeepney operators demand fare hikes, and fertilizer costs spike. The average Filipino family pays ₱3,200 more per month.`,
+  severity: 'critical' as SeverityLevel,
+  affectedNodes: philippineCascade.links.filter(l => l.from === 'diesel').length,
+  totalNodes: philippineCascade.nodes.length,
+};
