@@ -8,6 +8,13 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizePackageImports: [
+      'd3-sankey',
+      'd3-selection',
+      'd3-shape',
+    ],
+  },
 };
 
 export default nextConfig;

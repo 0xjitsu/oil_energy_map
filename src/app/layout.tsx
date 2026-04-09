@@ -111,6 +111,7 @@ export default function RootLayout({
     <html lang="en" className={`${plexMono.variable} ${plexSans.variable}`} style={{ colorScheme: 'dark' }}>
       <head>
         <link rel="preconnect" href="https://basemaps.cartocdn.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://query1.finance.yahoo.com" />
         <link rel="dns-prefetch" href="https://www.floatrates.com" />
         <meta name="source-code" content="https://github.com/0xjitsu/oil_energy_map" />

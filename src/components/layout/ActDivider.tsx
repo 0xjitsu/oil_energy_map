@@ -36,19 +36,27 @@ export function ActDivider({ number, question, hook, gradientFrom, gradientTo }:
         }}
         aria-label={`Act ${number}: ${question}`}
       >
-        <div className="font-mono text-7xl sm:text-8xl md:text-9xl font-black text-text-primary/[0.06] leading-none select-none mb-2">
-          {number}
-        </div>
+        {/* Watermark number — absolute positioned behind text, not in flow */}
+        <div className="relative">
+          <div
+            className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
+            aria-hidden="true"
+          >
+            <span className="font-mono text-[8rem] sm:text-[10rem] md:text-[12rem] font-black text-text-primary/[0.04] leading-none">
+              {number}
+            </span>
+          </div>
 
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-text-primary -mt-8 sm:-mt-12 md:-mt-16 mb-3">
-          {question}
-        </h2>
+          <h2 className="relative text-xl sm:text-2xl md:text-3xl font-bold text-text-primary py-8 sm:py-10 md:py-12 mb-3">
+            {question}
+          </h2>
+        </div>
 
         <p className="text-sm text-text-secondary max-w-md mx-auto">
           {hook}
         </p>
 
-        <div className="mt-4 text-text-dim animate-bounce" style={{ animationDuration: '2s' }}>
+        <div className="mt-4 text-text-dim animate-bounce [animation-duration:2s]">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="mx-auto" aria-hidden="true">
             <path d="M10 4v12M4 10l6 6 6-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

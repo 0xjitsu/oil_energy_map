@@ -5,8 +5,21 @@ import dynamic from 'next/dynamic';
 import { AlertBanner } from '@/components/layout/AlertBanner';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import MapWrapper from '@/components/map/MapWrapper';
-import TimelineSlider from '@/components/map/TimelineSlider';
+const MapWrapper = dynamic(
+  () => import('@/components/map/MapWrapper'),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[clamp(350px,55vh,600px)] sm:h-[600px] glass-card rounded-xl animate-pulse flex items-center justify-center">
+        <span className="text-text-dim font-mono text-xs">Loading map...</span>
+      </div>
+    ),
+  },
+);
+const TimelineSlider = dynamic(
+  () => import('@/components/map/TimelineSlider'),
+  { ssr: false },
+);
 import { PumpPrices } from '@/components/prices/PumpPrices';
 import { ImpactCards } from '@/components/prices/ImpactCards';
 import { VitalSigns } from '@/components/health/VitalSigns';
