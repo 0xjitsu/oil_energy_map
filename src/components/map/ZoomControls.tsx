@@ -26,7 +26,7 @@ export function ZoomControls({ onZoomIn, onZoomOut, onReset }: ZoomControlsProps
       <button
         onClick={onReset}
         className="w-12 h-12 flex items-center justify-center rounded-lg glass-card text-text-dim text-[10px] font-mono uppercase tracking-widest hover:bg-surface-hover hover:text-text-secondary transition-colors active:scale-95"
-        aria-label="Reset view"
+        aria-label="PH reset view"
       >
         PH
       </button>

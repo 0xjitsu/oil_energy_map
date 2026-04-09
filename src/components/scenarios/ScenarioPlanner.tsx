@@ -106,10 +106,12 @@ export function ScenarioPlanner({
               </span>
             </div>
             <input
+              id="brent-price-slider"
               type="range"
               min={60}
               max={180}
               step={5}
+              aria-label="Brent Crude price"
               value={params.brentPrice}
               onChange={(e) => updateParam('brentPrice', Number(e.target.value))}
               disabled={isTimelineDriven}
@@ -133,10 +135,12 @@ export function ScenarioPlanner({
               </span>
             </div>
             <input
+              id="hormuz-weeks-slider"
               type="range"
               min={0}
               max={16}
               step={1}
+              aria-label="Hormuz disruption weeks"
               value={params.hormuzWeeks}
               onChange={(e) => updateParam('hormuzWeeks', Number(e.target.value))}
               disabled={isTimelineDriven}
@@ -160,10 +164,12 @@ export function ScenarioPlanner({
               </span>
             </div>
             <input
+              id="forex-rate-slider"
               type="range"
               min={54}
               max={65}
               step={0.5}
+              aria-label="PHP/USD exchange rate"
               value={params.forexRate}
               onChange={(e) => updateParam('forexRate', Number(e.target.value))}
               disabled={isTimelineDriven}
@@ -184,6 +190,7 @@ export function ScenarioPlanner({
             <button
               type="button"
               role="switch"
+              aria-label="Bataan Refinery Offline toggle"
               aria-checked={params.refineryOffline}
               onClick={() => !isTimelineDriven && updateParam('refineryOffline', !params.refineryOffline)}
               disabled={isTimelineDriven}

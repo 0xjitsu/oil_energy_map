@@ -207,6 +207,7 @@ export function StressTest({ scenarioParams }: StressTestProps) {
               min={70}
               max={100}
               step={5}
+              aria-label="Gasoline price threshold"
               value={threshold}
               onChange={(e) => setThreshold(Number(e.target.value))}
               className="w-full"

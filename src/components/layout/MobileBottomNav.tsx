@@ -28,7 +28,7 @@ export function MobileBottomNav() {
               key={id}
               href={`#${id}`}
               className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg min-w-[56px] min-h-[44px] transition-colors ${
-                isActive ? 'text-text-primary' : 'text-text-dim'
+                isActive ? 'text-text-primary' : 'text-text-label'
               }`}
             >
               <span className="text-base">{icon}</span>

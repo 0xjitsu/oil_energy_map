@@ -52,7 +52,7 @@ export const marketPlayers: MarketPlayer[] = [
     stations: 3000,
     strategy: 'Import Only',
     vulnerabilityScore: 60,
-    color: '#475569',
+    color: '#94a3b8',
     logo: '/logos/others.svg',
   },
 ];

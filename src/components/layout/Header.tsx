@@ -72,7 +72,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
               Energy Intelligence Map
               {crisisLevel === 'CRISIS' && <span aria-hidden="true" className="animate-pulse text-status-red"> &raquo;</span>}
             </h1>
-            <p className="text-[10px] font-mono tracking-widest text-text-subtle uppercase mt-0.5">
+            <p className="text-[10px] font-mono tracking-widest text-text-secondary uppercase mt-0.5">
               Philippines Supply Chain
             </p>
           </Link>
@@ -88,7 +88,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
                   className={`px-3 py-1.5 rounded-md font-mono text-[10px] uppercase tracking-widest transition-colors duration-200 ${
                     isActive
                       ? 'text-text-primary bg-border-hover'
-                      : 'text-text-subtle hover:text-text-body hover:bg-surface-hover'
+                      : 'text-text-secondary hover:text-text-body hover:bg-surface-hover'
                   }`}
                 >
                   {label}
@@ -104,7 +104,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
             onClick={() => {
               window.dispatchEvent(new CustomEvent('open-how-to-guide'));
             }}
-            className="p-1.5 rounded-md hover:bg-surface-hover transition-colors text-text-dim hover:text-text-secondary"
+            className="p-1.5 rounded-md hover:bg-surface-hover transition-colors text-text-label hover:text-text-secondary"
             title="How to use"
           >
             <span className="text-[10px] font-mono">?</span>
@@ -124,11 +124,11 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
             {isLive ? 'LIVE' : 'STATIC'}
           </span>
           {updatedAgo && (
-            <span className="text-[10px] font-mono text-text-dim tracking-wider">
+            <span className="text-[10px] font-mono text-text-label tracking-wider">
               {updatedAgo}
             </span>
           )}
-          <span className="text-[10px] font-mono text-text-subtle tracking-wider">
+          <span className="text-[10px] font-mono text-text-label tracking-wider">
             {currentDate}
           </span>
         </div>
@@ -145,7 +145,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
               className={`flex-1 text-center px-2 py-1.5 rounded-md font-mono text-[9px] uppercase tracking-widest transition-colors duration-200 ${
                 isActive
                   ? 'text-text-primary bg-border-hover'
-                  : 'text-text-subtle hover:text-text-body'
+                  : 'text-text-secondary hover:text-text-body'
               }`}
             >
               {label}

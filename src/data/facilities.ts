@@ -147,7 +147,7 @@ export const facilities: Facility[] = [
     status: 'operational',
     type: 'depot',
     notes: 'National Capital Region — largest single demand center, consuming ~40% of national fuel supply.',
-    color: '#475569',
+    color: '#94a3b8',
     productionBpd: 50000,
   },
 ];
