@@ -39,15 +39,15 @@ export function ActDivider({ number, question, hook, gradientFrom, gradientTo }:
         {/* Watermark number — absolute positioned behind text, not in flow */}
         <div className="relative">
           <div
-            className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
+            className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.03]"
             aria-hidden="true"
           >
-            <span className="font-mono text-[8rem] sm:text-[10rem] md:text-[12rem] font-black text-text-primary/[0.04] leading-none">
+            <span className="font-mono text-[8rem] sm:text-[10rem] md:text-[12rem] font-black text-text-primary leading-none">
               {number}
             </span>
           </div>
 
-          <h2 className="relative text-xl sm:text-2xl md:text-3xl font-bold text-text-primary py-8 sm:py-10 md:py-12 mb-3">
+          <h2 className="relative text-xl sm:text-2xl md:text-3xl font-bold text-text-primary py-8 sm:py-10 md:py-12 mb-3 drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
             {question}
           </h2>
         </div>
