@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { Header } from '@/components/layout/Header';
@@ -16,7 +16,7 @@ import {
 import type { CascadeCategory } from '@/types/cascade';
 
 const SankeyDiagram = dynamic(
-  () => import('@/components/cascade/SankeyDiagram').then((m) => m.SankeyDiagram),
+  () => import('@/components/cascade/SankeyDiagram').then((m) => m.SankeyDiagram) as Promise<React.ComponentType<{ activeStage?: CascadeCategory | null }>>,
   {
     ssr: false,
     loading: () => (
@@ -183,13 +183,13 @@ export function CascadePage() {
         {/* ── Sankey Diagram (Desktop) ── */}
         <div className="hidden md:block">
           <div className="glass-card rounded-xl p-6">
-            <SankeyDiagram />
+            <SankeyDiagram activeStage={activeStage} />
           </div>
         </div>
 
         {/* ── Mobile Waterfall ── */}
         <div className="md:hidden">
-          <MobileWaterfall />
+          <MobileWaterfall activeStage={activeStage} />
         </div>
 
         {/* ── Key Insight Callout ── */}

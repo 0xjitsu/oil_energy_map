@@ -46,7 +46,11 @@ const MARGIN = { top: 40, right: 20, bottom: 20, left: 20 };
 /*  Component                                                         */
 /* ------------------------------------------------------------------ */
 
-export function SankeyDiagram() {
+interface SankeyDiagramProps {
+  activeStage?: CascadeCategory | null;
+}
+
+export function SankeyDiagram({ activeStage = null }: SankeyDiagramProps) {
   const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null);
   const [hoveredLinkIdx, setHoveredLinkIdx] = useState<number | null>(null);
   const [selectedNode, setSelectedNode] = useState<CascadeNode | null>(null);
@@ -176,26 +180,19 @@ export function SankeyDiagram() {
 
   return (
     <div>
-      {/* Category headers */}
-      <div className="relative mb-1" style={{ height: 20 }}>
-        <svg width="100%" viewBox={`0 0 ${SVG_W} 20`} preserveAspectRatio="xMidYMid meet">
-          {categoryPositions.map((cp) => (
-            <g key={cp.category}>
-              <circle cx={cp.x + 4} cy={12} r={4} fill={cp.color} />
-              <text
-                x={cp.x + 14}
-                y={14}
-                fill="rgba(255,255,255,0.4)"
-                fontSize={9}
-                fontFamily="var(--font-mono), monospace"
-                textAnchor="start"
-                dominantBaseline="middle"
-              >
-                {cp.label.toUpperCase()}
-              </text>
-            </g>
-          ))}
-        </svg>
+      {/* Category headers — HTML labels for crisp rendering */}
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-1 mb-2">
+        {categoryPositions.map((cp) => (
+          <div key={cp.category} className="flex items-center gap-1.5">
+            <div
+              className="w-2 h-2 rounded-full flex-shrink-0"
+              style={{ backgroundColor: cp.color }}
+            />
+            <span className="font-mono text-[10px] uppercase tracking-widest text-text-label">
+              {cp.label}
+            </span>
+          </div>
+        ))}
       </div>
 
       {/* Sankey SVG */}
@@ -211,7 +208,14 @@ export function SankeyDiagram() {
             const srcNode = link.source as SNode;
             const severityColor = SEVERITY_COLORS[srcNode.nodeData.severity];
 
+            const tgtNode = link.target as SNode;
+
             let opacity = 0.3;
+            if (activeStage) {
+              const srcMatches = srcNode.nodeData.category === activeStage;
+              const tgtMatches = tgtNode.nodeData.category === activeStage;
+              opacity = srcMatches || tgtMatches ? 0.5 : 0.05;
+            }
             if (hoveredLinkIdx !== null) {
               opacity = hoveredLinkIdx === i ? 0.6 : 0.1;
             } else if (hoveredNodeId) {
@@ -247,7 +251,9 @@ export function SankeyDiagram() {
             const color = SEVERITY_COLORS[sNode.nodeData.severity];
 
             let nodeOpacity = 1;
-            if (hoveredNodeId && connectedIds && !connectedIds.has(sNode.id)) {
+            if (activeStage && sNode.nodeData.category !== activeStage) {
+              nodeOpacity = 0.15;
+            } else if (hoveredNodeId && connectedIds && !connectedIds.has(sNode.id)) {
               nodeOpacity = 0.2;
             }
 

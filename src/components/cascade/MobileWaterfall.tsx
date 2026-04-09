@@ -22,7 +22,11 @@ function groupByCategory(nodes: CascadeNode[]): Record<CascadeCategory, CascadeN
   return groups;
 }
 
-export function MobileWaterfall() {
+interface MobileWaterfallProps {
+  activeStage?: CascadeCategory | null;
+}
+
+export function MobileWaterfall({ activeStage = null }: MobileWaterfallProps) {
   const groups = groupByCategory(philippineCascade.nodes);
   const linksByFrom = new Map<string, typeof philippineCascade.links>();
   for (const link of philippineCascade.links) {
@@ -37,9 +41,10 @@ export function MobileWaterfall() {
         const nodes = groups[category];
         if (!nodes) return null;
         const color = CATEGORY_COLORS[category];
+        const isDimmed = activeStage !== null && activeStage !== category;
 
         return (
-          <div key={category}>
+          <div key={category} className="transition-opacity duration-300" style={{ opacity: isDimmed ? 0.2 : 1 }}>
             {/* Category header */}
             <div className="flex items-center gap-2 mb-3">
               <div
