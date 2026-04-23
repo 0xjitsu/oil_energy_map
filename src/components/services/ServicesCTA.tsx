@@ -5,19 +5,45 @@ import { useState } from 'react';
 import { servicesCTA, audiencePills } from '@/data/services';
 import { FadeIn } from '@/components/ui/FadeIn';
 
+type Status = 'idle' | 'submitting' | 'success' | 'error';
+
 export function ServicesCTA() {
   const [name, setName] = useState('');
   const [org, setOrg] = useState('');
   const [stores, setStores] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState<Status>('idle');
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const subject = encodeURIComponent('RES/RAP Brief Request');
-    const body = encodeURIComponent(
-      `Name: ${name}\nOrganization: ${org}\nStore Count: ${stores}\n\nMessage:\n${message}`,
+    setStatus('submitting');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, organization: org, storeCount: stores, message }),
+      });
+
+      if (!res.ok) throw new Error('Server error');
+      setStatus('success');
+    } catch {
+      setStatus('error');
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <section id="contact" className="py-20 px-4 max-w-5xl mx-auto">
+        <div className="glass-card p-12 max-w-lg mx-auto text-center">
+          <div className="text-4xl mb-4">✓</div>
+          <h3 className="font-mono font-bold text-text-primary text-xl mb-2">Request received</h3>
+          <p className="text-text-body text-sm leading-relaxed">
+            We&apos;ll be in touch shortly with next steps for your RES/RAP brief.
+          </p>
+        </div>
+      </section>
     );
-    window.location.href = `mailto:${servicesCTA.formEmail}?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -44,11 +70,8 @@ export function ServicesCTA() {
           ))}
         </div>
 
-        {/* Contact form — no action/method; mailto built in JS to avoid browser security warning */}
-        <form
-          onSubmit={handleSubmit}
-          className="glass-card p-8 max-w-lg mx-auto space-y-5"
-        >
+        {/* Contact form */}
+        <form onSubmit={handleSubmit} className="glass-card p-8 max-w-lg mx-auto space-y-5">
           <div>
             <label htmlFor="svc-name" className="block font-mono text-[10px] uppercase tracking-widest text-text-label mb-2">
               Name
@@ -108,11 +131,18 @@ export function ServicesCTA() {
             />
           </div>
 
+          {status === 'error' && (
+            <p className="font-mono text-[10px] text-status-red text-center">
+              Something went wrong — please try again.
+            </p>
+          )}
+
           <button
             type="submit"
-            className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-mono text-sm rounded-lg transition-colors min-h-[44px]"
+            disabled={status === 'submitting'}
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-mono text-sm rounded-lg transition-colors min-h-[44px]"
           >
-            Request a Brief →
+            {status === 'submitting' ? 'Sending…' : 'Request a Brief →'}
           </button>
         </form>
       </FadeIn>
