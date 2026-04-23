@@ -14,6 +14,7 @@ const NAV_LINKS = [
   { href: '/primer', label: 'Oil Primer' },
   { href: '/references', label: 'References' },
   { href: '/roadmap', label: 'Roadmap' },
+  { href: '/services', label: 'Services' },
 ];
 
 function useCurrentDate() {
