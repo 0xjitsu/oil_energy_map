@@ -1,10 +1,25 @@
 // src/components/services/ServicesCTA.tsx
 'use client';
 
+import { useState } from 'react';
 import { servicesCTA, audiencePills } from '@/data/services';
 import { FadeIn } from '@/components/ui/FadeIn';
 
 export function ServicesCTA() {
+  const [name, setName] = useState('');
+  const [org, setOrg] = useState('');
+  const [stores, setStores] = useState('');
+  const [message, setMessage] = useState('');
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const subject = encodeURIComponent('RES/RAP Brief Request');
+    const body = encodeURIComponent(
+      `Name: ${name}\nOrganization: ${org}\nStore Count: ${stores}\n\nMessage:\n${message}`,
+    );
+    window.location.href = `mailto:${servicesCTA.formEmail}?subject=${subject}&body=${body}`;
+  }
+
   return (
     <section id="contact" className="py-20 px-4 max-w-5xl mx-auto">
       <FadeIn>
@@ -29,10 +44,9 @@ export function ServicesCTA() {
           ))}
         </div>
 
-        {/* Contact form */}
+        {/* Contact form — no action/method; mailto built in JS to avoid browser security warning */}
         <form
-          action={`mailto:${servicesCTA.formEmail}?subject=RES/RAP Brief Request`}
-          method="get"
+          onSubmit={handleSubmit}
           className="glass-card p-8 max-w-lg mx-auto space-y-5"
         >
           <div>
@@ -42,8 +56,9 @@ export function ServicesCTA() {
             <input
               id="svc-name"
               type="text"
-              name="name"
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full bg-bg-elevated border border-border-subtle rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:outline-none focus:border-border-hover transition-colors"
             />
           </div>
@@ -55,8 +70,9 @@ export function ServicesCTA() {
             <input
               id="svc-org"
               type="text"
-              name="organization"
               required
+              value={org}
+              onChange={(e) => setOrg(e.target.value)}
               className="w-full bg-bg-elevated border border-border-subtle rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:outline-none focus:border-border-hover transition-colors"
             />
           </div>
@@ -67,9 +83,9 @@ export function ServicesCTA() {
             </label>
             <select
               id="svc-stores"
-              name="stores"
               required
-              defaultValue=""
+              value={stores}
+              onChange={(e) => setStores(e.target.value)}
               className="w-full bg-bg-elevated border border-border-subtle rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:outline-none focus:border-border-hover transition-colors"
             >
               <option value="" disabled>Select range…</option>
@@ -85,8 +101,9 @@ export function ServicesCTA() {
             </label>
             <textarea
               id="svc-body"
-              name="body"
               rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full bg-bg-elevated border border-border-subtle rounded-lg px-4 py-3 text-text-primary font-mono text-sm focus:outline-none focus:border-border-hover transition-colors resize-none"
             />
           </div>
