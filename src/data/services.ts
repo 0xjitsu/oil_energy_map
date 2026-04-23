@@ -1,18 +1,27 @@
 // src/data/services.ts
 
 export const servicesHero = {
-  eyebrow: 'RES/RAP ENERGY PROCUREMENT · PHILIPPINES',
-  h1Line1: 'Your bid window is 2 weeks.',
-  h1Line2: 'Manual encoding takes 4–6.',
+  eyebrow: 'RES/RAP OPEN ACCESS BID · PHILIPPINES',
+  h1Line1: 'Your franchise is paying',
+  h1Line2: 'millions too much for electricity.',
   subheadline:
-    'AI eliminates the encoding bottleneck. Humans scan and validate. The platform does everything else.',
+    'The Philippine RES/RAP open access bid lets multi-site franchises switch from locked DU rates to competitive supply — ~20% savings at scale. The only thing standing between you and the bid is getting your bills LOI-ready in time.',
+  savingsAnchor: {
+    label: 'Estimated annual savings at scale',
+    tiers: [
+      { stores: '200 stores', saving: '₱38.4M/yr' },
+      { stores: '500 stores', saving: '₱96M/yr'   },
+      { stores: '1,000+',     saving: '₱192M/yr'  },
+    ],
+    note: 'Based on ~20% reduction vs DU rates · ₱80K avg spend/store/month',
+  },
   chips: [
-    { icon: '⚡', text: '~20% savings vs DU rates' },
+    { icon: '💰', text: 'Up to ₱192M/yr at 1,000 stores' },
     { icon: '⏱', text: '5–7 days to LOI-ready' },
     { icon: '🏪', text: 'Any franchise, any utility' },
   ],
   ctas: [
-    { label: 'Request a Brief →', href: '#contact', variant: 'primary' as const },
+    { label: 'Start My RES/RAP Brief →', href: '#contact', variant: 'primary' as const },
     { label: 'See How It Works ↓', href: '#pipeline', variant: 'secondary' as const },
   ],
 } as const;
@@ -99,6 +108,6 @@ export const servicesCTA = {
   h2Line1:  'Works for any franchise',
   h2Line2:  'with distributed utility bills.',
   sub:      "The platform is utility-agnostic. What's franchise-specific is only the store master schema — a single config file.",
-  formEmail: 'bernadettemisa403@gmail.com',
+  formEmail: 'bernamisa17@gmail.com',
   storeCountOptions: ['<50', '50–200', '200–1,000', '1,000+'],
 } as const;
