@@ -113,6 +113,14 @@ export function PricePanel() {
           </span>
         </div>
       )}
+      {!isLive && (
+        <div className="flex items-center gap-1.5 mb-2">
+          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-status-yellow" />
+          <span className="text-[9px] font-mono uppercase tracking-widest text-status-yellow/70">
+            Cached fallback
+          </span>
+        </div>
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {priceBenchmarks.map((b) => (
           <BenchmarkCard key={b.id} benchmark={b} history={priceHistory[b.id]} />

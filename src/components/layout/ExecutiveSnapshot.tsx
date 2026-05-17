@@ -225,6 +225,12 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
             <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400">Live</span>
           </span>
         )}
+        {!isLive && (
+          <span className="flex items-center gap-1.5">
+            <span className="inline-flex h-2 w-2 rounded-full bg-status-yellow" />
+            <span className="text-[10px] font-mono uppercase tracking-widest text-status-yellow">Cached</span>
+          </span>
+        )}
         <h2 className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
           Executive Snapshot
         </h2>
