@@ -69,6 +69,8 @@ export function PumpPrices() {
 
   if (!gasoline || !diesel) return null;
 
+  // Per-fuel identity colors (gasoline / diesel) — intentionally hardcoded and
+  // crisis-invariant identity hues, not status colors. Do NOT convert to status tokens.
   const fuels = [
     { label: 'Gasoline', benchmark: gasoline, sparkColor: '#ef4444', accentColor: '#ef4444' },
     { label: 'Diesel', benchmark: diesel, sparkColor: '#f59e0b', accentColor: '#f59e0b' },

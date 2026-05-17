@@ -184,6 +184,10 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
 
   if (!brent || !forex || !gasoline || !diesel) return null;
 
+  // Per-KPI identity colors — each metric card gets a distinct hue so the four
+  // cards stay visually distinguishable. Intentionally hardcoded and crisis-invariant:
+  // the crisis system recolors --accent-primary and card backgrounds, not per-metric
+  // identity hues. Do NOT convert these to status tokens.
   const kpis = [
     {
       label: 'Brent Crude',
