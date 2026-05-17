@@ -50,7 +50,7 @@ Returns current oil price benchmarks. Fetches live data from two external APIs i
 
 **Cache:** `s-maxage=900, stale-while-revalidate=1800` (15 min fresh, 30 min stale-while-revalidate). Header omitted on the exception catch path.
 
-**Client polling:** 5-minute interval (`usePrices` hook per `CLAUDE.md`).
+**Client polling:** 5-minute interval, owned by `DataProvider` (`usePrices` is a thin reader of its context).
 
 **Note on pump prices:** Pump gasoline and diesel are always sourced from static DOE data, not derived from live Brent/forex. The import parity formula is available in `src/lib/priceSources.ts` (`derivePumpPrices`) but is intentionally not used for pump prices in this route — it underestimates during supply disruptions.
 
@@ -110,7 +110,7 @@ All feeds are filtered for energy-relevance using the pattern: `oil|fuel|gasolin
 
 **Cache:** `s-maxage=300, stale-while-revalidate=600` (5 min fresh, 10 min stale). No cache header on exception path.
 
-**Client polling:** 3-minute interval with exponential backoff (`useEvents` hook per `CLAUDE.md`).
+**Client polling:** 3-minute interval with exponential backoff, owned by `DataProvider` (`useEvents` is a thin reader of its context).
 
 ---
 
