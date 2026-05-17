@@ -266,6 +266,8 @@ git commit -m "add scenario-url — pure encode/decode for shareable scenarios"
 
 A small presentational button. On click it tries `navigator.share` (native share sheet on mobile) and falls back to `navigator.clipboard.writeText` + a transient "Copied" confirmation. It takes a `url` and `title`; it owns no scenario logic. SSR-safe — all browser-API access is inside the click handler, never at module or render scope.
 
+> **Execution note (test deferred):** the planned `ShareButton.test.tsx` render test could not run — this repo's Vitest harness has never executed a component (`.test.tsx`) test, and the first attempt surfaced a pre-existing repo-wide defect: a duplicate-React-instance "Invalid hook call" the moment any hook component is rendered under test. `resolve.dedupe`, `server.deps.inline`, and `IS_REACT_ACT_ENVIRONMENT` were all tried without success — the proper fix (likely a Vitest 3 upgrade) is its own task, out of scope for this feature wave. `ShareButton` ships verified by `pnpm build`, `pnpm lint`, the final code review, and the Task 4 manual check; the component-test harness fix is tracked as a separate follow-up.
+
 **Files:**
 - Create: `src/components/ui/ShareButton.tsx`
 - Create: `src/components/ui/__tests__/ShareButton.test.tsx`
@@ -278,14 +280,21 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ShareButton } from '@/components/ui/ShareButton';
 
+// NOTE: this environment (Node 25 + vitest 2.1.9 + React 18) commits the React
+// render a tick AFTER `render()` returns, so a synchronous `getBy*` query would
+// miss the freshly-mounted DOM. Use the async, retrying `findBy*` queries —
+// the React Testing Library recommended pattern regardless.
+
 describe('ShareButton', () => {
   beforeEach(() => {
     vi.restoreAllMocks();
   });
 
-  it('renders the default label', () => {
+  it('renders the default label', async () => {
     render(<ShareButton url="https://example.com/?s=1" title="Test" />);
-    expect(screen.getByRole('button', { name: /share this view/i })).toBeTruthy();
+    expect(
+      await screen.findByRole('button', { name: /share this view/i }),
+    ).toBeTruthy();
   });
 
   it('copies to clipboard and shows confirmation when Web Share is unavailable', async () => {
@@ -293,13 +302,13 @@ describe('ShareButton', () => {
     // jsdom has no navigator.share — force the clipboard fallback path.
     vi.stubGlobal('navigator', { clipboard: { writeText } });
 
-    render(<ShareButton url="https://example.com/?s=120.8.60.5.1" title="Test" />);
-    fireEvent.click(screen.getByRole('button'));
+    render(<ShareButton url="https://example.com/?s=120_8_60.5_1" title="Test" />);
+    fireEvent.click(await screen.findByRole('button'));
 
     await waitFor(() => {
-      expect(writeText).toHaveBeenCalledWith('https://example.com/?s=120.8.60.5.1');
+      expect(writeText).toHaveBeenCalledWith('https://example.com/?s=120_8_60.5_1');
     });
-    expect(screen.getByText(/copied/i)).toBeTruthy();
+    expect(await screen.findByText(/copied/i)).toBeTruthy();
   });
 });
 ```
@@ -1130,7 +1139,7 @@ git commit -m "document scenario sharing for ai agents — llms.txt, manifest, j
 - [ ] **Step 1: Full test suite**
 
 Run: `pnpm test`
-Expected: all tests pass — the prior suite plus the 7 new `scenario-url` tests and the 2 new `ShareButton` tests.
+Expected: all tests pass — the prior suite plus the 7 new `scenario-url` tests. (The `ShareButton` render test was deferred — see the Task 2 execution note — so no `ShareButton` tests are in the suite.)
 
 - [ ] **Step 2: Clean build**
 
