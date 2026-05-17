@@ -1,7 +1,7 @@
 'use client';
 
 import { useScrollSpy } from '@/hooks/useScrollSpy';
-import { BarChart3, Map, TrendingUp, Fuel, SlidersHorizontal, Activity, Building2, type LucideIcon } from 'lucide-react';
+import { BarChart3, Map, DollarSign, Fuel, SlidersHorizontal, Activity, Building2, type LucideIcon } from 'lucide-react';
 
 interface NavSection {
   id: string;
@@ -12,7 +12,7 @@ interface NavSection {
 const SECTIONS: NavSection[] = [
   { id: 'snapshot', label: 'Overview', icon: BarChart3 },
   { id: 'map', label: 'Map', icon: Map },
-  { id: 'prices', label: 'Prices', icon: TrendingUp },
+  { id: 'prices', label: 'Prices', icon: DollarSign },
   { id: 'tracker', label: 'Stations', icon: Fuel },
   { id: 'scenario', label: 'Scenarios', icon: SlidersHorizontal },
   { id: 'stress-test', label: 'Analysis', icon: Activity },

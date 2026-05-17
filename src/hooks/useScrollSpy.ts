@@ -2,12 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-export interface Section {
-  id: string;
-  label: string;
-  icon: string;
-}
-
 export function useScrollSpy(sectionIds: string[], offset: number = 100) {
   const [activeId, setActiveId] = useState(sectionIds[0] ?? '');
   const observer = useRef<IntersectionObserver | null>(null);

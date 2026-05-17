@@ -1,7 +1,7 @@
 'use client';
 
 import { useScrollSpy } from '@/hooks/useScrollSpy';
-import { BarChart3, Map, TrendingUp, SlidersHorizontal, Building2, type LucideIcon } from 'lucide-react';
+import { BarChart3, Map, DollarSign, SlidersHorizontal, Building2, type LucideIcon } from 'lucide-react';
 
 interface MobileSection {
   id: string;
@@ -12,7 +12,7 @@ interface MobileSection {
 const MOBILE_SECTIONS: MobileSection[] = [
   { id: 'snapshot', label: 'Home', icon: BarChart3 },
   { id: 'map', label: 'Map', icon: Map },
-  { id: 'prices', label: 'Prices', icon: TrendingUp },
+  { id: 'prices', label: 'Prices', icon: DollarSign },
   { id: 'scenario', label: 'Plan', icon: SlidersHorizontal },
   { id: 'players', label: 'Market', icon: Building2 },
 ];
