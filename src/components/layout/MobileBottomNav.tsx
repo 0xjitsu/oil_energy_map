@@ -1,13 +1,20 @@
 'use client';
 
 import { useScrollSpy } from '@/hooks/useScrollSpy';
+import { BarChart3, Map, TrendingUp, SlidersHorizontal, Building2, type LucideIcon } from 'lucide-react';
 
-const MOBILE_SECTIONS = [
-  { id: 'snapshot', label: 'Home', icon: '📊' },
-  { id: 'map', label: 'Map', icon: '🗺️' },
-  { id: 'prices', label: 'Prices', icon: '💰' },
-  { id: 'scenario', label: 'Plan', icon: '🎛️' },
-  { id: 'players', label: 'Market', icon: '🏢' },
+interface MobileSection {
+  id: string;
+  label: string;
+  icon: LucideIcon;
+}
+
+const MOBILE_SECTIONS: MobileSection[] = [
+  { id: 'snapshot', label: 'Home', icon: BarChart3 },
+  { id: 'map', label: 'Map', icon: Map },
+  { id: 'prices', label: 'Prices', icon: TrendingUp },
+  { id: 'scenario', label: 'Plan', icon: SlidersHorizontal },
+  { id: 'players', label: 'Market', icon: Building2 },
 ];
 
 const MOBILE_SECTION_IDS = MOBILE_SECTIONS.map((s) => s.id);
@@ -21,7 +28,7 @@ export function MobileBottomNav() {
       aria-label="Quick navigation"
     >
       <div className="flex items-center justify-around px-2 py-1">
-        {MOBILE_SECTIONS.map(({ id, label, icon }) => {
+        {MOBILE_SECTIONS.map(({ id, label, icon: Icon }) => {
           const isActive = activeId === id;
           return (
             <a
@@ -31,7 +38,7 @@ export function MobileBottomNav() {
                 isActive ? 'text-text-primary' : 'text-text-label'
               }`}
             >
-              <span className="text-base">{icon}</span>
+              <Icon className="w-4 h-4" aria-hidden="true" />
               <span className="text-[8px] font-mono uppercase tracking-widest">{label}</span>
             </a>
           );
