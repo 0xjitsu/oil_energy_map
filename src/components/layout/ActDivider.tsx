@@ -19,11 +19,16 @@ export function ActDivider({ number, question, hook, gradientFrom, gradientTo }:
     <div
       ref={ref}
       className="relative min-h-[30vh] sm:min-h-[30vh] flex items-center justify-center overflow-hidden my-4"
-      style={{
-        background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
-        transform: `translateY(${bgOffset}px)`,
-      }}
     >
+      <div
+        className="absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
+          transform: `translateY(${bgOffset}px)`,
+        }}
+      />
+
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, transparent, ${gradientTo}, transparent)`, opacity: 0.3 }} />
       <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, transparent, ${gradientTo}, transparent)`, opacity: 0.3 }} />
 
