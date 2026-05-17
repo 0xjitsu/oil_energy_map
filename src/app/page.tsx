@@ -6,7 +6,7 @@ import { AlertBanner } from '@/components/layout/AlertBanner';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 const MapWrapper = dynamic(
-  () => import('@/components/map/MapWrapper'),
+  () => import('@/components/map/IntelMap'),
   {
     ssr: false,
     loading: () => (
