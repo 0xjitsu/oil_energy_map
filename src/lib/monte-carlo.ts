@@ -65,8 +65,15 @@ export function runMonteCarlo(
   for (let i = 0; i < runs; i++) {
     const brentPrice = Math.max(40, normalRandom(baseParams.brentPrice, baseParams.brentPrice * 0.15));
     const forexRate = Math.max(50, normalRandom(baseParams.forexRate, baseParams.forexRate * 0.05));
-    const hormuzDisrupted = bernoulli(0.15);
-    const hormuzWeeks = hormuzDisrupted ? Math.round(uniformRandom(1, 16)) : 0;
+    // Centre the Hormuz disruption on the user's scenario input. If the user
+    // set 0 weeks, keep a small (~5%) baseline tail risk of a short disruption.
+    const hormuzMean = baseParams.hormuzWeeks;
+    const hormuzWeeks =
+      hormuzMean > 0
+        ? Math.min(16, Math.max(0, Math.round(normalRandom(hormuzMean, Math.max(1, hormuzMean * 0.3)))))
+        : bernoulli(0.05)
+          ? Math.round(uniformRandom(1, 4))
+          : 0;
     const refineryOffline = bernoulli(isTyphoonSeason ? 0.15 : 0.05);
 
     const params: ScenarioParams = { brentPrice, hormuzWeeks, forexRate, refineryOffline };

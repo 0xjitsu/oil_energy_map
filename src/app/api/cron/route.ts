@@ -30,17 +30,13 @@ export async function GET(request: NextRequest) {
     results.prices = { ok: false, error: String(e) };
   }
 
-  // Fetch sentiment (only if HF token is configured)
-  if (process.env.HUGGINGFACE_API_TOKEN) {
-    try {
-      const sentRes = await fetch(`${baseUrl}/api/sentiment`);
-      const sentiment = await sentRes.json();
-      results.sentiment = { ok: sentRes.ok, count: Array.isArray(sentiment) ? sentiment.length : 0 };
-    } catch (e) {
-      results.sentiment = { ok: false, error: String(e) };
-    }
-  } else {
-    results.sentiment = { ok: false, error: 'HUGGINGFACE_API_TOKEN not configured' };
+  // Fetch sentiment
+  try {
+    const sentRes = await fetch(`${baseUrl}/api/sentiment`);
+    const sentiment = await sentRes.json();
+    results.sentiment = { ok: sentRes.ok, count: Array.isArray(sentiment) ? sentiment.length : 0 };
+  } catch (e) {
+    results.sentiment = { ok: false, error: String(e) };
   }
 
   const allOk = Object.values(results).every((r) => r.ok);

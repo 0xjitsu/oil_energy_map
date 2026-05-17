@@ -27,7 +27,7 @@ export function StationTrackerSection() {
         <div className="flex-1 h-px bg-border-subtle ml-2" />
       </div>
       <p className="text-sm text-text-secondary mb-4">
-        Fuel availability across 10,469 monitored stations
+        Estimated supply-stress distribution across 10,469 stations
       </p>
 
       {/* Stat cards */}
@@ -53,6 +53,12 @@ export function StationTrackerSection() {
           );
         })}
       </div>
+
+      {/* Modeled-data disclaimer */}
+      <p className="mt-4 text-[10px] font-mono text-text-dim leading-relaxed">
+        Per-station status is modeled (deterministic simulation from station ID +
+        regional supply-stress rates) — not live per-station telemetry.
+      </p>
 
       {/* Source attribution */}
       <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] font-mono text-text-dim">

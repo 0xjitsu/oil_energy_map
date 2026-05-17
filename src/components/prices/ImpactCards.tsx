@@ -2,36 +2,45 @@
 
 import { useMemo } from 'react';
 import { IMPACT_ITEMS } from '@/lib/constants';
+import { calculatePumpPrice } from '@/lib/scenario-engine';
 import { InfoTip } from '@/components/ui/Tooltip';
-import type { ScenarioParams, ImpactItem } from '@/types';
+import type { ScenarioParams, ImpactItem, RiskLevel } from '@/types';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
-const BASELINE_BRENT = 106;
+// Baselines mirror the scenario-engine's calm base case (Brent $80, PHP 56,
+// no disruption) so a calm scenario honestly derives "no extra cost".
+const BASELINE_GASOLINE = 65;
+const BASELINE_DIESEL = 59;
 
+/**
+ * Derive everyday cost impacts from the MODELED pump-price change.
+ * `calculatePumpPrice` is the same engine the Scenario Planner and Impact
+ * Calculator use — so these numbers are consistent across the dashboard.
+ */
 function deriveImpacts(base: ImpactItem[], params: ScenarioParams): ImpactItem[] {
-  const brentDelta = params.brentPrice - BASELINE_BRENT; // positive = more expensive
-  const forexPressure = (params.forexRate - 56) / 9; // 0 at ₱56, ~1 at ₱65
-  const severity = brentDelta / 74; // normalized: 0 at baseline, ~1 at $180
+  const { gasoline, diesel } = calculatePumpPrice(params);
+  const gasDelta = Math.max(0, gasoline - BASELINE_GASOLINE); // ₱/L over baseline
+  const dieselDelta = Math.max(0, diesel - BASELINE_DIESEL);
 
   return base.map((item) => {
     switch (item.label) {
       case 'Jeepney Fare': {
-        const extra = Math.max(0, Math.round(severity * 4 + forexPressure));
+        const extra = Math.round(dieselDelta * 0.35);
         const change = extra <= 0 ? 'No change' : `+₱${extra}–${extra + 1} per ride`;
         return { ...item, change };
       }
       case 'Grab Ride': {
-        const surcharge = Math.max(0, Math.round(8 + severity * 15 + forexPressure * 5));
-        const change = surcharge <= 0 ? 'No surcharge' : `+₱${surcharge}–${surcharge + 4} surcharge`;
+        const extra = Math.round(gasDelta * 2.2);
+        const change = extra <= 0 ? 'No surcharge' : `+₱${extra}–${extra + 4} surcharge`;
         return { ...item, change };
       }
       case 'Rice Delivery': {
-        const extra = Math.max(0, Math.round(1 + severity * 3 + forexPressure));
+        const extra = Math.round(dieselDelta * 0.25);
         const change = extra <= 0 ? 'No change' : `+₱${extra}–${extra + 1}/kg`;
         return { ...item, change };
       }
       case 'LPG Cooking': {
-        const extra = Math.max(0, Math.round(200 + severity * 400 + forexPressure * 100));
+        const extra = Math.round((gasDelta + dieselDelta) * 18);
         const change = extra <= 0 ? 'No change' : `+₱${extra}–${extra + 100}/month`;
         return { ...item, change };
       }
@@ -41,16 +50,12 @@ function deriveImpacts(base: ImpactItem[], params: ScenarioParams): ImpactItem[]
   });
 }
 
-function getBorderColor(brentPrice: number): string {
-  if (brentPrice < 80) return 'border-l-emerald-500/40';
-  if (brentPrice < 120) return 'border-l-yellow-500/40';
-  return 'border-l-red-500/40';
-}
-
-function getChangeColor(brentPrice: number): string {
-  if (brentPrice < 80) return 'text-emerald-400';
-  if (brentPrice < 120) return 'text-yellow-400';
-  return 'text-red-400';
+function riskClasses(riskLevel: RiskLevel): { border: string; change: string } {
+  if (riskLevel === 'green') return { border: 'border-l-status-green/40', change: 'text-status-green' };
+  if (riskLevel === 'red') {
+    return { border: 'border-l-status-red/40', change: 'text-status-red' };
+  }
+  return { border: 'border-l-status-yellow/40', change: 'text-status-yellow' };
 }
 
 interface ImpactCardsProps {
@@ -58,18 +63,21 @@ interface ImpactCardsProps {
 }
 
 export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
-  const impacts = useMemo(
-    () => deriveImpacts(IMPACT_ITEMS, scenarioParams),
-    [scenarioParams],
-  );
-  const borderColor = getBorderColor(scenarioParams.brentPrice);
-  const changeColor = getChangeColor(scenarioParams.brentPrice);
+  const { impacts, border, change } = useMemo(() => {
+    const result = calculatePumpPrice(scenarioParams);
+    const classes = riskClasses(result.riskLevel);
+    return {
+      impacts: deriveImpacts(IMPACT_ITEMS, scenarioParams),
+      border: classes.border,
+      change: classes.change,
+    };
+  }, [scenarioParams]);
 
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {impacts.map((item) => (
-          <div key={item.label} className={`glass-card p-4 cursor-default border-l-2 ${borderColor}`}>
+          <div key={item.label} className={`glass-card p-4 cursor-default border-l-2 ${border}`}>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-lg" role="img" aria-label={item.label}>
                 {item.icon}
@@ -79,14 +87,14 @@ export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
                 <InfoTip text={item.tooltip} />
               </span>
             </div>
-            <p className={`text-sm font-mono font-semibold ${changeColor}`}>{item.change}</p>
+            <p className={`text-sm font-mono font-semibold ${change}`}>{item.change}</p>
             <p className="text-[10px] font-mono text-text-subtle mt-1">
               from {item.current}
             </p>
           </div>
         ))}
       </div>
-      <SourceAttribution derived="Derived from Brent + Forex" />
+      <SourceAttribution derived="Modeled from scenario pump prices (scenario-engine)" />
     </div>
   );
 }

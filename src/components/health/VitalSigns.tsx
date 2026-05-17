@@ -1,6 +1,7 @@
 import { VITAL_SIGNS } from '@/lib/constants';
 import { InfoTip } from '@/components/ui/Tooltip';
 import { GaugeBar, type ThresholdZone } from '@/components/ui/GaugeBar';
+import { SourceAttribution } from '@/components/ui/SourceAttribution';
 import type { RiskLevel, ScenarioParams, MapMode, VitalSign } from '@/types';
 
 const STATUS_STYLES: Record<RiskLevel, { badge: string; label: string; pulse: boolean }> = {
@@ -111,9 +112,15 @@ interface VitalSignsProps {
 export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
   const signs = mapMode === 'live' ? VITAL_SIGNS : deriveVitalSigns(VITAL_SIGNS, scenarioParams);
 
+  const provenance =
+    mapMode === 'live'
+      ? 'Estimated from DOE baseline + editorial — not live telemetry'
+      : 'Derived from scenario parameters';
+
   return (
-    <div className="grid grid-cols-2 gap-3">
-      {signs.map((sign) => {
+    <div>
+      <div className="grid grid-cols-2 gap-3">
+        {signs.map((sign) => {
         const style = STATUS_STYLES[sign.status];
         return (
           <div
@@ -154,6 +161,8 @@ export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
           </div>
         );
       })}
+      </div>
+      <SourceAttribution derived={provenance} />
     </div>
   );
 }
