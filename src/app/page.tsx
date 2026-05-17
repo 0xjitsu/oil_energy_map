@@ -129,7 +129,7 @@ export default function Home() {
         <ActDivider
           number="01"
           question="What's Happening Now"
-          hook="Live supply chain status — crude benchmarks, forex, pump prices, and the infrastructure that moves oil across the Philippines."
+          hook="Crude, forex, pump prices, and the infrastructure moving oil right now — every figure here moves what you pay tomorrow."
           gradientFrom="#060a10"
           gradientTo="#0a1628"
         />
@@ -166,7 +166,7 @@ export default function Home() {
         <ActDivider
           number="02"
           question="What does it cost you?"
-          hook="The supply chain above sets the stage. Now let's see what it means at the pump — and in your wallet."
+          hook="The supply chain above becomes a line in your budget. Here is that line."
           gradientFrom="#0a1628"
           gradientTo="#1e1b4b"
         />
@@ -198,7 +198,7 @@ export default function Home() {
         <ActDivider
           number="03"
           question="What could happen next?"
-          hook="Prices are one thing. But what if Hormuz closes for 8 weeks? Model the scenarios yourself."
+          hook="One closed strait, one offline refinery. Model the shock before it reaches the pump."
           gradientFrom="#1e1b4b"
           gradientTo="#1c1408"
         />
@@ -229,7 +229,7 @@ export default function Home() {
         <ActDivider
           number="04"
           question="Who controls the supply?"
-          hook="Behind every price movement are market players, system health indicators, and global events."
+          hook="Five companies, one refinery, and the global events that move them all."
           gradientFrom="#1c1408"
           gradientTo="#0f172a"
         />
