@@ -6,10 +6,9 @@ import { useDismissable } from '@/hooks/useDismissable';
 import { GuideStep } from './GuideStep';
 
 export function HowToGuide() {
-  const { dismissed, dismiss, loaded } = useDismissable('how-to-guide');
+  const { dismiss, loaded } = useDismissable('how-to-guide');
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
-  const [autoOpened, setAutoOpened] = useState(false);
 
   const handleOpen = useCallback(() => {
     setStep(0);
@@ -53,16 +52,6 @@ export function HowToGuide() {
 
   // Wait for localStorage to load before deciding
   if (!loaded) return null;
-
-  // Auto-show on first visit (only once per session)
-  if (!dismissed && !open && !autoOpened) {
-    return (
-      <>
-        <HowToTrigger onClick={handleOpen} />
-        <AutoOpen onOpen={() => { setAutoOpened(true); handleOpen(); }} />
-      </>
-    );
-  }
 
   return (
     <>
@@ -143,10 +132,32 @@ function HowToTrigger({ onClick }: { onClick: () => void }) {
   );
 }
 
-function AutoOpen({ onOpen }: { onOpen: () => void }) {
-  useEffect(() => {
-    const timer = setTimeout(onOpen, 2000);
-    return () => clearTimeout(timer);
-  }, [onOpen]);
-  return null;
+export function HowToHint() {
+  const { dismissed, dismiss, loaded } = useDismissable('how-to-guide');
+
+  if (!loaded || dismissed) return null;
+
+  return (
+    <div className="glass-card flex items-center gap-3 px-4 py-2.5">
+      <span className="text-base" aria-hidden="true">🧭</span>
+      <p className="flex-1 text-xs font-sans text-text-secondary">
+        New here? This dashboard models what Philippine oil shocks cost everyday families.
+      </p>
+      <button
+        type="button"
+        onClick={() => window.dispatchEvent(new CustomEvent('open-how-to-guide'))}
+        className="font-mono text-[10px] uppercase tracking-widest text-petron hover:text-text-primary transition-colors whitespace-nowrap"
+      >
+        Take the tour →
+      </button>
+      <button
+        type="button"
+        onClick={dismiss}
+        aria-label="Dismiss tip"
+        className="p-2 rounded-md text-text-dim hover:text-text-secondary hover:bg-surface-hover transition-colors min-h-[36px] min-w-[36px] flex items-center justify-center"
+      >
+        ✕
+      </button>
+    </div>
+  );
 }

@@ -31,6 +31,9 @@ import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 import { ActDivider } from '@/components/layout/ActDivider';
+import { WhatToDo } from '@/components/layout/WhatToDo';
+import { CrisisHero } from '@/components/layout/CrisisHero';
+import { HowToHint } from '@/components/onboarding/HowToGuide';
 
 import { CrisisProvider } from '@/lib/CrisisProvider';
 import { HighlightProvider } from '@/lib/HighlightContext';
@@ -120,11 +123,17 @@ export default function Home() {
       <SectionNav />
 
       <main id="main-content" tabIndex={-1} className="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-8">
+        <FadeIn delay={0}>
+          <CrisisHero />
+        </FadeIn>
+
+        <HowToHint />
+
         {/* ━━━ ACT 1: WHAT'S HAPPENING NOW ━━━ */}
         <ActDivider
           number="01"
           question="What's Happening Now"
-          hook="Live supply chain status — crude benchmarks, forex, pump prices, and the infrastructure that moves oil across the Philippines."
+          hook="Crude, forex, pump prices, and the infrastructure moving oil right now — every figure here moves what you pay tomorrow."
           gradientFrom="#060a10"
           gradientTo="#0a1628"
         />
@@ -161,7 +170,7 @@ export default function Home() {
         <ActDivider
           number="02"
           question="What does it cost you?"
-          hook="The supply chain above sets the stage. Now let's see what it means at the pump — and in your wallet."
+          hook="The supply chain above becomes a line in your budget. Here is that line."
           gradientFrom="#0a1628"
           gradientTo="#1e1b4b"
         />
@@ -193,7 +202,7 @@ export default function Home() {
         <ActDivider
           number="03"
           question="What could happen next?"
-          hook="Prices are one thing. But what if Hormuz closes for 8 weeks? Model the scenarios yourself."
+          hook="One closed strait, one offline refinery. Model the shock before it reaches the pump."
           gradientFrom="#1e1b4b"
           gradientTo="#1c1408"
         />
@@ -224,7 +233,7 @@ export default function Home() {
         <ActDivider
           number="04"
           question="Who controls the supply?"
-          hook="Behind every price movement are market players, system health indicators, and global events."
+          hook="Five companies, one refinery, and the global events that move them all."
           gradientFrom="#1c1408"
           gradientTo="#0f172a"
         />
@@ -257,6 +266,17 @@ export default function Home() {
           <SectionHeader color="bg-status-yellow" label="Event Timeline" />
           <EventTimeline />
         </section>
+
+        {/* ━━━ ACT 5: WHAT YOU CAN DO ━━━ */}
+        <ActDivider
+          number="05"
+          question="What can you do about it?"
+          hook="The data is the easy part. Here is where you go from reading to doing."
+          gradientFrom="#0f172a"
+          gradientTo="#060a10"
+        />
+
+        <WhatToDo />
       </main>
 
       <MobileBottomNav />

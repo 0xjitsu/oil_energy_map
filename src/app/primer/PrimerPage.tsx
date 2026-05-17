@@ -19,6 +19,20 @@ export function PrimerPage() {
         <div className="max-w-4xl mx-auto">
           <CrudeOilTypes />
         </div>
+        <div className="mt-12 glass-card px-6 py-8 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-text-label mb-2">
+            Next
+          </p>
+          <p className="text-text-body mb-4">
+            You&apos;ve seen how oil reaches the Philippines. Now see what a price shock costs a family.
+          </p>
+          <a
+            href="/cascade"
+            className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-petron hover:text-text-primary transition-colors"
+          >
+            See the cost cascade →
+          </a>
+        </div>
       </main>
 
       <Footer />

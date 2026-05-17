@@ -58,10 +58,10 @@ export function CascadePage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-text-primary mb-3 max-w-3xl">
-            {cascadeHeadline.householdImpact}nth
-            <span className="text-text-secondary font-normal text-xl sm:text-2xl md:text-3xl block mt-1">
-              — what {cascadeHeadline.crudePrice} oil costs a Filipino family
-            </span>
+            Filipino families pay{' '}
+            <span className="text-status-red">{cascadeHeadline.householdImpact}</span>{' '}
+            more — traced from{' '}
+            <span className="text-status-red">{cascadeHeadline.crudePrice}</span> crude oil.
           </h1>
 
           <p className="max-w-2xl text-sm sm:text-base text-text-body leading-relaxed mt-4">
@@ -232,6 +232,21 @@ export function CascadePage() {
             </div>
           </div>
         </section>
+
+        <div className="mt-12 glass-card px-6 py-8 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-text-label mb-2">
+            Start here
+          </p>
+          <p className="text-text-body mb-4">
+            Wondering how the oil gets here in the first place? Trace the supply chain.
+          </p>
+          <a
+            href="/primer"
+            className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-petron hover:text-text-primary transition-colors"
+          >
+            How energy reaches the Philippines →
+          </a>
+        </div>
 
         {/* ── Methodology & Attribution ── */}
         <footer className="mt-10 pt-6 border-t border-border-subtle">
