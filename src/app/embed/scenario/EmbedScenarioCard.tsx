@@ -1,5 +1,3 @@
-'use client';
-
 import type { ScenarioParams } from '@/types';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
 
@@ -58,7 +56,7 @@ export function EmbedScenarioCard({ params }: EmbedScenarioCardProps) {
       </p>
 
       <a
-        href="/?s="
+        href="/"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-4 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-petron transition-colors hover:text-text-primary"
