@@ -7,15 +7,31 @@ import { SparkChart } from '@/components/prices/SparkChart';
 import { InfoTip } from '@/components/ui/Tooltip';
 import type { ScenarioParams } from '@/types';
 
-function getRiskLevel(params: ScenarioParams): { label: string; color: string; bg: string } {
+type RiskTone = 'danger' | 'warning' | 'caution' | 'ok';
+
+const RISK_TONE_CLASS: Record<RiskTone, string> = {
+  danger: 'text-status-red',
+  warning: 'text-status-red',
+  caution: 'text-status-yellow',
+  ok: 'text-status-green',
+};
+
+const RISK_TONE_BG: Record<RiskTone, string> = {
+  danger: 'bg-status-red/10',
+  warning: 'bg-status-red/10',
+  caution: 'bg-status-yellow/10',
+  ok: 'bg-status-green/10',
+};
+
+function getRiskLevel(params: ScenarioParams): { label: string; tone: RiskTone } {
   const score =
     params.hormuzWeeks / 16 +
     (params.refineryOffline ? 0.3 : 0) +
     (params.brentPrice - 106) / 150;
-  if (score > 0.6) return { label: 'CRITICAL', color: 'text-red-400', bg: 'bg-red-400/10' };
-  if (score > 0.3) return { label: 'HIGH', color: 'text-amber-400', bg: 'bg-amber-400/10' };
-  if (score > 0.1) return { label: 'MODERATE', color: 'text-yellow-400', bg: 'bg-yellow-400/10' };
-  return { label: 'LOW', color: 'text-emerald-400', bg: 'bg-emerald-400/10' };
+  if (score > 0.6) return { label: 'CRITICAL', tone: 'danger' };
+  if (score > 0.3) return { label: 'HIGH', tone: 'warning' };
+  if (score > 0.1) return { label: 'MODERATE', tone: 'caution' };
+  return { label: 'LOW', tone: 'ok' };
 }
 
 function formatValue(value: number, unit: string): string {
@@ -55,8 +71,10 @@ function HeroKPI({
   const pctChange = base !== 0 ? (delta / Math.abs(base)) * 100 : 0;
 
   return (
-    <div
-      className="glass-card p-5 lg:p-6 flex flex-col justify-between min-w-0 relative overflow-hidden cursor-pointer hover:border-border-hover transition-colors duration-200"
+    <button
+      type="button"
+      aria-label={`View details for ${label}`}
+      className="glass-card p-5 lg:p-6 flex flex-col justify-between min-w-0 relative overflow-hidden cursor-pointer hover:border-border-hover transition-colors duration-200 text-left w-full"
       style={{ borderTop: `2px solid ${accentBorder}` }}
       onClick={() => {
         if (targetId) {
@@ -77,7 +95,7 @@ function HeroKPI({
         </p>
         <span
           className={`text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded ${
-            isUp ? 'text-red-400 bg-red-400/10' : 'text-emerald-400 bg-emerald-400/10'
+            isUp ? 'text-status-red bg-status-red/10' : 'text-status-green bg-status-green/10'
           }`}
         >
           {isUp ? '▲' : '▼'} {Math.abs(pctChange).toFixed(1)}%
@@ -105,7 +123,7 @@ function HeroKPI({
 
       {/* Delta detail */}
       <div className="mt-3 flex items-center justify-between">
-        <p className={`text-xs font-mono flex items-center gap-1 ${isUp ? 'text-red-400/80' : 'text-emerald-400/80'}`}>
+        <p className={`text-xs font-mono flex items-center gap-1 ${isUp ? 'text-status-red/80' : 'text-status-green/80'}`}>
           <span
             style={{
               display: 'inline-block',
@@ -122,7 +140,7 @@ function HeroKPI({
         </span>
       </div>
       <span className="text-[9px] font-mono text-text-dim mt-1">View details ↓</span>
-    </div>
+    </button>
   );
 }
 
@@ -219,10 +237,10 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
         {isLive && (
           <span className="flex items-center gap-1.5">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-green opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-status-green" />
             </span>
-            <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-400">Live</span>
+            <span className="text-[10px] font-mono uppercase tracking-widest text-status-green">Live</span>
           </span>
         )}
         {!isLive && (
@@ -261,15 +279,23 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
         <StatusBadge
           label="Supply Risk"
           value={risk.label}
-          color={risk.color}
-          bg={risk.bg}
+          color={RISK_TONE_CLASS[risk.tone]}
+          bg={RISK_TONE_BG[risk.tone]}
           subtitle="Hormuz + Refinery"
         />
         <StatusBadge
           label="Disruptions"
           value={String(criticalCount)}
-          color={criticalCount > 2 ? 'text-red-400' : criticalCount > 0 ? 'text-amber-400' : 'text-emerald-400'}
-          bg={criticalCount > 2 ? 'bg-red-400/10' : criticalCount > 0 ? 'bg-amber-400/10' : 'bg-emerald-400/10'}
+          color={
+            RISK_TONE_CLASS[
+              criticalCount > 2 ? 'danger' : criticalCount > 0 ? 'caution' : 'ok'
+            ]
+          }
+          bg={
+            RISK_TONE_BG[
+              criticalCount > 2 ? 'danger' : criticalCount > 0 ? 'caution' : 'ok'
+            ]
+          }
           subtitle={`of ${events.length} events`}
         />
       </div>
