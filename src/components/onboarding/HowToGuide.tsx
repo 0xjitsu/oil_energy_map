@@ -154,7 +154,7 @@ export function HowToHint() {
         type="button"
         onClick={dismiss}
         aria-label="Dismiss tip"
-        className="p-1 rounded-md text-text-dim hover:text-text-secondary hover:bg-surface-hover transition-colors"
+        className="p-2 rounded-md text-text-dim hover:text-text-secondary hover:bg-surface-hover transition-colors min-h-[36px] min-w-[36px] flex items-center justify-center"
       >
         ✕
       </button>
