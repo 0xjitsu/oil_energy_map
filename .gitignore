@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated station data (built by scripts/build-stations-json.mjs via prebuild/predev)
+/public/data/stations.json

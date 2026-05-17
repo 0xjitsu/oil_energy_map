@@ -117,6 +117,8 @@ export async function GET() {
       headers: { 'Cache-Control': 's-maxage=900, stale-while-revalidate=1800' },
     });
   } catch {
-    return NextResponse.json(priceBenchmarks);
+    return NextResponse.json(priceBenchmarks, {
+      headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' },
+    });
   }
 }

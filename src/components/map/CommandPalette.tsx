@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import { allStations } from '@/data/stations';
+import { useStations } from '@/hooks/useStations';
 import { facilities } from '@/data/facilities';
 import { REGION_NAMES } from '@/data/regions';
 
@@ -38,6 +38,7 @@ export default function CommandPalette({
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const { stations } = useStations();
 
   // Focus input when opened
   useEffect(() => {
@@ -65,7 +66,7 @@ export default function CommandPalette({
     const matches: SearchResult[] = [];
 
     // Search stations (cap at 8)
-    const stationMatches = allStations
+    const stationMatches = stations
       .filter((s) => s.name.toLowerCase().includes(q) || s.brand.toLowerCase().includes(q))
       .slice(0, 8)
       .map((s): SearchResult => ({
@@ -107,7 +108,7 @@ export default function CommandPalette({
     matches.push(...actionMatches);
 
     return matches.slice(0, 20);
-  }, [query]);
+  }, [query, stations]);
 
   const handleSelect = useCallback((result: SearchResult) => {
     switch (result.type) {

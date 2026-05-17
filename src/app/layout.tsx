@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { DataProvider } from "@/lib/DataProvider";
 
 const plexMono = IBM_Plex_Mono({
   variable: "--font-mono",
@@ -125,7 +126,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        {children}
+        <DataProvider>{children}</DataProvider>
       </body>
     </html>
   );

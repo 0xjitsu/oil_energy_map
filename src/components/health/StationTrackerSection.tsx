@@ -1,6 +1,6 @@
 'use client';
 
-import { statusCounts } from '@/data/stations';
+import { useStations } from '@/hooks/useStations';
 import { STATUS_COLORS, STATUS_LABELS } from '@/types/stations';
 import type { StationStatus } from '@/types/stations';
 
@@ -12,9 +12,10 @@ const STAT_CARDS: { label: string; status: StationStatus | null }[] = [
   { label: STATUS_LABELS.operational, status: 'operational' },
 ];
 
-const TOTAL_STATIONS = 10_469;
-
 export function StationTrackerSection() {
+  const { stations, statusCounts } = useStations();
+  const total = stations.length;
+
   return (
     <div>
       {/* Section header */}
@@ -32,7 +33,7 @@ export function StationTrackerSection() {
       {/* Stat cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
         {STAT_CARDS.map(({ label, status }) => {
-          const count = status ? statusCounts[status] : TOTAL_STATIONS;
+          const count = status ? statusCounts[status] : total;
           const color = status ? STATUS_COLORS[status] : undefined;
 
           return (

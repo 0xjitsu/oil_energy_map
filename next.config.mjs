@@ -13,6 +13,8 @@ const nextConfig = {
       'd3-sankey',
       'd3-selection',
       'd3-shape',
+      'recharts',
+      'lucide-react',
     ],
   },
 };
