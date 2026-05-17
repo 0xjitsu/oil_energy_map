@@ -70,11 +70,11 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
         {/* Left — title + nav */}
         <div className="flex items-center gap-6">
           <Link href="/" className="group">
-            <h1 className="text-sm font-mono tracking-widest text-text-primary uppercase group-hover:text-white transition-colors">
+            <p className="text-sm font-mono tracking-widest text-text-primary uppercase group-hover:text-white transition-colors">
               {crisisLevel === 'CRISIS' && <span aria-hidden="true" className="animate-pulse text-status-red">&laquo; </span>}
               Energy Intelligence Map
               {crisisLevel === 'CRISIS' && <span aria-hidden="true" className="animate-pulse text-status-red"> &raquo;</span>}
-            </h1>
+            </p>
             <p className="text-[10px] font-mono tracking-widest text-text-secondary uppercase mt-0.5">
               Philippines Supply Chain
             </p>

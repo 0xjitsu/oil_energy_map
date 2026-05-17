@@ -31,6 +31,7 @@ import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 import { ActDivider } from '@/components/layout/ActDivider';
+import { CrisisHero } from '@/components/layout/CrisisHero';
 
 import { CrisisProvider } from '@/lib/CrisisProvider';
 import { HighlightProvider } from '@/lib/HighlightContext';
@@ -120,6 +121,10 @@ export default function Home() {
       <SectionNav />
 
       <main id="main-content" tabIndex={-1} className="max-w-[1600px] mx-auto px-4 sm:px-6 py-6 space-y-8">
+        <FadeIn delay={0}>
+          <CrisisHero />
+        </FadeIn>
+
         {/* ━━━ ACT 1: WHAT'S HAPPENING NOW ━━━ */}
         <ActDivider
           number="01"
