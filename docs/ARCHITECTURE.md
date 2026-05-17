@@ -2,13 +2,13 @@
 
 ## Overview
 
-The PH Oil Intelligence Dashboard is a Next.js 14 App Router application that runs as a client-heavy single-page app with no database. The root layout (`src/app/layout.tsx`) handles fonts and JSON-LD structured data; all interactive logic lives inside a single `'use client'` page component (`src/app/page.tsx`). External data enters through two Next.js API route handlers that proxy live third-party APIs (Yahoo Finance, FloatRates, RSS feeds, Reddit) and fall back to static seed data on failure. There is no authentication, no session store, and no persistent backend — all state is ephemeral React state within the browser session.
+The PH Oil Intelligence Dashboard is a Next.js 14 App Router application that runs as a client-heavy single-page app with no database. The root layout (`src/app/layout.tsx`) handles fonts and JSON-LD structured data, and mounts the app-wide `DataProvider` that owns the price/event polling loops; all interactive logic lives inside a single `'use client'` page component (`src/app/page.tsx`). External data enters through two Next.js API route handlers that proxy live third-party APIs (Yahoo Finance, FloatRates, RSS feeds, Reddit) and fall back to static seed data on failure. The 10,469-station dataset is served as a static JSON file (`public/data/stations.json`) and fetched at runtime. There is no authentication, no session store, and no persistent backend — all state is ephemeral React state within the browser session.
 
 ---
 
 ## Page Structure
 
-The page renders a single scroll document divided into four narrative acts. Provider nesting wraps the entire page content; `HighlightProvider` is scoped narrowly to Act 4's market players section only.
+The page renders a single scroll document divided into four narrative acts. Provider nesting wraps the entire page content: the root layout mounts `DataProvider` (app-wide price/event data) around everything, `CrisisProvider` wraps the page below it, and `HighlightProvider` is scoped narrowly to Act 4's market players section only.
 
 ```
 CrisisProvider (scenarioParams)
@@ -20,7 +20,7 @@ CrisisProvider (scenarioParams)
         ├── <main>
         │     ├── Act 01 — What's Happening Now
         │     │     ├── ExecutiveSnapshot   (#snapshot)
-        │     │     ├── MapWrapper          (#map)   ← dynamic()
+        │     │     ├── IntelMap            (#map)   ← dynamic()
         │     │     └── TimelineSlider / TimelineScrubber
         │     ├── Act 02 — What It Costs
         │     │     ├── PumpPrices
@@ -61,18 +61,34 @@ All section anchor IDs use `scroll-mt-20` to account for the sticky header offse
 | SG Refining Margin ($/bbl) | Hardcoded constant (15.3) | `GET /api/prices` | `usePrices` | N/A | Same constant |
 | Timeline events | RSS: PhilStar, Al Jazeera, Google News ×2, DOE PH; Social: r/Philippines, r/energy | `GET /api/events` | `useEvents` | 3 min | `src/data/events.ts` static seed |
 | NLP Sentiment | `GET /api/sentiment` | `GET /api/sentiment` | `useSentiment` | 15 min | Empty array (error state shown) |
-| Gas station locations (10,469) | OpenStreetMap Overpass (one-time build) | None | Direct import | Static | Always present |
+| Gas station locations (10,469) | OpenStreetMap Overpass (built into `public/data/stations.json`) | static file `/data/stations.json` | `useStations` | Once on mount | Empty data while loading / on error |
+
+All `/api/prices` and `/api/events` polling is owned by a single `DataProvider` context (`src/lib/DataProvider.tsx`), mounted once in the root layout. It runs the only price loop (5 min) and event loop (3 min); `usePrices` and `useEvents` are thin readers that subscribe to this context rather than polling independently.
 
 The prices API caches at `s-maxage=900, stale-while-revalidate=1800` (`src/app/api/prices/route.ts:97`).
 The events API caches at `s-maxage=300, stale-while-revalidate=600` (`src/app/api/events/route.ts:154`).
 
-`useEvents` retries up to 3 times with exponential backoff (1 s, 2 s delays) before falling back to static data (`src/hooks/useEvents.ts:16–31`).
+`DataProvider` retries `/api/events` up to 3 times with exponential backoff (1 s, 2 s delays) before keeping the static fallback (`src/lib/DataProvider.tsx`, `fetchEvents`).
 
 ---
 
 ## State Management
 
 No global store. All state is React Context or `useState` local to `page.tsx`. Components subscribe to context values directly; no prop drilling beyond immediate children.
+
+### DataContext (`src/lib/DataProvider.tsx`)
+
+Provided by `<DataProvider>` in the root layout — wraps the entire app. Owns the only `/api/prices` (5 min) and `/api/events` (3 min) polling loops plus the price-history ring buffer.
+
+| Value | Type | Description |
+|-------|------|-------------|
+| `prices` | `PriceBenchmark[]` | Latest price benchmarks; static seed until the first live fetch |
+| `pricesLive` / `pricesUpdated` | `boolean` / `Date \| null` | Live-vs-static flag and last successful fetch time |
+| `priceHistory` | `Record<string, number[]>` | Per-benchmark ring buffer (last 7 readings) for sparklines |
+| `events` | `TimelineEvent[]` | Latest timeline events; static seed until the first live fetch |
+| `eventsLive` / `eventsUpdated` | `boolean` / `Date \| null` | Live-vs-static flag and last successful fetch time |
+
+Consumed via `useData()`, or the thin `usePrices()` / `useEvents()` wrappers.
 
 ### CrisisContext (`src/lib/CrisisProvider.tsx`)
 
@@ -98,9 +114,9 @@ Scoped to Act 4's market players grid only (not page-level). Enables hover linki
 
 | Variable | Type | Default | Purpose |
 |----------|------|---------|---------|
-| `mapMode` | `MapMode` | `'live'` | Controls map rendering mode; shared across `MapWrapper`, `ScenarioPlanner`, `VitalSigns` |
-| `scenarioParams` | `ScenarioParams` | `{ brentPrice: 106, hormuzWeeks: 2, forexRate: 58.42, refineryOffline: false }` | What-if inputs; fed into `CrisisProvider`, `ExecutiveSnapshot`, `ImpactCards`, `StressTest`, `ImpactCalculator`, `VitalSigns`, `MapWrapper` |
-| `timelinePosition` | `number` | `0` | 0–1 scrubber value for timeline mode; drives `TimelineSlider`, `TimelineScrubber`, `MapWrapper` |
+| `mapMode` | `MapMode` | `'live'` | Controls map rendering mode; shared across `IntelMap`, `ScenarioPlanner`, `VitalSigns` |
+| `scenarioParams` | `ScenarioParams` | `{ brentPrice: 106, hormuzWeeks: 2, forexRate: 58.42, refineryOffline: false }` | What-if inputs; fed into `CrisisProvider`, `ExecutiveSnapshot`, `ImpactCards`, `StressTest`, `ImpactCalculator`, `VitalSigns`, `IntelMap` |
+| `timelinePosition` | `number` | `0` | 0–1 scrubber value for timeline mode; drives `TimelineSlider`, `TimelineScrubber`, `IntelMap` |
 
 ---
 
@@ -152,7 +168,7 @@ Components above the fold (Executive Snapshot, header chrome, pump prices grid) 
 |-----------|----------------|---------|
 | `ExecutiveSnapshot` | Static import | None (renders immediately) |
 | `PumpPrices`, `ImpactCards`, `VitalSigns`, `SentimentGauge`, `EventTimeline` | Static import | None |
-| `MapWrapper` → `IntelMap` | `dynamic()` inside `MapWrapper.tsx` | "Initializing MapLibre GL..." placeholder div |
+| `IntelMap` | `dynamic()` in `page.tsx` | "Loading map..." skeleton |
 | `PricePanel` | `dynamic()` in `page.tsx` | `<PricePanelSkeleton />` |
 | `ScenarioPlanner` | `dynamic()` in `page.tsx` | `<ScenarioPlannerSkeleton />` |
 | `MarketShare` | `dynamic()` in `page.tsx` | `<MarketShareSkeleton />` |
@@ -190,13 +206,13 @@ The map is implemented in `src/components/map/IntelMap.tsx` using `react-map-gl/
 
 ### Layer Factory Pattern
 
-All layers are created by factory functions and spread into a single `deckLayers` `useMemo` array (`src/components/map/IntelMap.tsx:169–211`):
+All layers are created by factory functions and spread into a single `deckLayers` `useMemo` array (`src/components/map/IntelMap.tsx:194–237`):
 
 | Factory | File | Output | Mode-aware |
 |---------|------|--------|------------|
-| `createFacilityLayers()` | `src/components/map/FacilityLayer.ts` | Refinery, terminal, depot icons + `ColumnLayer` for capacity height | Yes — shows disruption state in scenario/timeline |
-| `createRouteLayers()` | `src/components/map/ShippingLayer.ts` | Animated `PathLayer` shipping lanes | Yes — disrupted routes styled differently in scenario mode |
-| `createStationLayer()` | `src/components/map/StationLayer.ts` | `ScatterplotLayer` + cluster layer for 10,469 stations | No mode changes — filtered by brand, region, status |
+| `createFacilityLayers()` | `src/components/map/FacilityLayer.tsx` | Refinery, terminal, depot icons + `ColumnLayer` for capacity height | Yes — shows disruption state in scenario/timeline |
+| `createRouteLayers()` | `src/components/map/ShippingLayer.tsx` | Animated `PathLayer` shipping lanes | Yes — disrupted routes styled differently in scenario mode |
+| `createStationLayer()` | `src/components/map/StationLayer.tsx` | `ScatterplotLayer` + `supercluster` layer; takes stations already filtered via `filterStations` | No mode changes — brand/region/status filtering happens upstream in `IntelMap` |
 
 ### Map Modes
 
@@ -206,7 +222,7 @@ All layers are created by factory functions and spread into a single `deckLayers
 | Scenario | `'scenario'` | RAF loop stopped; layers receive `scenarioParams` to alter visual state (disrupted routes, offline facilities) |
 | Timeline | `'timeline'` | RAF loop stopped; `effectiveTime` driven by `timelinePosition` prop from the `TimelineSlider` scrubber |
 
-Mode is lifted to `page.tsx` state and passed down to `MapWrapper`, `ScenarioPlanner`, and `VitalSigns`.
+Mode is lifted to `page.tsx` state and passed down to `IntelMap`, `ScenarioPlanner`, and `VitalSigns`.
 
 ---
 
@@ -255,7 +271,7 @@ refineryPremium: +₱3.0/L if refineryOffline
 - `CrisisProvider` — used in `computeCrisisScore()` via `hormuzWeeks` and `brentPrice`
 - `ExecutiveSnapshot` — displays projected KPIs
 - `ImpactCards` — derives consumer cost impacts
-- `MapWrapper` / `IntelMap` — triggers layer re-render in scenario/timeline modes
+- `IntelMap` — triggers layer re-render in scenario/timeline modes
 - `StressTest` — Monte Carlo simulation input
 - `ImpactCalculator` — consumer household impact calculator
 - `VitalSigns` — system health status badges
