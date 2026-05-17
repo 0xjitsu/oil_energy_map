@@ -127,6 +127,9 @@ export default function IntelMap({
       return;
     }
 
+    // Reset the throttle counter so each LIVE session starts in a known phase.
+    frameRef.current = 0;
+
     const animate = () => {
       frameRef.current += 1;
       if (frameRef.current % 6 === 0) {
