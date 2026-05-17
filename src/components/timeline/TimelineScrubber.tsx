@@ -8,9 +8,9 @@ interface TimelineScrubberProps {
 }
 
 function severityColor(s: string): string {
-  if (s === 'red') return 'bg-red-500';
-  if (s === 'yellow') return 'bg-yellow-500';
-  return 'bg-emerald-500';
+  if (s === 'red') return 'bg-status-red';
+  if (s === 'yellow') return 'bg-status-yellow';
+  return 'bg-status-green';
 }
 
 export function TimelineScrubber({ visible }: TimelineScrubberProps) {
@@ -66,7 +66,7 @@ export function TimelineScrubber({ visible }: TimelineScrubberProps) {
               key={s}
               onClick={() => setSpeed(s)}
               className={`px-2 py-0.5 rounded text-[9px] font-mono ${
-                speed === s ? 'bg-blue-500/20 text-blue-400' : 'text-text-dim hover:text-text-secondary'
+                speed === s ? 'bg-petron/20 text-petron' : 'text-text-dim hover:text-text-secondary'
               }`}
             >
               {s}x
@@ -74,7 +74,7 @@ export function TimelineScrubber({ visible }: TimelineScrubberProps) {
           ))}
           <button
             onClick={togglePlay}
-            className="px-3 py-1 rounded-lg font-mono text-[10px] uppercase tracking-widest bg-blue-500/20 text-blue-400 hover:bg-blue-500/30"
+            className="px-3 py-1 rounded-lg font-mono text-[10px] uppercase tracking-widest bg-petron/20 text-petron hover:bg-petron/30"
           >
             {playing ? '⏸ Pause' : '▶ Play'}
           </button>
@@ -138,7 +138,7 @@ export function TimelineScrubber({ visible }: TimelineScrubberProps) {
             <div key={i} className="flex items-center gap-2 py-1">
               <span className={`w-2 h-2 rounded-full flex-shrink-0 ${severityColor(e.severity)}`} />
               <span className="text-[10px] font-mono text-text-secondary">{e.title}</span>
-              <span className={`text-[9px] font-mono ml-auto ${e.priceImpact > 0 ? 'text-red-400' : 'text-emerald-400'}`}>
+              <span className={`text-[9px] font-mono ml-auto ${e.priceImpact > 0 ? 'text-status-red' : 'text-status-green'}`}>
                 {e.priceImpact > 0 ? '+' : ''}{e.priceImpact}%
               </span>
             </div>
