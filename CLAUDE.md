@@ -99,12 +99,14 @@ Do NOT create inline headers in page components.
 | `src/components/primer/` | Oil Primer page components |
 | `src/components/ui/` | Shared UI primitives (Ticker, ScrollProgress, Tooltip) |
 | `src/components/onboarding/` | How-to guide and onboarding components |
-| `src/data/` | Static data (stations, references, primer content) |
-| `src/data/stations/` | Per-brand station JSON files |
+| `src/data/` | Static data (references, primer content) + station brand registry |
+| `src/data/stations/` | Per-brand station JSON files + `index.ts` (`BRAND_LIST`); bundled into `public/data/stations.json` at build time |
+| `public/data/` | Build-generated static data (`stations.json`) |
 | `src/hooks/` | Custom React hooks |
-| `src/lib/` | Utilities and constants |
+| `src/lib/` | Utilities, contexts, and constants |
 | `src/types/` | TypeScript interfaces |
-| `scripts/` | Data processing scripts (Python/Shell) |
+| `src/**/__tests__/` | Vitest test files |
+| `scripts/` | Data processing scripts (Node/Python/Shell), incl. `build-stations-json.mjs` |
 | `docs/superpowers/` | Specs and plans |
 
 ---
@@ -125,12 +127,17 @@ const deckLayers = useMemo(() => [
 ], [deps]);
 ```
 
+Station filtering (brand, region, status) is centralized in the shared `filterStations` predicate (`src/lib/station-filter.ts`). `IntelMap` filters the dataset once and passes the result into `createStationLayer`, so the rendered layer and the on-map station count never disagree.
+
 ---
 
 ## Station Data
 
 - 10,469 stations from OpenStreetMap Overpass API (ODbL license)
-- Stored as 7 JSON files in `src/data/stations/` (one per brand + others.json)
+- Stored as 7 source JSON files in `src/data/stations/` (one per brand + `others.json`)
+- **Not statically imported** — `scripts/build-stations-json.mjs` (run via the `prebuild` / `predev` npm scripts) concatenates the brand files into `public/data/stations.json`, which is fetched at runtime by the `useStations` hook. This keeps the ~3.7 MB dataset out of the client JS bundle.
+- `src/data/stations/index.ts` exports only `BRAND_LIST` — the canonical brand order for filter UIs
+- `useStations` assigns a deterministic per-station status (`assignStationStatus`) and tallies `statusCounts` on load
 - Each station has: id, brand, name, coordinates, address, fuelTypes, region, source
 - Regions assigned via bounding-box lookup (`src/data/regions.ts`)
 - Clustering via `supercluster` at zoom < 8
@@ -163,9 +170,9 @@ const deckLayers = useMemo(() => [
 - Header is `sticky top-0 z-50` — never wrap it in an `overflow-hidden` ancestor
 
 ### Data Fetching
-- Prices: `usePrices` hook (5-min polling) — Brent via Yahoo Finance, forex via FloatRates, pump prices from DOE Oil Monitor weekly SRP
-- Events: `useEvents` hook (3-min polling, retry with exponential backoff) — live RSS from PhilStar, Al Jazeera, DOE, Google News, Reddit
-- Sentiment: `useSentiment` hook (15-min polling)
+- Prices + Events: `DataProvider` (`src/lib/DataProvider.tsx`, mounted in the root layout) owns the single polling loop — `/api/prices` every 5 min, `/api/events` every 3 min (3× retry, exponential backoff). `usePrices` / `useEvents` are thin context readers, not independent pollers.
+- Sentiment: `useSentiment` hook (15-min polling) — independent, not part of `DataProvider`
+- Stations: `useStations` hook fetches `public/data/stations.json` once on mount (not statically imported)
 - Static data: direct imports from `@/data/`
 
 ### Price Source Transparency
@@ -257,6 +264,10 @@ All data cards MUST include a SourceAttribution footer.
 
 Horizontal bar with color-coded threshold zones (red/yellow/green). Props: `value` (0–100), `zones` (ThresholdZone[]), `height`, `showMarkers`.
 
+### SparkChart (`src/components/prices/SparkChart.tsx`)
+
+Hand-rolled SVG sparkline — gradient area fill + trend line + last-point dot. Replaced the previous Recharts `AreaChart` to keep Recharts out of the initial bundle. Props: `data` (`number[]`), `color`, optional `width` / `height` (default 80×24), `unit`. Renders a fixed-size empty box (no CLS) when given fewer than 2 points. Used by `PricePanel`, `ExecutiveSnapshot`, `PumpPrices`, `SentimentGauge`.
+
 ### HighlightContext (`src/lib/HighlightContext.tsx`)
 
 Cross-component hover linking. Wrap related components with `<HighlightProvider>`, consume with `useHighlight()`. Currently used for MarketShare donut ↔ PlayerCards glow synchronization.
@@ -269,6 +280,7 @@ Cross-component hover linking. Wrap related components with `<HighlightProvider>
 |--------|------|---------|
 | crisisLevel | `src/lib/crisisLevel.ts` | Pure crisis score computation + level mapping + token lookup |
 | CrisisProvider | `src/lib/CrisisProvider.tsx` | React context, CSS token injection on `document.documentElement` |
+| DataProvider | `src/lib/DataProvider.tsx` | App-wide React context; owns the only `/api/prices` + `/api/events` polling loops and the price-history buffer. Mounted in the root layout. |
 | HighlightContext | `src/lib/HighlightContext.tsx` | Cross-component hover state (highlightedPlayer) |
 | constants | `src/lib/constants.ts` | Impact items, vital sign defaults |
 | consumer-models | `src/lib/consumer-models.ts` | Consumer persona definitions, monthly cost calculations |
@@ -276,6 +288,7 @@ Cross-component hover linking. Wrap related components with `<HighlightProvider>
 | priceSources | `src/lib/priceSources.ts` | Typed fetcher functions for Brent, forex, DOE prices |
 | region-analytics | `src/lib/region-analytics.ts` | Per-region station counts, brand breakdown, nearest infrastructure |
 | scenario-engine | `src/lib/scenario-engine.ts` | Pump price model from ScenarioParams (Brent/forex/Hormuz/refinery) |
+| station-filter | `src/lib/station-filter.ts` | Shared `filterStations` predicate (brand/region/status) — single source of truth for the map layer and station count |
 | station-status | `src/lib/station-status.ts` | Deterministic station status simulation (djb2 hash, regional disruption rates) |
 
 ---
@@ -284,7 +297,7 @@ Cross-component hover linking. Wrap related components with `<HighlightProvider>
 
 - **Error boundary** (`src/app/error.tsx`): NERV-themed UI with retry button. Catches render errors in the main page.
 - **API fallback pattern**: All API routes return HTTP 200 with static fallback data when upstream sources fail. The dashboard never shows an empty state from API failure.
-- **Hook retry logic**: `useEvents` uses exponential backoff on fetch failure. `usePrices` polls every 5 minutes with silent retry.
+- **Centralized polling/retry**: `DataProvider` retries `/api/events` with exponential backoff and polls `/api/prices` every 5 minutes with silent retry. `usePrices` / `useEvents` consumers just read the latest values from context.
 
 ---
 
@@ -292,5 +305,7 @@ Cross-component hover linking. Wrap related components with `<HighlightProvider>
 
 - Build: `pnpm build` — must pass clean before any commit
 - Dev: `pnpm dev` (port 3007)
+- Test: `pnpm test` — Vitest; test files live in `src/**/__tests__/`
+- `prebuild` / `predev` run `scripts/build-stations-json.mjs` to regenerate `public/data/stations.json`
 - Deploy target: Vercel (do NOT push without permission)
 - No unused imports — ESLint enforces this

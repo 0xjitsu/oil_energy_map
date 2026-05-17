@@ -133,7 +133,6 @@ src/
 │   │   ├── IntelMap.tsx   # Map component with DeckGL overlay
 │   │   ├── FacilityLayer  # ScatterplotLayer for oil facilities
 │   │   ├── ShippingLayer  # PathLayer + ArcLayer for routes
-│   │   ├── LayerControls  # Glass morphism toggle panel
 │   │   └── FacilityDetail # Slide-up detail panel
 │   ├── prices/            # Price intelligence cards
 │   ├── scenarios/         # Scenario planner + risk matrix
