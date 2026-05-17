@@ -47,16 +47,16 @@ export const priceBenchmarks: PriceBenchmark[] = [
   {
     id: 'pump-gasoline',
     name: 'Pump Gasoline',
-    value: 100.48,
-    previousWeek: 95.50,
+    value: 63.20,
+    previousWeek: 62.05,
     unit: '₱/liter',
     tooltip: 'RON 95 unleaded in Metro Manila. Source: DOE Oil Monitor weekly SRP.',
   },
   {
     id: 'pump-diesel',
     name: 'Pump Diesel',
-    value: 130.75,
-    previousWeek: 111.75,
+    value: 59.40,
+    previousWeek: 60.10,
     unit: '₱/liter',
     tooltip: 'Diesel in Metro Manila. Source: DOE Oil Monitor weekly SRP.',
   },
@@ -69,3 +69,23 @@ export const priceBenchmarks: PriceBenchmark[] = [
     tooltip: 'Average gasoline/diesel crack spread over Brent.',
   },
 ];
+
+// ── Data-integrity guard ────────────────────────────────────────────────────
+// Runs at module load (prices.ts is imported by DataProvider). Hard-fails if a
+// required benchmark is missing or a pump price drifts outside a sane band —
+// prevents silently shipping stale/implausible fallback data.
+const REQUIRED_BENCHMARK_IDS = ['brent-crude', 'php-usd', 'pump-gasoline', 'pump-diesel'] as const;
+const _benchmarkIds = new Set(priceBenchmarks.map((b) => b.id));
+for (const id of REQUIRED_BENCHMARK_IDS) {
+  if (!_benchmarkIds.has(id)) {
+    throw new Error(`prices.ts: required benchmark "${id}" is missing`);
+  }
+}
+for (const id of ['pump-gasoline', 'pump-diesel'] as const) {
+  const b = priceBenchmarks.find((x) => x.id === id)!;
+  if (b.value < 30 || b.value > 110) {
+    throw new Error(
+      `prices.ts: ${id} fallback value ₱${b.value}/L is outside the sane band ₱30–110/L`,
+    );
+  }
+}
