@@ -1,0 +1,65 @@
+# PH Energy Intelligence Map — Full Reference for AI Agents
+
+> Complete structured reference. For the concise overview see /llms.txt.
+
+## Site
+
+- Name: PH Energy Intelligence Map
+- URL: https://energy-intelligence-map.vercel.app
+- Purpose: Real-time intelligence dashboard for the Philippine oil supply chain.
+- Repository: https://github.com/0xjitsu/oil_energy_map
+- Stack: Next.js 14 (App Router), TypeScript, deck.gl, MapLibre GL, Tailwind CSS
+- License: MIT
+
+## Routes
+
+- /                 — Main dashboard: WebGL supply-chain map, price panels, scenario planner, stress test, market players. Accepts ?s= to restore a shared scenario.
+- /primer           — Educational guide to how oil supply chains work.
+- /cascade          — Second-order cascade tracker: how an oil shock ripples through the economy.
+- /references       — Data provenance catalog for every data source.
+- /roadmap          — Phased expansion plan (PH -> ASEAN -> Global).
+- /services         — RES/RAP energy-supply services for multi-site franchise operators.
+- /embed/scenario   — Embeddable single-card widget for a modeled scenario (iframe-ready, accepts ?s=).
+
+## Data APIs
+
+All return JSON, no authentication, edge-cached.
+
+- GET /api/prices    — Oil benchmarks: Brent crude, Dubai, MOPS, pump gasoline/diesel, PHP/USD forex. Shape: PriceBenchmark[].
+- GET /api/events    — Aggregated Philippine energy news with severity ratings. Shape: TimelineEvent[].
+- GET /api/sentiment — NLP sentiment of energy headlines. Shape: SentimentResult[].
+- GET /api/index     — Machine-readable manifest of all API endpoints.
+
+## Shareable Scenarios
+
+The scenario planner serializes its state into a URL query parameter:
+
+- Parameter: s
+- Format: brent_hormuz_forex_refinery (underscore-delimited; underscore is used as the field separator because a dot can appear inside a decimal number and would make the field count ambiguous).
+- Fields:
+  - brent    — Brent crude price, USD/barrel. Range 60-180.
+  - hormuz   — Weeks the Strait of Hormuz is disrupted. Range 0-16.
+  - forex    — PHP/USD exchange rate. Range 54-65.
+  - refinery — Bataan refinery offline flag. 0 = online, 1 = offline.
+- Example: /?s=140_10_61.5_1  -> Brent $140, Hormuz 10 weeks, forex 61.5, refinery offline.
+- Out-of-range or malformed values clamp to bounds or fall back to the default scenario (106_2_58.42_0).
+
+## Scenario Model
+
+calculatePumpPrice(brent, hormuz, forex, refinery) returns estimated gasoline and diesel
+pump prices (PHP/L) and a risk level (green/yellow/red). Assumptions: base gasoline ~P65/L
+at Brent $80 / PHP 56; each $1 Brent ~= P0.18/L; each P1 peso weakening ~= P0.90/L; Hormuz
+disruption adds a rising per-week premium; Bataan offline adds ~P3/L import premium.
+
+## Datasets
+
+- Philippine Gas Stations — 10,469 stations from OpenStreetMap (ODbL). Brand, coordinates, fuel types, region, modeled operational status.
+- Oil Supply Chain Infrastructure — refineries, import terminals, fuel depots (DOE Philippines + manual research).
+
+## For AI Agents
+
+1. Start with GET /api/index to discover data endpoints.
+2. Use GET /api/prices and GET /api/events for live data.
+3. To share or embed a scenario, build an `?s=` URL as documented above.
+4. Iframe /embed/scenario?s=<encoded-scenario> to embed a scenario card.
+5. See /.well-known/ai-manifest.json for the structured capability manifest.

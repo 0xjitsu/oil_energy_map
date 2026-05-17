@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useEffect } from 'react';
+import { useMemo, useEffect, useRef, useState } from 'react';
 import { ScenarioParams, MapMode } from '@/types';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
 import { usePrices } from '@/hooks/usePrices';
@@ -10,6 +10,8 @@ import { RiskMatrix } from './RiskMatrix';
 import { ScenarioSlots } from './ScenarioSlots';
 import { ScenarioCompare } from './ScenarioCompare';
 import { InfoTip } from '@/components/ui/Tooltip';
+import { ShareButton } from '@/components/ui/ShareButton';
+import { decodeScenario, buildScenarioUrl, SCENARIO_PARAM } from '@/lib/scenario-url';
 
 interface ScenarioPlannerProps {
   params: ScenarioParams;
@@ -28,16 +30,41 @@ export function ScenarioPlanner({
   const liveBrent = prices.find((b) => b.id === 'brent-crude')?.value ?? 106;
   const liveForex = prices.find((b) => b.id === 'php-usd')?.value ?? 58.42;
 
+  // Tracks whether a scenario was restored from the URL on first mount, so the
+  // live-price sync below does not immediately clobber the shared Brent/forex.
+  // Read synchronously in the ref initializer (not in an effect) so the gate is
+  // set BEFORE any effect runs — the live-sync skip must not depend on the
+  // declaration order of the two effects below.
+  const urlScenarioRef = useRef(
+    typeof window !== 'undefined' &&
+      Boolean(new URLSearchParams(window.location.search).get(SCENARIO_PARAM)),
+  );
+
+  // On mount only: if the URL carries an `?s=` scenario, restore it. A shared
+  // link should land the visitor on exactly the scenario the sharer modeled.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const raw = new URLSearchParams(window.location.search).get(SCENARIO_PARAM);
+    if (!raw) return;
+    onParamsChange(decodeScenario(raw));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Sync slider values with live prices when they change (LIVE/SCENARIO only).
   // Functional updater avoids overwriting a concurrent slider edit with a stale closure.
   useEffect(() => {
-    if (mapMode !== 'timeline') {
-      onParamsChange((prev) => ({
-        ...prev,
-        brentPrice: Math.round(liveBrent),
-        forexRate: liveForex,
-      }));
+    if (mapMode === 'timeline') return;
+    // If a scenario was restored from the URL, skip the first live-price sync
+    // so the shared Brent/forex survive. Subsequent ticks sync normally.
+    if (urlScenarioRef.current) {
+      urlScenarioRef.current = false;
+      return;
     }
+    onParamsChange((prev) => ({
+      ...prev,
+      brentPrice: Math.round(liveBrent),
+      forexRate: liveForex,
+    }));
   }, [liveBrent, liveForex, mapMode, onParamsChange]);
 
   // In TIMELINE mode, derive params from timeline position
@@ -63,21 +90,36 @@ export function ScenarioPlanner({
   const result = useMemo(() => calculatePumpPrice(params), [params]);
   const { scenarios, saveScenario, removeScenario } = useScenarios();
 
+  const [shareUrl, setShareUrl] = useState('');
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    setShareUrl(buildScenarioUrl(params, window.location.origin, '/'));
+  }, [params]);
+
   return (
     <div>
       <div className="mb-6">
-        <div className="flex items-center gap-2">
-          <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
-            Scenario Planner
-          </h2>
-          <button
-            onClick={() => window.dispatchEvent(new CustomEvent('open-how-to-guide'))}
-            className="p-1 rounded-md hover:bg-surface-hover transition-colors text-text-dim hover:text-text-secondary"
-            aria-label="How to use scenario planner"
-            title="How to use scenario planner"
-          >
-            <span className="text-[10px] font-mono">?</span>
-          </button>
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
+              Scenario Planner
+            </h2>
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent('open-how-to-guide'))}
+              className="p-1 rounded-md hover:bg-surface-hover transition-colors text-text-dim hover:text-text-secondary"
+              aria-label="How to use scenario planner"
+              title="How to use scenario planner"
+            >
+              <span className="text-[10px] font-mono">?</span>
+            </button>
+          </div>
+          {shareUrl && !isTimelineDriven && (
+            <ShareButton
+              url={shareUrl}
+              title="PH Oil scenario"
+              text="See the fuel-price shock I modeled on the PH Energy Intelligence Map"
+            />
+          )}
         </div>
         <p className="text-xs font-sans text-text-label mt-1">
           {isTimelineDriven ? 'Driven by timeline — scrub to explore' : 'What happens if...'}

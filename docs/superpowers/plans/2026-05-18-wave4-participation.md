@@ -4,7 +4,7 @@
 
 **Goal:** Make any meaningful dashboard state shareable without an account. A user who models a fuel-price shock can copy a URL that restores the exact scenario, and that link renders a rich social card describing the shock. A lightweight "Share this view" control and a single embeddable card round it out, and the AI-agent surfaces (`llms.txt`, manifest, JSON-LD) are verified and brought up to date.
 
-**Architecture:** One new pure helper module (`src/lib/scenario-url.ts`) encodes/decodes `ScenarioParams` to a compact URL query param — fully unit-tested, no React. `ScenarioPlanner` reads it on mount and gains a "Copy link" affordance via a new presentational `ShareButton` (Web Share API + clipboard fallback). A dynamic `opengraph-image` route under `/embed/scenario` plus a minimal `/embed/scenario` page render a shareable card from the same query param. The existing `/opengraph-image.tsx` stays as the site default; the scenario OG image is a new route so the homepage is unaffected. No new dependencies, no new infra (no Supabase, no API routes — everything is client-side or edge-rendered from URL params).
+**Architecture:** One new pure helper module (`src/lib/scenario-url.ts`) encodes/decodes `ScenarioParams` to a compact URL query param — an underscore-delimited `brent_hormuz_forex_refinery` string (underscore, not dot — a dot can appear inside a decimal number and would make the field count ambiguous; underscore is URL-safe and never appears in a number) — fully unit-tested, no React. `ScenarioPlanner` reads it on mount and gains a "Copy link" affordance via a new presentational `ShareButton` (Web Share API + clipboard fallback). A dynamic OG-image Route Handler at `/embed/scenario/og` plus a minimal `/embed/scenario` page render a shareable card from the same query param. The existing `/opengraph-image.tsx` stays as the site default; the scenario OG image is a new route so the homepage is unaffected. No new dependencies, no new infra (no Supabase, no API routes — everything is client-side or edge-rendered from URL params).
 
 **Tech Stack:** Next.js 14 App Router, React 18, Tailwind (design tokens — never hardcode colors), Vitest.
 
@@ -21,7 +21,7 @@ Brownfield Next.js 14 dashboard. Package manager **pnpm**; agent shells need `ex
 - `calculatePumpPrice(params: ScenarioParams): ScenarioResult` (from `@/lib/scenario-engine`) → `{ gasoline: number; diesel: number; riskLevel: 'green'|'yellow'|'red' }`. Pure, no React — safe to call from an edge route.
 - `Home` (`src/app/page.tsx`) owns `scenarioParams` in `useState` and passes `handleParamsChange` (a `useCallback`-wrapped `setScenarioParams`, which accepts a value or an updater) into `<ScenarioPlanner params=... onParamsChange=... />`.
 - `ScenarioPlanner` (`src/components/scenarios/ScenarioPlanner.tsx`) already has two `useEffect`s that sync params from live prices / timeline. A new mount-only effect is needed to apply a URL-supplied scenario, and it must run BEFORE the live-price sync clobbers `brentPrice`/`forexRate` — see Task 4.
-- The OG-image route is `src/app/opengraph-image.tsx` with `export const runtime = 'edge'`. A nested route at `src/app/embed/scenario/opengraph-image.tsx` produces a per-page OG image for the `/embed/scenario` URL.
+- The site-default OG-image route is `src/app/opengraph-image.tsx` with `export const runtime = 'edge'`. The scenario OG image is a separate Route Handler at `src/app/embed/scenario/og/route.tsx` (a Route Handler, not the `opengraph-image` special file, because only a Route Handler can read the `?s=` query string — see Task 6).
 - `metadataBase` is set in `src/app/layout.tsx` to `https://energy-intelligence-map.vercel.app`.
 - Existing AI surfaces: `public/llms.txt` (static), `public/.well-known/ai-manifest.json` (static), JSON-LD in `src/app/layout.tsx`. There is NO `llms-full.txt`. The manifest does not list `/embed/*` or scenario sharing.
 - Tests live in `src/**/__tests__/`; Vitest config includes `src/**/*.{test,spec}.{ts,tsx}`, jsdom env, `@` alias resolved.
@@ -35,14 +35,14 @@ Brownfield Next.js 14 dashboard. Package manager **pnpm**; agent shells need `ex
 
 | Action | File | Responsibility |
 |--------|------|----------------|
-| Create | `src/lib/scenario-url.ts` | Pure encode/decode of `ScenarioParams` ↔ compact URL query string |
+| Create | `src/lib/scenario-url.ts` | Pure encode/decode of `ScenarioParams` ↔ compact underscore-delimited URL query string |
 | Create | `src/lib/__tests__/scenario-url.test.ts` | Tests for the pure encode/decode/clamp helpers |
 | Create | `src/components/ui/ShareButton.tsx` | "Copy link" / Web Share affordance with clipboard fallback |
 | Create | `src/components/ui/__tests__/ShareButton.test.tsx` | Render + clipboard-fallback behavior test |
 | Modify | `src/components/scenarios/ScenarioPlanner.tsx` | Apply a URL scenario on mount; render `ShareButton` with the scenario link |
 | Create | `src/app/embed/scenario/page.tsx` | Minimal iframe-able single card rendering a scenario result from `?s=` |
 | Create | `src/app/embed/scenario/EmbedScenarioCard.tsx` | The presentational embed card (client component) |
-| Create | `src/app/embed/scenario/opengraph-image.tsx` | Dynamic edge OG image for a shared scenario URL |
+| Create | `src/app/embed/scenario/og/route.tsx` | Dynamic edge OG image Route Handler for a shared scenario URL |
 | Create | `src/app/embed/layout.tsx` | Bare layout for `/embed/*` — no header/footer, transparent-friendly |
 | Modify | `public/llms.txt` | Document scenario sharing + the `/embed/scenario` route |
 | Modify | `public/.well-known/ai-manifest.json` | Add the `/embed/scenario` route and the scenario-share capability |
@@ -53,7 +53,7 @@ Brownfield Next.js 14 dashboard. Package manager **pnpm**; agent shells need `ex
 
 ## Task 1: `scenario-url` — pure encode/decode helper
 
-A pure module that turns `ScenarioParams` into a compact, URL-safe `s` query value and back. Encoding is a fixed-order CSV of the four fields (`brent.hormuz.forex.refinery`) — short, human-inspectable, no base64 needed for four small numbers. Decoding is defensive: any malformed or out-of-range value falls back to a clamped default, so a hand-edited URL can never crash the planner. This is the substrate WS5 virality serializes.
+A pure module that turns `ScenarioParams` into a compact, URL-safe `s` query value and back. Encoding is a fixed-order, underscore-delimited string of the four fields (`brent_hormuz_forex_refinery`) — short, human-inspectable, no base64 needed for four small numbers. **Underscore, not dot:** a field can carry a decimal point (forex always, and a hand-edited brent/hormuz might), so a dot delimiter would make the field count ambiguous; underscore is a URL-safe unreserved character that never appears inside a number. Decoding is defensive: any malformed or out-of-range value falls back to a clamped default, so a hand-edited URL can never crash the planner. This is the substrate WS5 virality serializes.
 
 **Files:**
 - Create: `src/lib/scenario-url.ts`
@@ -72,18 +72,18 @@ import {
 import type { ScenarioParams } from '@/types';
 
 describe('encodeScenario', () => {
-  it('encodes the four params as a dotted string in fixed order', () => {
+  it('encodes the four params as an underscore-delimited string in fixed order', () => {
     const params: ScenarioParams = {
       brentPrice: 120,
       hormuzWeeks: 8,
       forexRate: 60.5,
       refineryOffline: true,
     };
-    expect(encodeScenario(params)).toBe('120.8.60.5.1');
+    expect(encodeScenario(params)).toBe('120_8_60.5_1');
   });
 
   it('encodes refineryOffline=false as 0', () => {
-    expect(encodeScenario(DEFAULT_SCENARIO)).toBe('106.2.58.42.0');
+    expect(encodeScenario(DEFAULT_SCENARIO)).toBe('106_2_58.42_0');
   });
 });
 
@@ -105,12 +105,12 @@ describe('decodeScenario', () => {
 
   it('returns the default scenario for a malformed string', () => {
     expect(decodeScenario('not-a-scenario')).toEqual(DEFAULT_SCENARIO);
-    expect(decodeScenario('120.8')).toEqual(DEFAULT_SCENARIO);
+    expect(decodeScenario('120_8')).toEqual(DEFAULT_SCENARIO);
   });
 
   it('clamps out-of-range numbers into slider bounds', () => {
     // brent 999 -> max 180; hormuz -5 -> min 0; forex 200 -> max 65
-    expect(decodeScenario('999.-5.200.1')).toEqual({
+    expect(decodeScenario('999_-5_200_1')).toEqual({
       brentPrice: 180,
       hormuzWeeks: 0,
       forexRate: 65,
@@ -119,7 +119,7 @@ describe('decodeScenario', () => {
   });
 
   it('rounds brent and hormuz to integers and forex to one decimal', () => {
-    expect(decodeScenario('106.7.2.4.58.418.0')).toEqual({
+    expect(decodeScenario('106.7_2.4_58.418_0')).toEqual({
       brentPrice: 107,
       hormuzWeeks: 2,
       forexRate: 58.4,
@@ -162,15 +162,21 @@ const BOUNDS = {
 /** The query-param key a shared scenario is stored under. */
 export const SCENARIO_PARAM = 's';
 
+/**
+ * Field separator for the encoded scenario. Underscore is URL-safe (an
+ * unreserved character per RFC 3986) and — unlike a dot — can never appear
+ * inside a decimal number, so the four fields always split unambiguously
+ * even when forex (or a hand-edited brent/hormuz) carries a decimal point.
+ */
+const FIELD_SEP = '_';
+
 function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
 }
 
 /**
- * Pure: encode a scenario as a compact dotted string —
- * `brent.hormuz.forex.refinery` — e.g. `120.8.60.5.1`.
- * Note the forex decimal contributes its own dot; decode splits on a fixed
- * field count, not on dot count, so this is unambiguous.
+ * Pure: encode a scenario as a compact underscore-delimited string —
+ * `brent_hormuz_forex_refinery` — e.g. `120_8_60.5_1`.
  */
 export function encodeScenario(params: ScenarioParams): string {
   return [
@@ -178,26 +184,26 @@ export function encodeScenario(params: ScenarioParams): string {
     params.hormuzWeeks,
     params.forexRate,
     params.refineryOffline ? 1 : 0,
-  ].join('.');
+  ].join(FIELD_SEP);
 }
 
 /**
- * Pure: decode a dotted scenario string back into `ScenarioParams`.
- * Defensive — any missing, non-numeric, or out-of-range field falls back to
- * the clamped default, so a hand-edited or stale URL can never crash the UI.
+ * Pure: decode an underscore-delimited scenario string back into
+ * `ScenarioParams`. Defensive — any missing, non-numeric, or out-of-range
+ * field falls back to the clamped default, so a hand-edited or stale URL can
+ * never crash the UI.
  */
 export function decodeScenario(raw: string | null | undefined): ScenarioParams {
   if (!raw) return { ...DEFAULT_SCENARIO };
 
-  const parts = raw.split('.').map((p) => p.trim());
-  // Expect exactly 5 numeric fields: brent, hormuz, forexInt, forexFrac, refinery.
-  // forex is split across two dot-separated chunks (integer + fraction).
-  if (parts.length !== 5) return { ...DEFAULT_SCENARIO };
+  const parts = raw.split(FIELD_SEP).map((p) => p.trim());
+  // Expect exactly 4 fields: brent, hormuz, forex, refinery.
+  if (parts.length !== 4) return { ...DEFAULT_SCENARIO };
 
   const brent = Number(parts[0]);
   const hormuz = Number(parts[1]);
-  const forex = Number(`${parts[2]}.${parts[3]}`);
-  const refinery = parts[4];
+  const forex = Number(parts[2]);
+  const refinery = parts[3];
 
   if (
     !Number.isFinite(brent) ||
@@ -236,9 +242,9 @@ export function buildScenarioUrl(
 - [ ] **Step 4: Run the test to verify it passes**
 
 Run: `pnpm test src/lib/__tests__/scenario-url.test.ts`
-Expected: PASS — `9 passed`.
+Expected: PASS — `7 passed`.
 
-> Note on the encoding: `encodeScenario` joins five values with dots; the forex value (`58.42`) contributes its own internal dot, so the wire string `106.2.58.42.0` has exactly five dot-separated chunks. `decodeScenario` requires exactly 5 chunks and reconstructs forex from chunks 2+3. The test `'120.8'` (2 chunks) and `'not-a-scenario'` (1 chunk) both correctly fall through to the default.
+> Note on the encoding: `encodeScenario` joins the four values with underscores. Underscore can never appear inside a JavaScript number, so `decodeScenario` always splits into exactly four fields regardless of how many decimal points the values carry. A string with any other field count — `'120_8'` (2 fields) or `'not-a-scenario'` (1 field) — correctly falls through to the default.
 
 - [ ] **Step 5: Verify lint and build pass**
 
@@ -260,6 +266,8 @@ git commit -m "add scenario-url — pure encode/decode for shareable scenarios"
 
 A small presentational button. On click it tries `navigator.share` (native share sheet on mobile) and falls back to `navigator.clipboard.writeText` + a transient "Copied" confirmation. It takes a `url` and `title`; it owns no scenario logic. SSR-safe — all browser-API access is inside the click handler, never at module or render scope.
 
+> **Execution note (test deferred):** the planned `ShareButton.test.tsx` render test could not run — this repo's Vitest harness has never executed a component (`.test.tsx`) test, and the first attempt surfaced a pre-existing repo-wide defect: a duplicate-React-instance "Invalid hook call" the moment any hook component is rendered under test. `resolve.dedupe`, `server.deps.inline`, and `IS_REACT_ACT_ENVIRONMENT` were all tried without success — the proper fix (likely a Vitest 3 upgrade) is its own task, out of scope for this feature wave. `ShareButton` ships verified by `pnpm build`, `pnpm lint`, the final code review, and the Task 4 manual check; the component-test harness fix is tracked as a separate follow-up.
+
 **Files:**
 - Create: `src/components/ui/ShareButton.tsx`
 - Create: `src/components/ui/__tests__/ShareButton.test.tsx`
@@ -272,14 +280,21 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ShareButton } from '@/components/ui/ShareButton';
 
+// NOTE: this environment (Node 25 + vitest 2.1.9 + React 18) commits the React
+// render a tick AFTER `render()` returns, so a synchronous `getBy*` query would
+// miss the freshly-mounted DOM. Use the async, retrying `findBy*` queries —
+// the React Testing Library recommended pattern regardless.
+
 describe('ShareButton', () => {
   beforeEach(() => {
     vi.restoreAllMocks();
   });
 
-  it('renders the default label', () => {
+  it('renders the default label', async () => {
     render(<ShareButton url="https://example.com/?s=1" title="Test" />);
-    expect(screen.getByRole('button', { name: /share this view/i })).toBeTruthy();
+    expect(
+      await screen.findByRole('button', { name: /share this view/i }),
+    ).toBeTruthy();
   });
 
   it('copies to clipboard and shows confirmation when Web Share is unavailable', async () => {
@@ -287,13 +302,13 @@ describe('ShareButton', () => {
     // jsdom has no navigator.share — force the clipboard fallback path.
     vi.stubGlobal('navigator', { clipboard: { writeText } });
 
-    render(<ShareButton url="https://example.com/?s=120.8.60.5.1" title="Test" />);
-    fireEvent.click(screen.getByRole('button'));
+    render(<ShareButton url="https://example.com/?s=120_8_60.5_1" title="Test" />);
+    fireEvent.click(await screen.findByRole('button'));
 
     await waitFor(() => {
-      expect(writeText).toHaveBeenCalledWith('https://example.com/?s=120.8.60.5.1');
+      expect(writeText).toHaveBeenCalledWith('https://example.com/?s=120_8_60.5_1');
     });
-    expect(screen.getByText(/copied/i)).toBeTruthy();
+    expect(await screen.findByText(/copied/i)).toBeTruthy();
   });
 });
 ```
@@ -724,7 +739,7 @@ Expected: both succeed. The `pnpm build` route table now lists `/embed/scenario`
 
 - [ ] **Step 4: Manual check**
 
-Run `pnpm dev`. Open `http://localhost:3007/embed/scenario?s=140.10.61.5.1` — confirm a single centered card renders with no header/footer, showing modeled gasoline/diesel prices, a "Crisis"/"Elevated"/"Stable" badge, and the scenario summary line ("Brent $140/bbl · Hormuz 10wk · ₱61.50/USD · Bataan refinery offline"). Open `http://localhost:3007/embed/scenario` with no `?s=` — confirm it renders the default scenario without error. Stop the dev server.
+Run `pnpm dev`. Open `http://localhost:3007/embed/scenario?s=140_10_61.5_1` — confirm a single centered card renders with no header/footer, showing modeled gasoline/diesel prices, a "Crisis"/"Elevated"/"Stable" badge, and the scenario summary line ("Brent $140/bbl · Hormuz 10wk · ₱61.50/USD · Bataan refinery offline"). Open `http://localhost:3007/embed/scenario` with no `?s=` — confirm it renders the default scenario without error. Stop the dev server.
 
 - [ ] **Step 5: Commit**
 
@@ -739,31 +754,35 @@ git commit -m "add embeddable scenario result card at /embed/scenario"
 
 ## Task 6: Dynamic OG image for a shared scenario
 
-A per-route `opengraph-image.tsx` under `src/app/embed/scenario/`. When someone shares an `/embed/scenario?s=...` link, this generates a 1200×630 social card encoding the modeled prices and risk — so the link unfurls richly on social. It mirrors the structure and inline-hex style of the existing `src/app/opengraph-image.tsx` (which is the only place inline hex is sanctioned, since `next/og` cannot read Tailwind tokens).
+When someone shares an `/embed/scenario?s=...` link, the link should unfurl on social as a 1200×630 card encoding the modeled prices and risk.
+
+**Why a Route Handler, not `opengraph-image.tsx`:** Next.js 14's `opengraph-image` special file receives only `params` (dynamic route segments) — never `searchParams`. A scenario lives entirely in the `?s=` query string, so an `opengraph-image.tsx` would silently always render the default scenario. Instead we use a real Route Handler at `/embed/scenario/og` (a Route Handler receives the full `Request` and can read the query string), and point the page's Open Graph metadata at it via `generateMetadata`. The card mirrors the inline-hex style of the existing `src/app/opengraph-image.tsx` — inline hex is sanctioned here because `next/og` cannot read Tailwind tokens.
 
 **Files:**
-- Create: `src/app/embed/scenario/opengraph-image.tsx`
+- Create: `src/app/embed/scenario/og/route.tsx` — the edge Route Handler that renders the `ImageResponse` from `?s=`.
+- Modify: `src/app/embed/scenario/page.tsx` — replace the static `metadata` export with `generateMetadata`, so the `og:image` tag carries the scenario's `?s=`.
 
-- [ ] **Step 1: Create the dynamic OG image route**
+- [ ] **Step 1: Create the OG image Route Handler**
 
-Create `src/app/embed/scenario/opengraph-image.tsx`:
+Create `src/app/embed/scenario/og/route.tsx`:
 ```tsx
 import { ImageResponse } from 'next/og';
-import { decodeScenario } from '@/lib/scenario-url';
+import { decodeScenario, SCENARIO_PARAM } from '@/lib/scenario-url';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
 
 export const runtime = 'edge';
-export const alt = 'A modeled Philippine fuel-price scenario';
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
 
-// next/og passes the request so we can read the `?s=` scenario param.
-export default function ScenarioOGImage({
-  searchParams,
-}: {
-  searchParams: { s?: string };
-}) {
-  const params = decodeScenario(searchParams?.s ?? null);
+const SIZE = { width: 1200, height: 630 };
+
+/**
+ * Dynamic Open Graph image for a shared scenario. This is a Route Handler
+ * rather than the `opengraph-image` special file because only a Route Handler
+ * receives the request URL — the scenario lives entirely in the `?s=` query
+ * string, which `opengraph-image.tsx` cannot see.
+ */
+export function GET(request: Request) {
+  const raw = new URL(request.url).searchParams.get(SCENARIO_PARAM);
+  const params = decodeScenario(raw);
   const result = calculatePumpPrice(params);
 
   const riskTheme = {
@@ -917,26 +936,49 @@ export default function ScenarioOGImage({
         </div>
       </div>
     ),
-    { ...size },
+    { ...SIZE },
   );
 }
 ```
 
-- [ ] **Step 2: Verify lint and build pass**
+- [ ] **Step 2: Point the embed page's Open Graph metadata at the OG route**
+
+Modify `src/app/embed/scenario/page.tsx`. Replace the static `metadata` export with a `generateMetadata` function — `generateMetadata` receives `searchParams`, so it can build an `og:image` URL that carries the scenario. Change the imports to add `encodeScenario`, and replace the `export const metadata: Metadata = {...}` block with:
+```tsx
+export function generateMetadata({ searchParams }: EmbedScenarioPageProps): Metadata {
+  // Re-encode the decoded scenario so the OG image URL is always canonical,
+  // even when the incoming `?s=` was malformed or out of range.
+  const encoded = encodeScenario(decodeScenario(searchParams.s ?? null));
+  const ogImage = `/embed/scenario/og?s=${encoded}`;
+  return {
+    title: 'PH Oil — Modeled Scenario',
+    robots: { index: false, follow: false },
+    openGraph: {
+      title: 'PH Oil — Modeled Scenario',
+      description: 'A modeled Philippine fuel-price scenario.',
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', images: [ogImage] },
+  };
+}
+```
+The import line `import { decodeScenario } from '@/lib/scenario-url';` becomes `import { decodeScenario, encodeScenario } from '@/lib/scenario-url';`. The `EmbedScenarioPageProps` interface and the `EmbedScenarioPage` default export are unchanged. (`metadataBase` in the root layout resolves the relative `/embed/scenario/og?...` URL to absolute.)
+
+- [ ] **Step 3: Verify lint and build pass**
 
 Run: `pnpm lint && pnpm build`
-Expected: both succeed. The build route table lists `/embed/scenario/opengraph-image` as an edge route.
+Expected: both succeed. The build route table lists `/embed/scenario/og` as an edge route.
 
-- [ ] **Step 3: Manual check**
+- [ ] **Step 4: Manual check**
 
-Run `pnpm dev`. Open `http://localhost:3007/embed/scenario/opengraph-image?s=150.12.62.0.1` directly in the browser — confirm a 1200×630 PNG renders with the "CRISIS" badge, a "₱.../L gasoline if this shock hits." headline, two price cards, and the scenario-inputs line. Open it again with no `?s=` — confirm it renders the default scenario without error. Stop the dev server.
+Run `pnpm dev`. Open `http://localhost:3007/embed/scenario/og?s=150_12_62_1` directly in the browser — confirm a 1200×630 PNG renders with the "CRISIS" badge, a "₱.../L gasoline if this shock hits." headline, two price cards, and the scenario-inputs line. Open it again with no `?s=` — confirm it renders the default scenario without error. Then open `http://localhost:3007/embed/scenario?s=150_12_62_1` and view source — confirm the `<meta property="og:image">` tag points at `/embed/scenario/og?s=150_12_62_1`. Stop the dev server.
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 5: Commit**
 
 ```bash
 git diff --cached --stat   # expect: nothing staged yet
-git add src/app/embed/scenario/opengraph-image.tsx
-git diff --cached --stat   # expect: only the OG image route
+git add src/app/embed/scenario/og/route.tsx src/app/embed/scenario/page.tsx
+git diff --cached --stat   # expect: only the OG route + the page
 git commit -m "add dynamic og image for shared scenario links"
 ```
 
@@ -960,7 +1002,7 @@ In `public/llms.txt`, locate the `## Pages` section. Insert a new section immedi
 
 The dashboard's scenario planner is fully shareable without an account:
 
-- Scenario links — the homepage accepts an `?s=` query parameter encoding a modeled fuel-price scenario (`brent.hormuz.forex.refinery`, e.g. `/?s=140.10.61.5.1`). Opening such a link restores the exact sliders the sharer set.
+- Scenario links — the homepage accepts an `?s=` query parameter encoding a modeled fuel-price scenario (`brent_hormuz_forex_refinery`, e.g. `/?s=140_10_61.5_1`). Opening such a link restores the exact sliders the sharer set.
 - GET /embed/scenario?s=... — a minimal, iframe-ready card rendering the modeled gasoline/diesel prices and risk level for a scenario. Embed it in other sites.
 - Each shared scenario link generates a dynamic Open Graph image, so links unfurl as rich cards on social platforms.
 ```
@@ -983,10 +1025,10 @@ In `public/.well-known/ai-manifest.json`, append a new object to the `apis` arra
     {
       "path": "/embed/scenario",
       "method": "GET",
-      "description": "Embeddable single-card widget rendering a modeled fuel-price scenario. Accepts an `s` query parameter (encoded scenario: brent.hormuz.forex.refinery). Iframe-ready, no chrome.",
+      "description": "Embeddable single-card widget rendering a modeled fuel-price scenario. Accepts an `s` query parameter (encoded scenario: brent_hormuz_forex_refinery). Iframe-ready, no chrome.",
       "cache": "static",
       "response_type": "text/html",
-      "query_params": { "s": "Encoded scenario string, e.g. 140.10.61.5.1" }
+      "query_params": { "s": "Encoded scenario string, e.g. 140_10_61.5_1" }
     }
 ```
 Then add a new top-level `"capabilities"` key after the `"apis"` array (and before `"datasets"`):
@@ -994,7 +1036,7 @@ Then add a new top-level `"capabilities"` key after the `"apis"` array (and befo
   "capabilities": {
     "shareable_scenarios": {
       "description": "Modeled fuel-price scenarios are shareable via an `?s=` URL parameter on the homepage and the /embed/scenario route. No account required.",
-      "param_format": "brent.hormuz.forex.refinery — e.g. /?s=140.10.61.5.1",
+      "param_format": "brent_hormuz_forex_refinery — e.g. /?s=140_10_61.5_1",
       "open_graph": "Shared scenario links generate dynamic Open Graph images for rich social unfurling."
     }
   },
@@ -1041,14 +1083,14 @@ All return JSON, no authentication, edge-cached.
 The scenario planner serializes its state into a URL query parameter:
 
 - Parameter: s
-- Format: brent.hormuz.forex.refinery (dotted; the forex value contributes its own decimal dot, so a well-formed value has five dot-separated chunks).
+- Format: brent_hormuz_forex_refinery (underscore-delimited; underscore is used as the field separator because a dot can appear inside a decimal number and would make the field count ambiguous).
 - Fields:
   - brent    — Brent crude price, USD/barrel. Range 60-180.
   - hormuz   — Weeks the Strait of Hormuz is disrupted. Range 0-16.
   - forex    — PHP/USD exchange rate. Range 54-65.
   - refinery — Bataan refinery offline flag. 0 = online, 1 = offline.
-- Example: /?s=140.10.61.5.1  -> Brent $140, Hormuz 10 weeks, forex 61.5, refinery offline.
-- Out-of-range or malformed values clamp to bounds or fall back to the default scenario (106.2.58.42.0).
+- Example: /?s=140_10_61.5_1  -> Brent $140, Hormuz 10 weeks, forex 61.5, refinery offline.
+- Out-of-range or malformed values clamp to bounds or fall back to the default scenario (106_2_58.42_0).
 
 ## Scenario Model
 
@@ -1079,7 +1121,7 @@ In `src/app/layout.tsx`, locate the `jsonLdData` array. Append a third object to
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "PH Oil Scenario Planner",
-    url: "https://energy-intelligence-map.vercel.app/?s=106.2.58.42.0",
+    url: "https://energy-intelligence-map.vercel.app/?s=106_2_58.42_0",
     description:
       "Model a Philippine fuel-price shock — Brent crude, Strait of Hormuz disruption, PHP/USD forex, and refinery status — and share the result via a no-login URL.",
     applicationCategory: "BusinessApplication",
@@ -1124,12 +1166,12 @@ git commit -m "document scenario sharing for ai agents — llms.txt, manifest, j
 - [ ] **Step 1: Full test suite**
 
 Run: `pnpm test`
-Expected: all tests pass — the prior suite plus the 9 new `scenario-url` tests and the 2 new `ShareButton` tests.
+Expected: all tests pass — the prior suite plus the 7 new `scenario-url` tests. (The `ShareButton` render test was deferred — see the Task 2 execution note — so no `ShareButton` tests are in the suite.)
 
 - [ ] **Step 2: Clean build**
 
 Run: `pnpm build`
-Expected: succeeds. The route table includes `/embed/scenario` and `/embed/scenario/opengraph-image` (edge). Note the homepage `/` First Load JS — it should be within a few kB of the pre-wave figure; `ShareButton` and `scenario-url` are tiny, and the embed routes are separate entry points that do not load on `/`.
+Expected: succeeds. The route table includes `/embed/scenario` and `/embed/scenario/og` (edge). Note the homepage `/` First Load JS — it should be within a few kB of the pre-wave figure; `ShareButton` and `scenario-url` are tiny, and the embed routes are separate entry points that do not load on `/`.
 
 - [ ] **Step 3: Lint**
 
@@ -1141,8 +1183,8 @@ Expected: no errors; the only `react-hooks/exhaustive-deps` suppressions are the
 Run `pnpm dev`. Confirm end-to-end:
 1. On `/`, the Scenario Planner shows a "Share this view" button; set Hormuz to 12 weeks and click it — the link copies and the button flashes "✓ Copied".
 2. Paste the copied URL into a fresh tab — the planner restores to 12 weeks.
-3. Open `/embed/scenario?s=150.14.63.0.1` — a chrome-free card renders the modeled prices and a "Crisis" badge.
-4. Open `/embed/scenario/opengraph-image?s=150.14.63.0.1` — a 1200×630 social card PNG renders.
+3. Open `/embed/scenario?s=150_14_63_1` — a chrome-free card renders the modeled prices and a "Crisis" badge.
+4. Open `/embed/scenario/og?s=150_14_63_1` — a 1200×630 social card PNG renders.
 5. Open `/llms-full.txt` — the full agent reference is served.
 Stop the dev server.
 

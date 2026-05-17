@@ -86,6 +86,25 @@ const jsonLdData = [
       "Diesel Pump Price (PHP/liter)",
     ],
   },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "PH Oil Scenario Planner",
+    url: "https://energy-intelligence-map.vercel.app/?s=106_2_58.42_0",
+    description:
+      "Model a Philippine fuel-price shock — Brent crude, Strait of Hormuz disruption, PHP/USD forex, and refinery status — and share the result via a no-login URL.",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    isPartOf: {
+      "@type": "WebApplication",
+      name: "PH Energy Intelligence Map",
+      url: "https://energy-intelligence-map.vercel.app",
+    },
+    potentialAction: {
+      "@type": "ShareAction",
+      target: "https://energy-intelligence-map.vercel.app/?s={scenario}",
+    },
+  },
 ];
 
 function JsonLd() {

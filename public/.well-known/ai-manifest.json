@@ -40,8 +40,23 @@
       "description": "API discovery endpoint — returns this manifest's API section as JSON",
       "cache": "static",
       "response_type": "application/json"
+    },
+    {
+      "path": "/embed/scenario",
+      "method": "GET",
+      "description": "Embeddable single-card widget rendering a modeled fuel-price scenario. Accepts an `s` query parameter (encoded scenario: brent_hormuz_forex_refinery). Iframe-ready, no chrome.",
+      "cache": "static",
+      "response_type": "text/html",
+      "query_params": { "s": "Encoded scenario string, e.g. 140_10_61.5_1" }
     }
   ],
+  "capabilities": {
+    "shareable_scenarios": {
+      "description": "Modeled fuel-price scenarios are shareable via an `?s=` URL parameter on the homepage and the /embed/scenario route. No account required.",
+      "param_format": "brent_hormuz_forex_refinery — e.g. /?s=140_10_61.5_1",
+      "open_graph": "Shared scenario links generate dynamic Open Graph images for rich social unfurling."
+    }
+  },
   "datasets": [
     {
       "name": "Philippine Gas Stations",
