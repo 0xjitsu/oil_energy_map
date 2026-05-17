@@ -10,8 +10,10 @@ import type { GasStation } from '@/types/stations';
 import type { StationStatus } from '@/types/stations';
 import { createFacilityLayers } from './FacilityLayer';
 import { createRouteLayers } from './ShippingLayer';
-import { createStationLayer } from './StationLayer';
-import { BRAND_LIST, allStations } from '@/data/stations';
+import { createStationLayer, createClusterCache } from './StationLayer';
+import { BRAND_LIST } from '@/data/stations';
+import { useStations } from '@/hooks/useStations';
+import { filterStations } from '@/lib/station-filter';
 import MapToolbar from './MapToolbar';
 import StationFilterBar from './StationFilterBar';
 import CommandPalette from './CommandPalette';
@@ -79,6 +81,8 @@ export default function IntelMap({
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const rafRef = useRef<number>(0);
   const mapRef = useRef<MapRef>(null);
+  const { stations } = useStations();
+  const clusterCacheRef = useRef(createClusterCache());
 
   const handleZoomIn = useCallback(() => {
     const map = mapRef.current?.getMap();
@@ -114,7 +118,9 @@ export default function IntelMap({
   const handleCommandPaletteOpen = useCallback(() => setCommandPaletteOpen(true), []);
   const handleCommandPaletteClose = useCallback(() => setCommandPaletteOpen(false), []);
 
-  // Animation loop for LIVE mode
+  // Animation loop for LIVE mode — commit state at ~10fps, not 60fps,
+  // so the deckLayers memo rebuilds 6x less often.
+  const frameRef = useRef(0);
   useEffect(() => {
     if (mapMode !== 'live') {
       cancelAnimationFrame(rafRef.current);
@@ -122,7 +128,10 @@ export default function IntelMap({
     }
 
     const animate = () => {
-      setCurrentTime((t) => (t + 1) % 1000);
+      frameRef.current += 1;
+      if (frameRef.current % 6 === 0) {
+        setCurrentTime((t) => (t + 6) % 1000);
+      }
       rafRef.current = requestAnimationFrame(animate);
     };
     rafRef.current = requestAnimationFrame(animate);
@@ -166,6 +175,19 @@ export default function IntelMap({
     setSelectedFacility(null);
   }, []);
 
+  const stationCacheKey = useMemo(
+    () =>
+      Array.from(visibleBrands).sort().join(',') +
+      '|' + (selectedRegion ?? '') +
+      '|' + statusFilter,
+    [visibleBrands, selectedRegion, statusFilter],
+  );
+
+  const filteredStations = useMemo(
+    () => filterStations(stations, { visibleBrands, selectedRegion, statusFilter }),
+    [stations, visibleBrands, selectedRegion, statusFilter],
+  );
+
   const deckLayers = useMemo(
     () => [
       ...createFacilityLayers(
@@ -179,8 +201,8 @@ export default function IntelMap({
       ),
       ...createRouteLayers(layers.routes, mapMode, effectiveTime, scenarioParams),
       ...createStationLayer(
+        filteredStations,
         stationsVisible,
-        visibleBrands,
         () => {
           /* future: station detail panel */
         },
@@ -188,8 +210,9 @@ export default function IntelMap({
         setHoveredStation,
         setHoveredStationInfo,
         currentZoom,
-        selectedRegion,
         statusFilter,
+        stationCacheKey,
+        clusterCacheRef.current,
       ),
     ],
     [
@@ -202,24 +225,16 @@ export default function IntelMap({
       handleSelect,
       hoveredFacility,
       stationsVisible,
-      visibleBrands,
+      filteredStations,
       hoveredStation,
       currentZoom,
-      selectedRegion,
       statusFilter,
+      stationCacheKey,
     ],
   );
 
-  const totalStationCount = allStations.length;
-
-  const filteredStationCount = useMemo(() => {
-    return allStations.filter(
-      (s) =>
-        visibleBrands.has(s.brand) &&
-        (!selectedRegion || s.region === selectedRegion) &&
-        (!statusFilter || statusFilter === 'all' || s.status === statusFilter),
-    ).length;
-  }, [visibleBrands, selectedRegion, statusFilter]);
+  const totalStationCount = stations.length;
+  const filteredStationCount = filteredStations.length;
 
   return (
     <div

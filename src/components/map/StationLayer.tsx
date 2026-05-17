@@ -1,5 +1,4 @@
 import { ScatterplotLayer, TextLayer } from '@deck.gl/layers';
-import { allStations } from '@/data/stations';
 import type { GasStation } from '@/types/stations';
 import { BRAND_COLORS, STATUS_COLORS } from '@/types/stations';
 import type { StationStatus } from '@/types/stations';
@@ -17,12 +16,22 @@ function hexToRgb(hex: string): [number, number, number] {
 /** Zoom threshold: below this, stations are clustered */
 const CLUSTER_MAX_ZOOM = 8;
 
-/** Supercluster index — cached per visible-brands key to avoid rebuilding every frame */
-let cachedBrandsKey = '';
-let cachedIndex: Supercluster<GasStation> | null = null;
+/** Instance-scoped cluster cache. Created with `createClusterCache()` and held in a ref by IntelMap. */
+export interface ClusterCache {
+  key: string;
+  index: Supercluster<GasStation> | null;
+}
 
-function getClusterIndex(filtered: GasStation[], brandsKey: string): Supercluster<GasStation> {
-  if (cachedIndex && cachedBrandsKey === brandsKey) return cachedIndex;
+export function createClusterCache(): ClusterCache {
+  return { key: '', index: null };
+}
+
+function getClusterIndex(
+  filtered: GasStation[],
+  cacheKey: string,
+  cache: ClusterCache,
+): Supercluster<GasStation> {
+  if (cache.index && cache.key === cacheKey) return cache.index;
 
   const index = new Supercluster<GasStation>({
     radius: 60,
@@ -39,8 +48,8 @@ function getClusterIndex(filtered: GasStation[], brandsKey: string): Supercluste
   }));
 
   index.load(features);
-  cachedBrandsKey = brandsKey;
-  cachedIndex = index;
+  cache.key = cacheKey;
+  cache.index = index;
   return index;
 }
 
@@ -51,26 +60,27 @@ interface ClusterPoint {
   isCluster: boolean;
 }
 
+/**
+ * Build the station deck.gl layers.
+ * `filteredStations` must already be filtered by the caller (see `filterStations`).
+ * `cacheKey` uniquely identifies that filtered set; `cache` is an instance-scoped object.
+ */
 export function createStationLayer(
+  filteredStations: GasStation[],
   visible: boolean,
-  visibleBrands: Set<string>,
   onSelect: (station: GasStation) => void,
   hoveredId: string | null,
   setHoveredId: (id: string | null) => void,
-  onHoverInfo?: (info: { station: GasStation; x: number; y: number } | null) => void,
-  zoom?: number,
-  selectedRegion?: string | null,
-  statusFilter?: StationStatus | 'all',
+  onHoverInfo: ((info: { station: GasStation; x: number; y: number } | null) => void) | undefined,
+  zoom: number | undefined,
+  statusFilter: StationStatus | 'all',
+  cacheKey: string,
+  cache: ClusterCache,
 ): Layer[] {
-  const filtered = allStations.filter(
-    (s) =>
-      visibleBrands.has(s.brand) &&
-      (!selectedRegion || s.region === selectedRegion) &&
-      (!statusFilter || statusFilter === 'all' || s.status === statusFilter),
-  );
+  const filtered = filteredStations;
   const currentZoom = zoom ?? 10; // default to unclustered if zoom not provided
 
-  // When zoomed in enough, render individual dots (original behavior)
+  // When zoomed in enough, render individual dots
   if (currentZoom >= CLUSTER_MAX_ZOOM) {
     const dotLayer = new ScatterplotLayer<GasStation>({
       id: 'station-dots',
@@ -83,9 +93,10 @@ export function createStationLayer(
       radiusMinPixels: 2,
       radiusMaxPixels: 8,
       getFillColor: (d: GasStation) => {
-        const colorSource = statusFilter && statusFilter !== 'all'
-          ? STATUS_COLORS[d.status ?? 'operational']
-          : (BRAND_COLORS[d.brand] ?? BRAND_COLORS.Other);
+        const colorSource =
+          statusFilter && statusFilter !== 'all'
+            ? STATUS_COLORS[d.status ?? 'operational']
+            : (BRAND_COLORS[d.brand] ?? BRAND_COLORS.Other);
         const rgb = hexToRgb(colorSource);
         const alpha = d.id === hoveredId ? 255 : 180;
         return [...rgb, alpha] as [number, number, number, number];
@@ -104,15 +115,14 @@ export function createStationLayer(
       updateTriggers: {
         getFillColor: [hoveredId, statusFilter],
         getRadius: [hoveredId],
-        data: [visibleBrands, selectedRegion, statusFilter],
+        data: [cacheKey],
       },
     });
     return [dotLayer];
   }
 
   // Clustered view for low zoom levels
-  const brandsKey = Array.from(visibleBrands).sort().join(',') + '|' + (selectedRegion ?? '') + '|' + (statusFilter ?? 'all');
-  const index = getClusterIndex(filtered, brandsKey);
+  const index = getClusterIndex(filtered, cacheKey, cache);
   const rawClusters = index.getClusters([-180, -85, 180, 85], Math.floor(currentZoom));
 
   const clusterData: ClusterPoint[] = rawClusters.map((c) => {
@@ -130,7 +140,6 @@ export function createStationLayer(
 
   const hoveredClusterId = hoveredId;
 
-  // Cluster circle layer
   const clusterCircleLayer = new ScatterplotLayer<ClusterPoint>({
     id: 'station-clusters',
     data: clusterData,
@@ -148,18 +157,16 @@ export function createStationLayer(
     radiusMaxPixels: 50,
     getFillColor: (d) => {
       if (!d.isCluster) {
-        // Single unclustered station — fall back to neutral dot
         return d.id === hoveredClusterId
-          ? [59, 130, 246, 255] as [number, number, number, number]
-          : [59, 130, 246, 160] as [number, number, number, number];
+          ? ([59, 130, 246, 255] as [number, number, number, number])
+          : ([59, 130, 246, 160] as [number, number, number, number]);
       }
       return d.id === hoveredClusterId
-        ? [59, 130, 246, 230] as [number, number, number, number]
-        : [59, 130, 246, 160] as [number, number, number, number];
+        ? ([59, 130, 246, 230] as [number, number, number, number])
+        : ([59, 130, 246, 160] as [number, number, number, number]);
     },
     onHover: ({ object }: { object?: ClusterPoint }) => {
       setHoveredId(object ? object.id : null);
-      // Clear station tooltip when hovering clusters
       onHoverInfo?.(null);
     },
     onClick: () => {
@@ -172,11 +179,10 @@ export function createStationLayer(
     updateTriggers: {
       getFillColor: [hoveredClusterId],
       getRadius: [hoveredClusterId],
-      data: [brandsKey, currentZoom],
+      data: [cacheKey, currentZoom],
     },
   });
 
-  // Only show count labels on actual clusters (count > 1)
   const labelData = clusterData.filter((d) => d.isCluster && d.count > 1);
 
   const clusterLabelLayer = new TextLayer<ClusterPoint>({
@@ -194,7 +200,7 @@ export function createStationLayer(
     fontFamily: 'Inter, system-ui, sans-serif',
     sizeUnits: 'pixels' as const,
     updateTriggers: {
-      data: [brandsKey, currentZoom],
+      data: [cacheKey, currentZoom],
     },
   });
 
