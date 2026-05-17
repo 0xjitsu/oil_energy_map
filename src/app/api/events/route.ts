@@ -156,6 +156,9 @@ export async function GET() {
     );
   } catch {
     // Fallback to static data on any error
-    return NextResponse.json({ events: timelineEvents, lastChecked: null });
+    return NextResponse.json(
+      { events: timelineEvents, lastChecked: null },
+      { headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' } },
+    );
   }
 }
