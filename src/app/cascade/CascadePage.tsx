@@ -43,7 +43,7 @@ export function CascadePage() {
       <ScrollProgress />
       <Header showTicker={false} />
 
-      <main className="max-w-[1200px] mx-auto px-4 sm:px-6 py-6">
+      <main id="main-content" tabIndex={-1} className="max-w-[1200px] mx-auto px-4 sm:px-6 py-6">
 
         {/* ── Hero: Lead with human impact ── */}
         <section className="py-10 sm:py-14">

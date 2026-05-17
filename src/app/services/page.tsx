@@ -14,7 +14,7 @@ export default function Services() {
   return (
     <>
       <Header showTicker={false} />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <ServicesPage />
       </main>
       <Footer />

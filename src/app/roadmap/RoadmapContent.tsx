@@ -74,7 +74,7 @@ export function RoadmapContent() {
     <div className="min-h-screen bg-bg-primary overflow-x-clip">
       <Header showTicker={false} />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <main id="main-content" tabIndex={-1} className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* A. Hero */}
         <section className="mb-12">
           <div className="flex items-center gap-2 mb-4">

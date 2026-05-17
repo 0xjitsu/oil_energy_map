@@ -13,7 +13,7 @@ export function PrimerPage() {
       <ScrollProgress />
       <Header showTicker={false} />
 
-      <main className="px-4 sm:px-6 py-6">
+      <main id="main-content" tabIndex={-1} className="px-4 sm:px-6 py-6">
         <PrimerHero />
         <SupplyChainFlow />
         <div className="max-w-4xl mx-auto">

@@ -33,7 +33,7 @@ export function ReferencesContent({ references }: { references: DataReference[] 
     <div className="min-h-screen bg-bg-primary overflow-x-clip">
       <Header showTicker={false} />
 
-      <main className="max-w-[1600px] mx-auto px-4 py-8 sm:px-6">
+      <main id="main-content" tabIndex={-1} className="max-w-[1600px] mx-auto px-4 py-8 sm:px-6">
         {/* Hero */}
         <section className="mb-10">
           <div className="flex items-center gap-2 mb-4">
