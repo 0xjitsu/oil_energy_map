@@ -41,14 +41,18 @@ async function getHeadlines(): Promise<string[]> {
   return timelineEvents.slice(0, 5).map((e) => e.event);
 }
 
+const SENTIMENT_FALLBACK: SentimentResult[] = [
+  { headline: 'Sentiment analysis temporarily unavailable', sentiment: 'neutral', score: 0.5 },
+  { headline: 'Showing neutral baseline — live NLP feed offline', sentiment: 'neutral', score: 0.5 },
+];
+
 export async function GET() {
   const token = process.env.HUGGINGFACE_API_TOKEN;
 
   if (!token) {
-    return NextResponse.json(
-      { error: 'HUGGINGFACE_API_TOKEN not configured' },
-      { status: 503 }
-    );
+    return NextResponse.json(SENTIMENT_FALLBACK, {
+      headers: { 'Cache-Control': 's-maxage=3600, stale-while-revalidate=7200' },
+    });
   }
 
   try {
@@ -64,11 +68,9 @@ export async function GET() {
     });
 
     if (!response.ok) {
-      const error = await response.text();
-      return NextResponse.json(
-        { error: `HuggingFace API error: ${response.status}`, detail: error },
-        { status: 502 }
-      );
+      return NextResponse.json(SENTIMENT_FALLBACK, {
+        headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' },
+      });
     }
 
     const results: HFResult[][] = await response.json();
@@ -87,9 +89,8 @@ export async function GET() {
       headers: { 'Cache-Control': 's-maxage=3600, stale-while-revalidate=7200' },
     });
   } catch {
-    return NextResponse.json(
-      { error: 'Failed to fetch sentiment analysis' },
-      { status: 500 }
-    );
+    return NextResponse.json(SENTIMENT_FALLBACK, {
+      headers: { 'Cache-Control': 's-maxage=60, stale-while-revalidate=300' },
+    });
   }
 }
