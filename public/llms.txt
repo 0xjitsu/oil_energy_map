@@ -36,6 +36,15 @@ For structured API discovery, fetch:
 - / — Main dashboard with interactive WebGL map, price panels, scenario planner, stress testing, and market player analysis
 - /primer — Educational guide to how oil supply chains work
 - /references — Data provenance catalog listing all 14+ data sources with status (active/simulated/baseline)
+- /embed/scenario — embeddable single-card widget for a modeled scenario (iframe-ready, accepts ?s=)
+
+## Sharing & Embedding
+
+The dashboard's scenario planner is fully shareable without an account:
+
+- Scenario links — the homepage accepts an `?s=` query parameter encoding a modeled fuel-price scenario (`brent_hormuz_forex_refinery`, e.g. `/?s=140_10_61.5_1`). Opening such a link restores the exact sliders the sharer set.
+- GET /embed/scenario?s=... — a minimal, iframe-ready card rendering the modeled gasoline/diesel prices and risk level for a scenario. Embed it in other sites.
+- Each shared scenario link generates a dynamic Open Graph image, so links unfurl as rich cards on social platforms.
 
 ## Source Code
 
@@ -52,6 +61,7 @@ If you are an AI agent exploring this site:
 3. Use GET /api/events for latest energy news with severity ratings
 4. Visit /references for full data source documentation
 5. To contribute: clone https://github.com/0xjitsu/oil_energy_map, read CLAUDE.md for project rules and patterns
+6. To embed a scenario card elsewhere, iframe /embed/scenario?s=<encoded-scenario>
 
 ## Cascade Effects
 
