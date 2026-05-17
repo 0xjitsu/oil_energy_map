@@ -4,11 +4,12 @@ import { useMemo } from 'react';
 import { IMPACT_ITEMS } from '@/lib/constants';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
 import { InfoTip } from '@/components/ui/Tooltip';
-import type { ScenarioParams, ImpactItem } from '@/types';
+import type { ScenarioParams, ImpactItem, RiskLevel } from '@/types';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
-// Baseline Metro Manila pump prices (₱/L) — the "no extra cost" reference point.
-const BASELINE_GASOLINE = 63;
+// Baselines mirror the scenario-engine's calm base case (Brent $80, PHP 56,
+// no disruption) so a calm scenario honestly derives "no extra cost".
+const BASELINE_GASOLINE = 65;
 const BASELINE_DIESEL = 59;
 
 /**
@@ -49,7 +50,7 @@ function deriveImpacts(base: ImpactItem[], params: ScenarioParams): ImpactItem[]
   });
 }
 
-function riskClasses(riskLevel: string): { border: string; change: string } {
+function riskClasses(riskLevel: RiskLevel): { border: string; change: string } {
   if (riskLevel === 'green') return { border: 'border-l-status-green/40', change: 'text-status-green' };
   if (riskLevel === 'red') {
     return { border: 'border-l-status-red/40', change: 'text-status-red' };
@@ -64,7 +65,7 @@ interface ImpactCardsProps {
 export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
   const { impacts, border, change } = useMemo(() => {
     const result = calculatePumpPrice(scenarioParams);
-    const classes = riskClasses(String(result.riskLevel));
+    const classes = riskClasses(result.riskLevel);
     return {
       impacts: deriveImpacts(IMPACT_ITEMS, scenarioParams),
       border: classes.border,
