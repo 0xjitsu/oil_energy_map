@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react';
 import { computeRegionAnalytics } from '@/lib/region-analytics';
+import { useStations } from '@/hooks/useStations';
 
 interface RegionPanelProps {
   region: string;
@@ -9,7 +10,11 @@ interface RegionPanelProps {
 }
 
 export default function RegionPanel({ region, onClose }: RegionPanelProps) {
-  const analytics = useMemo(() => computeRegionAnalytics(region), [region]);
+  const { stations } = useStations();
+  const analytics = useMemo(
+    () => computeRegionAnalytics(region, stations),
+    [region, stations],
+  );
   const maxBrandCount = analytics.brandBreakdown[0]?.count ?? 1;
 
   return (

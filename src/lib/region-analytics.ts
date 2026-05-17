@@ -1,7 +1,7 @@
-import { allStations } from '@/data/stations';
 import { facilities } from '@/data/facilities';
 import { BRAND_COLORS } from '@/types/stations';
 import type { Facility } from '@/types';
+import type { GasStation } from '@/types/stations';
 
 export interface RegionAnalytics {
   regionName: string;
@@ -44,7 +44,10 @@ function findNearest(
   return { name: nearest.name, distanceKm: Math.round(minDist) };
 }
 
-export function computeRegionAnalytics(regionName: string): RegionAnalytics {
+export function computeRegionAnalytics(
+  regionName: string,
+  allStations: GasStation[],
+): RegionAnalytics {
   const stations = allStations.filter((s) => s.region === regionName);
 
   const brandCounts = new Map<string, number>();
