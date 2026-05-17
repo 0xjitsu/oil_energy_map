@@ -58,10 +58,10 @@ export function CascadePage() {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-text-primary mb-3 max-w-3xl">
-            {cascadeHeadline.householdImpact}nth
-            <span className="text-text-secondary font-normal text-xl sm:text-2xl md:text-3xl block mt-1">
-              — what {cascadeHeadline.crudePrice} oil costs a Filipino family
-            </span>
+            Filipino families pay{' '}
+            <span className="text-status-red">{cascadeHeadline.householdImpact}</span>{' '}
+            more — traced from{' '}
+            <span className="text-status-red">{cascadeHeadline.crudePrice}</span> crude oil.
           </h1>
 
           <p className="max-w-2xl text-sm sm:text-base text-text-body leading-relaxed mt-4">
