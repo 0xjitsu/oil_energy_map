@@ -31,6 +31,7 @@ import { ExecutiveSnapshot } from '@/components/layout/ExecutiveSnapshot';
 import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 import { ActDivider } from '@/components/layout/ActDivider';
+import { WhatToDo } from '@/components/layout/WhatToDo';
 import { CrisisHero } from '@/components/layout/CrisisHero';
 import { HowToHint } from '@/components/onboarding/HowToGuide';
 
@@ -265,6 +266,17 @@ export default function Home() {
           <SectionHeader color="bg-status-yellow" label="Event Timeline" />
           <EventTimeline />
         </section>
+
+        {/* ━━━ ACT 5: WHAT YOU CAN DO ━━━ */}
+        <ActDivider
+          number="05"
+          question="What can you do about it?"
+          hook="The data is the easy part. Here is where you go from reading to doing."
+          gradientFrom="#0f172a"
+          gradientTo="#060a10"
+        />
+
+        <WhatToDo />
       </main>
 
       <MobileBottomNav />
