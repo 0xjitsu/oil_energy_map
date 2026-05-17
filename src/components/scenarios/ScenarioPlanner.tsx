@@ -32,7 +32,13 @@ export function ScenarioPlanner({
 
   // Tracks whether a scenario was restored from the URL on first mount, so the
   // live-price sync below does not immediately clobber the shared Brent/forex.
-  const urlScenarioRef = useRef(false);
+  // Read synchronously in the ref initializer (not in an effect) so the gate is
+  // set BEFORE any effect runs — the live-sync skip must not depend on the
+  // declaration order of the two effects below.
+  const urlScenarioRef = useRef(
+    typeof window !== 'undefined' &&
+      Boolean(new URLSearchParams(window.location.search).get(SCENARIO_PARAM)),
+  );
 
   // On mount only: if the URL carries an `?s=` scenario, restore it. A shared
   // link should land the visitor on exactly the scenario the sharer modeled.
@@ -40,7 +46,6 @@ export function ScenarioPlanner({
     if (typeof window === 'undefined') return;
     const raw = new URLSearchParams(window.location.search).get(SCENARIO_PARAM);
     if (!raw) return;
-    urlScenarioRef.current = true;
     onParamsChange(decodeScenario(raw));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
