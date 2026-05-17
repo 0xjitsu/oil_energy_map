@@ -59,7 +59,7 @@ export default function RegionPanel({ region, onClose }: RegionPanelProps) {
             {analytics.nearestTerminal && (
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-status-green" />
                   <span className="text-[10px] font-mono text-text-secondary">{analytics.nearestTerminal.name}</span>
                 </div>
                 <span className="text-[10px] font-mono text-text-dim">{analytics.nearestTerminal.distanceKm} km</span>
@@ -68,7 +68,7 @@ export default function RegionPanel({ region, onClose }: RegionPanelProps) {
             {analytics.nearestDepot && (
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-status-yellow" />
                   <span className="text-[10px] font-mono text-text-secondary">{analytics.nearestDepot.name}</span>
                 </div>
                 <span className="text-[10px] font-mono text-text-dim">{analytics.nearestDepot.distanceKm} km</span>

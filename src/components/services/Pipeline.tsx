@@ -14,7 +14,7 @@ export function Pipeline() {
         <h2 className="text-3xl sm:text-4xl font-bold text-text-primary text-center mb-4">
           From scanned PDF to bid-ready dataset
           <br />
-          <span className="text-blue-400">in 7 stages.</span>
+          <span className="text-petron">in 7 stages.</span>
         </h2>
         <p className="text-text-body text-center max-w-2xl mx-auto mb-12">
           Every bill passes the same deterministic pipeline — no human encoding, no format-specific exceptions.
@@ -27,7 +27,7 @@ export function Pipeline() {
               <div key={stage.num} className="flex items-start">
                 {/* Stage node */}
                 <div className="group flex flex-col items-center w-28 px-2">
-                  <div className="w-10 h-10 rounded-full glass-card border border-border-hover flex items-center justify-center font-mono text-sm font-bold text-text-primary group-hover:border-blue-400 group-hover:text-blue-400 transition-colors mb-3 flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full glass-card border border-border-hover flex items-center justify-center font-mono text-sm font-bold text-text-primary group-hover:border-petron group-hover:text-petron transition-colors mb-3 flex-shrink-0">
                     {stage.num}
                   </div>
                   <div className="font-mono text-xs font-bold text-text-primary text-center mb-1">

@@ -7,15 +7,15 @@ interface BadgeProps {
 
 const statusConfig: Record<BadgeProps['status'], { classes: string; defaultLabel: string }> = {
   green: {
-    classes: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
+    classes: 'bg-status-green/10 text-status-green border border-status-green/20',
     defaultLabel: 'NORMAL',
   },
   yellow: {
-    classes: 'bg-yellow-500/10 text-yellow-400 border border-yellow-500/20',
+    classes: 'bg-status-yellow/10 text-status-yellow border border-status-yellow/20',
     defaultLabel: 'WARNING',
   },
   red: {
-    classes: 'bg-red-500/10 text-red-400 border border-red-500/20',
+    classes: 'bg-status-red/10 text-status-red border border-status-red/20',
     defaultLabel: 'CRITICAL',
   },
 };

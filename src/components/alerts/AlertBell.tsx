@@ -34,7 +34,7 @@ export function AlertBell() {
       >
         <span className="text-sm">🔔</span>
         {alerts.unreadCount > 0 && (
-          <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-red-500 text-white text-[8px] font-mono flex items-center justify-center">
+          <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-status-red text-white text-[8px] font-mono flex items-center justify-center">
             {alerts.unreadCount > 9 ? '9+' : alerts.unreadCount}
           </span>
         )}

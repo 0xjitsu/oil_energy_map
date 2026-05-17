@@ -31,7 +31,7 @@ export default function AlertDrawer({ open, onClose, alerts, onAddRule }: AlertD
                 Mark all read
               </button>
             )}
-            <button onClick={onAddRule} className="px-2 py-1 rounded text-[9px] font-mono bg-blue-500/20 text-blue-400 hover:bg-blue-500/30">
+            <button onClick={onAddRule} className="px-2 py-1 rounded text-[9px] font-mono bg-petron/20 text-petron hover:bg-petron/30">
               + Rule
             </button>
             <button onClick={onClose} className="text-text-dim hover:text-text-secondary">✕</button>
@@ -49,13 +49,13 @@ export default function AlertDrawer({ open, onClose, alerts, onAddRule }: AlertD
                 <div className="flex items-center gap-1">
                   <button
                     onClick={() => alerts.toggleRule(rule.id)}
-                    className={`text-[9px] font-mono ${rule.enabled ? 'text-emerald-400' : 'text-text-dim'}`}
+                    className={`text-[9px] font-mono ${rule.enabled ? 'text-status-green' : 'text-text-dim'}`}
                   >
                     {rule.enabled ? 'ON' : 'OFF'}
                   </button>
                   <button
                     onClick={() => alerts.removeRule(rule.id)}
-                    className="text-[9px] text-text-dim hover:text-red-400"
+                    className="text-[9px] text-text-dim hover:text-status-red"
                   >
                     ✕
                   </button>

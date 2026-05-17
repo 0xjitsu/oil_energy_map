@@ -84,9 +84,9 @@ export default function MapToolbar({
                 onDoubleClick={() => handleExpand(key)}
                 className={`w-9 h-9 flex items-center justify-center rounded-lg transition-colors duration-200 text-sm ${
                   active
-                    ? 'bg-blue-500/15 border border-blue-500/30 text-text-primary'
+                    ? 'bg-petron/15 border border-petron/30 text-text-primary'
                     : 'bg-surface-hover text-text-muted hover:text-text-secondary'
-                } ${expanded ? 'ring-1 ring-blue-500/30' : ''}`}
+                } ${expanded ? 'ring-1 ring-petron/30' : ''}`}
                 title={`${label} (${shortcut})`}
               >
                 {icon}

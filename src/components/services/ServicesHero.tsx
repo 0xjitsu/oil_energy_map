@@ -21,13 +21,13 @@ export function ServicesHero() {
         </p>
 
         {/* Savings anchor callout */}
-        <div className="glass-card max-w-2xl mx-auto mb-8 p-5 border border-green-500/20">
+        <div className="glass-card max-w-2xl mx-auto mb-8 p-5 border border-status-green/20">
           <p className="font-mono text-[10px] uppercase tracking-widest text-text-label mb-3">
             {servicesHero.savingsAnchor.label}
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-3">
             {servicesHero.savingsAnchor.tiers.map((tier) => (
-              <div key={tier.stores} className="text-center px-4 py-2 bg-green-500/10 rounded-lg">
+              <div key={tier.stores} className="text-center px-4 py-2 bg-status-green/10 rounded-lg">
                 <div className="font-mono text-xl font-bold text-status-green">{tier.saving}</div>
                 <div className="font-mono text-[10px] text-text-dim mt-0.5">{tier.stores}</div>
               </div>
@@ -56,7 +56,7 @@ export function ServicesHero() {
               href={cta.href}
               className={
                 cta.variant === 'primary'
-                  ? 'inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-mono text-sm rounded-lg transition-colors min-h-[44px]'
+                  ? 'inline-flex items-center px-6 py-3 bg-petron hover:bg-petron/90 text-white font-mono text-sm rounded-lg transition-colors min-h-[44px]'
                   : 'inline-flex items-center px-6 py-3 glass-card font-mono text-sm text-text-secondary hover:text-text-primary transition-colors min-h-[44px]'
               }
             >

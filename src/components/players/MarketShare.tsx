@@ -103,7 +103,7 @@ export function MarketShare() {
               y={activePlayer ? '36%' : '50%'}
               textAnchor="middle"
               dominantBaseline="central"
-              fill={activePlayer ? activePlayer.color : 'rgba(255,255,255,0.3)'}
+              fill={activePlayer ? activePlayer.color : 'var(--text-subtle)'}
               fontSize={activePlayer ? 12 : 10}
               fontFamily="monospace"
               fontWeight={activePlayer ? 'bold' : 'normal'}
@@ -117,7 +117,7 @@ export function MarketShare() {
                   y="48%"
                   textAnchor="middle"
                   dominantBaseline="central"
-                  fill="rgba(255,255,255,0.5)"
+                  fill="var(--text-dim)"
                   fontSize={10}
                   fontFamily="monospace"
                 >
@@ -128,7 +128,7 @@ export function MarketShare() {
                   y="58%"
                   textAnchor="middle"
                   dominantBaseline="central"
-                  fill="rgba(255,255,255,0.4)"
+                  fill="var(--text-subtle)"
                   fontSize={9}
                   fontFamily="monospace"
                 >
@@ -139,7 +139,7 @@ export function MarketShare() {
                   y="66%"
                   textAnchor="middle"
                   dominantBaseline="central"
-                  fill="rgba(255,255,255,0.35)"
+                  fill="var(--text-subtle)"
                   fontSize={8}
                   fontFamily="monospace"
                 >
