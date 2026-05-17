@@ -32,6 +32,7 @@ import { SectionNav } from '@/components/layout/SectionNav';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 import { ActDivider } from '@/components/layout/ActDivider';
 import { CrisisHero } from '@/components/layout/CrisisHero';
+import { HowToHint } from '@/components/onboarding/HowToGuide';
 
 import { CrisisProvider } from '@/lib/CrisisProvider';
 import { HighlightProvider } from '@/lib/HighlightContext';
@@ -124,6 +125,8 @@ export default function Home() {
         <FadeIn delay={0}>
           <CrisisHero />
         </FadeIn>
+
+        <HowToHint />
 
         {/* ━━━ ACT 1: WHAT'S HAPPENING NOW ━━━ */}
         <ActDivider
