@@ -135,7 +135,7 @@ export function MobileWaterfall({ activeStage = null }: MobileWaterfallProps) {
                                 <path
                                   d="M4 2 L4 12 L12 12"
                                   fill="none"
-                                  stroke="rgba(255,255,255,0.15)"
+                                  stroke="var(--border-subtle)"
                                   strokeWidth="1.5"
                                   strokeLinecap="round"
                                   strokeLinejoin="round"
