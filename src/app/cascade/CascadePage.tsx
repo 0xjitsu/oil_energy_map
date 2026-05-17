@@ -233,6 +233,21 @@ export function CascadePage() {
           </div>
         </section>
 
+        <div className="mt-12 glass-card px-6 py-8 text-center">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-text-label mb-2">
+            Start here
+          </p>
+          <p className="text-text-body mb-4">
+            Wondering how the oil gets here in the first place? Trace the supply chain.
+          </p>
+          <a
+            href="/primer"
+            className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-petron hover:text-text-primary transition-colors"
+          >
+            How energy reaches the Philippines →
+          </a>
+        </div>
+
         {/* ── Methodology & Attribution ── */}
         <footer className="mt-10 pt-6 border-t border-border-subtle">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[10px] font-mono text-text-dim">
