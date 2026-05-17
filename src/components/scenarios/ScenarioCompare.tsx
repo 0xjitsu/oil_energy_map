@@ -8,9 +8,9 @@ interface ScenarioCompareProps {
 
 function getRiskColor(level: string): string {
   switch (level) {
-    case 'red': return 'text-red-400';
-    case 'yellow': return 'text-yellow-400';
-    default: return 'text-emerald-400';
+    case 'red': return 'text-status-red';
+    case 'yellow': return 'text-status-yellow';
+    default: return 'text-status-green';
   }
 }
 

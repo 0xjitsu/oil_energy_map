@@ -29,9 +29,9 @@ export default function MapToolbarPanel({
       {activeLayer === 'facilities' && (
         <div className="space-y-2">
           {[
-            { label: 'Refinery', color: 'bg-blue-500' },
-            { label: 'Terminal', color: 'bg-emerald-500' },
-            { label: 'Depot', color: 'bg-amber-500' },
+            { label: 'Refinery', color: 'bg-petron' },
+            { label: 'Terminal', color: 'bg-status-green' },
+            { label: 'Depot', color: 'bg-status-yellow' },
           ].map(({ label, color }) => (
             <div key={label} className="flex items-center gap-2">
               <span className={`w-2.5 h-2.5 rounded-full ${color}`} />
@@ -49,8 +49,8 @@ export default function MapToolbarPanel({
       {activeLayer === 'routes' && (
         <div className="space-y-2">
           {[
-            { label: 'Active Route', color: 'bg-emerald-500' },
-            { label: 'Disrupted', color: 'bg-red-500' },
+            { label: 'Active Route', color: 'bg-status-green' },
+            { label: 'Disrupted', color: 'bg-status-red' },
           ].map(({ label, color }) => (
             <div key={label} className="flex items-center gap-2">
               <span className={`w-4 h-0.5 ${color} rounded`} />

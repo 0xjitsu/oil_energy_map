@@ -8,13 +8,13 @@ interface ImpactResultProps {
 }
 
 function getDeltaColor(delta: number): string {
-  return delta > 0 ? 'text-red-400' : 'text-emerald-400';
+  return delta > 0 ? 'text-status-red' : 'text-status-green';
 }
 
 function getIncomeImpactColor(percent: number): string {
-  if (percent > 5) return 'text-red-400';
-  if (percent > 2) return 'text-yellow-400';
-  return 'text-emerald-400';
+  if (percent > 5) return 'text-status-red';
+  if (percent > 2) return 'text-status-yellow';
+  return 'text-status-green';
 }
 
 export function ImpactResult({ persona, impact }: ImpactResultProps) {

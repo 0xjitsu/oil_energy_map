@@ -34,7 +34,7 @@ export function ScenarioSlots({ scenarios, onLoad, onRemove, onSave, disabled }:
           {s.name}
           <span
             onClick={(e) => { e.stopPropagation(); onRemove(s.id); }}
-            className="text-text-dim hover:text-red-400 cursor-pointer"
+            className="text-text-dim hover:text-status-red cursor-pointer"
           >
             ✕
           </span>
@@ -61,7 +61,7 @@ export function ScenarioSlots({ scenarios, onLoad, onRemove, onSave, disabled }:
             className="px-2 py-1 rounded-md bg-border text-[10px] font-mono text-text-primary outline-none w-32"
             autoFocus
           />
-          <button onClick={handleSave} className="text-[10px] text-emerald-400">✓</button>
+          <button onClick={handleSave} className="text-[10px] text-status-green">✓</button>
           <button onClick={() => setNaming(false)} className="text-[10px] text-text-dim">✕</button>
         </div>
       )}

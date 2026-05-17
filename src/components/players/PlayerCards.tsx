@@ -14,9 +14,9 @@ function vulnerabilityLevel(score: number): RiskLevel {
 }
 
 const RISK_COLORS: Record<RiskLevel, { bar: string; text: string; label: string }> = {
-  green: { bar: 'bg-emerald-500', text: 'text-emerald-400', label: 'LOW' },
-  yellow: { bar: 'bg-yellow-500', text: 'text-yellow-400', label: 'MED' },
-  red: { bar: 'bg-red-500', text: 'text-red-400', label: 'HIGH' },
+  green: { bar: 'bg-status-green', text: 'text-status-green', label: 'LOW' },
+  yellow: { bar: 'bg-status-yellow', text: 'text-status-yellow', label: 'MED' },
+  red: { bar: 'bg-status-red', text: 'text-status-red', label: 'HIGH' },
 };
 
 const STRATEGY_ICON: Record<string, string> = {

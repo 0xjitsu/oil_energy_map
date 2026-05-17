@@ -12,15 +12,15 @@ const CURRENT_DIESEL = 72.3;
 const RISK_BADGE: Record<RiskLevel, { label: string; className: string }> = {
   green: {
     label: 'STABLE',
-    className: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
+    className: 'bg-status-green/20 text-status-green border-status-green/30',
   },
   yellow: {
     label: 'ELEVATED',
-    className: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
+    className: 'bg-status-yellow/20 text-status-yellow border-status-yellow/30',
   },
   red: {
     label: 'CRISIS',
-    className: 'bg-red-500/20 text-red-400 border-red-500/30 alert-glow',
+    className: 'bg-status-red/20 text-status-red border-status-red/30 alert-glow',
   },
 };
 
@@ -60,7 +60,7 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
           </p>
           <p
             className={`text-xs font-mono mt-1 ${
-              gasDiff >= 0 ? 'text-red-400' : 'text-emerald-400'
+              gasDiff >= 0 ? 'text-status-red' : 'text-status-green'
             }`}
           >
             {gasDiff >= 0 ? '+' : ''}₱{gasDiff.toFixed(2)} vs current
@@ -75,7 +75,7 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
           </p>
           <p
             className={`text-xs font-mono mt-1 ${
-              dieselDiff >= 0 ? 'text-red-400' : 'text-emerald-400'
+              dieselDiff >= 0 ? 'text-status-red' : 'text-status-green'
             }`}
           >
             {dieselDiff >= 0 ? '+' : ''}₱{dieselDiff.toFixed(2)} vs current

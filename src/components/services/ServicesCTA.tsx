@@ -140,7 +140,7 @@ export function ServicesCTA() {
           <button
             type="submit"
             disabled={status === 'submitting'}
-            className="w-full py-3 bg-blue-600 hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-mono text-sm rounded-lg transition-colors min-h-[44px]"
+            className="w-full py-3 bg-petron hover:bg-petron/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-mono text-sm rounded-lg transition-colors min-h-[44px]"
           >
             {status === 'submitting' ? 'Sending…' : 'Request a Brief →'}
           </button>

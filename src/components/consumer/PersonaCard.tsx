@@ -10,13 +10,13 @@ interface PersonaCardProps {
 }
 
 function getPainColor(index: number): string {
-  if (index <= 3) return 'bg-emerald-500';
-  if (index <= 6) return 'bg-yellow-500';
-  return 'bg-red-500';
+  if (index <= 3) return 'bg-status-green';
+  if (index <= 6) return 'bg-status-yellow';
+  return 'bg-status-red';
 }
 
 function getDeltaColor(delta: number): string {
-  return delta > 0 ? 'text-red-400' : 'text-emerald-400';
+  return delta > 0 ? 'text-status-red' : 'text-status-green';
 }
 
 export function PersonaCard({ persona, impact, selected, onClick }: PersonaCardProps) {
@@ -24,7 +24,7 @@ export function PersonaCard({ persona, impact, selected, onClick }: PersonaCardP
     <button
       onClick={onClick}
       className={`text-left glass-card card-interactive p-4 transition-all ${
-        selected ? 'border-blue-500/30' : ''
+        selected ? 'border-petron/30' : ''
       }`}
     >
       <div className="flex items-center gap-2 mb-2">

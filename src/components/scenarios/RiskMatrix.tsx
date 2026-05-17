@@ -11,9 +11,9 @@ interface RiskCategory {
 }
 
 const DOT_COLORS: Record<RiskLevel, string> = {
-  green: 'bg-emerald-400',
-  yellow: 'bg-yellow-400',
-  red: 'bg-red-400 animate-pulse',
+  green: 'bg-status-green',
+  yellow: 'bg-status-yellow',
+  red: 'bg-status-red animate-pulse',
 };
 
 const LEVEL_LABELS: Record<RiskLevel, string> = {

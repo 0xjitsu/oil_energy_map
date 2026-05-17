@@ -45,7 +45,7 @@ function RiskRadar({ dimensions }: { dimensions: { label: string; value: number 
           key={`ring-${i}`}
           points={points}
           fill="none"
-          stroke="rgba(255,255,255,0.08)"
+          stroke="var(--border-hover)"
           strokeWidth={1}
         />
       ))}
@@ -60,7 +60,7 @@ function RiskRadar({ dimensions }: { dimensions: { label: string; value: number 
             y1={cy}
             x2={p.x}
             y2={p.y}
-            stroke="rgba(255,255,255,0.06)"
+            stroke="var(--border-subtle)"
             strokeWidth={1}
           />
         );
@@ -100,7 +100,7 @@ function RiskRadar({ dimensions }: { dimensions: { label: string; value: number 
             y={p.y}
             textAnchor="middle"
             dominantBaseline="central"
-            fill="rgba(255,255,255,0.4)"
+            fill="var(--text-label)"
             fontSize={8}
             fontFamily="monospace"
           >
@@ -171,7 +171,7 @@ export function StressTest({ scenarioParams }: StressTestProps) {
         <button
           onClick={handleRun}
           disabled={running}
-          className="px-4 py-2 rounded-lg font-mono text-[10px] uppercase tracking-widest bg-amber-500/20 text-amber-400 hover:bg-amber-500/30 disabled:opacity-50 transition-colors"
+          className="px-4 py-2 rounded-lg font-mono text-[10px] uppercase tracking-widest bg-status-yellow/20 text-status-yellow hover:bg-status-yellow/30 disabled:opacity-50 transition-colors"
         >
           {running ? 'Simulating...' : 'Run Stress Test'}
         </button>

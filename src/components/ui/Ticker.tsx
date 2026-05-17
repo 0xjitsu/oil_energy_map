@@ -5,9 +5,9 @@ import { useEvents } from '@/hooks/useEvents';
 import { Severity } from '@/types';
 
 const SEVERITY_DOT: Record<Severity, string> = {
-  red: 'bg-red-400',
-  yellow: 'bg-yellow-400',
-  green: 'bg-emerald-400',
+  red: 'bg-status-red',
+  yellow: 'bg-status-yellow',
+  green: 'bg-status-green',
 };
 
 type TickerItem =
@@ -56,7 +56,7 @@ export function Ticker() {
                 <span className="text-text-primary font-semibold tabular-nums">
                   {item.value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {item.unit}
                 </span>
-                <span className={`font-semibold ${item.isUp ? 'text-red-400' : 'text-emerald-400'}`}>
+                <span className={`font-semibold ${item.isUp ? 'text-status-red' : 'text-status-green'}`}>
                   {item.isUp ? '▲' : '▼'} {item.pct}%
                 </span>
               </>

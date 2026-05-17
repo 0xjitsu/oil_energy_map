@@ -11,11 +11,11 @@ export function ConfidenceFan({ result, fuelType }: ConfidenceFanProps) {
   const data = fuelType === 'gasoline' ? result.pumpGasoline : result.pumpDiesel;
 
   const bands = [
-    { label: 'P10', value: data.p10, color: 'text-emerald-400' },
-    { label: 'P25', value: data.p25, color: 'text-emerald-300' },
+    { label: 'P10', value: data.p10, color: 'text-status-green' },
+    { label: 'P25', value: data.p25, color: 'text-status-green' },
     { label: 'P50', value: data.p50, color: 'text-text-primary' },
-    { label: 'P75', value: data.p75, color: 'text-amber-300' },
-    { label: 'P90', value: data.p90, color: 'text-red-400' },
+    { label: 'P75', value: data.p75, color: 'text-status-yellow' },
+    { label: 'P90', value: data.p90, color: 'text-status-red' },
   ];
 
   return (
@@ -31,7 +31,7 @@ export function ConfidenceFan({ result, fuelType }: ConfidenceFanProps) {
 
       <div className="mt-3 relative h-6 rounded-full overflow-hidden bg-border">
         <div
-          className="absolute h-full bg-gradient-to-r from-emerald-500/20 via-yellow-500/20 to-red-500/20 rounded-full"
+          className="absolute h-full bg-gradient-to-r from-status-green/20 via-status-yellow/20 to-status-red/20 rounded-full"
           style={{
             left: '0%',
             width: '100%',

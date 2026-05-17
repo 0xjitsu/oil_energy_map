@@ -51,7 +51,7 @@ export default function AlertRuleModal({ open, onClose, onSave }: AlertRuleModal
                   key={d}
                   onClick={() => setDirection(d)}
                   className={`flex-1 px-3 py-2 rounded-lg font-mono text-[10px] uppercase tracking-widest transition-colors ${
-                    direction === d ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' : 'bg-border text-text-muted'
+                    direction === d ? 'bg-petron/20 text-petron border border-petron/30' : 'bg-border text-text-muted'
                   }`}
                 >
                   {d === 'above' ? '↑ Above' : '↓ Below'}
@@ -79,7 +79,7 @@ export default function AlertRuleModal({ open, onClose, onSave }: AlertRuleModal
           </button>
           <button
             onClick={() => onSave({ benchmarkId, direction, threshold })}
-            className="flex-1 px-3 py-2 rounded-lg font-mono text-[10px] uppercase tracking-widest bg-blue-500/20 text-blue-400 hover:bg-blue-500/30"
+            className="flex-1 px-3 py-2 rounded-lg font-mono text-[10px] uppercase tracking-widest bg-petron/20 text-petron hover:bg-petron/30"
           >
             Save Rule
           </button>

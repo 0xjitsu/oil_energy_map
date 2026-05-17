@@ -1,15 +1,22 @@
 'use client';
 
-import { useScrollSpy, type Section } from '@/hooks/useScrollSpy';
+import { useScrollSpy } from '@/hooks/useScrollSpy';
+import { BarChart3, Map, DollarSign, Fuel, SlidersHorizontal, Activity, Building2, type LucideIcon } from 'lucide-react';
 
-const SECTIONS: Section[] = [
-  { id: 'snapshot', label: 'Overview', icon: '📊' },
-  { id: 'map', label: 'Map', icon: '🗺️' },
-  { id: 'prices', label: 'Prices', icon: '💰' },
-  { id: 'tracker', label: 'Stations', icon: '⛽' },
-  { id: 'scenario', label: 'Scenarios', icon: '🎛️' },
-  { id: 'stress-test', label: 'Analysis', icon: '🎲' },
-  { id: 'players', label: 'Players', icon: '🏢' },
+interface NavSection {
+  id: string;
+  label: string;
+  icon: LucideIcon;
+}
+
+const SECTIONS: NavSection[] = [
+  { id: 'snapshot', label: 'Overview', icon: BarChart3 },
+  { id: 'map', label: 'Map', icon: Map },
+  { id: 'prices', label: 'Prices', icon: DollarSign },
+  { id: 'tracker', label: 'Stations', icon: Fuel },
+  { id: 'scenario', label: 'Scenarios', icon: SlidersHorizontal },
+  { id: 'stress-test', label: 'Analysis', icon: Activity },
+  { id: 'players', label: 'Players', icon: Building2 },
 ];
 
 const SECTION_IDS = SECTIONS.map((s) => s.id);
@@ -22,7 +29,7 @@ export function SectionNav() {
       className="hidden xl:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col gap-1"
       aria-label="Section navigation"
     >
-      {SECTIONS.map(({ id, label, icon }) => {
+      {SECTIONS.map(({ id, label, icon: Icon }) => {
         const isActive = activeId === id;
         return (
           <a
@@ -35,7 +42,7 @@ export function SectionNav() {
             }`}
             title={label}
           >
-            <span className="text-xs">{icon}</span>
+            <Icon className="w-3.5 h-3.5" aria-hidden="true" />
             <span className={`text-[9px] font-mono uppercase tracking-widest transition-all duration-200 ${
               isActive ? 'opacity-100 max-w-[80px]' : 'opacity-0 max-w-0 overflow-hidden group-hover:opacity-100 group-hover:max-w-[80px]'
             }`}>

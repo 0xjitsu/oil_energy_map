@@ -12,9 +12,9 @@ export function Disclaimer({ showRoadmap = true }: DisclaimerProps) {
   return (
     <div className="glass-card disclaimer-card p-4">
       <div className="flex items-start gap-2">
-        <span className="text-amber-500 text-sm mt-0.5">⚠️</span>
+        <span className="text-status-yellow text-sm mt-0.5">⚠️</span>
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-widest text-amber-500 mb-1">
+          <p className="font-mono text-[10px] uppercase tracking-widest text-status-yellow mb-1">
             Simulation Disclaimer
           </p>
           <p className="text-[11px] font-sans text-text-secondary leading-relaxed">

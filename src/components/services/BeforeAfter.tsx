@@ -19,7 +19,7 @@ export function BeforeAfter() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Before */}
-          <div className="glass-card p-6 border-l-2 border-red-500">
+          <div className="glass-card p-6 border-l-2 border-status-red">
             <p className="font-mono text-[10px] uppercase tracking-widest text-status-red mb-4">
               BEFORE (MANUAL)
             </p>
@@ -36,14 +36,14 @@ export function BeforeAfter() {
                 {beforeAfterItems.beforeStat}
               </div>
               <div className="text-text-dim text-xs mt-1">{beforeAfterItems.beforeStatSub}</div>
-              <span className="mt-3 inline-block px-2 py-1 bg-red-500/10 text-red-400 font-mono text-[10px] rounded">
+              <span className="mt-3 inline-block px-2 py-1 bg-status-red/10 text-status-red font-mono text-[10px] rounded">
                 {beforeAfterItems.beforeBadge}
               </span>
             </div>
           </div>
 
           {/* After */}
-          <div className="glass-card p-6 border-l-2 border-green-500">
+          <div className="glass-card p-6 border-l-2 border-status-green">
             <p className="font-mono text-[10px] uppercase tracking-widest text-status-green mb-4">
               AFTER (PLATFORM)
             </p>
@@ -56,8 +56,8 @@ export function BeforeAfter() {
                     <span
                       className={`px-2 py-0.5 rounded font-mono text-[9px] uppercase flex-shrink-0 ${
                         item.badge === 'human'
-                          ? 'bg-blue-500/10 text-blue-400'
-                          : 'bg-green-500/10 text-green-400'
+                          ? 'bg-petron/10 text-petron'
+                          : 'bg-status-green/10 text-status-green'
                       }`}
                     >
                       {item.badge}
@@ -71,7 +71,7 @@ export function BeforeAfter() {
                 {beforeAfterItems.afterStat}
               </div>
               <div className="text-text-dim text-xs mt-1">{beforeAfterItems.afterStatSub}</div>
-              <span className="mt-3 inline-block px-2 py-1 bg-green-500/10 text-green-400 font-mono text-[10px] rounded">
+              <span className="mt-3 inline-block px-2 py-1 bg-status-green/10 text-status-green font-mono text-[10px] rounded">
                 {beforeAfterItems.afterBadge}
               </span>
             </div>

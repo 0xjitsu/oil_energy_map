@@ -35,8 +35,8 @@ function BenchmarkCard({
     [history, benchmark.value],
   );
 
-  const changeColor = isUp ? 'text-red-400' : 'text-emerald-400';
-  const sparkColor = isUp ? '#f87171' : '#34d399';
+  const changeColor = isUp ? 'text-status-red' : 'text-status-green';
+  const sparkColor = isUp ? 'var(--status-red)' : 'var(--status-green)';
   // Live feeds: brent-crude (Yahoo Finance), php-usd (FloatRates)
   // DOE-sourced: pump-gasoline, pump-diesel (DOE Oil Monitor weekly SRP)
   // Derived from live feeds: dubai-crude, mops-gasoline, mops-diesel, sg-refining-margin
@@ -50,8 +50,14 @@ function BenchmarkCard({
       style={
         exceedsRange
           ? {
-              boxShadow: `0 0 16px ${isUp ? 'rgba(239,68,68,0.25)' : 'rgba(16,185,129,0.25)'}`,
-              borderColor: isUp ? 'rgba(239,68,68,0.4)' : 'rgba(16,185,129,0.4)',
+              boxShadow: `0 0 16px ${
+                isUp
+                  ? 'color-mix(in srgb, var(--status-red) 25%, transparent)'
+                  : 'color-mix(in srgb, var(--status-green) 25%, transparent)'
+              }`,
+              borderColor: isUp
+                ? 'color-mix(in srgb, var(--status-red) 40%, transparent)'
+                : 'color-mix(in srgb, var(--status-green) 40%, transparent)',
             }
           : undefined
       }
@@ -68,7 +74,7 @@ function BenchmarkCard({
         </p>
         <span
           className={`text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded ${
-            isUp ? 'text-red-400 bg-red-400/10' : 'text-emerald-400 bg-emerald-400/10'
+            isUp ? 'text-status-red bg-status-red/10' : 'text-status-green bg-status-green/10'
           }`}
         >
           {isUp ? '▲' : '▼'} {changePct}%
@@ -105,10 +111,10 @@ export function PricePanel() {
       {isLive && (
         <div className="flex items-center gap-1.5 mb-2">
           <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-status-green opacity-75" />
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-status-green" />
           </span>
-          <span className="text-[9px] font-mono uppercase tracking-widest text-emerald-400/70">
+          <span className="text-[9px] font-mono uppercase tracking-widest text-status-green/70">
             Live prices
           </span>
         </div>

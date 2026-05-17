@@ -121,7 +121,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased bg-[var(--bg-primary)] text-[var(--text-primary)]">
         <a
-          href="#snapshot"
+          href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[200] focus:px-4 focus:py-2 focus:bg-petron focus:text-white focus:rounded-lg focus:text-sm focus:font-mono"
         >
           Skip to main content

@@ -35,7 +35,7 @@ function PriceCard({
         </p>
         <span
           className={`text-[9px] font-mono font-semibold px-1.5 py-0.5 rounded ${
-            isUp ? 'text-red-400 bg-red-400/10' : 'text-emerald-400 bg-emerald-400/10'
+            isUp ? 'text-status-red bg-status-red/10' : 'text-status-green bg-status-green/10'
           }`}
         >
           {isUp ? '▲' : '▼'} {Math.abs(pctChange).toFixed(1)}%
@@ -52,7 +52,7 @@ function PriceCard({
           <SparkChart data={sparkData} color={sparkColor} width={100} height={28} />
         )}
       </div>
-      <p className={`mt-2 text-xs font-mono ${isUp ? 'text-red-400/80' : 'text-emerald-400/80'}`}>
+      <p className={`mt-2 text-xs font-mono ${isUp ? 'text-status-red/80' : 'text-status-green/80'}`}>
         {isUp ? '↑' : '↓'} ₱{Math.abs(change).toFixed(2)} vs prev week
       </p>
       <p className="mt-1 text-[9px] font-mono text-text-dim">
@@ -69,6 +69,8 @@ export function PumpPrices() {
 
   if (!gasoline || !diesel) return null;
 
+  // Per-fuel identity colors (gasoline / diesel) — intentionally hardcoded and
+  // crisis-invariant identity hues, not status colors. Do NOT convert to status tokens.
   const fuels = [
     { label: 'Gasoline', benchmark: gasoline, sparkColor: '#ef4444', accentColor: '#ef4444' },
     { label: 'Diesel', benchmark: diesel, sparkColor: '#f59e0b', accentColor: '#f59e0b' },
