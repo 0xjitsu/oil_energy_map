@@ -83,9 +83,11 @@ for (const id of REQUIRED_BENCHMARK_IDS) {
 }
 for (const id of ['pump-gasoline', 'pump-diesel'] as const) {
   const b = priceBenchmarks.find((x) => x.id === id)!;
-  if (b.value < 30 || b.value > 110) {
-    throw new Error(
-      `prices.ts: ${id} fallback value ₱${b.value}/L is outside the sane band ₱30–110/L`,
-    );
+  for (const field of ['value', 'previousWeek'] as const) {
+    if (b[field] < 30 || b[field] > 110) {
+      throw new Error(
+        `prices.ts: ${id}.${field} ₱${b[field]}/L is outside the sane band ₱30–110/L`,
+      );
+    }
   }
 }
