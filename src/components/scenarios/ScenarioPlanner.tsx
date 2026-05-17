@@ -13,7 +13,7 @@ import { InfoTip } from '@/components/ui/Tooltip';
 
 interface ScenarioPlannerProps {
   params: ScenarioParams;
-  onParamsChange: (params: ScenarioParams) => void;
+  onParamsChange: (params: ScenarioParams | ((prev: ScenarioParams) => ScenarioParams)) => void;
   mapMode: MapMode;
   timelinePosition: number;
 }
@@ -28,17 +28,17 @@ export function ScenarioPlanner({
   const liveBrent = prices.find((b) => b.id === 'brent-crude')?.value ?? 106;
   const liveForex = prices.find((b) => b.id === 'php-usd')?.value ?? 58.42;
 
-  // Sync initial slider values with live prices once loaded (LIVE/SCENARIO only)
+  // Sync slider values with live prices when they change (LIVE/SCENARIO only).
+  // Functional updater avoids overwriting a concurrent slider edit with a stale closure.
   useEffect(() => {
     if (mapMode !== 'timeline') {
-      onParamsChange({
-        ...params,
+      onParamsChange((prev) => ({
+        ...prev,
         brentPrice: Math.round(liveBrent),
         forexRate: liveForex,
-      });
+      }));
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [liveBrent, liveForex]);
+  }, [liveBrent, liveForex, mapMode, onParamsChange]);
 
   // In TIMELINE mode, derive params from timeline position
   useEffect(() => {
