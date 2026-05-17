@@ -10,30 +10,30 @@ import { EmptyState } from '@/components/ui/EmptyState';
 const SEVERITY_COLORS: Record<Severity, { dot: string; bg: string; text: string; label: string }> = {
   red: {
     dot: 'bg-status-red shadow-[0_0_8px_rgba(239,68,68,0.5)]',
-    bg: 'bg-red-500/8 border-red-500/20',
-    text: 'text-red-400',
+    bg: 'bg-status-red/8 border-status-red/20',
+    text: 'text-status-red',
     label: 'CRITICAL',
   },
   yellow: {
     dot: 'bg-status-yellow shadow-[0_0_8px_rgba(234,179,8,0.4)]',
-    bg: 'bg-yellow-500/8 border-yellow-500/15',
-    text: 'text-yellow-400',
+    bg: 'bg-status-yellow/8 border-status-yellow/15',
+    text: 'text-status-yellow',
     label: 'WATCH',
   },
   green: {
     dot: 'bg-status-green shadow-[0_0_8px_rgba(16,185,129,0.4)]',
-    bg: 'bg-emerald-500/8 border-emerald-500/15',
-    text: 'text-emerald-400',
+    bg: 'bg-status-green/8 border-status-green/15',
+    text: 'text-status-green',
     label: 'POSITIVE',
   },
 };
 
 const SOURCE_ICONS: Record<SourceType, { icon: typeof Newspaper; color: string; label: string }> = {
-  news: { icon: Newspaper, color: 'text-blue-400', label: 'News' },
-  government: { icon: Landmark, color: 'text-emerald-400', label: 'Gov' },
+  news: { icon: Newspaper, color: 'text-petron', label: 'News' },
+  government: { icon: Landmark, color: 'text-status-green', label: 'Gov' },
   social: { icon: MessageCircle, color: 'text-purple-400', label: 'Social' },
   ai: { icon: Bot, color: 'text-orange-400', label: 'AI' },
-  market: { icon: TrendingUp, color: 'text-yellow-400', label: 'Market' },
+  market: { icon: TrendingUp, color: 'text-status-yellow', label: 'Market' },
 };
 
 type SeverityFilter = 'all' | Severity;
@@ -75,9 +75,9 @@ export function EventTimeline() {
             Intelligence Feed
           </p>
           {isLive && (
-            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/25">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse-live" />
-              <span className="text-[8px] font-mono text-emerald-400 uppercase">Live</span>
+            <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-status-green/15 border border-status-green/25">
+              <span className="w-1.5 h-1.5 rounded-full bg-status-green animate-pulse-live" />
+              <span className="text-[8px] font-mono text-status-green uppercase">Live</span>
             </span>
           )}
         </div>
@@ -168,7 +168,7 @@ export function EventTimeline() {
       {/* Event list */}
       <div className="relative">
         {/* Connecting timeline line */}
-        <div className="absolute left-[4.5px] top-2 bottom-2 w-px bg-gradient-to-b from-red-500/30 via-yellow-500/15 to-emerald-500/10" />
+        <div className="absolute left-[4.5px] top-2 bottom-2 w-px bg-gradient-to-b from-status-red/30 via-status-yellow/15 to-status-green/10" />
 
         <div className="space-y-1">
           {displayed.map((entry, idx) => {

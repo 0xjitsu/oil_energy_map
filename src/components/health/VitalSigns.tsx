@@ -5,9 +5,9 @@ import { SourceAttribution } from '@/components/ui/SourceAttribution';
 import type { RiskLevel, ScenarioParams, MapMode, VitalSign } from '@/types';
 
 const STATUS_STYLES: Record<RiskLevel, { badge: string; label: string; pulse: boolean }> = {
-  green: { badge: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', label: 'OK', pulse: false },
-  yellow: { badge: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30', label: 'WATCH', pulse: true },
-  red: { badge: 'bg-red-500/20 text-red-400 border-red-500/30', label: 'ALERT', pulse: true },
+  green: { badge: 'bg-status-green/20 text-status-green border-status-green/30', label: 'OK', pulse: false },
+  yellow: { badge: 'bg-status-yellow/20 text-status-yellow border-status-yellow/30', label: 'WATCH', pulse: true },
+  red: { badge: 'bg-status-red/20 text-status-red border-status-red/30', label: 'ALERT', pulse: true },
 };
 
 function deriveVitalSigns(base: VitalSign[], params: ScenarioParams): VitalSign[] {

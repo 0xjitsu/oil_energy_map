@@ -6,15 +6,15 @@ import { SparkChart } from '@/components/prices/SparkChart';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
 
 const SENTIMENT_BADGE: Record<SentimentResult['sentiment'], { bg: string; text: string }> = {
-  positive: { bg: 'bg-emerald-500/20 border-emerald-500/30', text: 'text-emerald-400' },
-  negative: { bg: 'bg-red-500/20 border-red-500/30', text: 'text-red-400' },
+  positive: { bg: 'bg-status-green/20 border-status-green/30', text: 'text-status-green' },
+  negative: { bg: 'bg-status-red/20 border-status-red/30', text: 'text-status-red' },
   neutral: { bg: 'bg-zinc-500/20 border-zinc-500/30', text: 'text-zinc-400' },
 };
 
 function overallLabel(score: number): { label: string; color: string; bgColor: string } {
-  if (score > 0.2) return { label: 'BULLISH', color: 'text-emerald-400', bgColor: 'bg-emerald-500' };
-  if (score < -0.2) return { label: 'BEARISH', color: 'text-red-400', bgColor: 'bg-red-500' };
-  return { label: 'NEUTRAL', color: 'text-yellow-400', bgColor: 'bg-yellow-500' };
+  if (score > 0.2) return { label: 'BULLISH', color: 'text-status-green', bgColor: 'bg-status-green' };
+  if (score < -0.2) return { label: 'BEARISH', color: 'text-status-red', bgColor: 'bg-status-red' };
+  return { label: 'NEUTRAL', color: 'text-status-yellow', bgColor: 'bg-status-yellow' };
 }
 
 export function SentimentGauge() {
@@ -47,8 +47,8 @@ export function SentimentGauge() {
   })();
 
   const trendConfig = {
-    improving: { arrow: '▲', color: 'text-emerald-400', sparkColor: '#34d399' },
-    deteriorating: { arrow: '▼', color: 'text-red-400', sparkColor: '#f87171' },
+    improving: { arrow: '▲', color: 'text-status-green', sparkColor: 'var(--status-green)' },
+    deteriorating: { arrow: '▼', color: 'text-status-red', sparkColor: 'var(--status-red)' },
     stable: { arrow: '–', color: 'text-text-subtle', sparkColor: '#71717a' },
   }[trend];
 
@@ -106,8 +106,8 @@ export function SentimentGauge() {
       {/* Sentiment gauge bar */}
       <div className="mb-3">
         <div className="flex items-center justify-between mb-1">
-          <span className="text-[9px] font-mono text-red-400/60">BEARISH</span>
-          <span className="text-[9px] font-mono text-emerald-400/60">BULLISH</span>
+          <span className="text-[9px] font-mono text-status-red/60">BEARISH</span>
+          <span className="text-[9px] font-mono text-status-green/60">BULLISH</span>
         </div>
         <div className="relative h-2 rounded-full bg-border-subtle overflow-hidden">
           <div
@@ -140,7 +140,7 @@ export function SentimentGauge() {
       {/* Sentiment breakdown counts */}
       <div className="flex items-center gap-4 mb-3">
         <div className="flex items-center gap-1.5">
-          <div className="w-2 h-2 rounded-full bg-emerald-500" />
+          <div className="w-2 h-2 rounded-full bg-status-green" />
           <span className="text-[10px] font-mono text-text-secondary">{counts.positive} pos</span>
         </div>
         <div className="flex items-center gap-1.5">
@@ -148,7 +148,7 @@ export function SentimentGauge() {
           <span className="text-[10px] font-mono text-text-secondary">{counts.neutral} neu</span>
         </div>
         <div className="flex items-center gap-1.5">
-          <div className="w-2 h-2 rounded-full bg-red-500" />
+          <div className="w-2 h-2 rounded-full bg-status-red" />
           <span className="text-[10px] font-mono text-text-secondary">{counts.negative} neg</span>
         </div>
       </div>
