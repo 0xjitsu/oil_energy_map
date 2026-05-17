@@ -17,6 +17,37 @@ const PRICE_POLL = 5 * 60 * 1000; // 5 minutes
 const EVENT_POLL = 3 * 60 * 1000; // 3 minutes
 const MAX_HISTORY = 7; // ~35 min of price points at 5-min intervals
 
+/**
+ * Append the latest price values into the per-benchmark history ring buffer,
+ * capped at MAX_HISTORY entries each. Pure — returns a new object.
+ */
+export function accumulatePriceHistory(
+  current: Record<string, number[]>,
+  data: PriceBenchmark[],
+): Record<string, number[]> {
+  const updated = { ...current };
+  for (const b of data) {
+    const prev = updated[b.id] ?? [];
+    updated[b.id] = [...prev, b.value].slice(-MAX_HISTORY);
+  }
+  return updated;
+}
+
+/**
+ * Normalize an /api/events response into a TimelineEvent[].
+ * The endpoint may return either a bare array or a `{ events: [...] }` envelope.
+ * Returns null if neither shape yields a non-empty array.
+ */
+export function normalizeEventsResponse(data: unknown): TimelineEvent[] | null {
+  const list = Array.isArray(data)
+    ? data
+    : (data as { events?: unknown })?.events;
+  if (Array.isArray(list) && list.length > 0) {
+    return list as TimelineEvent[];
+  }
+  return null;
+}
+
 interface DataContextValue {
   prices: PriceBenchmark[];
   pricesLive: boolean;
@@ -63,11 +94,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
           setPricesLive(true);
           setPricesUpdated(new Date());
 
-          const updated = { ...historyRef.current };
-          for (const b of data) {
-            const prev = updated[b.id] ?? [];
-            updated[b.id] = [...prev, b.value].slice(-MAX_HISTORY);
-          }
+          const updated = accumulatePriceHistory(historyRef.current, data);
           historyRef.current = updated;
           setPriceHistory(updated);
         }
@@ -83,8 +110,8 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         const r = await fetch('/api/events');
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         const data = await r.json();
-        const list = Array.isArray(data) ? data : data.events;
-        if (Array.isArray(list) && list.length > 0) {
+        const list = normalizeEventsResponse(data);
+        if (list) {
           setEvents(list);
           setEventsLive(true);
           setEventsUpdated(new Date());
