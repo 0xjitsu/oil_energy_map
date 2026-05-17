@@ -42,7 +42,7 @@ Brownfield Next.js 14 dashboard. Package manager **pnpm**; agent shells need `ex
 | Modify | `src/components/scenarios/ScenarioPlanner.tsx` | Apply a URL scenario on mount; render `ShareButton` with the scenario link |
 | Create | `src/app/embed/scenario/page.tsx` | Minimal iframe-able single card rendering a scenario result from `?s=` |
 | Create | `src/app/embed/scenario/EmbedScenarioCard.tsx` | The presentational embed card (client component) |
-| Create | `src/app/embed/scenario/opengraph-image.tsx` | Dynamic edge OG image for a shared scenario URL |
+| Create | `src/app/embed/scenario/og/route.tsx` | Dynamic edge OG image Route Handler for a shared scenario URL |
 | Create | `src/app/embed/layout.tsx` | Bare layout for `/embed/*` — no header/footer, transparent-friendly |
 | Modify | `public/llms.txt` | Document scenario sharing + the `/embed/scenario` route |
 | Modify | `public/.well-known/ai-manifest.json` | Add the `/embed/scenario` route and the scenario-share capability |
@@ -754,31 +754,35 @@ git commit -m "add embeddable scenario result card at /embed/scenario"
 
 ## Task 6: Dynamic OG image for a shared scenario
 
-A per-route `opengraph-image.tsx` under `src/app/embed/scenario/`. When someone shares an `/embed/scenario?s=...` link, this generates a 1200×630 social card encoding the modeled prices and risk — so the link unfurls richly on social. It mirrors the structure and inline-hex style of the existing `src/app/opengraph-image.tsx` (which is the only place inline hex is sanctioned, since `next/og` cannot read Tailwind tokens).
+When someone shares an `/embed/scenario?s=...` link, the link should unfurl on social as a 1200×630 card encoding the modeled prices and risk.
+
+**Why a Route Handler, not `opengraph-image.tsx`:** Next.js 14's `opengraph-image` special file receives only `params` (dynamic route segments) — never `searchParams`. A scenario lives entirely in the `?s=` query string, so an `opengraph-image.tsx` would silently always render the default scenario. Instead we use a real Route Handler at `/embed/scenario/og` (a Route Handler receives the full `Request` and can read the query string), and point the page's Open Graph metadata at it via `generateMetadata`. The card mirrors the inline-hex style of the existing `src/app/opengraph-image.tsx` — inline hex is sanctioned here because `next/og` cannot read Tailwind tokens.
 
 **Files:**
-- Create: `src/app/embed/scenario/opengraph-image.tsx`
+- Create: `src/app/embed/scenario/og/route.tsx` — the edge Route Handler that renders the `ImageResponse` from `?s=`.
+- Modify: `src/app/embed/scenario/page.tsx` — replace the static `metadata` export with `generateMetadata`, so the `og:image` tag carries the scenario's `?s=`.
 
-- [ ] **Step 1: Create the dynamic OG image route**
+- [ ] **Step 1: Create the OG image Route Handler**
 
-Create `src/app/embed/scenario/opengraph-image.tsx`:
+Create `src/app/embed/scenario/og/route.tsx`:
 ```tsx
 import { ImageResponse } from 'next/og';
-import { decodeScenario } from '@/lib/scenario-url';
+import { decodeScenario, SCENARIO_PARAM } from '@/lib/scenario-url';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
 
 export const runtime = 'edge';
-export const alt = 'A modeled Philippine fuel-price scenario';
-export const size = { width: 1200, height: 630 };
-export const contentType = 'image/png';
 
-// next/og passes the request so we can read the `?s=` scenario param.
-export default function ScenarioOGImage({
-  searchParams,
-}: {
-  searchParams: { s?: string };
-}) {
-  const params = decodeScenario(searchParams?.s ?? null);
+const SIZE = { width: 1200, height: 630 };
+
+/**
+ * Dynamic Open Graph image for a shared scenario. This is a Route Handler
+ * rather than the `opengraph-image` special file because only a Route Handler
+ * receives the request URL — the scenario lives entirely in the `?s=` query
+ * string, which `opengraph-image.tsx` cannot see.
+ */
+export function GET(request: Request) {
+  const raw = new URL(request.url).searchParams.get(SCENARIO_PARAM);
+  const params = decodeScenario(raw);
   const result = calculatePumpPrice(params);
 
   const riskTheme = {
@@ -932,26 +936,49 @@ export default function ScenarioOGImage({
         </div>
       </div>
     ),
-    { ...size },
+    { ...SIZE },
   );
 }
 ```
 
-- [ ] **Step 2: Verify lint and build pass**
+- [ ] **Step 2: Point the embed page's Open Graph metadata at the OG route**
+
+Modify `src/app/embed/scenario/page.tsx`. Replace the static `metadata` export with a `generateMetadata` function — `generateMetadata` receives `searchParams`, so it can build an `og:image` URL that carries the scenario. Change the imports to add `encodeScenario`, and replace the `export const metadata: Metadata = {...}` block with:
+```tsx
+export function generateMetadata({ searchParams }: EmbedScenarioPageProps): Metadata {
+  // Re-encode the decoded scenario so the OG image URL is always canonical,
+  // even when the incoming `?s=` was malformed or out of range.
+  const encoded = encodeScenario(decodeScenario(searchParams.s ?? null));
+  const ogImage = `/embed/scenario/og?s=${encoded}`;
+  return {
+    title: 'PH Oil — Modeled Scenario',
+    robots: { index: false, follow: false },
+    openGraph: {
+      title: 'PH Oil — Modeled Scenario',
+      description: 'A modeled Philippine fuel-price scenario.',
+      images: [{ url: ogImage, width: 1200, height: 630 }],
+    },
+    twitter: { card: 'summary_large_image', images: [ogImage] },
+  };
+}
+```
+The import line `import { decodeScenario } from '@/lib/scenario-url';` becomes `import { decodeScenario, encodeScenario } from '@/lib/scenario-url';`. The `EmbedScenarioPageProps` interface and the `EmbedScenarioPage` default export are unchanged. (`metadataBase` in the root layout resolves the relative `/embed/scenario/og?...` URL to absolute.)
+
+- [ ] **Step 3: Verify lint and build pass**
 
 Run: `pnpm lint && pnpm build`
-Expected: both succeed. The build route table lists `/embed/scenario/opengraph-image` as an edge route.
+Expected: both succeed. The build route table lists `/embed/scenario/og` as an edge route.
 
-- [ ] **Step 3: Manual check**
+- [ ] **Step 4: Manual check**
 
-Run `pnpm dev`. Open `http://localhost:3007/embed/scenario/opengraph-image?s=150_12_62_1` directly in the browser — confirm a 1200×630 PNG renders with the "CRISIS" badge, a "₱.../L gasoline if this shock hits." headline, two price cards, and the scenario-inputs line. Open it again with no `?s=` — confirm it renders the default scenario without error. Stop the dev server.
+Run `pnpm dev`. Open `http://localhost:3007/embed/scenario/og?s=150_12_62_1` directly in the browser — confirm a 1200×630 PNG renders with the "CRISIS" badge, a "₱.../L gasoline if this shock hits." headline, two price cards, and the scenario-inputs line. Open it again with no `?s=` — confirm it renders the default scenario without error. Then open `http://localhost:3007/embed/scenario?s=150_12_62_1` and view source — confirm the `<meta property="og:image">` tag points at `/embed/scenario/og?s=150_12_62_1`. Stop the dev server.
 
-- [ ] **Step 4: Commit**
+- [ ] **Step 5: Commit**
 
 ```bash
 git diff --cached --stat   # expect: nothing staged yet
-git add src/app/embed/scenario/opengraph-image.tsx
-git diff --cached --stat   # expect: only the OG image route
+git add src/app/embed/scenario/og/route.tsx src/app/embed/scenario/page.tsx
+git diff --cached --stat   # expect: only the OG route + the page
 git commit -m "add dynamic og image for shared scenario links"
 ```
 
@@ -1157,7 +1184,7 @@ Run `pnpm dev`. Confirm end-to-end:
 1. On `/`, the Scenario Planner shows a "Share this view" button; set Hormuz to 12 weeks and click it — the link copies and the button flashes "✓ Copied".
 2. Paste the copied URL into a fresh tab — the planner restores to 12 weeks.
 3. Open `/embed/scenario?s=150_14_63_1` — a chrome-free card renders the modeled prices and a "Crisis" badge.
-4. Open `/embed/scenario/opengraph-image?s=150_14_63_1` — a 1200×630 social card PNG renders.
+4. Open `/embed/scenario/og?s=150_14_63_1` — a 1200×630 social card PNG renders.
 5. Open `/llms-full.txt` — the full agent reference is served.
 Stop the dev server.
 
