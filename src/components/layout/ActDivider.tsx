@@ -21,7 +21,7 @@ export function ActDivider({ number, question, hook, gradientFrom, gradientTo }:
       className="relative min-h-[30vh] sm:min-h-[30vh] flex items-center justify-center overflow-hidden my-4"
     >
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
         style={{
           background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
