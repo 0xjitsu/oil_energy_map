@@ -4,7 +4,7 @@
 
 **Goal:** Make any meaningful dashboard state shareable without an account. A user who models a fuel-price shock can copy a URL that restores the exact scenario, and that link renders a rich social card describing the shock. A lightweight "Share this view" control and a single embeddable card round it out, and the AI-agent surfaces (`llms.txt`, manifest, JSON-LD) are verified and brought up to date.
 
-**Architecture:** One new pure helper module (`src/lib/scenario-url.ts`) encodes/decodes `ScenarioParams` to a compact URL query param — an underscore-delimited `brent_hormuz_forex_refinery` string (underscore, not dot — a dot can appear inside a decimal number and would make the field count ambiguous; underscore is URL-safe and never appears in a number) — fully unit-tested, no React. `ScenarioPlanner` reads it on mount and gains a "Copy link" affordance via a new presentational `ShareButton` (Web Share API + clipboard fallback). A dynamic `opengraph-image` route under `/embed/scenario` plus a minimal `/embed/scenario` page render a shareable card from the same query param. The existing `/opengraph-image.tsx` stays as the site default; the scenario OG image is a new route so the homepage is unaffected. No new dependencies, no new infra (no Supabase, no API routes — everything is client-side or edge-rendered from URL params).
+**Architecture:** One new pure helper module (`src/lib/scenario-url.ts`) encodes/decodes `ScenarioParams` to a compact URL query param — an underscore-delimited `brent_hormuz_forex_refinery` string (underscore, not dot — a dot can appear inside a decimal number and would make the field count ambiguous; underscore is URL-safe and never appears in a number) — fully unit-tested, no React. `ScenarioPlanner` reads it on mount and gains a "Copy link" affordance via a new presentational `ShareButton` (Web Share API + clipboard fallback). A dynamic OG-image Route Handler at `/embed/scenario/og` plus a minimal `/embed/scenario` page render a shareable card from the same query param. The existing `/opengraph-image.tsx` stays as the site default; the scenario OG image is a new route so the homepage is unaffected. No new dependencies, no new infra (no Supabase, no API routes — everything is client-side or edge-rendered from URL params).
 
 **Tech Stack:** Next.js 14 App Router, React 18, Tailwind (design tokens — never hardcode colors), Vitest.
 
@@ -21,7 +21,7 @@ Brownfield Next.js 14 dashboard. Package manager **pnpm**; agent shells need `ex
 - `calculatePumpPrice(params: ScenarioParams): ScenarioResult` (from `@/lib/scenario-engine`) → `{ gasoline: number; diesel: number; riskLevel: 'green'|'yellow'|'red' }`. Pure, no React — safe to call from an edge route.
 - `Home` (`src/app/page.tsx`) owns `scenarioParams` in `useState` and passes `handleParamsChange` (a `useCallback`-wrapped `setScenarioParams`, which accepts a value or an updater) into `<ScenarioPlanner params=... onParamsChange=... />`.
 - `ScenarioPlanner` (`src/components/scenarios/ScenarioPlanner.tsx`) already has two `useEffect`s that sync params from live prices / timeline. A new mount-only effect is needed to apply a URL-supplied scenario, and it must run BEFORE the live-price sync clobbers `brentPrice`/`forexRate` — see Task 4.
-- The OG-image route is `src/app/opengraph-image.tsx` with `export const runtime = 'edge'`. A nested route at `src/app/embed/scenario/opengraph-image.tsx` produces a per-page OG image for the `/embed/scenario` URL.
+- The site-default OG-image route is `src/app/opengraph-image.tsx` with `export const runtime = 'edge'`. The scenario OG image is a separate Route Handler at `src/app/embed/scenario/og/route.tsx` (a Route Handler, not the `opengraph-image` special file, because only a Route Handler can read the `?s=` query string — see Task 6).
 - `metadataBase` is set in `src/app/layout.tsx` to `https://energy-intelligence-map.vercel.app`.
 - Existing AI surfaces: `public/llms.txt` (static), `public/.well-known/ai-manifest.json` (static), JSON-LD in `src/app/layout.tsx`. There is NO `llms-full.txt`. The manifest does not list `/embed/*` or scenario sharing.
 - Tests live in `src/**/__tests__/`; Vitest config includes `src/**/*.{test,spec}.{ts,tsx}`, jsdom env, `@` alias resolved.
@@ -1171,7 +1171,7 @@ Expected: all tests pass — the prior suite plus the 7 new `scenario-url` tests
 - [ ] **Step 2: Clean build**
 
 Run: `pnpm build`
-Expected: succeeds. The route table includes `/embed/scenario` and `/embed/scenario/opengraph-image` (edge). Note the homepage `/` First Load JS — it should be within a few kB of the pre-wave figure; `ShareButton` and `scenario-url` are tiny, and the embed routes are separate entry points that do not load on `/`.
+Expected: succeeds. The route table includes `/embed/scenario` and `/embed/scenario/og` (edge). Note the homepage `/` First Load JS — it should be within a few kB of the pre-wave figure; `ShareButton` and `scenario-url` are tiny, and the embed routes are separate entry points that do not load on `/`.
 
 - [ ] **Step 3: Lint**
 
