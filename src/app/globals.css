@@ -34,6 +34,9 @@
   --bg-card-crisis: rgba(10, 15, 26, 0.7);
   --border-crisis: rgba(255, 255, 255, 0.06);
   --scan-line-opacity: 0;
+
+  --focus-ring: #38BDF8;
+  --selection-bg: rgba(59, 130, 246, 0.25);
 }
 
 * {
@@ -42,9 +45,9 @@
   margin: 0;
 }
 
-/* Global keyboard-focus ring — crisis-aware via --accent-primary */
+/* Global keyboard-focus ring — fixed high-contrast color, visible in every crisis state */
 :focus-visible {
-  outline: 2px solid var(--accent-primary);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -247,7 +250,7 @@ body::after {
 
 /* Text selection — subtle brand-blue tint for the dark theme */
 ::selection {
-  background: rgba(59, 130, 246, 0.25);
+  background: var(--selection-bg);
   color: var(--text-primary);
 }
 
