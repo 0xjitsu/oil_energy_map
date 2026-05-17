@@ -22,6 +22,21 @@ if (all.length < 10000) {
   throw new Error(`[build-stations] expected >=10000 stations, got ${all.length}`);
 }
 
+// The filter UI (BRAND_LIST in src/data/stations/index.ts) only exposes 6 named
+// brands plus an "Other" bucket. Remap any other raw OSM brand to "Other" so the
+// station-filter `visibleBrands.has(s.brand)` check can reach every station.
+const NAMED_BRANDS = new Set(['Petron', 'Shell', 'Caltex', 'Phoenix', 'SeaOil', 'Unioil']);
+let remapped = 0;
+for (const s of all) {
+  if (!NAMED_BRANDS.has(s.brand)) {
+    if (s.brand !== 'Other') remapped += 1;
+    s.brand = 'Other';
+  }
+}
+
 mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, JSON.stringify(all));
-console.log(`[build-stations] wrote ${all.length} stations to public/data/stations.json`);
+console.log(
+  `[build-stations] wrote ${all.length} stations to public/data/stations.json ` +
+    `(${remapped} non-canonical brands remapped to "Other")`,
+);

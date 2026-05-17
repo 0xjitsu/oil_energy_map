@@ -3,6 +3,11 @@
 import { useState, useEffect } from 'react';
 import type { GasStation, StationStatus } from '@/types/stations';
 import { assignStationStatus } from '@/lib/station-status';
+import { BRAND_LIST } from '@/data/stations';
+
+/** Brands the filter UI can toggle. A station whose brand falls outside this set
+ *  has no filter chip and would be silently hidden by the default brand filter. */
+const CANONICAL_BRANDS = new Set(BRAND_LIST);
 
 export interface StationsData {
   stations: GasStation[];
@@ -20,6 +25,7 @@ const EMPTY_COUNTS: Record<StationStatus, number> = {
 export function buildStationsData(raw: GasStation[]): StationsData {
   const stations = raw.map((s) => ({
     ...s,
+    brand: CANONICAL_BRANDS.has(s.brand) ? s.brand : 'Other',
     status: assignStationStatus(s.id, s.region ?? ''),
   }));
   const statusCounts: Record<StationStatus, number> = { ...EMPTY_COUNTS };
