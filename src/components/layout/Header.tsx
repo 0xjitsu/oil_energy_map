@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Menu, X } from 'lucide-react';
 import { Ticker } from '@/components/ui/Ticker';
 import { useEvents } from '@/hooks/useEvents';
 import { AlertBell } from '@/components/alerts/AlertBell';
@@ -54,6 +55,7 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
   const { isLive, lastUpdated } = useEvents();
   const updatedAgo = useRelativeTime(lastUpdated);
   const { crisisLevel } = useCrisis();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl header-bg">
@@ -102,6 +104,15 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
         {/* Right — alerts + live badge + date */}
         <div className="flex items-center gap-3">
           <button
+            type="button"
+            onClick={() => setMobileMenuOpen((v) => !v)}
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
+            className="sm:hidden p-2 -m-1 rounded-md text-text-secondary hover:text-text-primary hover:bg-surface-hover transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+          <button
             onClick={() => {
               window.dispatchEvent(new CustomEvent('open-how-to-guide'));
             }}
@@ -113,14 +124,14 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
           <AlertBell />
           <span className={`inline-flex items-center gap-1.5 rounded-md border px-2 py-1 text-[10px] font-mono tracking-wider ${
             isLive
-              ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-400'
-              : 'border-amber-500/20 bg-amber-500/10 text-amber-400'
+              ? 'border-status-green/20 bg-status-green/10 text-status-green'
+              : 'border-status-yellow/20 bg-status-yellow/10 text-status-yellow'
           }`}>
             <span className="relative flex h-2 w-2">
               {isLive && (
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-status-green opacity-75" />
               )}
-              <span className={`relative inline-flex h-2 w-2 rounded-full ${isLive ? 'bg-emerald-400' : 'bg-amber-400'}`} />
+              <span className={`relative inline-flex h-2 w-2 rounded-full ${isLive ? 'bg-status-green' : 'bg-status-yellow'}`} />
             </span>
             {isLive ? 'LIVE' : 'STATIC'}
           </span>
@@ -135,25 +146,28 @@ export function Header({ showTicker = true }: { showTicker?: boolean }) {
         </div>
       </div>
 
-      {/* Mobile nav */}
-      <nav className="sm:hidden flex items-center gap-1 px-4 pb-2">
-        {NAV_LINKS.map(({ href, label }) => {
-          const isActive = pathname === href;
-          return (
-            <Link
-              key={href}
-              href={href}
-              className={`flex-1 text-center px-2 py-1.5 rounded-md font-mono text-[9px] uppercase tracking-widest transition-colors duration-200 ${
-                isActive
-                  ? 'text-text-primary bg-border-hover'
-                  : 'text-text-secondary hover:text-text-body'
-              }`}
-            >
-              {label}
-            </Link>
-          );
-        })}
-      </nav>
+      {/* Mobile nav — hamburger panel */}
+      {mobileMenuOpen && (
+        <nav className="sm:hidden border-t border-border-subtle bg-bg-card/95 backdrop-blur-xl">
+          {NAV_LINKS.map(({ href, label }) => {
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block px-4 py-3 min-h-[44px] font-mono text-xs uppercase tracking-widest transition-colors ${
+                  isActive
+                    ? 'text-text-primary bg-border-hover'
+                    : 'text-text-secondary hover:text-text-body hover:bg-surface-hover'
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </nav>
+      )}
 
       {showTicker && <Ticker />}
     </header>
