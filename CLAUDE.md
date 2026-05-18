@@ -309,3 +309,21 @@ Cross-component hover linking. Wrap related components with `<HighlightProvider>
 - `prebuild` / `predev` run `scripts/build-stations-json.mjs` to regenerate `public/data/stations.json`
 - Deploy target: Vercel (do NOT push without permission)
 - No unused imports — ESLint enforces this
+
+### Component (`.test.tsx`) tests
+
+- React component render tests work — use `@testing-library/react`'s `render` /
+  `screen` / `fireEvent`, asserting via the async `findBy*` queries (`render()`
+  commits the DOM a tick later, so a synchronous `getBy*` immediately after
+  `render()` can miss it; `findBy*` retries and is the RTL-recommended pattern).
+  See `src/components/ui/__tests__/ShareButton.test.tsx` for a working example.
+- If a `.test.tsx` render ever fails with `Invalid hook call` /
+  `Cannot read properties of null (reading 'useState')`, the cause is a
+  **duplicate React instance from a stale `node_modules`**: pnpm materializes
+  react-dom's peer `react` (`.pnpm/react-dom@<v>_react@<v>/node_modules/react`)
+  as a separate directory from the components' `react`
+  (`.pnpm/react@<v>/node_modules/react`); if those two diverge to different
+  files there are two `ReactCurrentDispatcher` objects and hooks crash. Fix:
+  `rm -rf node_modules && pnpm install --frozen-lockfile` — a clean install off
+  the committed lockfile hardlinks both to one store object. `vitest.config.ts`
+  needs no React aliasing; the committed lockfile is correct.
