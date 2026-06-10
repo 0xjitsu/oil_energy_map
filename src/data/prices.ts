@@ -44,19 +44,23 @@ export const priceBenchmarks: PriceBenchmark[] = [
     unit: '₱/$',
     tooltip: 'Peso-dollar exchange rate. Higher = more expensive oil imports.',
   },
+  // DOE NCR common prices (RON95 / Diesel), week of June 2-8, 2026;
+  // previousWeek from the May 26 - June 1, 2026 issue.
+  // source: https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-for-june-2-8-2026-pdf-1 (retrieved 2026-06-10)
+  // source: https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-05262026-pdf (retrieved 2026-06-10)
   {
     id: 'pump-gasoline',
     name: 'Pump Gasoline',
-    value: 63.20,
-    previousWeek: 62.05,
+    value: 75.90,
+    previousWeek: 82.90,
     unit: '₱/liter',
     tooltip: 'RON 95 unleaded in Metro Manila. Source: DOE Oil Monitor weekly SRP.',
   },
   {
     id: 'pump-diesel',
     name: 'Pump Diesel',
-    value: 59.40,
-    previousWeek: 60.10,
+    value: 76.20,
+    previousWeek: 82.70,
     unit: '₱/liter',
     tooltip: 'Diesel in Metro Manila. Source: DOE Oil Monitor weekly SRP.',
   },

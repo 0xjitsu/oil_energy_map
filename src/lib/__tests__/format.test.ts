@@ -40,8 +40,9 @@ describe('getBenchmarkValue', () => {
     expect(getBenchmarkValue([bench('pump-diesel', 61.1)], 'pump-diesel')).toBe(61.1);
   });
   it('falls back to the static fallback benchmark when missing', () => {
-    // src/data/prices.ts static fallback: pump-diesel = 59.40
-    expect(getBenchmarkValue([], 'pump-diesel')).toBe(59.4);
+    // src/data/prices.ts static fallback: pump-diesel = 76.20
+    // (DOE NCR common price, week of June 2-8, 2026)
+    expect(getBenchmarkValue([], 'pump-diesel')).toBe(76.2);
   });
   it('throws on an unknown id — never invents a number', () => {
     expect(() => getBenchmarkValue([], 'no-such-benchmark')).toThrow();
