@@ -10,7 +10,7 @@ const MapWrapper = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="w-full h-[clamp(350px,55vh,600px)] sm:h-[600px] glass-card rounded-xl animate-pulse flex items-center justify-center">
+      <div className="w-full h-[500px] sm:h-[600px] lg:h-[75vh] lg:max-h-[900px] glass-card rounded-xl animate-pulse flex items-center justify-center">
         <span className="text-text-dim font-mono text-xs">Loading map...</span>
       </div>
     ),
@@ -141,7 +141,7 @@ export default function Home() {
         {/* Executive Snapshot — Hero KPIs */}
         <FadeIn delay={0}>
           <div id="snapshot" className="scroll-mt-24">
-            <ExecutiveSnapshot scenarioParams={scenarioParams} />
+            <ExecutiveSnapshot />
           </div>
         </FadeIn>
 
@@ -183,7 +183,7 @@ export default function Home() {
           </div>
           <div>
             <SectionHeader color="bg-phoenix" label="What This Means For You" />
-            <ImpactCards scenarioParams={scenarioParams} />
+            <ImpactCards />
           </div>
         </section>
 

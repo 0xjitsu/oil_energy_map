@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useEffect, useRef, useState } from 'react';
+import { startTransition, useMemo, useEffect, useRef, useState } from 'react';
 import { ScenarioParams, MapMode } from '@/types';
 import { calculatePumpPrice } from '@/lib/scenario-engine';
 import { usePrices } from '@/hooks/usePrices';
@@ -12,6 +12,7 @@ import { ScenarioCompare } from './ScenarioCompare';
 import { InfoTip } from '@/components/ui/Tooltip';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { decodeScenario, buildScenarioUrl, SCENARIO_PARAM } from '@/lib/scenario-url';
+import { formatPHP, getBenchmarkValue } from '@/lib/format';
 
 interface ScenarioPlannerProps {
   params: ScenarioParams;
@@ -27,8 +28,8 @@ export function ScenarioPlanner({
   timelinePosition,
 }: ScenarioPlannerProps) {
   const { prices } = usePrices();
-  const liveBrent = prices.find((b) => b.id === 'brent-crude')?.value ?? 106;
-  const liveForex = prices.find((b) => b.id === 'php-usd')?.value ?? 58.42;
+  const liveBrent = getBenchmarkValue(prices, 'brent-crude');
+  const liveForex = getBenchmarkValue(prices, 'php-usd');
 
   // Tracks whether a scenario was restored from the URL on first mount, so the
   // live-price sync below does not immediately clobber the shared Brent/forex.
@@ -83,18 +84,52 @@ export function ScenarioPlanner({
 
   const isTimelineDriven = mapMode === 'timeline';
 
-  const updateParam = <K extends keyof ScenarioParams>(key: K, value: ScenarioParams[K]) => {
-    onParamsChange({ ...params, [key]: value });
-  };
+  // ── Slider INP fix ─────────────────────────────────────────────────────
+  // Local mirror of the parent's params: sliders, readouts, and the result
+  // panel render from this immediately; propagation to page.tsx (which
+  // re-renders CrisisProvider + the deck.gl map) is coalesced to one
+  // animation frame and marked non-urgent via startTransition.
+  const [localParams, setLocalParams] = useState<ScenarioParams>(params);
+  // The last object we sent upward. When `params` echoes our own update
+  // (same reference), skip the sync so a mid-drag local value is never
+  // clobbered by a stale parent commit. External updates (live-price sync,
+  // timeline drive, slot load, URL restore) produce NEW objects → sync runs.
+  const lastSentRef = useRef<ScenarioParams>(params);
+  const sendRafRef = useRef(0);
 
-  const result = useMemo(() => calculatePumpPrice(params), [params]);
+  useEffect(() => {
+    if (params !== lastSentRef.current) {
+      // An external write (poll sync, timeline, slot load, URL restore) wins:
+      // cancel any pending drag propagation so a stale frame can't re-send
+      // old params after the mirror has already adopted the external values.
+      cancelAnimationFrame(sendRafRef.current);
+      setLocalParams(params);
+    }
+  }, [params]);
+
+  useEffect(() => () => cancelAnimationFrame(sendRafRef.current), []);
+
+  const updateParam = <K extends keyof ScenarioParams>(key: K, value: ScenarioParams[K]) => {
+    setLocalParams((prev) => {
+      const next = { ...prev, [key]: value };
+      cancelAnimationFrame(sendRafRef.current);
+      sendRafRef.current = requestAnimationFrame(() => {
+        lastSentRef.current = next;
+        startTransition(() => onParamsChange(next));
+      });
+      return next;
+    });
+  };
+  // ───────────────────────────────────────────────────────────────────────
+
+  const result = useMemo(() => calculatePumpPrice(localParams), [localParams]);
   const { scenarios, saveScenario, removeScenario } = useScenarios();
 
   const [shareUrl, setShareUrl] = useState('');
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    setShareUrl(buildScenarioUrl(params, window.location.origin, '/'));
-  }, [params]);
+    setShareUrl(buildScenarioUrl(localParams, window.location.origin, '/'));
+  }, [localParams]);
 
   return (
     <div>
@@ -128,7 +163,7 @@ export function ScenarioPlanner({
           scenarios={scenarios}
           onLoad={(p) => onParamsChange(p)}
           onRemove={removeScenario}
-          onSave={(name) => saveScenario(name, params)}
+          onSave={(name) => saveScenario(name, localParams)}
           disabled={isTimelineDriven}
         />
       </div>
@@ -144,7 +179,7 @@ export function ScenarioPlanner({
                 <InfoTip text="The global benchmark crude oil price. PH imports are priced against this." />
               </label>
               <span className="text-sm font-mono font-bold text-text-primary">
-                ${params.brentPrice}/bbl
+                ${localParams.brentPrice}/bbl
               </span>
             </div>
             <input
@@ -154,7 +189,7 @@ export function ScenarioPlanner({
               max={180}
               step={5}
               aria-label="Brent Crude price"
-              value={params.brentPrice}
+              value={localParams.brentPrice}
               onChange={(e) => updateParam('brentPrice', Number(e.target.value))}
               disabled={isTimelineDriven}
               className="w-full h-1.5 rounded-full appearance-none bg-border-hover accent-blue-500 cursor-pointer disabled:cursor-not-allowed"
@@ -173,7 +208,7 @@ export function ScenarioPlanner({
                 <InfoTip text="Weeks the Strait of Hormuz is partially or fully blocked. 70% of PH crude transits here." />
               </label>
               <span className="text-sm font-mono font-bold text-text-primary">
-                {params.hormuzWeeks} {params.hormuzWeeks === 1 ? 'week' : 'weeks'}
+                {localParams.hormuzWeeks} {localParams.hormuzWeeks === 1 ? 'week' : 'weeks'}
               </span>
             </div>
             <input
@@ -183,7 +218,7 @@ export function ScenarioPlanner({
               max={16}
               step={1}
               aria-label="Hormuz disruption weeks"
-              value={params.hormuzWeeks}
+              value={localParams.hormuzWeeks}
               onChange={(e) => updateParam('hormuzWeeks', Number(e.target.value))}
               disabled={isTimelineDriven}
               className="w-full h-1.5 rounded-full appearance-none bg-border-hover accent-orange-500 cursor-pointer disabled:cursor-not-allowed"
@@ -202,7 +237,7 @@ export function ScenarioPlanner({
                 <InfoTip text="The Philippine Peso to US Dollar exchange rate. Weaker peso = more expensive imports." />
               </label>
               <span className="text-sm font-mono font-bold text-text-primary">
-                ₱{params.forexRate.toFixed(2)}
+                {formatPHP(localParams.forexRate)}
               </span>
             </div>
             <input
@@ -212,7 +247,7 @@ export function ScenarioPlanner({
               max={65}
               step={0.5}
               aria-label="PHP/USD exchange rate"
-              value={params.forexRate}
+              value={localParams.forexRate}
               onChange={(e) => updateParam('forexRate', Number(e.target.value))}
               disabled={isTimelineDriven}
               className="w-full h-1.5 rounded-full appearance-none bg-border-hover accent-yellow-500 cursor-pointer disabled:cursor-not-allowed"
@@ -233,16 +268,16 @@ export function ScenarioPlanner({
               type="button"
               role="switch"
               aria-label="Bataan Refinery Offline toggle"
-              aria-checked={params.refineryOffline}
-              onClick={() => !isTimelineDriven && updateParam('refineryOffline', !params.refineryOffline)}
+              aria-checked={localParams.refineryOffline}
+              onClick={() => !isTimelineDriven && updateParam('refineryOffline', !localParams.refineryOffline)}
               disabled={isTimelineDriven}
               className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 disabled:cursor-not-allowed ${
-                params.refineryOffline ? 'bg-status-red' : 'bg-[rgba(255,255,255,0.12)]'
+                localParams.refineryOffline ? 'bg-status-red' : 'bg-[rgba(255,255,255,0.12)]'
               }`}
             >
               <span
                 className={`pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow-lg transform transition-transform duration-200 ${
-                  params.refineryOffline ? 'translate-x-5' : 'translate-x-0'
+                  localParams.refineryOffline ? 'translate-x-5' : 'translate-x-0'
                 }`}
               />
             </button>
@@ -256,7 +291,7 @@ export function ScenarioPlanner({
             diesel={result.diesel}
             riskLevel={result.riskLevel}
           />
-          <RiskMatrix params={params} riskLevel={result.riskLevel} />
+          <RiskMatrix params={localParams} riskLevel={result.riskLevel} />
         </div>
       </div>
 

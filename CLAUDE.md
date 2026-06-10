@@ -100,8 +100,8 @@ Do NOT create inline headers in page components.
 | `src/components/ui/` | Shared UI primitives (Ticker, ScrollProgress, Tooltip) |
 | `src/components/onboarding/` | How-to guide and onboarding components |
 | `src/data/` | Static data (references, primer content) + station brand registry |
-| `src/data/stations/` | Per-brand station JSON files + `index.ts` (`BRAND_LIST`); bundled into `public/data/stations.json` at build time |
-| `public/data/` | Build-generated static data (`stations.json`) |
+| `src/data/stations/` | Per-brand station JSON files + `index.ts` (`BRAND_LIST`); bundled into content-hashed `public/data/stations/<hash>.json` at build time |
+| `public/data/` | Build-generated static data (content-hashed `stations/<hash>.json`, pointed to by the committed `src/data/stations-manifest.json`) |
 | `src/hooks/` | Custom React hooks |
 | `src/lib/` | Utilities, contexts, and constants |
 | `src/types/` | TypeScript interfaces |
@@ -135,10 +135,10 @@ Station filtering (brand, region, status) is centralized in the shared `filterSt
 
 - 10,469 stations from OpenStreetMap Overpass API (ODbL license)
 - Stored as 7 source JSON files in `src/data/stations/` (one per brand + `others.json`)
-- **Not statically imported** — `scripts/build-stations-json.mjs` (run via the `prebuild` / `predev` npm scripts) concatenates the brand files into `public/data/stations.json`, which is fetched at runtime by the `useStations` hook. This keeps the ~3.7 MB dataset out of the client JS bundle.
+- **Not statically imported** — `scripts/build-stations-json.mjs` (run via the `prebuild` / `predev` npm scripts) concatenates the brand files into a slimmed, content-hashed `public/data/stations/<hash>.json` (per-station `source` stripped, empty `address` dropped, coordinates truncated to 5 decimals) and writes the committed pointer `src/data/stations-manifest.json`, which `useStations` imports to fetch the payload at runtime. `vercel.json` serves `/data/stations/*` with a 1-year immutable `Cache-Control` — the hash changes iff the data changes. This keeps the dataset out of the client JS bundle and out of repeat-visit downloads.
 - `src/data/stations/index.ts` exports only `BRAND_LIST` — the canonical brand order for filter UIs
 - `useStations` assigns a deterministic per-station status (`assignStationStatus`) and tallies `statusCounts` on load
-- Each station has: id, brand, name, coordinates, address, fuelTypes, region, source
+- Each station has: id, brand, name, coordinates, address (optional — dropped from the runtime payload when empty), fuelTypes, region, source (optional — provenance lives in the `src/data/stations/*.json` originals, stripped from the runtime payload)
 - Regions assigned via bounding-box lookup (`src/data/regions.ts`)
 - Clustering via `supercluster` at zoom < 8
 
@@ -172,7 +172,7 @@ Station filtering (brand, region, status) is centralized in the shared `filterSt
 ### Data Fetching
 - Prices + Events: `DataProvider` (`src/lib/DataProvider.tsx`, mounted in the root layout) owns the single polling loop — `/api/prices` every 5 min, `/api/events` every 3 min (3× retry, exponential backoff). `usePrices` / `useEvents` are thin context readers, not independent pollers.
 - Sentiment: `useSentiment` hook (15-min polling) — independent, not part of `DataProvider`
-- Stations: `useStations` hook fetches `public/data/stations.json` once on mount (not statically imported)
+- Stations: `useStations` hook fetches the content-hashed `public/data/stations/<hash>.json` once on mount (path imported from the committed `src/data/stations-manifest.json`; not statically imported)
 - Static data: direct imports from `@/data/`
 
 ### Price Source Transparency
@@ -306,7 +306,7 @@ Cross-component hover linking. Wrap related components with `<HighlightProvider>
 - Build: `pnpm build` — must pass clean before any commit
 - Dev: `pnpm dev` (port 3007)
 - Test: `pnpm test` — Vitest; test files live in `src/**/__tests__/`
-- `prebuild` / `predev` run `scripts/build-stations-json.mjs` to regenerate `public/data/stations.json`
+- `prebuild` / `predev` run `scripts/build-stations-json.mjs` to regenerate the content-hashed `public/data/stations/<hash>.json` + `src/data/stations-manifest.json`
 - Deploy target: Vercel (do NOT push without permission)
 - No unused imports — ESLint enforces this
 

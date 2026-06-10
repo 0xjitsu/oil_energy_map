@@ -2,7 +2,7 @@
 
 ## Overview
 
-The PH Oil Intelligence Dashboard is a Next.js 14 App Router application that runs as a client-heavy single-page app with no database. The root layout (`src/app/layout.tsx`) handles fonts and JSON-LD structured data, and mounts the app-wide `DataProvider` that owns the price/event polling loops; all interactive logic lives inside a single `'use client'` page component (`src/app/page.tsx`). External data enters through two Next.js API route handlers that proxy live third-party APIs (Yahoo Finance, FloatRates, RSS feeds, Reddit) and fall back to static seed data on failure. The 10,469-station dataset is served as a static JSON file (`public/data/stations.json`) and fetched at runtime. There is no authentication, no session store, and no persistent backend — all state is ephemeral React state within the browser session.
+The PH Oil Intelligence Dashboard is a Next.js 14 App Router application that runs as a client-heavy single-page app with no database. The root layout (`src/app/layout.tsx`) handles fonts and JSON-LD structured data, and mounts the app-wide `DataProvider` that owns the price/event polling loops; all interactive logic lives inside a single `'use client'` page component (`src/app/page.tsx`). External data enters through two Next.js API route handlers that proxy live third-party APIs (Yahoo Finance, FloatRates, RSS feeds, Reddit) and fall back to static seed data on failure. The 10,469-station dataset is served as a slimmed, content-hashed static JSON file (`public/data/stations/<hash>.json`, built by `scripts/build-stations-json.mjs` with the `source` provenance stripped, empty `address` fields dropped, and coordinates truncated to 5 decimals) and fetched at runtime via a committed manifest pointer (`src/data/stations-manifest.json`); `vercel.json` serves the hashed path with a 1-year immutable `Cache-Control`. There is no authentication, no session store, and no persistent backend — all state is ephemeral React state within the browser session.
 
 ---
 
@@ -61,7 +61,7 @@ All section anchor IDs use `scroll-mt-20` to account for the sticky header offse
 | SG Refining Margin ($/bbl) | Hardcoded constant (15.3) | `GET /api/prices` | `usePrices` | N/A | Same constant |
 | Timeline events | RSS: PhilStar, Al Jazeera, Google News ×2, DOE PH; Social: r/Philippines, r/energy | `GET /api/events` | `useEvents` | 3 min | `src/data/events.ts` static seed |
 | NLP Sentiment | `GET /api/sentiment` | `GET /api/sentiment` | `useSentiment` | 15 min | Empty array (error state shown) |
-| Gas station locations (10,469) | OpenStreetMap Overpass (built into `public/data/stations.json`) | static file `/data/stations.json` | `useStations` | Once on mount | Empty data while loading / on error |
+| Gas station locations (10,469) | OpenStreetMap Overpass (built into content-hashed `public/data/stations/<hash>.json`; slimmed: no `source`, no empty `address`, 5-decimal coords) | static file `/data/stations/<hash>.json` via `src/data/stations-manifest.json` (immutable Cache-Control from `vercel.json`) | `useStations` | Once on mount | Empty data while loading / on error |
 
 All `/api/prices` and `/api/events` polling is owned by a single `DataProvider` context (`src/lib/DataProvider.tsx`), mounted once in the root layout. It runs the only price loop (5 min) and event loop (3 min); `usePrices` and `useEvents` are thin readers that subscribe to this context rather than polling independently.
 

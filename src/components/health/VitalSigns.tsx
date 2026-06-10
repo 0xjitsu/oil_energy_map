@@ -2,6 +2,7 @@ import { VITAL_SIGNS } from '@/lib/constants';
 import { InfoTip } from '@/components/ui/Tooltip';
 import { GaugeBar, type ThresholdZone } from '@/components/ui/GaugeBar';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
+import { SimChip } from '@/components/ui/SimChip';
 import type { RiskLevel, ScenarioParams, MapMode, VitalSign } from '@/types';
 
 const STATUS_STYLES: Record<RiskLevel, { badge: string; label: string; pulse: boolean }> = {
@@ -119,6 +120,11 @@ export function VitalSigns({ scenarioParams, mapMode }: VitalSignsProps) {
 
   return (
     <div>
+      {mapMode !== 'live' && (
+        <div className="mb-2">
+          <SimChip />
+        </div>
+      )}
       <div className="grid grid-cols-2 gap-3">
         {signs.map((sign) => {
         const style = STATUS_STYLES[sign.status];

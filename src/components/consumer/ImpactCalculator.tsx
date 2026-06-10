@@ -5,6 +5,7 @@ import type { ScenarioParams } from '@/types';
 import { PERSONAS, calculateImpact } from '@/lib/consumer-models';
 import { PersonaCard } from './PersonaCard';
 import { ImpactResult } from './ImpactResult';
+import { SimChip } from '@/components/ui/SimChip';
 
 interface ImpactCalculatorProps {
   scenarioParams: ScenarioParams;
@@ -22,9 +23,12 @@ export function ImpactCalculator({ scenarioParams }: ImpactCalculatorProps) {
 
   return (
     <div>
-      <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
-        How Does This Affect You?
-      </h2>
+      <div className="flex items-center gap-2">
+        <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
+          How Does This Affect You?
+        </h2>
+        <SimChip />
+      </div>
       <p className="text-xs font-sans text-text-label mt-1 mb-4">
         Select a persona to see personalized fuel cost impact
       </p>

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import type { GasStation, StationStatus } from '@/types/stations';
 import { assignStationStatus } from '@/lib/station-status';
 import { BRAND_LIST } from '@/data/stations';
+import stationsManifest from '@/data/stations-manifest.json';
 
 /** Brands the filter UI can toggle. A station whose brand falls outside this set
  *  has no filter chip and would be silently hidden by the default brand filter. */
@@ -40,7 +41,7 @@ let stationsPromise: Promise<StationsData> | null = null;
 
 function loadStations(): Promise<StationsData> {
   if (stationsPromise) return stationsPromise;
-  stationsPromise = fetch('/data/stations.json')
+  stationsPromise = fetch(stationsManifest.file)
     .then((r) => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
