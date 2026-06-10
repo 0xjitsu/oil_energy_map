@@ -5,6 +5,7 @@ import type { ScenarioParams, MonteCarloResult } from '@/types';
 import { runMonteCarlo } from '@/lib/monte-carlo';
 import { ConfidenceFan } from './ConfidenceFan';
 import { Disclaimer } from '@/components/ui/Disclaimer';
+import { SimChip } from '@/components/ui/SimChip';
 
 function RiskRadar({ dimensions }: { dimensions: { label: string; value: number }[] }) {
   const size = 160;
@@ -150,9 +151,12 @@ export function StressTest({ scenarioParams }: StressTestProps) {
     <div>
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
-            Monte Carlo Stress Test
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2 className="text-sm font-mono tracking-widest text-text-primary uppercase">
+              Monte Carlo Stress Test
+            </h2>
+            <SimChip />
+          </div>
           <p className="text-xs font-sans text-text-label mt-1">
             1,000 simulated scenarios with randomized inputs
           </p>

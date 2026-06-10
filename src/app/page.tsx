@@ -141,7 +141,7 @@ export default function Home() {
         {/* Executive Snapshot — Hero KPIs */}
         <FadeIn delay={0}>
           <div id="snapshot" className="scroll-mt-24">
-            <ExecutiveSnapshot scenarioParams={scenarioParams} />
+            <ExecutiveSnapshot />
           </div>
         </FadeIn>
 
@@ -183,7 +183,7 @@ export default function Home() {
           </div>
           <div>
             <SectionHeader color="bg-phoenix" label="What This Means For You" />
-            <ImpactCards scenarioParams={scenarioParams} />
+            <ImpactCards />
           </div>
         </section>
 

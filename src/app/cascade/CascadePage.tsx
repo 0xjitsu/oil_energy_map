@@ -47,28 +47,26 @@ export function CascadePage() {
 
         {/* ── Hero: Lead with human impact ── */}
         <section className="py-10 sm:py-14">
-          <div className="inline-flex items-center gap-2 mb-5 rounded-full border border-status-red/20 bg-status-red/5 px-4 py-1.5">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-status-red opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-status-red" />
-            </span>
-            <span className="text-[10px] font-mono uppercase tracking-widest text-status-red">
-              Live Cascade Tracker
+          <div className="inline-flex items-center gap-2 mb-5 rounded-full border border-status-yellow/20 bg-status-yellow/5 px-4 py-1.5">
+            <span className="inline-flex h-2 w-2 rounded-full bg-status-yellow" />
+            <span className="text-[10px] font-mono uppercase tracking-widest text-status-yellow">
+              Modeled Shock Scenario
             </span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-text-primary mb-3 max-w-3xl">
-            Filipino families pay{' '}
-            <span className="text-status-red">{cascadeHeadline.householdImpact}</span>{' '}
-            more — traced from{' '}
-            <span className="text-status-red">{cascadeHeadline.crudePrice}</span> crude oil.
+            In a modeled{' '}
+            <span className="text-status-red">{cascadeHeadline.crudePrice}</span> oil-shock
+            scenario, Filipino families would pay{' '}
+            <span className="text-status-red">{cascadeHeadline.householdImpact}</span> more.
           </h1>
 
           <p className="max-w-2xl text-sm sm:text-base text-text-body leading-relaxed mt-4">
             Energy disruptions don&apos;t stop at the pump. Every dollar added to crude oil
             cascades through diesel, fertilizer, food prices, and transport fares — until
             it lands on the household budget. This tracker maps those second-order effects
-            across the Philippine economy.
+            across the Philippine economy. Figures on this page model a sustained{' '}
+            {cascadeHeadline.crudePrice} crude scenario — they are not today&apos;s prices.
           </p>
         </section>
 

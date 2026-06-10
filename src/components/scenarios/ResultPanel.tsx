@@ -3,6 +3,7 @@
 import { RiskLevel } from '@/types';
 import { usePrices } from '@/hooks/usePrices';
 import { formatPHP, getCurrentPumpPrices } from '@/lib/format';
+import { SimChip } from '@/components/ui/SimChip';
 
 interface ResultPanelProps {
   gasoline: number;
@@ -44,12 +45,13 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
   return (
     <div className="glass-card p-5">
       {/* Risk badge */}
-      <div className="mb-4">
+      <div className="mb-4 flex items-center gap-2">
         <span
           className={`inline-block rounded-md border px-2.5 py-1 text-[10px] font-mono tracking-widest ${badge.className}`}
         >
           {badge.label}
         </span>
+        <SimChip />
       </div>
 
       {/* Price estimates */}

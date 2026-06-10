@@ -2,53 +2,12 @@
 
 import { useMemo } from 'react';
 import { IMPACT_ITEMS } from '@/lib/constants';
-import { calculatePumpPrice } from '@/lib/scenario-engine';
+import { usePrices } from '@/hooks/usePrices';
+import { getCurrentPumpPrices } from '@/lib/format';
+import { deriveImpactsFromPump, pumpDeltaRisk, BASELINE_GASOLINE, BASELINE_DIESEL } from '@/lib/impact-model';
 import { InfoTip } from '@/components/ui/Tooltip';
-import type { ScenarioParams, ImpactItem, RiskLevel } from '@/types';
+import type { RiskLevel } from '@/types';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
-
-// Baselines mirror the scenario-engine's calm base case (Brent $80, PHP 56,
-// no disruption) so a calm scenario honestly derives "no extra cost".
-const BASELINE_GASOLINE = 65;
-const BASELINE_DIESEL = 59;
-
-/**
- * Derive everyday cost impacts from the MODELED pump-price change.
- * `calculatePumpPrice` is the same engine the Scenario Planner and Impact
- * Calculator use — so these numbers are consistent across the dashboard.
- */
-function deriveImpacts(base: ImpactItem[], params: ScenarioParams): ImpactItem[] {
-  const { gasoline, diesel } = calculatePumpPrice(params);
-  const gasDelta = Math.max(0, gasoline - BASELINE_GASOLINE); // ₱/L over baseline
-  const dieselDelta = Math.max(0, diesel - BASELINE_DIESEL);
-
-  return base.map((item) => {
-    switch (item.label) {
-      case 'Jeepney Fare': {
-        const extra = Math.round(dieselDelta * 0.35);
-        const change = extra <= 0 ? 'No change' : `+₱${extra}–${extra + 1} per ride`;
-        return { ...item, change };
-      }
-      case 'Grab Ride': {
-        const extra = Math.round(gasDelta * 2.2);
-        const change = extra <= 0 ? 'No surcharge' : `+₱${extra}–${extra + 4} surcharge`;
-        return { ...item, change };
-      }
-      case 'Rice Delivery': {
-        const extra = Math.round(dieselDelta * 0.25);
-        const change = extra <= 0 ? 'No change' : `+₱${extra}–${extra + 1}/kg`;
-        return { ...item, change };
-      }
-      case 'LPG Cooking': {
-        const extra = Math.round((gasDelta + dieselDelta) * 18);
-        const change = extra <= 0 ? 'No change' : `+₱${extra}–${extra + 100}/month`;
-        return { ...item, change };
-      }
-      default:
-        return item;
-    }
-  });
-}
 
 function riskClasses(riskLevel: RiskLevel): { border: string; change: string } {
   if (riskLevel === 'green') return { border: 'border-l-status-green/40', change: 'text-status-green' };
@@ -58,20 +17,19 @@ function riskClasses(riskLevel: RiskLevel): { border: string; change: string } {
   return { border: 'border-l-status-yellow/40', change: 'text-status-yellow' };
 }
 
-interface ImpactCardsProps {
-  scenarioParams: ScenarioParams;
-}
+export function ImpactCards() {
+  const { prices } = usePrices();
 
-export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
   const { impacts, border, change } = useMemo(() => {
-    const result = calculatePumpPrice(scenarioParams);
-    const classes = riskClasses(result.riskLevel);
+    const { gasoline, diesel } = getCurrentPumpPrices(prices);
+    const risk = pumpDeltaRisk(gasoline - BASELINE_GASOLINE, diesel - BASELINE_DIESEL);
+    const classes = riskClasses(risk);
     return {
-      impacts: deriveImpacts(IMPACT_ITEMS, scenarioParams),
+      impacts: deriveImpactsFromPump(IMPACT_ITEMS, gasoline, diesel),
       border: classes.border,
       change: classes.change,
     };
-  }, [scenarioParams]);
+  }, [prices]);
 
   return (
     <div>
@@ -94,7 +52,7 @@ export function ImpactCards({ scenarioParams }: ImpactCardsProps) {
           </div>
         ))}
       </div>
-      <SourceAttribution derived="Modeled from scenario pump prices (scenario-engine)" />
+      <SourceAttribution derived="Derived from live DOE pump prices vs calm baseline" />
     </div>
   );
 }

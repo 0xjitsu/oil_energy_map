@@ -2,7 +2,7 @@
 
 import { useCrisis } from '@/lib/CrisisProvider';
 import { usePrices } from '@/hooks/usePrices';
-import { criticalInsight } from '@/data/cascade';
+import { formatPHP } from '@/lib/format';
 import type { CrisisLevel } from '@/lib/crisisLevel';
 
 interface LevelFraming {
@@ -27,9 +27,9 @@ const LEVEL_FRAMING: Record<CrisisLevel, LevelFraming> = {
 
 /** Pure: compose the week-over-week diesel sentence. */
 export function composeDieselLine(value: number, delta: number): string {
-  const price = `₱${value.toFixed(2)}/L`;
-  if (delta > 0.01) return `Diesel is ${price} — up ₱${delta.toFixed(2)} this week.`;
-  if (delta < -0.01) return `Diesel is ${price} — down ₱${Math.abs(delta).toFixed(2)} this week.`;
+  const price = `${formatPHP(value)}/L`;
+  if (delta > 0.01) return `Diesel is ${price} — up ${formatPHP(delta)} this week.`;
+  if (delta < -0.01) return `Diesel is ${price} — down ${formatPHP(Math.abs(delta))} this week.`;
   return `Diesel is ${price} — flat this week.`;
 }
 
@@ -57,7 +57,7 @@ export function CrisisHero() {
       </h1>
       <p className="mt-4 text-text-body text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
         {dieselLine ? `${dieselLine} ` : ''}
-        {criticalInsight.headline} — here&apos;s why, and what it costs your family.
+        Here&apos;s why, and what it costs your family.
       </p>
       <a
         href="#snapshot"

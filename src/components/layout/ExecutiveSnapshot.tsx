@@ -7,7 +7,6 @@ import { SparkChart } from '@/components/prices/SparkChart';
 import { InfoTip } from '@/components/ui/Tooltip';
 import { weeklySeriesFor } from '@/lib/weekly-series';
 import { formatPHP, formatUSD } from '@/lib/format';
-import type { ScenarioParams } from '@/types';
 
 type RiskTone = 'danger' | 'warning' | 'caution' | 'ok';
 
@@ -25,11 +24,25 @@ const RISK_TONE_BG: Record<RiskTone, string> = {
   ok: 'bg-status-green/10',
 };
 
-function getRiskLevel(params: ScenarioParams): { label: string; tone: RiskTone } {
+/**
+ * Pure: supply-risk from LIVE signals only — Brent week-over-week move and
+ * live event severities. Replaces the old scenario-coupled formula so Act 1
+ * never presents a hypothetical as current risk (Wave A integrity rule).
+ */
+export function getLiveSupplyRisk(
+  brentValue: number,
+  brentPreviousWeek: number,
+  redEvents: number,
+  yellowEvents: number,
+): { label: string; tone: RiskTone } {
+  const brentDeltaPct =
+    brentPreviousWeek > 0
+      ? Math.abs((brentValue - brentPreviousWeek) / brentPreviousWeek) * 100
+      : 0;
   const score =
-    params.hormuzWeeks / 16 +
-    (params.refineryOffline ? 0.3 : 0) +
-    (params.brentPrice - 106) / 150;
+    Math.min(1, brentDeltaPct / 20) * 0.4 +
+    Math.min(1, redEvents / 3) * 0.4 +
+    Math.min(1, yellowEvents / 5) * 0.2;
   if (score > 0.6) return { label: 'CRITICAL', tone: 'danger' };
   if (score > 0.3) return { label: 'HIGH', tone: 'warning' };
   if (score > 0.1) return { label: 'MODERATE', tone: 'caution' };
@@ -168,11 +181,7 @@ function StatusBadge({
   );
 }
 
-interface ExecutiveSnapshotProps {
-  scenarioParams: ScenarioParams;
-}
-
-export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
+export function ExecutiveSnapshot() {
   const { prices, priceHistory, isLive } = usePrices();
   const { events } = useEvents();
 
@@ -230,8 +239,9 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
     },
   ];
 
-  const risk = getRiskLevel(scenarioParams);
   const criticalCount = events.filter((e) => e.severity === 'red').length;
+  const yellowCount = events.filter((e) => e.severity === 'yellow').length;
+  const risk = getLiveSupplyRisk(brent.value, brent.previousWeek, criticalCount, yellowCount);
 
   return (
     <section>
@@ -284,7 +294,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
           value={risk.label}
           color={RISK_TONE_CLASS[risk.tone]}
           bg={RISK_TONE_BG[risk.tone]}
-          subtitle="Hormuz + Refinery"
+          subtitle="Brent Δ + live events"
         />
         <StatusBadge
           label="Disruptions"
