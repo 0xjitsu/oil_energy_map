@@ -49,7 +49,9 @@ export function deriveImpactsFromPump(
         return { ...item, change };
       }
       default:
-        return item;
+        throw new Error(
+          `impact-model: unhandled impact label "${item.label}" — every IMPACT_ITEMS entry needs a live derivation`,
+        );
     }
   });
 }

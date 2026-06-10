@@ -37,7 +37,7 @@ export function getLiveSupplyRisk(
 ): { label: string; tone: RiskTone } {
   const brentDeltaPct =
     brentPreviousWeek > 0
-      ? Math.abs((brentValue - brentPreviousWeek) / brentPreviousWeek) * 100
+      ? Math.max(0, (brentValue - brentPreviousWeek) / brentPreviousWeek) * 100
       : 0;
   const score =
     Math.min(1, brentDeltaPct / 20) * 0.4 +

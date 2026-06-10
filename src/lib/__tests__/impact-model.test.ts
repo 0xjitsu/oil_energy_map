@@ -29,4 +29,11 @@ describe('deriveImpactsFromPump', () => {
     const impacts = deriveImpactsFromPump(IMPACT_ITEMS, 50, 45);
     for (const i of impacts) expect(i.change).not.toMatch(/-₱/);
   });
+  it('handles every IMPACT_ITEMS label (no silent passthrough)', () => {
+    expect(() => deriveImpactsFromPump(IMPACT_ITEMS, 80, 75)).not.toThrow();
+  });
+  it('throws on an unknown label instead of leaking a stale change string', () => {
+    const rogue = [{ ...IMPACT_ITEMS[0], label: 'Unknown Thing' }];
+    expect(() => deriveImpactsFromPump(rogue, 80, 75)).toThrow(/unhandled impact label/);
+  });
 });

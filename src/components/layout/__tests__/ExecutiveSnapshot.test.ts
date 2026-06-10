@@ -14,4 +14,7 @@ describe('getLiveSupplyRisk', () => {
   it('never divides by zero', () => {
     expect(getLiveSupplyRisk(80, 0, 0, 0).label).toBe('LOW');
   });
+  it('does not treat a brent crash as supply risk', () => {
+    expect(getLiveSupplyRisk(60, 80, 0, 0).label).toBe('LOW');
+  });
 });
