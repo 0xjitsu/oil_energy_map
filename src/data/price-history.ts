@@ -24,13 +24,14 @@
  * - 2025-06-30 is skipped: the DOE did not publish a retrievable NCR
  *   monitoring PDF for the July 1–7, 2025 week (validator tolerates the
  *   one-week gap).
- * - The series ends at 2026-03-02. From mid-March 2026 the Strait-of-Hormuz
- *   energy crisis pushed DOE common prices far outside this file's
- *   plausibility bands (e.g. week of 2026-03-17: diesel ₱102.60/L, RON95
- *   ₱86.20/L per DOE; Wikipedia reports diesel later exceeded ₱140/L).
- *   Those real weeks cannot be represented inside the validator's bands, and
- *   the post-peak in-band weeks (e.g. 2026-06-01: diesel ₱76.20, RON95
- *   ₱75.90) are unreachable across the >2-week gap, so they are excluded.
+ * - The series now runs through the 2026 Strait-of-Hormuz energy crisis to
+ *   2026-06-01. The validator's bands were recalibrated (2026-06-10) to the
+ *   verified crisis peaks — diesel common ₱153.70/L in the April 7–13, 2026
+ *   DOE week — so the real crisis weeks validate instead of being truncated.
+ * - The series ends at 2026-06-01: as of 2026-06-10 the DOE has not yet
+ *   published the NCR monitoring PDF for the June 9–15, 2026 week (the
+ *   DOE "List of NCR Pump Prices" article lists June 2–8 as the latest
+ *   issue), so week 2026-06-08 is omitted until it is retrievable.
  */
 export interface WeeklyPricePoint {
   /** Monday of the ISO week, YYYY-MM-DD. */
@@ -46,7 +47,7 @@ export interface WeeklyPricePoint {
 }
 
 /** The validator's floor — set to the number of weeks actually verified (>= 26, target 52). */
-export const MIN_WEEKS = 52;
+export const MIN_WEEKS = 65;
 
 export const PRICE_HISTORY: WeeklyPricePoint[] = [
   // source: https://prod-cms.doe.gov.ph/documents/d/guest/petro_ncr_2025_mar-4-10-pdf (retrieved 2026-06-10)
@@ -116,5 +117,33 @@ export const PRICE_HISTORY: WeeklyPricePoint[] = [
   // — Strait of Hormuz closed late February 2026, disrupting ~20% of world oil supply.
   { week: '2026-02-23', brent: 72.48, pumpDiesel: 60.79, pumpGasoline: 54.5, event: 'Strait of Hormuz closed (2026 Iran war)' },
   // source: https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-03032026-pdf (retrieved 2026-06-10)
-  { week: '2026-03-02', brent: 92.69, pumpDiesel: 60.5, pumpGasoline: 56.9, event: 'Crisis price surge begins — series truncated (later weeks exceed plausibility bands)' },
+  { week: '2026-03-02', brent: 92.69, pumpDiesel: 60.5, pumpGasoline: 56.9, event: 'Crisis price surge begins' },
+  // ── 2026 Hormuz-crisis weeks ──────────────────────────────────────────────
+  // Pump prices: DOE "Prevailing Retail Prices of Petroleum Products NCR"
+  // summary table, Common Price column (Gasoline RON95 / Diesel), one PDF per
+  // Tuesday–Monday DOE week, mapped to the Monday starting that ISO week.
+  // Brent: Yahoo Finance BZ=F weekly closes (same source URL as the header).
+  // Crisis narrative (Hormuz closure late Feb 2026, April 8 ceasefire):
+  // https://en.wikipedia.org/wiki/2026_Philippine_energy_crisis (retrieved 2026-06-10)
+  // source: https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-03102026n-pdf (retrieved 2026-06-10)
+  // (note the "n" in the slug — the plain 03102026 slug 404s; slug taken from
+  //  the DOE "List of NCR Pump Prices" article, doe.gov.ph/articles/3142895)
+  { week: '2026-03-09', brent: 103.14, pumpDiesel: 82.0, pumpGasoline: 72.0 },
+  // source: https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-03172026-pdf (retrieved 2026-06-10)
+  // (sibling weekly slugs: ncr-price-monitoring-03242026-pdf, -03312026-pdf,
+  //  -04072026-pdf, -04142026-pdf, -04212026-pdf, -04282026-pdf, -05052026-pdf,
+  //  -05122026-pdf, -05192026-pdf, -05262026-pdf)
+  { week: '2026-03-16', brent: 112.19, pumpDiesel: 102.6, pumpGasoline: 86.2, event: 'Diesel breaches ₱100/L as Hormuz closure bites' },
+  { week: '2026-03-23', brent: 112.57, pumpDiesel: 119.2, pumpGasoline: 95.9 },
+  { week: '2026-03-30', brent: 109.03, pumpDiesel: 128.8, pumpGasoline: 94.3 },
+  { week: '2026-04-06', brent: 95.2, pumpDiesel: 153.7, pumpGasoline: 96.5, event: 'Crisis peak — diesel common ₱153.70/L; April 8 ceasefire' },
+  { week: '2026-04-13', brent: 90.38, pumpDiesel: 123.4, pumpGasoline: 88.1, event: 'Post-ceasefire de-escalation begins' },
+  { week: '2026-04-20', brent: 105.33, pumpDiesel: 99.9, pumpGasoline: 83.7 },
+  { week: '2026-04-27', brent: 108.17, pumpDiesel: 86.9, pumpGasoline: 78.6 },
+  { week: '2026-05-04', brent: 101.29, pumpDiesel: 89.5, pumpGasoline: 92.4 },
+  { week: '2026-05-11', brent: 109.26, pumpDiesel: 79.9, pumpGasoline: 92.1 },
+  { week: '2026-05-18', brent: 103.54, pumpDiesel: 82.7, pumpGasoline: 94.0 },
+  { week: '2026-05-25', brent: 92.05, pumpDiesel: 82.7, pumpGasoline: 82.9 },
+  // source: https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-for-june-2-8-2026-pdf-1 (retrieved 2026-06-10)
+  { week: '2026-06-01', brent: 93.09, pumpDiesel: 76.2, pumpGasoline: 75.9 },
 ];

@@ -1,10 +1,16 @@
 import type { WeeklyPricePoint } from '@/data/price-history';
 
-/** Plausibility bands — a value outside these is a data error, not news. */
+/**
+ * Plausibility bands — a value outside these is a data error, not news.
+ * Ceilings sit above the verified 2026 Hormuz-crisis peaks (DOE NCR common
+ * diesel ₱153.70/L in the April 7–13, 2026 peak week; RON95 common ₱96.50/L
+ * the same week; Brent weekly close $112.57 week of 2026-03-23) so real
+ * crisis weeks validate while typos (extra digit, swapped fields) still fail.
+ */
 const BANDS = {
-  pumpDiesel: { min: 40, max: 90 },   // ₱/L
-  pumpGasoline: { min: 45, max: 95 }, // ₱/L
-  brent: { min: 40, max: 140 },       // $/bbl
+  pumpDiesel: { min: 40, max: 160 },   // ₱/L
+  pumpGasoline: { min: 45, max: 140 }, // ₱/L
+  brent: { min: 40, max: 160 },        // $/bbl
 } as const;
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000;

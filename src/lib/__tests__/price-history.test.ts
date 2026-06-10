@@ -28,7 +28,7 @@ describe('validatePriceHistory (unit)', () => {
     expect(validatePriceHistory([good('2026-01-05'), good('2026-02-09')], 2)).not.toEqual([]);
   });
   it('rejects out-of-band values', () => {
-    expect(validatePriceHistory([good('2026-01-05', { pumpDiesel: 120 }), good('2026-01-12')], 2)).not.toEqual([]);
+    expect(validatePriceHistory([good('2026-01-05', { pumpDiesel: 200 }), good('2026-01-12')], 2)).not.toEqual([]);
     expect(validatePriceHistory([good('2026-01-05', { pumpGasoline: 30 }), good('2026-01-12')], 2)).not.toEqual([]);
     expect(validatePriceHistory([good('2026-01-05', { brent: 250 }), good('2026-01-12')], 2)).not.toEqual([]);
   });
