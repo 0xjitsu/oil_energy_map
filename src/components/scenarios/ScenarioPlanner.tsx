@@ -98,7 +98,13 @@ export function ScenarioPlanner({
   const sendRafRef = useRef(0);
 
   useEffect(() => {
-    if (params !== lastSentRef.current) setLocalParams(params);
+    if (params !== lastSentRef.current) {
+      // An external write (poll sync, timeline, slot load, URL restore) wins:
+      // cancel any pending drag propagation so a stale frame can't re-send
+      // old params after the mirror has already adopted the external values.
+      cancelAnimationFrame(sendRafRef.current);
+      setLocalParams(params);
+    }
   }, [params]);
 
   useEffect(() => () => cancelAnimationFrame(sendRafRef.current), []);
