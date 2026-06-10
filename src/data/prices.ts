@@ -4,43 +4,58 @@ import { PriceBenchmark } from '@/types';
 // These should approximate recent market prices so the dashboard
 // looks reasonable even without live data.
 export const priceBenchmarks: PriceBenchmark[] = [
+  // Dubai/MOPS fallbacks are static literals derived from the Brent fallback
+  // below using the SAME spreads the live route applies (priceSources.ts:
+  // Dubai = Brent + 2.50, MOPS gasoline = Brent + 13.50, MOPS diesel = Brent + 17.00),
+  // so the static snapshot stays internally coherent.
   {
     id: 'dubai-crude',
     name: 'Dubai Crude',
-    value: 110.50,
-    previousWeek: 108.20,
+    value: 95.59,
+    previousWeek: 94.55,
     unit: '$/bbl',
     tooltip: 'Asia-Pacific benchmark. What PH pays for raw oil.',
   },
+  // Brent fallback pinned to the curated weekly history tail
+  // (src/data/price-history.ts, Yahoo Finance BZ=F weekly closes — source
+  // URL cited in that file's header): week 2026-06-01 close 93.09,
+  // week 2026-05-25 close 92.05.
   {
     id: 'brent-crude',
     name: 'Brent Crude',
-    value: 107.90,
-    previousWeek: 105.80,
+    value: 93.09,
+    previousWeek: 92.05,
     unit: '$/bbl',
     tooltip: 'Global benchmark. Tracks ICE Brent futures.',
   },
   {
     id: 'mops-gasoline',
     name: 'MOPS Gasoline (95)',
-    value: 121.40,
-    previousWeek: 119.30,
+    value: 106.59,
+    previousWeek: 105.55,
     unit: '$/bbl',
     tooltip: 'Singapore gasoline benchmark. Directly sets PH pump price.',
   },
   {
     id: 'mops-diesel',
     name: 'MOPS Diesel',
-    value: 124.90,
-    previousWeek: 122.80,
+    value: 110.09,
+    previousWeek: 109.05,
     unit: '$/bbl',
     tooltip: 'Singapore diesel benchmark. Affects jeepney fares, food delivery, agriculture.',
   },
+  // USD/PHP weekly closes for the same two weeks as the Brent fallback:
+  // week 2026-06-01 closed 61.35 (Fri 2026-06-05), week 2026-05-25 closed
+  // 60.72 (Fri 2026-05-29). Yahoo Finance PHP=X daily closes:
+  // https://query1.finance.yahoo.com/v8/finance/chart/PHP=X?range=3mo&interval=1d
+  // (retrieved 2026-06-11; the 1wk bar for the 05-25 week is corrupted on
+  // Yahoo's side — a 16.20 bad tick — so both weeks were verified against
+  // the daily series; the 06-01 weekly bar close 61.352 matches.)
   {
     id: 'php-usd',
     name: 'PHP/USD',
-    value: 60.56,
-    previousWeek: 60.25,
+    value: 61.35,
+    previousWeek: 60.72,
     unit: '₱/$',
     tooltip: 'Peso-dollar exchange rate. Higher = more expensive oil imports.',
   },
