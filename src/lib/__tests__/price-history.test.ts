@@ -27,6 +27,18 @@ describe('validatePriceHistory (unit)', () => {
   it('rejects gaps longer than two skipped weeks', () => {
     expect(validatePriceHistory([good('2026-01-05'), good('2026-02-09')], 2)).not.toEqual([]);
   });
+  it('accepts a gap of exactly two skipped weeks (three-week step)', () => {
+    expect(validatePriceHistory([good('2026-01-05'), good('2026-01-26')], 2)).toEqual([]);
+  });
+  it('rejects a gap of three skipped weeks (four-week step)', () => {
+    expect(validatePriceHistory([good('2026-01-05'), good('2026-02-02')], 2)).not.toEqual([]);
+  });
+  it('rejects a non-ISO week string', () => {
+    expect(validatePriceHistory([good('Jan 5 2026'), good('2026-01-12')], 2)).not.toEqual([]);
+  });
+  it('rejects an unparseable ISO-shaped date', () => {
+    expect(validatePriceHistory([good('2026-13-45'), good('2026-01-12')], 2)).not.toEqual([]);
+  });
   it('rejects out-of-band values', () => {
     expect(validatePriceHistory([good('2026-01-05', { pumpDiesel: 200 }), good('2026-01-12')], 2)).not.toEqual([]);
     expect(validatePriceHistory([good('2026-01-05', { pumpGasoline: 30 }), good('2026-01-12')], 2)).not.toEqual([]);

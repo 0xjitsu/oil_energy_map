@@ -46,12 +46,16 @@ export interface WeeklyPricePoint {
   event?: string;
 }
 
-/** The validator's floor — set to the number of weeks actually verified (>= 26, target 52). */
+/** The validator's floor — set to the number of verified weeks; currently 65 (2025-03 → 2026-06). */
 export const MIN_WEEKS = 65;
 
 export const PRICE_HISTORY: WeeklyPricePoint[] = [
   // source: https://prod-cms.doe.gov.ph/documents/d/guest/petro_ncr_2025_mar-4-10-pdf (retrieved 2026-06-10)
   // (sibling weekly slugs: petro_ncr_2025_mar-11-17-pdf, mar-18-24-pdf, mar-25-31-pdf, apr-1-7-pdf)
+  // NOTE: pumpGasoline 68.86 re-verified against the Mar 4-10 PDF (re-retrieved
+  // 2026-06-10): RON95 Common Price is exactly 68.86 with diesel 54.60. The
+  // ₱14.26 drop to the next week is real — DOE "Common Price" is the modal
+  // sampled price and can jump between station clusters week-to-week.
   { week: '2025-03-03', brent: 70.36, pumpDiesel: 54.6, pumpGasoline: 68.86 },
   { week: '2025-03-10', brent: 70.58, pumpDiesel: 53.7, pumpGasoline: 54.6 },
   { week: '2025-03-17', brent: 72.16, pumpDiesel: 50.8, pumpGasoline: 57.9 },
@@ -64,6 +68,9 @@ export const PRICE_HISTORY: WeeklyPricePoint[] = [
   // source: https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-04222025-pdf (retrieved 2026-06-10)
   // (sibling weekly slugs: ncr-price-monitoring-04292025-pdf, -05062025-pdf, -05132025-pdf, -05202025-pdf)
   { week: '2025-04-21', brent: 66.87, pumpDiesel: 53.3, pumpGasoline: 56.15 },
+  // NOTE: pumpGasoline 65.03 re-verified against the Apr 29 - May 5 PDF
+  // (ncr-price-monitoring-04292025-pdf, re-retrieved 2026-06-10): RON95
+  // Common Price is exactly 65.03 — the ₱8.88 jump from 56.15 is in the source.
   { week: '2025-04-28', brent: 61.29, pumpDiesel: 53.4, pumpGasoline: 65.03 },
   { week: '2025-05-05', brent: 63.91, pumpDiesel: 51.45, pumpGasoline: 59.75 },
   { week: '2025-05-12', brent: 65.41, pumpDiesel: 49.75, pumpGasoline: 54.6 },

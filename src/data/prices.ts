@@ -85,6 +85,9 @@ for (const id of REQUIRED_BENCHMARK_IDS) {
     throw new Error(`prices.ts: required benchmark "${id}" is missing`);
   }
 }
+// The ₱110 ceiling guards the *fallback snapshot* values above (normal-market
+// levels) — it sits below the verified 2026 crisis peak (₱153.70/L diesel) on
+// purpose, and must be raised consciously if fallbacks are ever refreshed mid-crisis.
 for (const id of ['pump-gasoline', 'pump-diesel'] as const) {
   const b = priceBenchmarks.find((x) => x.id === id)!;
   for (const field of ['value', 'previousWeek'] as const) {
