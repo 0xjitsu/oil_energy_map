@@ -250,7 +250,12 @@ export default function IntelMap({
         mapStyle={MAP_STYLE}
         style={{ width: '100%', height: '100%' }}
         attributionControl={{}}
-        onMove={(evt) => setCurrentZoom(evt.viewState.zoom)}
+        onMove={(evt) => {
+          // currentZoom is only consumed for clustering thresholds, which
+          // floor it anyway (StationLayer) — re-render only on integer change.
+          const next = Math.floor(evt.viewState.zoom);
+          setCurrentZoom((prev) => (Math.floor(prev) === next ? prev : next));
+        }}
       >
         <DeckGLOverlay layers={deckLayers} />
       </Map>

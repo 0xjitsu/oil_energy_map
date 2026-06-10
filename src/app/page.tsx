@@ -10,7 +10,7 @@ const MapWrapper = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="w-full h-[clamp(350px,55vh,600px)] sm:h-[600px] glass-card rounded-xl animate-pulse flex items-center justify-center">
+      <div className="w-full h-[500px] sm:h-[600px] lg:h-[75vh] lg:max-h-[900px] glass-card rounded-xl animate-pulse flex items-center justify-center">
         <span className="text-text-dim font-mono text-xs">Loading map...</span>
       </div>
     ),
