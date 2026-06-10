@@ -7,16 +7,7 @@ import { SparkChart } from './SparkChart';
 import { InfoTip } from '@/components/ui/Tooltip';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
-
-function generateSparkData(value: number): number[] {
-  const points: number[] = [];
-  const variance = value * 0.03;
-  for (let i = 0; i < 7; i++) {
-    const offset = (Math.sin(i * 1.2) + Math.cos(i * 0.7)) * variance * 0.5;
-    points.push(value - variance + offset + variance * (i / 6));
-  }
-  return points;
-}
+import { weeklySeriesFor } from '@/lib/weekly-series';
 
 function BenchmarkCard({
   benchmark,
@@ -30,10 +21,13 @@ function BenchmarkCard({
   const isUp = change > 0;
   const animated = useAnimatedNumber(benchmark.value);
 
-  const sparkData = useMemo(
-    () => (history && history.length >= 2 ? history : generateSparkData(benchmark.value)),
-    [history, benchmark.value],
-  );
+  // Real data only: curated weekly series where the metric maps; else the
+  // intraday poll buffer (real, just short); else SparkChart's labeled empty box.
+  const sparkData = useMemo(() => {
+    const weekly = weeklySeriesFor(benchmark.id);
+    if (weekly) return weekly;
+    return history && history.length >= 2 ? history : [];
+  }, [history, benchmark.id]);
 
   const changeColor = isUp ? 'text-status-red' : 'text-status-green';
   const sparkColor = isUp ? 'var(--status-red)' : 'var(--status-green)';
@@ -89,7 +83,7 @@ function BenchmarkCard({
             {benchmark.unit}
           </span>
         </div>
-        <SparkChart data={sparkData} color={sparkColor} width={100} height={28} />
+        <SparkChart data={sparkData} color={sparkColor} width={100} height={28} emptyLabel="history building…" />
       </div>
       <div className="flex items-center justify-between mt-2">
         <p className={`text-xs font-mono ${changeColor}`}>

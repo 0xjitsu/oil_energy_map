@@ -4,6 +4,8 @@ import { usePrices } from '@/hooks/usePrices';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 import { SparkChart } from './SparkChart';
 import { SourceAttribution } from '@/components/ui/SourceAttribution';
+import { weeklySeriesFor } from '@/lib/weekly-series';
+import { formatPHP } from '@/lib/format';
 
 function PriceCard({
   label,
@@ -44,16 +46,14 @@ function PriceCard({
       <div className="flex items-end justify-between gap-3">
         <div>
           <span className="text-3xl sm:text-4xl font-mono font-bold text-text-primary tabular-nums">
-            ₱{animatedValue.toFixed(2)}
+            {formatPHP(animatedValue)}
           </span>
           <span className="text-sm text-text-dim font-mono ml-1">/L</span>
         </div>
-        {sparkData.length >= 2 && (
-          <SparkChart data={sparkData} color={sparkColor} width={100} height={28} />
-        )}
+        <SparkChart data={sparkData} color={sparkColor} width={100} height={28} emptyLabel="history building…" />
       </div>
       <p className={`mt-2 text-xs font-mono ${isUp ? 'text-status-red/80' : 'text-status-green/80'}`}>
-        {isUp ? '↑' : '↓'} ₱{Math.abs(change).toFixed(2)} vs prev week
+        {isUp ? '↑' : '↓'} {formatPHP(Math.abs(change))} vs prev week
       </p>
       <p className="mt-1 text-[9px] font-mono text-text-dim">
         Source: DOE Oil Monitor (SRP)
@@ -87,7 +87,7 @@ export function PumpPrices() {
               label={label}
               value={benchmark.value}
               change={change}
-              sparkData={priceHistory[benchmark.id] ?? [benchmark.value]}
+              sparkData={weeklySeriesFor(benchmark.id) ?? priceHistory[benchmark.id] ?? []}
               sparkColor={sparkColor}
               accentColor={accentColor}
             />

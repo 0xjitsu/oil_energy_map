@@ -8,18 +8,32 @@ interface SparkChartProps {
   width?: number;
   height?: number;
   unit?: string;
+  /** Rendered inside the fixed-size box when data has < 2 points. */
+  emptyLabel?: string;
 }
 
 /**
  * Lightweight SVG sparkline — area fill + line + last-point dot.
  * Replaces the Recharts AreaChart to keep Recharts out of the initial bundle.
  */
-export function SparkChart({ data, color, width = 80, height = 24, unit }: SparkChartProps) {
+export function SparkChart({ data, color, width = 80, height = 24, unit, emptyLabel }: SparkChartProps) {
   // useId() is SSR-safe; strip colons so the value is a valid SVG fragment id.
   const gradientId = `spark${useId().replace(/:/g, '')}`;
 
   if (data.length < 2) {
-    // Not enough points for a trend — render an empty, fixed-size box (no CLS).
+    // Not enough points for a trend. Same fixed-size box (no CLS) — but never
+    // a silent hide: when the caller passes emptyLabel, say so out loud.
+    // Missing ≠ zero ≠ fabricated (CLAUDE.md aggregate-honesty rule).
+    if (emptyLabel) {
+      return (
+        <div
+          style={{ width, height }}
+          className="flex items-center justify-end font-mono text-[10px] text-text-dim whitespace-nowrap"
+        >
+          {emptyLabel}
+        </div>
+      );
+    }
     return <div style={{ width, height }} aria-hidden="true" />;
   }
 

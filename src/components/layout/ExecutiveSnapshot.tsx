@@ -5,6 +5,8 @@ import { useEvents } from '@/hooks/useEvents';
 import { useAnimatedNumber } from '@/hooks/useAnimatedNumber';
 import { SparkChart } from '@/components/prices/SparkChart';
 import { InfoTip } from '@/components/ui/Tooltip';
+import { weeklySeriesFor } from '@/lib/weekly-series';
+import { formatPHP, formatUSD } from '@/lib/format';
 import type { ScenarioParams } from '@/types';
 
 type RiskTone = 'danger' | 'warning' | 'caution' | 'ok';
@@ -35,9 +37,8 @@ function getRiskLevel(params: ScenarioParams): { label: string; tone: RiskTone }
 }
 
 function formatValue(value: number, unit: string): string {
-  if (unit === '$/bbl') return `$${value.toFixed(1)}`;
-  if (unit === '₱/$') return `₱${value.toFixed(2)}`;
-  return `₱${value.toFixed(2)}`;
+  if (unit === '$/bbl') return formatUSD(value, { decimals: 1 });
+  return formatPHP(value);
 }
 
 function HeroKPI({
@@ -114,11 +115,9 @@ function HeroKPI({
         </div>
 
         {/* Wider sparkline */}
-        {sparkData.length >= 2 && (
-          <div className="shrink-0">
-            <SparkChart data={sparkData} color={sparkColor} width={120} height={32} />
-          </div>
-        )}
+        <div className="shrink-0">
+          <SparkChart data={sparkData} color={sparkColor} width={120} height={32} emptyLabel="history building…" />
+        </div>
       </div>
 
       {/* Delta detail */}
@@ -268,7 +267,7 @@ export function ExecutiveSnapshot({ scenarioParams }: ExecutiveSnapshotProps) {
             unit={unit}
             delta={benchmark.value - benchmark.previousWeek}
             deltaLabel={deltaLabel}
-            sparkData={priceHistory[benchmark.id] ?? [benchmark.value]}
+            sparkData={weeklySeriesFor(benchmark.id) ?? priceHistory[benchmark.id] ?? []}
             sparkColor={sparkColor}
             accentBorder={accentBorder}
             tooltip={benchmark.tooltip}
