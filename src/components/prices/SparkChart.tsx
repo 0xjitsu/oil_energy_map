@@ -28,7 +28,7 @@ export function SparkChart({ data, color, width = 80, height = 24, unit, emptyLa
       return (
         <div
           style={{ width, height }}
-          className="flex items-center justify-end font-mono text-[10px] text-text-dim whitespace-nowrap"
+          className="flex items-center justify-end overflow-hidden font-mono text-[10px] text-text-dim whitespace-nowrap"
         >
           {emptyLabel}
         </div>

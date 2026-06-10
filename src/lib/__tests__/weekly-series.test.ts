@@ -24,4 +24,8 @@ describe('weeklySeriesFor', () => {
     const series = weeklySeriesFor('pump-diesel')!;
     expect(series[series.length - 1]).toBe(PRICE_HISTORY[PRICE_HISTORY.length - 1].pumpDiesel);
   });
+
+  it('returns the same array instance per id (referential stability)', () => {
+    expect(weeklySeriesFor('pump-diesel')).toBe(weeklySeriesFor('pump-diesel'));
+  });
 });

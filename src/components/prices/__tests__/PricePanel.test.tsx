@@ -12,8 +12,10 @@ describe('PricePanel', () => {
   it('labels missing history instead of fabricating a trend', async () => {
     render(<PricePanel />);
     const labels = await screen.findAllByText(/history building/i);
-    // 8 benchmarks; brent-crude, pump-gasoline, pump-diesel have weekly series → 5 labeled.
-    expect(labels.length).toBeGreaterThanOrEqual(1);
+    // 8 benchmarks; brent-crude, pump-gasoline, pump-diesel have weekly series →
+    // exactly 5 labeled (dubai-crude, mops-gasoline, mops-diesel, php-usd,
+    // sg-refining-margin). Pinned so a benchmark silently losing its label fails.
+    expect(labels.length).toBe(5);
   });
 
   it('renders a real sparkline for benchmarks with weekly history', async () => {
