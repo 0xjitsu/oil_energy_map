@@ -5,10 +5,12 @@ export interface GasStation {
   brand: string;
   name: string;
   coordinates: [number, number]; // [lat, lng]
-  address: string;
+  /** Omitted in the built runtime payload when empty. */
+  address?: string;
   fuelTypes?: string[];
   region?: string;
-  source: {
+  /** Provenance — present in src/data source files, stripped from the runtime payload. */
+  source?: {
     url: string;
     scrapedAt: string;
   };
