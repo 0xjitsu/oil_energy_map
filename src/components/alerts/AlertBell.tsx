@@ -1,13 +1,13 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { useAlerts } from '@/hooks/useAlerts';
+import { useAlertsContext } from '@/lib/AlertsProvider';
 import type { AlertRule } from '@/types';
 import AlertDrawer from './AlertDrawer';
 import AlertRuleModal from './AlertRuleModal';
 
 export function AlertBell() {
-  const alerts = useAlerts();
+  const alerts = useAlertsContext();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
