@@ -16,11 +16,17 @@ function loadFromStorage<T>(key: string): T[] {
 }
 
 function persistRules(rules: AlertRule[]): void {
-  localStorage.setItem(RULES_KEY, JSON.stringify(rules));
+  // Storage can be blocked (private mode, quota, disabled) — alerts must
+  // still work in-memory rather than throwing mid-effect on a price poll.
+  try {
+    localStorage.setItem(RULES_KEY, JSON.stringify(rules));
+  } catch { /* in-memory only */ }
 }
 
 function persistHistory(history: AlertNotification[]): void {
-  localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+  try {
+    localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+  } catch { /* in-memory only */ }
 }
 
 export function useAlerts() {

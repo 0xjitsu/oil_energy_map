@@ -803,6 +803,8 @@ git commit -m "replace fabricated sparklines with real weekly history and honest
 
 ## Task 4: Live-vs-simulated separation (A2)
 
+> **Amendment (2026-06-10, post-review):** Shipped code deviates from the listings below in two reviewed, test-locked ways (commit `5cd8a3d`): `getLiveSupplyRisk` counts only Brent *upside* as supply risk (`Math.max(0, …)`, not `Math.abs`), and `deriveImpactsFromPump` throws on unhandled impact labels instead of passing items through (fail-loud per CLAUDE.md). Tasks 1–6 are complete (commits `2e0a759`…`b507841`); `persistRules`/`persistHistory` in `useAlerts.ts` additionally gained storage-blocked try/catch guards in the Task 5 fast-follow.
+
 Acts 1–2 surfaces compute from live prices; surfaces that legitimately remain scenario-driven get a visible `SIMULATED` chip; `/cascade` and the hero stop presenting a hypothetical $107.8/bbl world as current fact.
 
 **Files:**
