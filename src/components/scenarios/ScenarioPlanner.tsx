@@ -12,7 +12,7 @@ import { ScenarioCompare } from './ScenarioCompare';
 import { InfoTip } from '@/components/ui/Tooltip';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { decodeScenario, buildScenarioUrl, SCENARIO_PARAM } from '@/lib/scenario-url';
-import { formatPHP } from '@/lib/format';
+import { formatPHP, getBenchmarkValue } from '@/lib/format';
 
 interface ScenarioPlannerProps {
   params: ScenarioParams;
@@ -28,8 +28,8 @@ export function ScenarioPlanner({
   timelinePosition,
 }: ScenarioPlannerProps) {
   const { prices } = usePrices();
-  const liveBrent = prices.find((b) => b.id === 'brent-crude')?.value ?? 106;
-  const liveForex = prices.find((b) => b.id === 'php-usd')?.value ?? 58.42;
+  const liveBrent = getBenchmarkValue(prices, 'brent-crude');
+  const liveForex = getBenchmarkValue(prices, 'php-usd');
 
   // Tracks whether a scenario was restored from the URL on first mount, so the
   // live-price sync below does not immediately clobber the shared Brent/forex.
