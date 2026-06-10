@@ -1,13 +1,14 @@
+'use client';
+
 import { RiskLevel } from '@/types';
+import { usePrices } from '@/hooks/usePrices';
+import { formatPHP, getCurrentPumpPrices } from '@/lib/format';
 
 interface ResultPanelProps {
   gasoline: number;
   diesel: number;
   riskLevel: RiskLevel;
 }
-
-const CURRENT_GASOLINE = 78.5;
-const CURRENT_DIESEL = 72.3;
 
 const RISK_BADGE: Record<RiskLevel, { label: string; className: string }> = {
   green: {
@@ -34,9 +35,11 @@ const RISK_SUMMARY: Record<RiskLevel, string> = {
 };
 
 export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
+  const { prices } = usePrices();
+  const current = getCurrentPumpPrices(prices);
   const badge = RISK_BADGE[riskLevel];
-  const gasDiff = gasoline - CURRENT_GASOLINE;
-  const dieselDiff = diesel - CURRENT_DIESEL;
+  const gasDiff = gasoline - current.gasoline;
+  const dieselDiff = diesel - current.diesel;
 
   return (
     <div className="glass-card p-5">
@@ -56,14 +59,14 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
             Est. Gasoline
           </p>
           <p className="text-3xl font-mono font-bold text-text-primary">
-            ₱{gasoline.toFixed(2)}
+            {formatPHP(gasoline)}
           </p>
           <p
             className={`text-xs font-mono mt-1 ${
               gasDiff >= 0 ? 'text-status-red' : 'text-status-green'
             }`}
           >
-            {gasDiff >= 0 ? '+' : ''}₱{gasDiff.toFixed(2)} vs current
+            {gasDiff >= 0 ? '+' : ''}{formatPHP(gasDiff)} vs current
           </p>
         </div>
         <div>
@@ -71,14 +74,14 @@ export function ResultPanel({ gasoline, diesel, riskLevel }: ResultPanelProps) {
             Est. Diesel
           </p>
           <p className="text-3xl font-mono font-bold text-text-primary">
-            ₱{diesel.toFixed(2)}
+            {formatPHP(diesel)}
           </p>
           <p
             className={`text-xs font-mono mt-1 ${
               dieselDiff >= 0 ? 'text-status-red' : 'text-status-green'
             }`}
           >
-            {dieselDiff >= 0 ? '+' : ''}₱{dieselDiff.toFixed(2)} vs current
+            {dieselDiff >= 0 ? '+' : ''}{formatPHP(dieselDiff)} vs current
           </p>
         </div>
       </div>

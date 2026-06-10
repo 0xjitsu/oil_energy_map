@@ -1,6 +1,7 @@
 'use client';
 
 import type { SavedScenario } from '@/types';
+import { formatPHP } from '@/lib/format';
 
 interface ScenarioCompareProps {
   scenarios: SavedScenario[];
@@ -39,7 +40,7 @@ export function ScenarioCompare({ scenarios }: ScenarioCompareProps) {
               </div>
               <div>
                 <p className="text-[9px] font-mono text-text-dim uppercase">PHP/USD</p>
-                <p className="text-sm font-mono text-text-primary">₱{s.params.forexRate.toFixed(2)}</p>
+                <p className="text-sm font-mono text-text-primary">{formatPHP(s.params.forexRate)}</p>
               </div>
               <div>
                 <p className="text-[9px] font-mono text-text-dim uppercase">Refinery</p>
@@ -50,11 +51,11 @@ export function ScenarioCompare({ scenarios }: ScenarioCompareProps) {
 
               <div>
                 <p className="text-[9px] font-mono text-text-dim uppercase">Gasoline</p>
-                <p className="text-lg font-mono font-bold text-text-primary">₱{s.derived.gasoline.toFixed(2)}</p>
+                <p className="text-lg font-mono font-bold text-text-primary">{formatPHP(s.derived.gasoline)}</p>
               </div>
               <div>
                 <p className="text-[9px] font-mono text-text-dim uppercase">Diesel</p>
-                <p className="text-lg font-mono font-bold text-text-primary">₱{s.derived.diesel.toFixed(2)}</p>
+                <p className="text-lg font-mono font-bold text-text-primary">{formatPHP(s.derived.diesel)}</p>
               </div>
               <div>
                 <p className="text-[9px] font-mono text-text-dim uppercase">Risk</p>
