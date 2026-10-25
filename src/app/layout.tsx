@@ -36,11 +36,27 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://energy-intelligence-map.vercel.app",
     siteName: "PH Energy Intelligence Map",
+    // Autoplaying link preview; og:image (opengraph-image.tsx) stays the fallback.
+    videos: [
+      {
+        url: "https://energy-intelligence-map.vercel.app/og/preview.mp4",
+        secureUrl: "https://energy-intelligence-map.vercel.app/og/preview.mp4",
+        type: "video/mp4",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "player",
     title: "PH Energy Intelligence Map",
     description: "Live Philippine oil supply chain dashboard — track Brent crude, pump prices, 10,469 stations, and geopolitical risks with scenario planning and Monte Carlo simulation.",
+    players: {
+      playerUrl: "https://energy-intelligence-map.vercel.app/og/player.html",
+      streamUrl: "https://energy-intelligence-map.vercel.app/og/preview.mp4",
+      width: 1200,
+      height: 630,
+    },
   },
 };
 
